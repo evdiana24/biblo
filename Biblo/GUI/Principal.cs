@@ -21,13 +21,18 @@ namespace Biblo.GUI
             lblRol.Text = oSesion.Rol;
         }
 
-        private void generalToolStripMenuItem_Click(object sender, EventArgs e)
+        /*private void generalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (oSesion.VerificarPermiso(2))
             {
                 Principal f = new Principal();
                 f.Show();
             }
-        }
+        }*/
+
+        /*private void configuracionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }*/
     }
 }

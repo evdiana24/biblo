@@ -16,14 +16,47 @@ namespace Biblo.GUI
         public PrincipalAdmin()
         {
             InitializeComponent();
+            CustomizeDesign();
         }
         private void CustomizeDesign() {
-            SubMenu.Visible = false;
+            panelCuentas.Visible = false;
+            panelLibros.Visible = false;
+            panelPrestamos.Visible = false;
+            panelPagos.Visible = false;
+            panelAutores.Visible = false;
+            panelEditoriales.Visible = false;
+            panelCategorias.Visible = false;
+            
         }
+        //Ocultar submenu
         private void hideSubMenu() {
-            if (SubMenu.Visible == true)
+            if (panelCuentas.Visible == true)
             {
-                SubMenu.Visible = false;
+                panelCuentas.Visible = false;
+            }
+            if (panelLibros.Visible == true)
+            {
+                panelLibros.Visible = false;
+            }
+            if (panelPrestamos.Visible == true)
+            {
+                panelPrestamos.Visible = false;
+            }
+            if (panelPagos.Visible == true)
+            {
+                panelPagos.Visible = false;
+            }
+            if (panelAutores.Visible == true)
+            {
+                panelAutores.Visible = false;
+            }
+            if (panelEditoriales.Visible == true)
+            {
+                panelEditoriales.Visible = false;
+            }
+            if (panelCategorias.Visible == true)
+            {
+                panelCategorias.Visible = false;
             }
         }
         private void showSubMenu(Panel Submenu) {
@@ -39,14 +72,21 @@ namespace Biblo.GUI
         }
         private void btnSlider_Click(object sender, EventArgs e)
         {
-            if (MenuVertical.Width == 250)
+            if (MenuVertical.Width == 167)
             {
-                MenuVertical.Width = 70;
+                MenuVertical.Width = 60;
             }
+            
+            /*if (MenuVertical.Width == 250)
+            {
+                MenuVertical.Width = 60;
+                
+            }*/
             else
             {
-                MenuVertical.Width = 250;
+                MenuVertical.Width = 167;
             }
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -84,12 +124,42 @@ namespace Biblo.GUI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnLibros_Click(object sender, EventArgs e)
+        
+
+        private void MenuVertical_Paint(object sender, PaintEventArgs e)
         {
-            showSubMenu(SubMenu);
+
+        }
+        
+
+        
+
+        private void btnGestionCuentas_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelCuentas);
         }
 
-        private void btnAgregarLibro_Click(object sender, EventArgs e)
+        private void btnMiPerfil_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnLectores_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnGestionLibros_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelLibros);
+        }
+
+        private void btnAgregarlibros_Click_1(object sender, EventArgs e)
         {
             hideSubMenu();
         }
@@ -99,7 +169,72 @@ namespace Biblo.GUI
             hideSubMenu();
         }
 
-        private void btnModificarLibros_Click(object sender, EventArgs e)
+        private void btnGestionPrestamos_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelPrestamos);
+        }
+
+        private void btnVerprestamos_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnGestionPagos_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelPagos);
+        }
+
+        private void btnRegistrarPago_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnVerMoras_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnGestionAutores_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelAutores);
+        }
+
+        private void btnAgregarAutores_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnListaAutores_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnGestionEditoriales_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelEditoriales);
+        }
+
+        private void btnAgregarEditorial_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnEditoriales_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelCategorias);
+        }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnVerCategoria_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }

@@ -14,7 +14,7 @@ namespace Biblo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.PrincipalLector());
+            Application.Run(new GUI.PrincipalAdmin());
         }
     }
 }

@@ -32,7 +32,7 @@ namespace Biblo.CLS
             {
                 if (Login())
                 {
-                    GUI.Principal f = new GUI.Principal();
+                    GUI.PrincipalLector f = new GUI.PrincipalLector();
                     f.ShowDialog();
                 }
                 else

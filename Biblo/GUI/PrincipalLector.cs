@@ -14,10 +14,13 @@ namespace Biblo.GUI
 {
     public partial class PrincipalLector : Form
     {
+        SessionManager.Sesion oSesion = SessionManager.Sesion.Instance;
         public PrincipalLector()
         {
             InitializeComponent();
             CustomizeDesign();
+            lblUsuario.Text = oSesion.Usuario;
+            lblRol.Text = oSesion.Rol;
         }
         private void CustomizeDesign()
         {
@@ -75,7 +78,7 @@ namespace Biblo.GUI
 
         private void btnMiPerfil_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario<agregarAutor>();
         }
 
         private void btnBuscarlibro_Click(object sender, EventArgs e)
@@ -132,6 +135,26 @@ namespace Biblo.GUI
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = panelFormularios.Controls.OfType<MiForm>().FirstOrDefault();
+            if(formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                panelFormularios.Controls.Add(formulario);
+                panelFormularios.Tag = formulario;
+                formulario.Show();
+            }
+
+            else
+            {
+                formulario.BringToFront();
+            }
+
         }
     }
 }

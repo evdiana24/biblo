@@ -47,6 +47,90 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\AppManager.cs" />
+    <Compile Include="GUI\agregarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\agregarAutor.Designer.cs">
+      <DependentUpon>agregarAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\agregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\agregarCategoria.Designer.cs">
+      <DependentUpon>agregarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\agregarEditorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\agregarEditorial.Designer.cs">
+      <DependentUpon>agregarEditorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\agregarEjemplares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\agregarEjemplares.Designer.cs">
+      <DependentUpon>agregarEjemplares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\agregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\agregarEmpleado.Designer.cs">
+      <DependentUpon>agregarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AgregarLector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AgregarLector.Designer.cs">
+      <DependentUpon>AgregarLector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AgregarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AgregarLibro.Designer.cs">
+      <DependentUpon>AgregarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\agregarMoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\agregarMoras.Designer.cs">
+      <DependentUpon>agregarMoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\agregarPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\agregarPagos.Designer.cs">
+      <DependentUpon>agregarPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\agregarPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\agregarPrestamos.Designer.cs">
+      <DependentUpon>agregarPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\agregarUsuariosEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\agregarUsuariosEmpleados.Designer.cs">
+      <DependentUpon>agregarUsuariosEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\agregarUsuariosLectores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\agregarUsuariosLectores.Designer.cs">
+      <DependentUpon>agregarUsuariosLectores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\buscarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\buscarLibro.Designer.cs">
+      <DependentUpon>buscarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CambiarContra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CambiarContra.Designer.cs">
+      <DependentUpon>CambiarContra.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +163,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\agregarAutor.resx">
+      <DependentUpon>agregarAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\agregarCategoria.resx">
+      <DependentUpon>agregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\agregarEditorial.resx">
+      <DependentUpon>agregarEditorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\agregarEjemplares.resx">
+      <DependentUpon>agregarEjemplares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\agregarEmpleado.resx">
+      <DependentUpon>agregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AgregarLector.resx">
+      <DependentUpon>AgregarLector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AgregarLibro.resx">
+      <DependentUpon>AgregarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\agregarMoras.resx">
+      <DependentUpon>agregarMoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\agregarPagos.resx">
+      <DependentUpon>agregarPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\agregarPrestamos.resx">
+      <DependentUpon>agregarPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\agregarUsuariosEmpleados.resx">
+      <DependentUpon>agregarUsuariosEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\agregarUsuariosLectores.resx">
+      <DependentUpon>agregarUsuariosLectores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\buscarLibro.resx">
+      <DependentUpon>buscarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CambiarContra.resx">
+      <DependentUpon>CambiarContra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

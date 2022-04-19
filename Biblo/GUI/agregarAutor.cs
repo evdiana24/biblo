@@ -16,15 +16,5 @@ namespace Biblo.GUI
         {
             InitializeComponent();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void agregarAutor_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

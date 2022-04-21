@@ -46,7 +46,7 @@
             "Autor",
             "Categoria",
             "Nombre"});
-            this.cbxElegir.Location = new System.Drawing.Point(53, 78);
+            this.cbxElegir.Location = new System.Drawing.Point(54, 97);
             this.cbxElegir.Name = "cbxElegir";
             this.cbxElegir.Size = new System.Drawing.Size(121, 24);
             this.cbxElegir.TabIndex = 1;
@@ -54,7 +54,7 @@
             // txbBuscarLibro
             // 
             this.txbBuscarLibro.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbBuscarLibro.Location = new System.Drawing.Point(368, 79);
+            this.txbBuscarLibro.Location = new System.Drawing.Point(368, 97);
             this.txbBuscarLibro.Name = "txbBuscarLibro";
             this.txbBuscarLibro.Size = new System.Drawing.Size(220, 21);
             this.txbBuscarLibro.TabIndex = 3;
@@ -62,7 +62,7 @@
             // dtgBuscarLibros
             // 
             this.dtgBuscarLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBuscarLibros.Location = new System.Drawing.Point(15, 140);
+            this.dtgBuscarLibros.Location = new System.Drawing.Point(20, 182);
             this.dtgBuscarLibros.Name = "dtgBuscarLibros";
             this.dtgBuscarLibros.Size = new System.Drawing.Size(608, 132);
             this.dtgBuscarLibros.TabIndex = 4;
@@ -75,7 +75,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(305, 65);
+            this.btnBuscar.Location = new System.Drawing.Point(305, 83);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(57, 35);
             this.btnBuscar.TabIndex = 55;
@@ -92,7 +92,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(347, 298);
+            this.btnCancelar.Location = new System.Drawing.Point(350, 373);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(153, 41);
             this.btnCancelar.TabIndex = 58;
@@ -109,7 +109,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(131, 298);
+            this.btnEditar.Location = new System.Drawing.Point(134, 373);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(155, 41);
             this.btnEditar.TabIndex = 57;
@@ -122,7 +122,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(632, 372);
+            this.ClientSize = new System.Drawing.Size(640, 469);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnBuscar);

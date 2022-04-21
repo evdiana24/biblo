@@ -27,6 +27,11 @@ namespace Biblo.GUI
             panelBuscarLibro.Visible = false;
             panelPagos.Visible = false;
 
+            if(oSesion.IDRol == "2")
+            {
+                btnPagos.Visible = false;
+            }
+
         }
         private void hideSubMenu() {
             if (panelBuscarLibro.Visible == true)

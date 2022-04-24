@@ -131,7 +131,6 @@ namespace SessionManager
             return verificado; 
         }
 
-
         private Sesion()
         {
 

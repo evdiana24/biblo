@@ -30,222 +30,499 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.misDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.librosPrestadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.librosADevolverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarLectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.desactivarCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarLibroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configuracionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.lblUsuario = new System.Windows.Forms.ToolStripLabel();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.lblRol = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.menuStrip.SuspendLayout();
-            this.toolStrip.SuspendLayout();
-            this.statusStrip.SuspendLayout();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
+            this.btnBarraTitulo = new System.Windows.Forms.Panel();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.panelPagos = new System.Windows.Forms.Panel();
+            this.btnHistorialPagos = new System.Windows.Forms.Button();
+            this.btnMoras = new System.Windows.Forms.Button();
+            this.btnPagos = new System.Windows.Forms.Button();
+            this.btnMisPrestamos = new System.Windows.Forms.Button();
+            this.panelBuscarLibro = new System.Windows.Forms.Panel();
+            this.btnPorEditorial = new System.Windows.Forms.Button();
+            this.btnPorAutor = new System.Windows.Forms.Button();
+            this.btnPorCategoria = new System.Windows.Forms.Button();
+            this.btnPortitulo = new System.Windows.Forms.Button();
+            this.btnBuscarlibro = new System.Windows.Forms.Button();
+            this.btnMiPerfil = new System.Windows.Forms.Button();
+            this.panelFormularios = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            this.btnBarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panelPagos.SuspendLayout();
+            this.panelBuscarLibro.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip
+            // btnRestaurar
             // 
-            this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generalToolStripMenuItem,
-            this.procesosToolStripMenuItem,
-            this.librosToolStripMenuItem,
-            this.configuracionesToolStripMenuItem,
-            this.salirToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(948, 35);
-            this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "MenuStrip";
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
+            this.btnRestaurar.Location = new System.Drawing.Point(1155, 6);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(17, 16);
+            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRestaurar.TabIndex = 2;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Visible = false;
             // 
-            // generalToolStripMenuItem
+            // btnMinimizar
             // 
-            this.generalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.misDatosToolStripMenuItem,
-            this.librosPrestadosToolStripMenuItem,
-            this.librosADevolverToolStripMenuItem});
-            this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(101, 29);
-            this.generalToolStripMenuItem.Text = "Mi cuenta";
-//            this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(1134, 6);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(17, 16);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.TabStop = false;
             // 
-            // misDatosToolStripMenuItem
+            // btnSalir
             // 
-            this.misDatosToolStripMenuItem.Name = "misDatosToolStripMenuItem";
-            this.misDatosToolStripMenuItem.Size = new System.Drawing.Size(231, 30);
-            this.misDatosToolStripMenuItem.Text = "Mis datos";
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(1176, 5);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(17, 16);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSalir.TabIndex = 1;
+            this.btnSalir.TabStop = false;
             // 
-            // librosPrestadosToolStripMenuItem
+            // btnBarraTitulo
             // 
-            this.librosPrestadosToolStripMenuItem.Name = "librosPrestadosToolStripMenuItem";
-            this.librosPrestadosToolStripMenuItem.Size = new System.Drawing.Size(231, 30);
-            this.librosPrestadosToolStripMenuItem.Text = "Libros prestados";
+            this.btnBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
+            this.btnBarraTitulo.Controls.Add(this.btnRestaurar);
+            this.btnBarraTitulo.Controls.Add(this.btnMinimizar);
+            this.btnBarraTitulo.Controls.Add(this.btnMaximizar);
+            this.btnBarraTitulo.Controls.Add(this.btnSalir);
+            this.btnBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.btnBarraTitulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBarraTitulo.Name = "btnBarraTitulo";
+            this.btnBarraTitulo.Size = new System.Drawing.Size(1200, 28);
+            this.btnBarraTitulo.TabIndex = 4;
             // 
-            // librosADevolverToolStripMenuItem
+            // btnMaximizar
             // 
-            this.librosADevolverToolStripMenuItem.Name = "librosADevolverToolStripMenuItem";
-            this.librosADevolverToolStripMenuItem.Size = new System.Drawing.Size(231, 30);
-            this.librosADevolverToolStripMenuItem.Text = "Libros a devolver";
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
+            this.btnMaximizar.Location = new System.Drawing.Point(1155, 8);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(17, 16);
+            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMaximizar.TabIndex = 2;
+            this.btnMaximizar.TabStop = false;
             // 
-            // procesosToolStripMenuItem
+            // panel2
             // 
-            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarLectorToolStripMenuItem,
-            this.agregarEmpleadoToolStripMenuItem,
-            this.desactivarCuentaToolStripMenuItem});
-            this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
-            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(95, 29);
-            this.procesosToolStripMenuItem.Text = "Procesos";
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblUsuario);
+            this.panel2.Controls.Add(this.lblRol);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(245, 123);
+            this.panel2.TabIndex = 1;
             // 
-            // agregarLectorToolStripMenuItem
+            // label2
             // 
-            this.agregarLectorToolStripMenuItem.Name = "agregarLectorToolStripMenuItem";
-            this.agregarLectorToolStripMenuItem.Size = new System.Drawing.Size(245, 30);
-            this.agregarLectorToolStripMenuItem.Text = "Agregar lector";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(22, 95);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Rol:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // agregarEmpleadoToolStripMenuItem
+            // label1
             // 
-            this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
-            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(245, 30);
-            this.agregarEmpleadoToolStripMenuItem.Text = "Agregar empleado";
-            // 
-            // desactivarCuentaToolStripMenuItem
-            // 
-            this.desactivarCuentaToolStripMenuItem.Name = "desactivarCuentaToolStripMenuItem";
-            this.desactivarCuentaToolStripMenuItem.Size = new System.Drawing.Size(245, 30);
-            this.desactivarCuentaToolStripMenuItem.Text = "Desactivar cuenta";
-            // 
-            // librosToolStripMenuItem
-            // 
-            this.librosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buscarLibroToolStripMenuItem});
-            this.librosToolStripMenuItem.Name = "librosToolStripMenuItem";
-            this.librosToolStripMenuItem.Size = new System.Drawing.Size(72, 29);
-            this.librosToolStripMenuItem.Text = "Libros";
-            // 
-            // buscarLibroToolStripMenuItem
-            // 
-            this.buscarLibroToolStripMenuItem.Name = "buscarLibroToolStripMenuItem";
-            this.buscarLibroToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
-            this.buscarLibroToolStripMenuItem.Text = "Buscar libro";
-            // 
-            // configuracionesToolStripMenuItem
-            // 
-            this.configuracionesToolStripMenuItem.Name = "configuracionesToolStripMenuItem";
-            this.configuracionesToolStripMenuItem.Size = new System.Drawing.Size(152, 29);
-            this.configuracionesToolStripMenuItem.Text = "Configuraciones";
-//            this.configuracionesToolStripMenuItem.Click += new System.EventHandler(this.configuracionesToolStripMenuItem_Click);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(57, 29);
-            this.salirToolStripMenuItem.Text = "Salir";
-            // 
-            // toolStrip
-            // 
-            this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblUsuario});
-            this.toolStrip.Location = new System.Drawing.Point(0, 35);
-            this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip.Size = new System.Drawing.Size(948, 30);
-            this.toolStrip.TabIndex = 1;
-            this.toolStrip.Text = "ToolStrip";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(22, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Usuario:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblUsuario
             // 
-            this.lblUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.lblUsuario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Image = ((System.Drawing.Image)(resources.GetObject("lblUsuario.Image")));
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblUsuario.Location = new System.Drawing.Point(94, 69);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(124, 27);
-            this.lblUsuario.Text = "Usuario";
-            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.AutoSize = false;
-            this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblRol});
-            this.statusStrip.Location = new System.Drawing.Point(0, 651);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip.Size = new System.Drawing.Size(948, 46);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRol
             // 
-            this.lblRol.BackColor = System.Drawing.Color.Transparent;
-            this.lblRol.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Image = ((System.Drawing.Image)(resources.GetObject("lblRol.Image")));
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblRol.Location = new System.Drawing.Point(62, 95);
+            this.lblRol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(67, 41);
-            this.lblRol.Text = "Rol";
-            this.lblRol.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblRol.Size = new System.Drawing.Size(0, 16);
+            this.lblRol.TabIndex = 0;
+            this.lblRol.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(97, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.btnCerrarSesion);
+            this.panel1.Controls.Add(this.panelPagos);
+            this.panel1.Controls.Add(this.btnPagos);
+            this.panel1.Controls.Add(this.btnMisPrestamos);
+            this.panel1.Controls.Add(this.panelBuscarLibro);
+            this.panel1.Controls.Add(this.btnBuscarlibro);
+            this.panel1.Controls.Add(this.btnMiPerfil);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(245, 622);
+            this.panel1.TabIndex = 5;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(51)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 593);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(245, 29);
+            this.btnCerrarSesion.TabIndex = 19;
+            this.btnCerrarSesion.Text = "Cerrar sesión";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            // 
+            // panelPagos
+            // 
+            this.panelPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
+            this.panelPagos.Controls.Add(this.btnHistorialPagos);
+            this.panelPagos.Controls.Add(this.btnMoras);
+            this.panelPagos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelPagos.Location = new System.Drawing.Point(0, 349);
+            this.panelPagos.Margin = new System.Windows.Forms.Padding(2);
+            this.panelPagos.Name = "panelPagos";
+            this.panelPagos.Size = new System.Drawing.Size(245, 57);
+            this.panelPagos.TabIndex = 8;
+            // 
+            // btnHistorialPagos
+            // 
+            this.btnHistorialPagos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistorialPagos.FlatAppearance.BorderSize = 0;
+            this.btnHistorialPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorialPagos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorialPagos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnHistorialPagos.Location = new System.Drawing.Point(0, 26);
+            this.btnHistorialPagos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHistorialPagos.Name = "btnHistorialPagos";
+            this.btnHistorialPagos.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.btnHistorialPagos.Size = new System.Drawing.Size(245, 26);
+            this.btnHistorialPagos.TabIndex = 1;
+            this.btnHistorialPagos.Text = "Ver historial de pagos";
+            this.btnHistorialPagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorialPagos.UseVisualStyleBackColor = true;
+            // 
+            // btnMoras
+            // 
+            this.btnMoras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMoras.FlatAppearance.BorderSize = 0;
+            this.btnMoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMoras.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoras.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMoras.Location = new System.Drawing.Point(0, 0);
+            this.btnMoras.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMoras.Name = "btnMoras";
+            this.btnMoras.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.btnMoras.Size = new System.Drawing.Size(245, 26);
+            this.btnMoras.TabIndex = 0;
+            this.btnMoras.Text = "Moras";
+            this.btnMoras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMoras.UseVisualStyleBackColor = true;
+            // 
+            // btnPagos
+            // 
+            this.btnPagos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPagos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPagos.FlatAppearance.BorderSize = 0;
+            this.btnPagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(51)))));
+            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.Location = new System.Drawing.Point(0, 320);
+            this.btnPagos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnPagos.Size = new System.Drawing.Size(245, 29);
+            this.btnPagos.TabIndex = 7;
+            this.btnPagos.Text = "Pagos";
+            this.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.UseVisualStyleBackColor = true;
+            // 
+            // btnMisPrestamos
+            // 
+            this.btnMisPrestamos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMisPrestamos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnMisPrestamos.FlatAppearance.BorderSize = 0;
+            this.btnMisPrestamos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(51)))));
+            this.btnMisPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMisPrestamos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMisPrestamos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMisPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMisPrestamos.Location = new System.Drawing.Point(0, 291);
+            this.btnMisPrestamos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMisPrestamos.Name = "btnMisPrestamos";
+            this.btnMisPrestamos.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnMisPrestamos.Size = new System.Drawing.Size(245, 29);
+            this.btnMisPrestamos.TabIndex = 6;
+            this.btnMisPrestamos.Text = "Mis préstamos";
+            this.btnMisPrestamos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMisPrestamos.UseVisualStyleBackColor = true;
+            // 
+            // panelBuscarLibro
+            // 
+            this.panelBuscarLibro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
+            this.panelBuscarLibro.Controls.Add(this.btnPorEditorial);
+            this.panelBuscarLibro.Controls.Add(this.btnPorAutor);
+            this.panelBuscarLibro.Controls.Add(this.btnPorCategoria);
+            this.panelBuscarLibro.Controls.Add(this.btnPortitulo);
+            this.panelBuscarLibro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBuscarLibro.Location = new System.Drawing.Point(0, 181);
+            this.panelBuscarLibro.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBuscarLibro.Name = "panelBuscarLibro";
+            this.panelBuscarLibro.Size = new System.Drawing.Size(245, 110);
+            this.panelBuscarLibro.TabIndex = 5;
+            // 
+            // btnPorEditorial
+            // 
+            this.btnPorEditorial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPorEditorial.FlatAppearance.BorderSize = 0;
+            this.btnPorEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPorEditorial.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPorEditorial.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPorEditorial.Location = new System.Drawing.Point(0, 78);
+            this.btnPorEditorial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPorEditorial.Name = "btnPorEditorial";
+            this.btnPorEditorial.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.btnPorEditorial.Size = new System.Drawing.Size(245, 26);
+            this.btnPorEditorial.TabIndex = 3;
+            this.btnPorEditorial.Text = "Por editorial";
+            this.btnPorEditorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPorEditorial.UseVisualStyleBackColor = true;
+            // 
+            // btnPorAutor
+            // 
+            this.btnPorAutor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPorAutor.FlatAppearance.BorderSize = 0;
+            this.btnPorAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPorAutor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPorAutor.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPorAutor.Location = new System.Drawing.Point(0, 52);
+            this.btnPorAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPorAutor.Name = "btnPorAutor";
+            this.btnPorAutor.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.btnPorAutor.Size = new System.Drawing.Size(245, 26);
+            this.btnPorAutor.TabIndex = 2;
+            this.btnPorAutor.Text = "Por autor";
+            this.btnPorAutor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPorAutor.UseVisualStyleBackColor = true;
+            // 
+            // btnPorCategoria
+            // 
+            this.btnPorCategoria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPorCategoria.FlatAppearance.BorderSize = 0;
+            this.btnPorCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPorCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPorCategoria.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPorCategoria.Location = new System.Drawing.Point(0, 26);
+            this.btnPorCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPorCategoria.Name = "btnPorCategoria";
+            this.btnPorCategoria.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.btnPorCategoria.Size = new System.Drawing.Size(245, 26);
+            this.btnPorCategoria.TabIndex = 1;
+            this.btnPorCategoria.Text = "Por categoría";
+            this.btnPorCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPorCategoria.UseVisualStyleBackColor = true;
+            // 
+            // btnPortitulo
+            // 
+            this.btnPortitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPortitulo.FlatAppearance.BorderSize = 0;
+            this.btnPortitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPortitulo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPortitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPortitulo.Location = new System.Drawing.Point(0, 0);
+            this.btnPortitulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPortitulo.Name = "btnPortitulo";
+            this.btnPortitulo.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.btnPortitulo.Size = new System.Drawing.Size(245, 26);
+            this.btnPortitulo.TabIndex = 0;
+            this.btnPortitulo.Text = "Por título";
+            this.btnPortitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPortitulo.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarlibro
+            // 
+            this.btnBuscarlibro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBuscarlibro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnBuscarlibro.FlatAppearance.BorderSize = 0;
+            this.btnBuscarlibro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(51)))));
+            this.btnBuscarlibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarlibro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarlibro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnBuscarlibro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarlibro.Location = new System.Drawing.Point(0, 152);
+            this.btnBuscarlibro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarlibro.Name = "btnBuscarlibro";
+            this.btnBuscarlibro.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnBuscarlibro.Size = new System.Drawing.Size(245, 29);
+            this.btnBuscarlibro.TabIndex = 4;
+            this.btnBuscarlibro.Text = "Buscar libro";
+            this.btnBuscarlibro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarlibro.UseVisualStyleBackColor = true;
+            // 
+            // btnMiPerfil
+            // 
+            this.btnMiPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMiPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnMiPerfil.FlatAppearance.BorderSize = 0;
+            this.btnMiPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(51)))));
+            this.btnMiPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMiPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMiPerfil.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMiPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMiPerfil.Location = new System.Drawing.Point(0, 123);
+            this.btnMiPerfil.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMiPerfil.Name = "btnMiPerfil";
+            this.btnMiPerfil.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnMiPerfil.Size = new System.Drawing.Size(245, 29);
+            this.btnMiPerfil.TabIndex = 3;
+            this.btnMiPerfil.Text = "Mi perfil";
+            this.btnMiPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMiPerfil.UseVisualStyleBackColor = true;
+            // 
+            // panelFormularios
+            // 
+            this.panelFormularios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelFormularios.BackgroundImage")));
+            this.panelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFormularios.Location = new System.Drawing.Point(0, 28);
+            this.panelFormularios.Name = "panelFormularios";
+            this.panelFormularios.Size = new System.Drawing.Size(1200, 622);
+            this.panelFormularios.TabIndex = 6;
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(948, 697);
-            this.Controls.Add(this.statusStrip);
-            this.Controls.Add(this.toolStrip);
-            this.Controls.Add(this.menuStrip);
+            this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelFormularios);
+            this.Controls.Add(this.btnBarraTitulo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
-            this.toolStrip.ResumeLayout(false);
-            this.toolStrip.PerformLayout();
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            this.btnBarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panelPagos.ResumeLayout(false);
+            this.panelBuscarLibro.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
         #endregion
-
-
-        private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStrip toolStrip;
-        private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.ToolStripStatusLabel lblRol;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripLabel lblUsuario;
-        private System.Windows.Forms.ToolStripMenuItem generalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem misDatosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem librosPrestadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem librosADevolverToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarLectorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem desactivarCuentaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem librosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarLibroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem configuracionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.PictureBox btnSalir;
+        private System.Windows.Forms.Panel btnBarraTitulo;
+        private System.Windows.Forms.PictureBox btnMaximizar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Panel panelPagos;
+        private System.Windows.Forms.Button btnHistorialPagos;
+        private System.Windows.Forms.Button btnMoras;
+        private System.Windows.Forms.Button btnPagos;
+        private System.Windows.Forms.Button btnMisPrestamos;
+        private System.Windows.Forms.Panel panelBuscarLibro;
+        private System.Windows.Forms.Button btnPorEditorial;
+        private System.Windows.Forms.Button btnPorAutor;
+        private System.Windows.Forms.Button btnPorCategoria;
+        private System.Windows.Forms.Button btnPortitulo;
+        private System.Windows.Forms.Button btnBuscarlibro;
+        private System.Windows.Forms.Button btnMiPerfil;
+        private System.Windows.Forms.Panel panelFormularios;
     }
 }
 

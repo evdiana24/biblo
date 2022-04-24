@@ -83,9 +83,11 @@ namespace Biblo.GUI
 
         private void btnMiPerfil_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<verAutores>();
+
             /*if (oSesion.VerificarPermiso(2))
             {
-                AbrirFormulario<agregarAutor>();
+                AbrirFormulario<verAutores>();
             }
             else
             {

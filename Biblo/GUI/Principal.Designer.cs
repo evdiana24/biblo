@@ -74,7 +74,7 @@
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(1155, 6);
+            this.btnRestaurar.Location = new System.Drawing.Point(1005, 6);
             this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(17, 16);
@@ -88,7 +88,7 @@
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(1134, 6);
+            this.btnMinimizar.Location = new System.Drawing.Point(984, 6);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(17, 16);
@@ -101,7 +101,7 @@
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(1176, 5);
+            this.btnSalir.Location = new System.Drawing.Point(1026, 5);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(17, 16);
@@ -120,7 +120,7 @@
             this.btnBarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.btnBarraTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnBarraTitulo.Name = "btnBarraTitulo";
-            this.btnBarraTitulo.Size = new System.Drawing.Size(1200, 28);
+            this.btnBarraTitulo.Size = new System.Drawing.Size(1050, 28);
             this.btnBarraTitulo.TabIndex = 4;
             // 
             // btnMaximizar
@@ -128,7 +128,7 @@
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(1155, 8);
+            this.btnMaximizar.Location = new System.Drawing.Point(1005, 8);
             this.btnMaximizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(17, 16);
@@ -226,7 +226,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 622);
+            this.panel1.Size = new System.Drawing.Size(245, 572);
             this.panel1.TabIndex = 5;
             // 
             // btnCerrarSesion
@@ -239,7 +239,7 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 593);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 543);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
@@ -456,24 +456,25 @@
             this.btnMiPerfil.Text = "Mi perfil";
             this.btnMiPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMiPerfil.UseVisualStyleBackColor = true;
+            this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
             // 
             // panelFormularios
             // 
             this.panelFormularios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelFormularios.BackgroundImage")));
             this.panelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormularios.Location = new System.Drawing.Point(0, 28);
+            this.panelFormularios.Location = new System.Drawing.Point(245, 28);
             this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(1200, 622);
-            this.panelFormularios.TabIndex = 6;
+            this.panelFormularios.Size = new System.Drawing.Size(805, 572);
+            this.panelFormularios.TabIndex = 8;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1200, 650);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1050, 600);
             this.Controls.Add(this.panelFormularios);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBarraTitulo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -1,6 +1,6 @@
-﻿namespace Biblo.GUI
+﻿namespace General.GUI
 {
-    partial class AgregarLector
+    partial class LectorEdicion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarLector));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LectorEdicion));
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.cmbGeneroLector = new System.Windows.Forms.ComboBox();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.txbTelefono = new System.Windows.Forms.TextBox();
             this.txbCorreo = new System.Windows.Forms.TextBox();
-            this.txbDireccionLector = new System.Windows.Forms.TextBox();
-            this.txbNombreLector = new System.Windows.Forms.TextBox();
+            this.txbDireccion = new System.Windows.Forms.TextBox();
+            this.txbNombre = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,7 +47,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txbIdLector = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dtFechaContratacion = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,6 +94,7 @@
             this.btnCancelar.TabIndex = 136;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -109,18 +113,19 @@
             this.btnGuardar.TabIndex = 135;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // cmbGeneroLector
+            // cmbGenero
             // 
-            this.cmbGeneroLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbGeneroLector.FormattingEnabled = true;
-            this.cmbGeneroLector.Items.AddRange(new object[] {
+            this.cmbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.cmbGeneroLector.Location = new System.Drawing.Point(147, 248);
-            this.cmbGeneroLector.Name = "cmbGeneroLector";
-            this.cmbGeneroLector.Size = new System.Drawing.Size(170, 28);
-            this.cmbGeneroLector.TabIndex = 132;
+            this.cmbGenero.Location = new System.Drawing.Point(147, 248);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(170, 28);
+            this.cmbGenero.TabIndex = 132;
             // 
             // txbTelefono
             // 
@@ -138,21 +143,21 @@
             this.txbCorreo.Size = new System.Drawing.Size(303, 26);
             this.txbCorreo.TabIndex = 128;
             // 
-            // txbDireccionLector
+            // txbDireccion
             // 
-            this.txbDireccionLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbDireccionLector.Location = new System.Drawing.Point(146, 207);
-            this.txbDireccionLector.Name = "txbDireccionLector";
-            this.txbDireccionLector.Size = new System.Drawing.Size(455, 26);
-            this.txbDireccionLector.TabIndex = 127;
+            this.txbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbDireccion.Location = new System.Drawing.Point(146, 207);
+            this.txbDireccion.Name = "txbDireccion";
+            this.txbDireccion.Size = new System.Drawing.Size(455, 26);
+            this.txbDireccion.TabIndex = 127;
             // 
-            // txbNombreLector
+            // txbNombre
             // 
-            this.txbNombreLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbNombreLector.Location = new System.Drawing.Point(232, 170);
-            this.txbNombreLector.Name = "txbNombreLector";
-            this.txbNombreLector.Size = new System.Drawing.Size(369, 26);
-            this.txbNombreLector.TabIndex = 126;
+            this.txbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbNombre.Location = new System.Drawing.Point(232, 170);
+            this.txbNombre.Name = "txbNombre";
+            this.txbNombre.Size = new System.Drawing.Size(369, 26);
+            this.txbNombre.TabIndex = 126;
             // 
             // label9
             // 
@@ -248,17 +253,22 @@
             this.label12.TabIndex = 139;
             this.label12.Text = "ID:";
             // 
-            // dtFechaContratacion
+            // dtFechaNacimiento
             // 
-            this.dtFechaContratacion.CustomFormat = "dd/MM/yyyy";
-            this.dtFechaContratacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dtFechaContratacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFechaContratacion.Location = new System.Drawing.Point(279, 331);
-            this.dtFechaContratacion.Name = "dtFechaContratacion";
-            this.dtFechaContratacion.Size = new System.Drawing.Size(170, 26);
-            this.dtFechaContratacion.TabIndex = 159;
+            this.dtFechaNacimiento.CustomFormat = "dd/MM/yyyy";
+            this.dtFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(279, 331);
+            this.dtFechaNacimiento.Name = "dtFechaNacimiento";
+            this.dtFechaNacimiento.Size = new System.Drawing.Size(170, 26);
+            this.dtFechaNacimiento.TabIndex = 159;
             // 
-            // AgregarLector
+            // Notificador
+            // 
+            this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Notificador.ContainerControl = this;
+            // 
+            // LectorEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,18 +276,18 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(640, 469);
-            this.Controls.Add(this.dtFechaContratacion);
+            this.Controls.Add(this.dtFechaNacimiento);
             this.Controls.Add(this.txbIdLector);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.cmbGeneroLector);
+            this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.txbTelefono);
             this.Controls.Add(this.txbCorreo);
-            this.Controls.Add(this.txbDireccionLector);
-            this.Controls.Add(this.txbNombreLector);
+            this.Controls.Add(this.txbDireccion);
+            this.Controls.Add(this.txbNombre);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -285,8 +295,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AgregarLector";
+            this.Name = "LectorEdicion";
             this.Text = "AgregarLector";
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,11 +309,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ComboBox cmbGeneroLector;
+        private System.Windows.Forms.ComboBox cmbGenero;
         private System.Windows.Forms.TextBox txbTelefono;
         private System.Windows.Forms.TextBox txbCorreo;
-        private System.Windows.Forms.TextBox txbDireccionLector;
-        private System.Windows.Forms.TextBox txbNombreLector;
+        private System.Windows.Forms.TextBox txbDireccion;
+        private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -311,6 +322,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbIdLector;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dtFechaContratacion;
+        private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }

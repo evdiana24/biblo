@@ -47,41 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\AppManager.cs" />
-    <Compile Include="GUI\agregarAutor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\agregarAutor.Designer.cs">
-      <DependentUpon>agregarAutor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\agregarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\agregarCategoria.Designer.cs">
-      <DependentUpon>agregarCategoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\agregarEditorial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\agregarEditorial.Designer.cs">
-      <DependentUpon>agregarEditorial.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\agregarEjemplares.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\agregarEjemplares.Designer.cs">
       <DependentUpon>agregarEjemplares.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\agregarEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\agregarEmpleado.Designer.cs">
-      <DependentUpon>agregarEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\AgregarLector.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\AgregarLector.Designer.cs">
-      <DependentUpon>AgregarLector.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\AgregarLibro.cs">
       <SubType>Form</SubType>
@@ -235,23 +205,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\agregarAutor.resx">
-      <DependentUpon>agregarAutor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\agregarCategoria.resx">
-      <DependentUpon>agregarCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\agregarEditorial.resx">
-      <DependentUpon>agregarEditorial.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\agregarEjemplares.resx">
       <DependentUpon>agregarEjemplares.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\agregarEmpleado.resx">
-      <DependentUpon>agregarEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\AgregarLector.resx">
-      <DependentUpon>AgregarLector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AgregarLibro.resx">
       <DependentUpon>AgregarLibro.cs</DependentUpon>
@@ -355,6 +310,10 @@
     <ProjectReference Include="..\DataSource\DataSource.csproj">
       <Project>{42e51e7c-cd09-4528-b6e2-5dd80ffd34f5}</Project>
       <Name>DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\General\General.csproj">
+      <Project>{0633c326-b44d-439b-bbd4-1bc7bfd90f98}</Project>
+      <Name>General</Name>
     </ProjectReference>
     <ProjectReference Include="..\SessionManager\SessionManager.csproj">
       <Project>{d457ebfd-6d9a-4fea-be01-1b8c5ae08f6b}</Project>

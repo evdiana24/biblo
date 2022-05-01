@@ -1,6 +1,6 @@
-﻿namespace Biblo.GUI
+﻿namespace General.GUI
 {
-    partial class agregarEditorial
+    partial class EditorialEdicion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agregarEditorial));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditorialEdicion));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txbEditorial = new System.Windows.Forms.TextBox();
@@ -37,6 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txbIdEditorial = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -56,6 +59,7 @@
             this.btnCancelar.TabIndex = 112;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -74,6 +78,7 @@
             this.btnGuardar.TabIndex = 111;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txbEditorial
             // 
@@ -144,7 +149,12 @@
             this.label1.TabIndex = 105;
             this.label1.Text = "ID:";
             // 
-            // agregarEditorial
+            // Notificador
+            // 
+            this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Notificador.ContainerControl = this;
+            // 
+            // EditorialEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,8 +171,9 @@
             this.Controls.Add(this.txbIdEditorial);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "agregarEditorial";
+            this.Name = "EditorialEdicion";
             this.Text = "agregarEditorial";
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,5 +189,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbIdEditorial;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }

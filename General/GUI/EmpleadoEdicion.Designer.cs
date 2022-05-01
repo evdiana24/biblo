@@ -1,6 +1,6 @@
-﻿namespace Biblo.GUI
+﻿namespace General.GUI
 {
-    partial class agregarEmpleado
+    partial class EmpleadoEdicion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agregarEmpleado));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpleadoEdicion));
             this.txbIdEmpleado = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,13 +38,13 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dtFechaContratacion = new System.Windows.Forms.DateTimePicker();
             this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.cmbGeneroEmp = new System.Windows.Forms.ComboBox();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.txbTelefono = new System.Windows.Forms.TextBox();
             this.txbDUI = new System.Windows.Forms.TextBox();
             this.txbNIT = new System.Windows.Forms.TextBox();
             this.txbCorreo = new System.Windows.Forms.TextBox();
-            this.txbDireccionEmp = new System.Windows.Forms.TextBox();
-            this.txbNombreEmpleado = new System.Windows.Forms.TextBox();
+            this.txbDireccion = new System.Windows.Forms.TextBox();
+            this.txbNombre = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,6 +54,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // txbIdEmpleado
@@ -119,6 +122,7 @@
             this.btnCancelar.TabIndex = 160;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -137,6 +141,7 @@
             this.btnGuardar.TabIndex = 159;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dtFechaContratacion
             // 
@@ -158,17 +163,17 @@
             this.dtFechaNacimiento.Size = new System.Drawing.Size(170, 26);
             this.dtFechaNacimiento.TabIndex = 157;
             // 
-            // cmbGeneroEmp
+            // cmbGenero
             // 
-            this.cmbGeneroEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbGeneroEmp.FormattingEnabled = true;
-            this.cmbGeneroEmp.Items.AddRange(new object[] {
+            this.cmbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.cmbGeneroEmp.Location = new System.Drawing.Point(148, 247);
-            this.cmbGeneroEmp.Name = "cmbGeneroEmp";
-            this.cmbGeneroEmp.Size = new System.Drawing.Size(147, 28);
-            this.cmbGeneroEmp.TabIndex = 156;
+            this.cmbGenero.Location = new System.Drawing.Point(148, 247);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(147, 28);
+            this.cmbGenero.TabIndex = 156;
             // 
             // txbTelefono
             // 
@@ -202,21 +207,21 @@
             this.txbCorreo.Size = new System.Drawing.Size(303, 26);
             this.txbCorreo.TabIndex = 152;
             // 
-            // txbDireccionEmp
+            // txbDireccion
             // 
-            this.txbDireccionEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbDireccionEmp.Location = new System.Drawing.Point(148, 170);
-            this.txbDireccionEmp.Name = "txbDireccionEmp";
-            this.txbDireccionEmp.Size = new System.Drawing.Size(454, 26);
-            this.txbDireccionEmp.TabIndex = 151;
+            this.txbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbDireccion.Location = new System.Drawing.Point(148, 170);
+            this.txbDireccion.Name = "txbDireccion";
+            this.txbDireccion.Size = new System.Drawing.Size(454, 26);
+            this.txbDireccion.TabIndex = 151;
             // 
-            // txbNombreEmpleado
+            // txbNombre
             // 
-            this.txbNombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbNombreEmpleado.Location = new System.Drawing.Point(234, 132);
-            this.txbNombreEmpleado.Name = "txbNombreEmpleado";
-            this.txbNombreEmpleado.Size = new System.Drawing.Size(368, 26);
-            this.txbNombreEmpleado.TabIndex = 150;
+            this.txbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbNombre.Location = new System.Drawing.Point(234, 132);
+            this.txbNombre.Name = "txbNombre";
+            this.txbNombre.Size = new System.Drawing.Size(368, 26);
+            this.txbNombre.TabIndex = 150;
             // 
             // label10
             // 
@@ -326,7 +331,12 @@
             this.label2.TabIndex = 141;
             this.label2.Text = "Nombre completo:";
             // 
-            // agregarEmpleado
+            // Notificador
+            // 
+            this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Notificador.ContainerControl = this;
+            // 
+            // EmpleadoEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -342,13 +352,13 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.dtFechaContratacion);
             this.Controls.Add(this.dtFechaNacimiento);
-            this.Controls.Add(this.cmbGeneroEmp);
+            this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.txbTelefono);
             this.Controls.Add(this.txbDUI);
             this.Controls.Add(this.txbNIT);
             this.Controls.Add(this.txbCorreo);
-            this.Controls.Add(this.txbDireccionEmp);
-            this.Controls.Add(this.txbNombreEmpleado);
+            this.Controls.Add(this.txbDireccion);
+            this.Controls.Add(this.txbNombre);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -359,8 +369,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "agregarEmpleado";
+            this.Name = "EmpleadoEdicion";
             this.Text = "agregarEmpleado";
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,13 +387,13 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DateTimePicker dtFechaContratacion;
         private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
-        private System.Windows.Forms.ComboBox cmbGeneroEmp;
+        private System.Windows.Forms.ComboBox cmbGenero;
         private System.Windows.Forms.TextBox txbTelefono;
         private System.Windows.Forms.TextBox txbDUI;
         private System.Windows.Forms.TextBox txbNIT;
         private System.Windows.Forms.TextBox txbCorreo;
-        private System.Windows.Forms.TextBox txbDireccionEmp;
-        private System.Windows.Forms.TextBox txbNombreEmpleado;
+        private System.Windows.Forms.TextBox txbDireccion;
+        private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -392,5 +403,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }

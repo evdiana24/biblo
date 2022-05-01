@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +42,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS\Autores.cs" />
+    <Compile Include="CLS\Categorias.cs" />
+    <Compile Include="CLS\Editoriales.cs" />
+    <Compile Include="CLS\Empleados.cs" />
+    <Compile Include="CLS\Lectores.cs" />
+    <Compile Include="CLS\Permisos.cs" />
+    <Compile Include="GUI\LectorEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LectorEdicion.Designer.cs">
+      <DependentUpon>LectorEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EmpleadoEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmpleadoEdicion.Designer.cs">
+      <DependentUpon>EmpleadoEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditorialEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditorialEdicion.Designer.cs">
+      <DependentUpon>EditorialEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CategoriaEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CategoriaEdicion.Designer.cs">
+      <DependentUpon>CategoriaEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AutorEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AutorEdicion.Designer.cs">
+      <DependentUpon>AutorEdicion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\LectorEdicion.resx">
+      <DependentUpon>LectorEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmpleadoEdicion.resx">
+      <DependentUpon>EmpleadoEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditorialEdicion.resx">
+      <DependentUpon>EditorialEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CategoriaEdicion.resx">
+      <DependentUpon>CategoriaEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AutorEdicion.resx">
+      <DependentUpon>AutorEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataManager\DataManager.csproj">
+      <Project>{55ae3030-7e04-4543-937a-7101b9829dd2}</Project>
+      <Name>DataManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

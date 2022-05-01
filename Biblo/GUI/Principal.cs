@@ -74,7 +74,11 @@ namespace Biblo.GUI
 
         private void btnMiPerfil_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<verAutores>();
+            General.GUI.LectorEdicion f = new General.GUI.LectorEdicion();
+            //f.MdiParent = this;
+            f.Show();
+
+            //AbrirFormulario<verAutores>();
 
             /*if (oSesion.VerificarPermiso(2))
             {

@@ -155,18 +155,6 @@
     <Compile Include="GUI\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\PrincipalAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\PrincipalAdmin.Designer.cs">
-      <DependentUpon>PrincipalAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\PrincipalLector.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\PrincipalLector.Designer.cs">
-      <DependentUpon>PrincipalLector.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,12 +288,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PrincipalAdmin.resx">
-      <DependentUpon>PrincipalAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PrincipalLector.resx">
-      <DependentUpon>PrincipalLector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>

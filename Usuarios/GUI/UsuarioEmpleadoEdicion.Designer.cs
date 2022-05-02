@@ -1,6 +1,6 @@
-﻿namespace Biblo.GUI
+﻿namespace Usuarios.GUI
 {
-    partial class agregarUsuariosEmpleados
+    partial class UsuarioEmpleadoEdicion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agregarUsuariosEmpleados));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioEmpleadoEdicion));
             this.txbClave = new System.Windows.Forms.TextBox();
             this.txbUsuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txbIdUsuarioEmp = new System.Windows.Forms.TextBox();
+            this.txbIdUsuario = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -47,6 +48,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txbIdRol = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // txbClave
@@ -89,14 +92,14 @@
             this.label2.TabIndex = 173;
             this.label2.Text = "Usuario:";
             // 
-            // txbIdUsuarioEmp
+            // txbIdUsuario
             // 
-            this.txbIdUsuarioEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdUsuarioEmp.Location = new System.Drawing.Point(198, 117);
-            this.txbIdUsuarioEmp.Name = "txbIdUsuarioEmp";
-            this.txbIdUsuarioEmp.ReadOnly = true;
-            this.txbIdUsuarioEmp.Size = new System.Drawing.Size(139, 26);
-            this.txbIdUsuarioEmp.TabIndex = 172;
+            this.txbIdUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIdUsuario.Location = new System.Drawing.Point(198, 117);
+            this.txbIdUsuario.Name = "txbIdUsuario";
+            this.txbIdUsuario.ReadOnly = true;
+            this.txbIdUsuario.Size = new System.Drawing.Size(139, 26);
+            this.txbIdUsuario.TabIndex = 172;
             // 
             // label12
             // 
@@ -153,6 +156,7 @@
             this.btnCancelar.TabIndex = 168;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -171,6 +175,7 @@
             this.btnGuardar.TabIndex = 167;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // cmbEstado
             // 
@@ -195,7 +200,7 @@
             // 
             // dtFechaCreacion
             // 
-            this.dtFechaCreacion.CustomFormat = "dd/MM/yyyy";
+            this.dtFechaCreacion.CustomFormat = "";
             this.dtFechaCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtFechaCreacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFechaCreacion.Location = new System.Drawing.Point(294, 277);
@@ -257,7 +262,12 @@
             this.label6.TabIndex = 187;
             this.label6.Text = "ID de Rol:";
             // 
-            // agregarUsuariosEmpleados
+            // Notificador
+            // 
+            this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Notificador.ContainerControl = this;
+            // 
+            // UsuariosEmpleadosEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -275,7 +285,7 @@
             this.Controls.Add(this.txbUsuario);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txbIdUsuarioEmp);
+            this.Controls.Add(this.txbIdUsuario);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
@@ -284,8 +294,9 @@
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "agregarUsuariosEmpleados";
+            this.Name = "UsuariosEmpleadosEdicion";
             this.Text = "agregarUsuariosEmpleados";
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +308,7 @@
         private System.Windows.Forms.TextBox txbUsuario;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbIdUsuarioEmp;
+        private System.Windows.Forms.TextBox txbIdUsuario;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
@@ -311,5 +322,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txbIdRol;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }

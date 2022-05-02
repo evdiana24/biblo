@@ -1,6 +1,6 @@
-﻿namespace Biblo.GUI
+﻿namespace Usuarios.GUI
 {
-    partial class agregarUsuariosLectores
+    partial class UsuarioLectorEdicion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agregarUsuariosLectores));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioLectorEdicion));
             this.txbIdRol = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txbIdLector = new System.Windows.Forms.TextBox();
@@ -36,17 +37,21 @@
             this.dtFechaCreacion = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txbClave = new System.Windows.Forms.TextBox();
-            this.txbIdUsuario = new System.Windows.Forms.TextBox();
+            this.txbUsuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txbIdUsuarioLect = new System.Windows.Forms.TextBox();
+            this.txbIdUsuario = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.cmbEstadoLector = new System.Windows.Forms.ComboBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.cmbCarnet = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // txbIdRol
@@ -93,7 +98,7 @@
             // 
             // dtFechaCreacion
             // 
-            this.dtFechaCreacion.CustomFormat = "dd/MM/yyyy";
+            this.dtFechaCreacion.CustomFormat = "";
             this.dtFechaCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtFechaCreacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFechaCreacion.Location = new System.Drawing.Point(267, 278);
@@ -121,13 +126,13 @@
             this.txbClave.Size = new System.Drawing.Size(139, 26);
             this.txbClave.TabIndex = 200;
             // 
-            // txbIdUsuario
+            // txbUsuario
             // 
-            this.txbIdUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbIdUsuario.Location = new System.Drawing.Point(171, 154);
-            this.txbIdUsuario.Name = "txbIdUsuario";
-            this.txbIdUsuario.Size = new System.Drawing.Size(139, 26);
-            this.txbIdUsuario.TabIndex = 199;
+            this.txbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbUsuario.Location = new System.Drawing.Point(171, 154);
+            this.txbUsuario.Name = "txbUsuario";
+            this.txbUsuario.Size = new System.Drawing.Size(139, 26);
+            this.txbUsuario.TabIndex = 199;
             // 
             // label9
             // 
@@ -153,14 +158,14 @@
             this.label2.TabIndex = 197;
             this.label2.Text = "Usuario:";
             // 
-            // txbIdUsuarioLect
+            // txbIdUsuario
             // 
-            this.txbIdUsuarioLect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdUsuarioLect.Location = new System.Drawing.Point(171, 115);
-            this.txbIdUsuarioLect.Name = "txbIdUsuarioLect";
-            this.txbIdUsuarioLect.ReadOnly = true;
-            this.txbIdUsuarioLect.Size = new System.Drawing.Size(139, 26);
-            this.txbIdUsuarioLect.TabIndex = 196;
+            this.txbIdUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIdUsuario.Location = new System.Drawing.Point(171, 115);
+            this.txbIdUsuario.Name = "txbIdUsuario";
+            this.txbIdUsuario.ReadOnly = true;
+            this.txbIdUsuario.Size = new System.Drawing.Size(139, 26);
+            this.txbIdUsuario.TabIndex = 196;
             // 
             // label12
             // 
@@ -217,6 +222,7 @@
             this.btnCancelar.TabIndex = 192;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -235,15 +241,16 @@
             this.btnGuardar.TabIndex = 191;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // cmbEstadoLector
+            // cmbEstado
             // 
-            this.cmbEstadoLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbEstadoLector.FormattingEnabled = true;
-            this.cmbEstadoLector.Location = new System.Drawing.Point(171, 238);
-            this.cmbEstadoLector.Name = "cmbEstadoLector";
-            this.cmbEstadoLector.Size = new System.Drawing.Size(139, 28);
-            this.cmbEstadoLector.TabIndex = 190;
+            this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Location = new System.Drawing.Point(171, 238);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(139, 28);
+            this.cmbEstado.TabIndex = 190;
             // 
             // label4
             // 
@@ -253,11 +260,37 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(52, 238);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 23);
+            this.label4.Size = new System.Drawing.Size(77, 23);
             this.label4.TabIndex = 189;
-            this.label4.Text = "Estado :";
+            this.label4.Text = "Estado:";
             // 
-            // agregarUsuariosLectores
+            // cmbCarnet
+            // 
+            this.cmbCarnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbCarnet.FormattingEnabled = true;
+            this.cmbCarnet.Location = new System.Drawing.Point(459, 238);
+            this.cmbCarnet.Name = "cmbCarnet";
+            this.cmbCarnet.Size = new System.Drawing.Size(139, 28);
+            this.cmbCarnet.TabIndex = 208;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(340, 238);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 23);
+            this.label7.TabIndex = 207;
+            this.label7.Text = "Carnet:";
+            // 
+            // Notificador
+            // 
+            this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Notificador.ContainerControl = this;
+            // 
+            // UsuarioLectorEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -265,6 +298,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(640, 469);
+            this.Controls.Add(this.cmbCarnet);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txbIdRol);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txbIdLector);
@@ -272,20 +307,21 @@
             this.Controls.Add(this.dtFechaCreacion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbClave);
-            this.Controls.Add(this.txbIdUsuario);
+            this.Controls.Add(this.txbUsuario);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txbIdUsuarioLect);
+            this.Controls.Add(this.txbIdUsuario);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.cmbEstadoLector);
+            this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "agregarUsuariosLectores";
+            this.Name = "UsuarioLectorEdicion";
             this.Text = "agregarUsuariosLectores";
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,16 +336,19 @@
         private System.Windows.Forms.DateTimePicker dtFechaCreacion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txbClave;
-        private System.Windows.Forms.TextBox txbIdUsuario;
+        private System.Windows.Forms.TextBox txbUsuario;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbIdUsuarioLect;
+        private System.Windows.Forms.TextBox txbIdUsuario;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ComboBox cmbEstadoLector;
+        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbCarnet;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }

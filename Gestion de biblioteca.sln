@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblo", "Biblo\Biblo.csproj", "{5F47D252-E14A-4D57-8A43-31B098652E6C}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionManager", "SessionManager\SessionManager.csproj", "{D457EBFD-6D9A-4FEA-BE01-1B8C5AE08F6B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General", "General\General.csproj", "{0633C326-B44D-439B-BBD4-1BC7BFD90F98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usuarios", "Usuarios\Usuarios.csproj", "{BE4F7CBE-52ED-44EC-8990-5C721DB624B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0633C326-B44D-439B-BBD4-1BC7BFD90F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0633C326-B44D-439B-BBD4-1BC7BFD90F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0633C326-B44D-439B-BBD4-1BC7BFD90F98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE4F7CBE-52ED-44EC-8990-5C721DB624B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE4F7CBE-52ED-44EC-8990-5C721DB624B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE4F7CBE-52ED-44EC-8990-5C721DB624B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE4F7CBE-52ED-44EC-8990-5C721DB624B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

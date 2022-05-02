@@ -74,7 +74,7 @@ namespace Biblo.GUI
 
         private void btnMiPerfil_Click(object sender, EventArgs e)
         {
-            General.GUI.LectorEdicion f = new General.GUI.LectorEdicion();
+            Usuarios.GUI.UsuarioLectorEdicion f = new Usuarios.GUI.UsuarioLectorEdicion();
             //f.MdiParent = this;
             f.Show();
 

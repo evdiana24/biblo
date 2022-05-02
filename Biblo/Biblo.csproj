@@ -77,18 +77,6 @@
     <Compile Include="GUI\agregarPrestamos.Designer.cs">
       <DependentUpon>agregarPrestamos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\agregarUsuariosEmpleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\agregarUsuariosEmpleados.Designer.cs">
-      <DependentUpon>agregarUsuariosEmpleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\agregarUsuariosLectores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\agregarUsuariosLectores.Designer.cs">
-      <DependentUpon>agregarUsuariosLectores.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\buscarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,12 +208,6 @@
     <EmbeddedResource Include="GUI\agregarPrestamos.resx">
       <DependentUpon>agregarPrestamos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\agregarUsuariosEmpleados.resx">
-      <DependentUpon>agregarUsuariosEmpleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\agregarUsuariosLectores.resx">
-      <DependentUpon>agregarUsuariosLectores.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\buscarLibro.resx">
       <DependentUpon>buscarLibro.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +300,10 @@
     <ProjectReference Include="..\SessionManager\SessionManager.csproj">
       <Project>{d457ebfd-6d9a-4fea-be01-1b8c5ae08f6b}</Project>
       <Name>SessionManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Usuarios\Usuarios.csproj">
+      <Project>{be4f7cbe-52ed-44ec-8990-5c721db624b8}</Project>
+      <Name>Usuarios</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

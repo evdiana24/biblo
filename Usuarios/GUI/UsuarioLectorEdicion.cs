@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace General.GUI
+namespace Usuarios.GUI
 {
-    public partial class EmpleadoEdicion : Form
+    public partial class UsuarioLectorEdicion : Form
     {
         private void Procesar()
         {
@@ -19,25 +19,23 @@ namespace General.GUI
                 if (Validar())
                 {
                     //Creamos el objeto entidad
-                    CLS.Empleados oEmpleado = new CLS.Empleados();
+                    CLS.UsuariosLectores oUsuarioLector = new CLS.UsuariosLectores();
 
                     //Sincronizar el objeto con la interfaz
-                    oEmpleado.IdEmpleado = txbIdEmpleado.Text;
-                    oEmpleado.Nombre = txbNombre.Text;
-                    oEmpleado.Fecha_nacimiento = dtFechaNacimiento.Value.Date.ToString("yyyy/MM/dd");
-                    oEmpleado.Dui = txbDUI.Text;
-                    oEmpleado.Nit = txbNIT.Text;
-                    oEmpleado.Genero = cmbGenero.Text;
-                    oEmpleado.Telefono = txbTelefono.Text;
-                    oEmpleado.Correo = txbCorreo.Text;
-                    oEmpleado.Direccion = txbDireccion.Text;
-                    oEmpleado.Fecha_contratacion = dtFechaContratacion.Value.Date.ToString("yyyy/MM/dd");
+                    oUsuarioLector.IDUsuario = txbIdUsuario.Text;
+                    oUsuarioLector.Usuario = txbUsuario.Text;
+                    oUsuarioLector.Clave = txbClave.Text;
+                    oUsuarioLector.Estado = cmbEstado.Text;
+                    oUsuarioLector.Carnet = cmbCarnet.Text;
+                    oUsuarioLector.Fecha_Creacion = dtFechaCreacion.Value.Date.ToString("yyyy/MM/dd");
+                    oUsuarioLector.IDLector = txbIdLector.Text;
+                    oUsuarioLector.IDRol = txbIdRol.Text;
 
                     //Operamos segun sea el caso
-                    if (txbIdEmpleado.TextLength > 0)
+                    if (txbIdUsuario.TextLength > 0)
                     {
                         //Estoy editando
-                        if (oEmpleado.Actualizar())
+                        if (oUsuarioLector.Actualizar())
                         {
                             //Se actualizo correctamente
                             MessageBox.Show("El registro fue actualizado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -52,7 +50,7 @@ namespace General.GUI
                     else
                     {
                         //Estoy insertando un nuevo registro
-                        if (oEmpleado.Guardar())
+                        if (oUsuarioLector.Guardar())
                         {
                             //Se guardo correctamente
                             MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -78,49 +76,39 @@ namespace General.GUI
             try
             {
                 Notificador.Clear();
-                if (txbNombre.TextLength == 0)
+                if (txbUsuario.TextLength == 0)
                 {
-                    Notificador.SetError(txbNombre, "Escriba al menos un nombre");
+                    Notificador.SetError(txbUsuario, "Escriba el nombre de usuario");
                     Validado = false;
                 }
-                if (dtFechaNacimiento.Text.Length == 0)
+                if (txbClave.TextLength == 0)
                 {
-                    Notificador.SetError(dtFechaNacimiento, "Escriba la fecha de nacimiento");
+                    Notificador.SetError(txbClave, "Escriba la contraseña");
                     Validado = false;
                 }
-                if (txbDUI.TextLength == 0)
+                if (cmbEstado.Text.Length == 0)
                 {
-                    Notificador.SetError(txbDUI, "Escriba el número de DUI");
+                    Notificador.SetError(cmbEstado, "Seleccione el estado del usuario");
                     Validado = false;
                 }
-                if (txbNIT.TextLength == 0)
+                if (cmbCarnet.Text.Length == 0)
                 {
-                    Notificador.SetError(txbNIT, "Escriba el número de NIT");
+                    Notificador.SetError(cmbCarnet, "Seleccione si cuenta con un carnet");
                     Validado = false;
                 }
-                if (cmbGenero.Text.Length == 0)
+                if (dtFechaCreacion.Text.Length == 0)
                 {
-                    Notificador.SetError(cmbGenero, "Seleccione su género");
+                    Notificador.SetError(dtFechaCreacion, "Seleccione la fecha de creación del usuario");
                     Validado = false;
                 }
-                if (txbTelefono.TextLength == 0)
+                if (txbIdLector.Text.Length == 0)
                 {
-                    Notificador.SetError(txbTelefono, "Escriba el número de teléfono");
+                    Notificador.SetError(txbIdLector, "Seleccione el ID del lector");
                     Validado = false;
                 }
-                if (txbCorreo.TextLength == 0)
+                if (txbIdRol.TextLength == 0)
                 {
-                    Notificador.SetError(txbCorreo, "Escriba el correo electrónico");
-                    Validado = false;
-                }
-                if (txbDireccion.TextLength == 0)
-                {
-                    Notificador.SetError(txbDireccion, "Escriaba la dirección");
-                    Validado = false;
-                }
-                if (dtFechaContratacion.Text.Length == 0)
-                {
-                    Notificador.SetError(dtFechaNacimiento, "Seleccione la fecha de contratación");
+                    Notificador.SetError(txbIdRol, "Escriba el ID del rol");
                     Validado = false;
                 }
             }
@@ -131,7 +119,7 @@ namespace General.GUI
             return Validado;
         }
 
-        public EmpleadoEdicion()
+        public UsuarioLectorEdicion()
         {
             InitializeComponent();
         }

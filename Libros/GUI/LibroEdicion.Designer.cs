@@ -1,6 +1,6 @@
-﻿namespace Biblo.GUI
+﻿namespace Libros.GUI
 {
-    partial class AgregarLibro
+    partial class LibroEdicion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarLibro));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibroEdicion));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txbIdLibro = new System.Windows.Forms.TextBox();
@@ -43,6 +44,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txbEdicion = new System.Windows.Forms.TextBox();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -62,6 +65,7 @@
             this.btnCancelar.TabIndex = 138;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -80,6 +84,7 @@
             this.btnGuardar.TabIndex = 137;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txbIdLibro
             // 
@@ -208,7 +213,12 @@
             this.txbEdicion.Size = new System.Drawing.Size(129, 26);
             this.txbEdicion.TabIndex = 152;
             // 
-            // AgregarLibro
+            // Notificador
+            // 
+            this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Notificador.ContainerControl = this;
+            // 
+            // LibroEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,8 +242,9 @@
             this.Controls.Add(this.btnGuardar);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AgregarLibro";
+            this.Name = "LibroEdicion";
             this.Text = "AgregarLibro";
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +266,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbEdicion;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }

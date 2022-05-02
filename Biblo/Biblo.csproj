@@ -47,18 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\AppManager.cs" />
-    <Compile Include="GUI\agregarEjemplares.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\agregarEjemplares.Designer.cs">
-      <DependentUpon>agregarEjemplares.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\AgregarLibro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\AgregarLibro.Designer.cs">
-      <DependentUpon>AgregarLibro.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\agregarMoras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,12 +58,6 @@
     </Compile>
     <Compile Include="GUI\agregarPagos.Designer.cs">
       <DependentUpon>agregarPagos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\agregarPrestamos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\agregarPrestamos.Designer.cs">
-      <DependentUpon>agregarPrestamos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\buscarLibro.cs">
       <SubType>Form</SubType>
@@ -193,20 +175,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\agregarEjemplares.resx">
-      <DependentUpon>agregarEjemplares.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\AgregarLibro.resx">
-      <DependentUpon>AgregarLibro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\agregarMoras.resx">
       <DependentUpon>agregarMoras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\agregarPagos.resx">
       <DependentUpon>agregarPagos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\agregarPrestamos.resx">
-      <DependentUpon>agregarPrestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\buscarLibro.resx">
       <DependentUpon>buscarLibro.cs</DependentUpon>
@@ -296,6 +269,14 @@
     <ProjectReference Include="..\General\General.csproj">
       <Project>{0633c326-b44d-439b-bbd4-1bc7bfd90f98}</Project>
       <Name>General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libros\Libros.csproj">
+      <Project>{90c385ce-648a-4bc9-a84f-35df00a3ab7b}</Project>
+      <Name>Libros</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prestamos\Prestamos.csproj">
+      <Project>{5de519b6-172f-4210-96e4-296e9974e647}</Project>
+      <Name>Prestamos</Name>
     </ProjectReference>
     <ProjectReference Include="..\SessionManager\SessionManager.csproj">
       <Project>{d457ebfd-6d9a-4fea-be01-1b8c5ae08f6b}</Project>

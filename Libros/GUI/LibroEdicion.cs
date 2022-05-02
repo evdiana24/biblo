@@ -25,7 +25,7 @@ namespace Libros.GUI
                     oLibro.Titulo = txbTitulo.Text;
                     oLibro.Anio_publicacion = txbAnio.Text;
                     oLibro.Edicion = txbEdicion.Text;
-                    oLibro.IdEditorial = txbEditorial.Text;
+                    oLibro.IdEditorial = txbIdEditorial.Text;
 
                     //Operamos segun sea el caso
                     if (txbIdLibro.TextLength > 0)
@@ -87,9 +87,9 @@ namespace Libros.GUI
                     Notificador.SetError(txbEdicion, "Escriba la edición");
                     Validado = false;
                 }
-                if (txbEditorial.TextLength == 0)
+                if (txbIdEditorial.TextLength == 0)
                 {
-                    Notificador.SetError(txbEditorial, "Escriba el ID de la editorial");
+                    Notificador.SetError(txbIdEditorial, "Escriba el ID de la editorial");
                     Validado = false;
                 }
             }
@@ -113,6 +113,24 @@ namespace Libros.GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GUI.LibrosGestion f = new LibrosGestion();
+                f.ShowDialog();
+                if (f.Seleccionado)
+                {
+                    txbIdLibro.Text = f.IDLibroSeleccionado;
+                    txbTitulo.Text = f.LibroSeleccionado;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

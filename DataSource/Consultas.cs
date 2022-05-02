@@ -56,6 +56,80 @@ namespace DataSource
 
             return Resultado;
         }
+
+        public static DataTable PERMISOS_DE_UN_ROL(String pIDRol)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT IDOpcion, Opcion, 
+            IFNULL((SELECT IDPermiso FROM permisos z WHERE z.IDROL = " + pIDRol + @" AND z.IDOpcion = a.IDOpcion), 0) IDPermiso,
+            (SELECT COUNT(IDPermiso) FROM permisos z WHERE z.IDROL = " + pIDRol + @" AND z.IDOpcion = a.IDOpcion) Asignado
+            FROM opciones a;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+
+        public static DataTable TODOS_LOS_USUARIOS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT 
+            a.IDUsuario, a.Usuario, a.IDEmpleado, a.IDRol,
+            b.Nombres, b.Apellidos, b.Genero,
+            c.Rol  
+            FROM usuarios a, empleados b, roles c 
+            WHERE a.IDEmpleado=b.IDEmpleado 
+            AND a.IDRol=c.IDRol ORDER BY Apellidos;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+        public static DataTable TODOS_LOS_EMPLEADOS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT IDEmpleado, Nombres, Apellidos, Genero 
+            FROM empleados order by Apellidos, Nombres;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable TODOS_LOS_ROLES()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT IDRol, Rol FROM roles ORDER BY Rol;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
     }
 }
 

@@ -154,11 +154,12 @@
             // cmbEstado
             // 
             this.cmbEstado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
+            "Disponible",
+            "No Disponible"});
             this.cmbEstado.Location = new System.Drawing.Point(208, 301);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(130, 28);

@@ -179,8 +179,12 @@
             // 
             // cmbEstado
             // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Suspendido"});
             this.cmbEstado.Location = new System.Drawing.Point(198, 237);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(139, 28);
@@ -267,7 +271,7 @@
             this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.Notificador.ContainerControl = this;
             // 
-            // UsuariosEmpleadosEdicion
+            // UsuarioEmpleadoEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -294,7 +298,7 @@
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UsuariosEmpleadosEdicion";
+            this.Name = "UsuarioEmpleadoEdicion";
             this.Text = "agregarUsuariosEmpleados";
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);

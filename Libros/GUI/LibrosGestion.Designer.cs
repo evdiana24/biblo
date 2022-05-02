@@ -29,12 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrosGestion));
-            this.dtgVerLibrosAdmin = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Disponibilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgLibrosGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -45,67 +40,35 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.txbFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgVerLibrosAdmin)).BeginInit();
+            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Disponibilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgLibrosGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgVerLibrosAdmin
+            // dtgLibrosGestion
             // 
-            this.dtgVerLibrosAdmin.AllowUserToAddRows = false;
-            this.dtgVerLibrosAdmin.AllowUserToDeleteRows = false;
-            this.dtgVerLibrosAdmin.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgVerLibrosAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgVerLibrosAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgLibrosGestion.AllowUserToAddRows = false;
+            this.dtgLibrosGestion.AllowUserToDeleteRows = false;
+            this.dtgLibrosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dtgLibrosGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgLibrosGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Titulo,
             this.Editorial,
             this.Autor,
             this.Disponibilidad});
-            this.dtgVerLibrosAdmin.Location = new System.Drawing.Point(50, 112);
-            this.dtgVerLibrosAdmin.Name = "dtgVerLibrosAdmin";
-            this.dtgVerLibrosAdmin.ReadOnly = true;
-            this.dtgVerLibrosAdmin.Size = new System.Drawing.Size(708, 412);
-            this.dtgVerLibrosAdmin.TabIndex = 0;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.DataPropertyName = "tID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Titulo
-            // 
-            this.Titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Titulo.DataPropertyName = "tTitulo";
-            this.Titulo.HeaderText = "Titulo";
-            this.Titulo.Name = "Titulo";
-            this.Titulo.ReadOnly = true;
-            // 
-            // Editorial
-            // 
-            this.Editorial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Editorial.DataPropertyName = "tEditorial";
-            this.Editorial.HeaderText = "Editorial";
-            this.Editorial.Name = "Editorial";
-            this.Editorial.ReadOnly = true;
-            // 
-            // Autor
-            // 
-            this.Autor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Autor.DataPropertyName = "tAutor";
-            this.Autor.HeaderText = "Autor";
-            this.Autor.Name = "Autor";
-            this.Autor.ReadOnly = true;
-            // 
-            // Disponibilidad
-            // 
-            this.Disponibilidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Disponibilidad.DataPropertyName = "tDisponibilidad";
-            this.Disponibilidad.HeaderText = "Disponibilidad";
-            this.Disponibilidad.Name = "Disponibilidad";
-            this.Disponibilidad.ReadOnly = true;
+            this.dtgLibrosGestion.Location = new System.Drawing.Point(50, 112);
+            this.dtgLibrosGestion.Name = "dtgLibrosGestion";
+            this.dtgLibrosGestion.ReadOnly = true;
+            this.dtgLibrosGestion.RowHeadersVisible = false;
+            this.dtgLibrosGestion.Size = new System.Drawing.Size(708, 412);
+            this.dtgLibrosGestion.TabIndex = 0;
             // 
             // toolStrip1
             // 
@@ -122,7 +85,9 @@
             this.btnEliminar,
             this.toolStripSeparator4,
             this.txbFiltrar,
-            this.toolStripLabel1});
+            this.toolStripLabel1,
+            this.btnSeleccionar,
+            this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(50, 52);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(2);
@@ -190,6 +155,60 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(53, 32);
             this.toolStripLabel1.Text = "Filtrar";
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
+            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(87, 32);
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 35);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.DataPropertyName = "tID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Titulo
+            // 
+            this.Titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Titulo.DataPropertyName = "tTitulo";
+            this.Titulo.HeaderText = "Titulo";
+            this.Titulo.Name = "Titulo";
+            this.Titulo.ReadOnly = true;
+            // 
+            // Editorial
+            // 
+            this.Editorial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Editorial.DataPropertyName = "tEditorial";
+            this.Editorial.HeaderText = "Editorial";
+            this.Editorial.Name = "Editorial";
+            this.Editorial.ReadOnly = true;
+            // 
+            // Autor
+            // 
+            this.Autor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Autor.DataPropertyName = "tAutor";
+            this.Autor.HeaderText = "Autor";
+            this.Autor.Name = "Autor";
+            this.Autor.ReadOnly = true;
+            // 
+            // Disponibilidad
+            // 
+            this.Disponibilidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Disponibilidad.DataPropertyName = "tDisponibilidad";
+            this.Disponibilidad.HeaderText = "Disponibilidad";
+            this.Disponibilidad.Name = "Disponibilidad";
+            this.Disponibilidad.ReadOnly = true;
+            // 
             // LibrosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,11 +217,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(805, 570);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgVerLibrosAdmin);
+            this.Controls.Add(this.dtgLibrosGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LibrosGestion";
             this.Text = "verLibrosAdministrador";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgVerLibrosAdmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgLibrosGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -211,12 +230,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dtgVerLibrosAdmin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Disponibilidad;
+        private System.Windows.Forms.DataGridView dtgLibrosGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -227,5 +241,12 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripTextBox txbFiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton btnSeleccionar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Disponibilidad;
     }
 }

@@ -245,8 +245,12 @@
             // 
             // cmbEstado
             // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Suspendido"});
             this.cmbEstado.Location = new System.Drawing.Point(171, 238);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(139, 28);
@@ -266,8 +270,12 @@
             // 
             // cmbCarnet
             // 
+            this.cmbCarnet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCarnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbCarnet.FormattingEnabled = true;
+            this.cmbCarnet.Items.AddRange(new object[] {
+            "Verdadero",
+            "Falso"});
             this.cmbCarnet.Location = new System.Drawing.Point(459, 238);
             this.cmbCarnet.Name = "cmbCarnet";
             this.cmbCarnet.Size = new System.Drawing.Size(139, 28);

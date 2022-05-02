@@ -34,7 +34,7 @@
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.btnBarraTitulo = new System.Windows.Forms.Panel();
+            this.panelBarraTitulo = new System.Windows.Forms.Panel();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
-            this.btnBarraTitulo.SuspendLayout();
+            this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -133,20 +133,20 @@
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
-            // btnBarraTitulo
+            // panelBarraTitulo
             // 
-            this.btnBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
-            this.btnBarraTitulo.Controls.Add(this.btnRestaurar);
-            this.btnBarraTitulo.Controls.Add(this.btnMinimizar);
-            this.btnBarraTitulo.Controls.Add(this.btnMaximizar);
-            this.btnBarraTitulo.Controls.Add(this.btnSalir);
-            this.btnBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.btnBarraTitulo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBarraTitulo.Name = "btnBarraTitulo";
-            this.btnBarraTitulo.Size = new System.Drawing.Size(1050, 28);
-            this.btnBarraTitulo.TabIndex = 4;
-            this.btnBarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.btnBarraTitulo_Paint);
+            this.panelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
+            this.panelBarraTitulo.Controls.Add(this.btnRestaurar);
+            this.panelBarraTitulo.Controls.Add(this.btnMinimizar);
+            this.panelBarraTitulo.Controls.Add(this.btnMaximizar);
+            this.panelBarraTitulo.Controls.Add(this.btnSalir);
+            this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelBarraTitulo.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBarraTitulo.Name = "panelBarraTitulo";
+            this.panelBarraTitulo.Size = new System.Drawing.Size(1050, 28);
+            this.panelBarraTitulo.TabIndex = 4;
+            this.panelBarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseMove);
             // 
             // btnMaximizar
             // 
@@ -387,7 +387,7 @@
             this.btnPagos.Text = "PAGOS";
             this.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPagos.UseVisualStyleBackColor = true;
-            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click_1);
+            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
             // 
             // panelPrestamos
             // 
@@ -828,7 +828,6 @@
             this.panelFormularios.Name = "panelFormularios";
             this.panelFormularios.Size = new System.Drawing.Size(805, 570);
             this.panelFormularios.TabIndex = 8;
-            this.panelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormularios_Paint);
             // 
             // Principal
             // 
@@ -838,7 +837,7 @@
             this.ClientSize = new System.Drawing.Size(1050, 598);
             this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnBarraTitulo);
+            this.Controls.Add(this.panelBarraTitulo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
@@ -848,7 +847,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
-            this.btnBarraTitulo.ResumeLayout(false);
+            this.panelBarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -867,7 +866,7 @@
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnSalir;
-        private System.Windows.Forms.Panel btnBarraTitulo;
+        private System.Windows.Forms.Panel panelBarraTitulo;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;

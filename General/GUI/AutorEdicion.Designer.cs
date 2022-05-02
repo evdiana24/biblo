@@ -37,10 +37,12 @@
             this.txbNombreAutor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txbIdAutor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txbIdAutor = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +100,7 @@
             // cmbGenero
             // 
             this.cmbGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Items.AddRange(new object[] {
@@ -112,7 +115,7 @@
             // 
             this.txbNombreAutor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbNombreAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNombreAutor.Location = new System.Drawing.Point(203, 209);
+            this.txbNombreAutor.Location = new System.Drawing.Point(203, 184);
             this.txbNombreAutor.Name = "txbNombreAutor";
             this.txbNombreAutor.Size = new System.Drawing.Size(271, 26);
             this.txbNombreAutor.TabIndex = 89;
@@ -126,9 +129,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(85, 285);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 23);
+            this.label3.Size = new System.Drawing.Size(84, 23);
             this.label3.TabIndex = 88;
-            this.label3.Text = "Género :";
+            this.label3.Text = "Género:";
             // 
             // label2
             // 
@@ -137,20 +140,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(85, 208);
+            this.label2.Location = new System.Drawing.Point(85, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 23);
+            this.label2.Size = new System.Drawing.Size(98, 23);
             this.label2.TabIndex = 87;
-            this.label2.Text = "Nombre :";
-            // 
-            // txbIdAutor
-            // 
-            this.txbIdAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdAutor.Location = new System.Drawing.Point(204, 134);
-            this.txbIdAutor.Name = "txbIdAutor";
-            this.txbIdAutor.ReadOnly = true;
-            this.txbIdAutor.Size = new System.Drawing.Size(129, 26);
-            this.txbIdAutor.TabIndex = 94;
+            this.label2.Text = "Nombres:";
             // 
             // label4
             // 
@@ -182,6 +176,37 @@
             this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.Notificador.ContainerControl = this;
             // 
+            // txbIdAutor
+            // 
+            this.txbIdAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbIdAutor.Location = new System.Drawing.Point(203, 129);
+            this.txbIdAutor.Name = "txbIdAutor";
+            this.txbIdAutor.ReadOnly = true;
+            this.txbIdAutor.Size = new System.Drawing.Size(129, 26);
+            this.txbIdAutor.TabIndex = 97;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(203, 236);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(271, 26);
+            this.textBox1.TabIndex = 99;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(85, 235);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 23);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "Apellidos:";
+            // 
             // AutorEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,9 +215,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(640, 469);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txbIdAutor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txbIdAutor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -219,9 +246,11 @@
         private System.Windows.Forms.TextBox txbNombreAutor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbIdAutor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ErrorProvider Notificador;
+        private System.Windows.Forms.TextBox txbIdAutor;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
     }
 }

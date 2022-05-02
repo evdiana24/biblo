@@ -37,6 +37,7 @@ namespace Biblo.GUI
             }
 
         }
+
         private void hideSubMenu()
         {
             if (panelGeneral.Visible == true)
@@ -74,41 +75,6 @@ namespace Biblo.GUI
             }
         }
 
-        private void btnMiPerfil_Click(object sender, EventArgs e)
-        {
-            Biblo.GUI.misDatos f = new Biblo.GUI.misDatos();
-            //f.MdiParent = this;
-            f.Show();
-
-            //AbrirFormulario<AutoresGestion>();
-
-            /*if (oSesion.VerificarPermiso(2))
-            {
-                AbrirFormulario<verAutores>();
-            }
-            else
-            {
-                btnMiPerfil.Visible = false;
-            }*/
-        }
-
-        
-        private void btnPagos_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelPagos);
-        }
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr Hwnd, int wMsg, int wParam, int lParam);
-
-        private void btnBarraTitulo_Paint(object sender, PaintEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
@@ -120,6 +86,7 @@ namespace Biblo.GUI
                 panelFormularios.Controls.Add(formulario);
                 panelFormularios.Tag = formulario;
                 formulario.Show();
+                formulario.BringToFront();
             }
 
             else
@@ -129,11 +96,13 @@ namespace Biblo.GUI
 
         }
 
-        private void panelFormularios_Paint(object sender, PaintEventArgs e)
+        //MI PERFIL
+        private void btnMiPerfil_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario<misDatos>();
         }
 
+        //GENERAL
         private void btnGeneral_Click(object sender, EventArgs e)
         {
             showSubMenu(panelGeneral);
@@ -141,29 +110,35 @@ namespace Biblo.GUI
 
         private void btnGAutores_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<General.GUI.AutoresGestion>();
             hideSubMenu();
         }
 
         private void btnGCategorias_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<General.GUI.CategoriasGestion>();
             hideSubMenu();
         }
 
         private void btnGEditoriales_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<General.GUI.EditorialesGestion>();
             hideSubMenu();
         }
 
         private void btnGEmpleados_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<General.GUI.EmpleadosGestion>();
             hideSubMenu();
         }
 
         private void btnGLectores_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<General.GUI.LectoresGestion>();
             hideSubMenu();
         }
 
+        //USUARIOS
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             showSubMenu(panelUsuarios);
@@ -171,14 +146,17 @@ namespace Biblo.GUI
 
         private void btnGUsuarios_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<Usuarios.GUI.UsuariosEmpleadosGestion>();
             hideSubMenu();
         }
 
         private void btnGUsuariosLectores_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<Usuarios.GUI.UsuariosLectoresGestion>();
             hideSubMenu();
         }
 
+        //LIBROS
         private void btnLibros_Click(object sender, EventArgs e)
         {
             showSubMenu(panelLibros);
@@ -186,19 +164,23 @@ namespace Biblo.GUI
 
         private void btnGLibros_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<Libros.GUI.LibrosGestion>();
             hideSubMenu();
         }
 
         private void btnGEjemplares_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<Libros.GUI.EjemplaresGestion>();
             hideSubMenu();
         }
 
         private void btnBuscarLibros_Click(object sender, EventArgs e)
         {
+            //AbrirFormulario<Libros.GUI.LibrosGestion>();
             hideSubMenu();
         }
 
+        //PRÉSTAMOS
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
             showSubMenu(panelPrestamos);
@@ -206,49 +188,59 @@ namespace Biblo.GUI
 
         private void btnGPrestamos_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
             hideSubMenu();
         }
 
         private void btnDetallesPrestamos_Click(object sender, EventArgs e)
         {
+            //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
             hideSubMenu();
         }
 
         private void btnMisPrestamos_Click(object sender, EventArgs e)
         {
+            //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
             hideSubMenu();
         }
 
         private void btnRegistrarDev_Click(object sender, EventArgs e)
         {
+            //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
             hideSubMenu();
         }
-
-        private void btnPagos_Click_1(object sender, EventArgs e)
+        
+        //PAGOS
+        private void btnPagos_Click(object sender, EventArgs e)
         {
             showSubMenu(panelPagos);
         }
 
         private void btnMisMoras_Click(object sender, EventArgs e)
         {
+            //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
             hideSubMenu();
         }
 
         private void btnGMoras_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<Pagos.GUI.MorasGestion>();
             hideSubMenu();
         }
 
         private void btnGPagos_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<Pagos.GUI.PagosGestion>();
             hideSubMenu();
         }
 
         private void btnHistorialPagos_Click(object sender, EventArgs e)
         {
+            //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
             hideSubMenu();
         }
 
+        //CERRAR SESION
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
@@ -271,6 +263,17 @@ namespace Biblo.GUI
             this.WindowState = FormWindowState.Maximized;
             btnMaximizar.Visible = false;
             btnRestaurar.Visible = true;
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr Hwnd, int wMsg, int wParam, int lParam);
+
+        private void panelBarraTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

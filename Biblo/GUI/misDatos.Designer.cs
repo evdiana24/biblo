@@ -147,7 +147,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(632, 372);
+            this.ClientSize = new System.Drawing.Size(805, 570);
             this.Controls.Add(this.btnCambiarContra);
             this.Controls.Add(this.txbUsuario);
             this.Controls.Add(this.txbCorreo);

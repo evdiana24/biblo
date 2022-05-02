@@ -47,18 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\AppManager.cs" />
-    <Compile Include="GUI\agregarMoras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\agregarMoras.Designer.cs">
-      <DependentUpon>agregarMoras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\agregarPagos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\agregarPagos.Designer.cs">
-      <DependentUpon>agregarPagos.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\buscarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +71,6 @@
     <Compile Include="GUI\misDatos.Designer.cs">
       <DependentUpon>misDatos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\misPrestamos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\misPrestamos.Designer.cs">
-      <DependentUpon>misPrestamos.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,86 +83,8 @@
     <Compile Include="GUI\Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\verAutores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verAutores.Designer.cs">
-      <DependentUpon>verAutores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verCategoria.Designer.cs">
-      <DependentUpon>verCategoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verEditoriales.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verEditoriales.Designer.cs">
-      <DependentUpon>verEditoriales.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verEjemplares.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verEjemplares.Designer.cs">
-      <DependentUpon>verEjemplares.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verEmpleado.Designer.cs">
-      <DependentUpon>verEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verLectores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verLectores.Designer.cs">
-      <DependentUpon>verLectores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verLibrosAdministrador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verLibrosAdministrador.Designer.cs">
-      <DependentUpon>verLibrosAdministrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verMoras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verMoras.Designer.cs">
-      <DependentUpon>verMoras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verPagos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verPagos.Designer.cs">
-      <DependentUpon>verPagos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verPrestamos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verPrestamos.Designer.cs">
-      <DependentUpon>verPrestamos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verUsuariosEmpleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verUsuariosEmpleados.Designer.cs">
-      <DependentUpon>verUsuariosEmpleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\verUsuariosLectores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\verUsuariosLectores.Designer.cs">
-      <DependentUpon>verUsuariosLectores.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\agregarMoras.resx">
-      <DependentUpon>agregarMoras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\agregarPagos.resx">
-      <DependentUpon>agregarPagos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\buscarLibro.resx">
       <DependentUpon>buscarLibro.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,50 +97,11 @@
     <EmbeddedResource Include="GUI\misDatos.resx">
       <DependentUpon>misDatos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\misPrestamos.resx">
-      <DependentUpon>misPrestamos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verAutores.resx">
-      <DependentUpon>verAutores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verCategoria.resx">
-      <DependentUpon>verCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verEditoriales.resx">
-      <DependentUpon>verEditoriales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verEjemplares.resx">
-      <DependentUpon>verEjemplares.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verEmpleado.resx">
-      <DependentUpon>verEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verLectores.resx">
-      <DependentUpon>verLectores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verLibrosAdministrador.resx">
-      <DependentUpon>verLibrosAdministrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verMoras.resx">
-      <DependentUpon>verMoras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verPagos.resx">
-      <DependentUpon>verPagos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verPrestamos.resx">
-      <DependentUpon>verPrestamos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verUsuariosEmpleados.resx">
-      <DependentUpon>verUsuariosEmpleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\verUsuariosLectores.resx">
-      <DependentUpon>verUsuariosLectores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -273,6 +138,10 @@
     <ProjectReference Include="..\Libros\Libros.csproj">
       <Project>{90c385ce-648a-4bc9-a84f-35df00a3ab7b}</Project>
       <Name>Libros</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pagos\Pagos.csproj">
+      <Project>{a8672bc9-2c26-4d21-9d02-06da36b55c05}</Project>
+      <Name>Pagos</Name>
     </ProjectReference>
     <ProjectReference Include="..\Prestamos\Prestamos.csproj">
       <Project>{5de519b6-172f-4210-96e4-296e9974e647}</Project>

@@ -56,6 +56,18 @@
     <Compile Include="GUI\UsuarioEmpleadoEdicion.Designer.cs">
       <DependentUpon>UsuarioEmpleadoEdicion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UsuariosEmpleadosGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UsuariosEmpleadosGestion.Designer.cs">
+      <DependentUpon>UsuariosEmpleadosGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UsuariosLectoresGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UsuariosLectoresGestion.Designer.cs">
+      <DependentUpon>UsuariosLectoresGestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +83,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UsuarioEmpleadoEdicion.resx">
       <DependentUpon>UsuarioEmpleadoEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UsuariosEmpleadosGestion.resx">
+      <DependentUpon>UsuariosEmpleadosGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UsuariosLectoresGestion.resx">
+      <DependentUpon>UsuariosLectoresGestion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

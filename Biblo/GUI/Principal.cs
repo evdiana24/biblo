@@ -14,6 +14,7 @@ namespace Biblo.GUI
     public partial class Principal : Form
     {
         SessionManager.Sesion oSesion = SessionManager.Sesion.Instance;
+
         public Principal()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace Biblo.GUI
             lblUsuario.Text = oSesion.Usuario;
             lblRol.Text = oSesion.Rol;
         }
+
         private void CustomizeDesign()
         {
             panelGeneral.Visible = false;
@@ -74,11 +76,11 @@ namespace Biblo.GUI
 
         private void btnMiPerfil_Click(object sender, EventArgs e)
         {
-            Prestamos.GUI.PrestamoEdicion f = new Prestamos.GUI.PrestamoEdicion();
+            Biblo.GUI.misDatos f = new Biblo.GUI.misDatos();
             //f.MdiParent = this;
             f.Show();
 
-            //AbrirFormulario<verAutores>();
+            //AbrirFormulario<AutoresGestion>();
 
             /*if (oSesion.VerificarPermiso(2))
             {
@@ -106,6 +108,7 @@ namespace Biblo.GUI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;

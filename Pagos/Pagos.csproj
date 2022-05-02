@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{90C385CE-648A-4BC9-A84F-35DF00A3AB7B}</ProjectGuid>
+    <ProjectGuid>{A8672BC9-2C26-4D21-9D02-06DA36B55C05}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Libros</RootNamespace>
-    <AssemblyName>Libros</AssemblyName>
+    <RootNamespace>Pagos</RootNamespace>
+    <AssemblyName>Pagos</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,46 +42,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CLS\Ejemplares.cs" />
-    <Compile Include="CLS\Libros.cs" />
-    <Compile Include="GUI\EjemplarEdicion.cs">
+    <Compile Include="CLS\Moras.cs" />
+    <Compile Include="CLS\Pagos.cs" />
+    <Compile Include="GUI\PagoEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\EjemplarEdicion.Designer.cs">
-      <DependentUpon>EjemplarEdicion.cs</DependentUpon>
+    <Compile Include="GUI\PagoEdicion.Designer.cs">
+      <DependentUpon>PagoEdicion.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\LibroEdicion.cs">
+    <Compile Include="GUI\MoraEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\LibroEdicion.Designer.cs">
-      <DependentUpon>LibroEdicion.cs</DependentUpon>
+    <Compile Include="GUI\MoraEdicion.Designer.cs">
+      <DependentUpon>MoraEdicion.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\EjemplaresGestion.cs">
+    <Compile Include="GUI\MorasGestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\EjemplaresGestion.Designer.cs">
-      <DependentUpon>EjemplaresGestion.cs</DependentUpon>
+    <Compile Include="GUI\MorasGestion.Designer.cs">
+      <DependentUpon>MorasGestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\LibrosGestion.cs">
+    <Compile Include="GUI\PagosGestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\LibrosGestion.Designer.cs">
-      <DependentUpon>LibrosGestion.cs</DependentUpon>
+    <Compile Include="GUI\PagosGestion.Designer.cs">
+      <DependentUpon>PagosGestion.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI\EjemplarEdicion.resx">
-      <DependentUpon>EjemplarEdicion.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\PagoEdicion.resx">
+      <DependentUpon>PagoEdicion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\LibroEdicion.resx">
-      <DependentUpon>LibroEdicion.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\MoraEdicion.resx">
+      <DependentUpon>MoraEdicion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\EjemplaresGestion.resx">
-      <DependentUpon>EjemplaresGestion.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\MorasGestion.resx">
+      <DependentUpon>MorasGestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\LibrosGestion.resx">
-      <DependentUpon>LibrosGestion.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\PagosGestion.resx">
+      <DependentUpon>PagosGestion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

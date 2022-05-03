@@ -48,9 +48,9 @@ namespace Libros.GUI
                 _DATOS.DataSource = DataSource.Consultas.TODOS_LOS_LIBROS();
                 Filtrar();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                MessageBox.Show("Error al cargar datos");
             }
         }
 
@@ -60,7 +60,7 @@ namespace Libros.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = "titulo LIKE '%" + txbFiltro.Text + "%' OR editorial LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = "Titulo LIKE '%" + txbFiltro.Text + "%' OR Editorial LIKE '%" + txbFiltro.Text + "%'";
                 }
                 else
                 {
@@ -85,10 +85,10 @@ namespace Libros.GUI
         {
             try
             {
-                _IDLibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["tID"].Value.ToString();
-                _LibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["tTitulo"].Value.ToString();
+                _IDLibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["IDLibro"].Value.ToString();
+                _LibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["Titulo"].Value.ToString();
                 _Seleccionado = true;
-                Close();
+                //Close();
             }
             catch(Exception)
             {
@@ -108,7 +108,7 @@ namespace Libros.GUI
                 if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     CLS.Libros oLibro = new CLS.Libros();
-                    oLibro.IdLibro = dtgLibrosGestion.CurrentRow.Cells["tID"].Value.ToString();
+                    oLibro.IdLibro = dtgLibrosGestion.CurrentRow.Cells["IDLibro"].Value.ToString();
                     if (oLibro.Eliminar())
                     {
                         MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -129,15 +129,17 @@ namespace Libros.GUI
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
                 if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     GUI.LibroEdicion f = new LibroEdicion();
-                    f.txbIdLibro.Text = dtgLibrosGestion.CurrentRow.Cells["tID"].Value.ToString();
-                    f.txbNombres.Text = dtgDatos.CurrentRow.Cells["tTitulo"].Value.ToString();
-                    f.txbApellidos.Text = dtgDatos.CurrentRow.Cells["tEditorial"].Value.ToString();
-                    f.cbbGenero.Text = dtgDatos.CurrentRow.Cells["Genero"].Value.ToString();
+                    f.txbIdLibro.Text = dtgLibrosGestion.CurrentRow.Cells["IDLibro"].Value.ToString();
+                    f.txbTitulo.Text = dtgLibrosGestion.CurrentRow.Cells["Titulo"].Value.ToString();
+                    f.txbAnio.Text = dtgLibrosGestion.CurrentRow.Cells["Anio_publicacion"].Value.ToString();
+                    f.txbEdicion.Text = dtgLibrosGestion.CurrentRow.Cells["Edicion"].Value.ToString();
+                    f.txbIdEditorial.Text = dtgLibrosGestion.CurrentRow.Cells["IDEditorial"].Value.ToString();
+                    f.txbEditorial.Text = dtgLibrosGestion.CurrentRow.Cells["Editorial"].Value.ToString();
                     f.ShowDialog();
                     CargarDatos();
                 }
@@ -146,12 +148,31 @@ namespace Libros.GUI
             {
                 MessageBox.Show("Seleccione una fila válida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            }*/
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                GUI.LibroEdicion f = new LibroEdicion();
+                f.ShowDialog();
+                CargarDatos();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void LibrosGestion_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -80,7 +80,7 @@ namespace DataSource
         public static DataTable TODOS_LOS_LIBROS()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, b.editorial 
+            String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, a.idEditorial, b.editorial 
             FROM libros a, editoriales b
             WHERE a.idEditorial = b.idEditorial;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();

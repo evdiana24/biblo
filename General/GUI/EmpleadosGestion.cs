@@ -16,5 +16,10 @@ namespace General.GUI
         {
             InitializeComponent();
         }
+
+        private void dtgBuscarLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -113,7 +113,7 @@
             // 
             this.txbNombres.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNombres.Location = new System.Drawing.Point(234, 170);
+            this.txbNombres.Location = new System.Drawing.Point(234, 168);
             this.txbNombres.Name = "txbNombres";
             this.txbNombres.Size = new System.Drawing.Size(298, 26);
             this.txbNombres.TabIndex = 89;
@@ -138,7 +138,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 173);
+            this.label2.Location = new System.Drawing.Point(40, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(188, 23);
             this.label2.TabIndex = 87;

@@ -291,21 +291,21 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txbIdLibro;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txbIdEditorial;
-        private System.Windows.Forms.TextBox txbAnio;
-        private System.Windows.Forms.TextBox txbTitulo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbEdicion;
         private System.Windows.Forms.ErrorProvider Notificador;
-        private System.Windows.Forms.TextBox txbEditorial;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.TextBox txbIdLibro;
+        public System.Windows.Forms.TextBox txbIdEditorial;
+        public System.Windows.Forms.TextBox txbAnio;
+        public System.Windows.Forms.TextBox txbTitulo;
+        public System.Windows.Forms.TextBox txbEdicion;
+        public System.Windows.Forms.TextBox txbEditorial;
     }
 }

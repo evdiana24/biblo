@@ -22,6 +22,7 @@ namespace Libros.GUI
                     CLS.Libros oLibro = new CLS.Libros();
 
                     //Sincronizar el objeto con la interfaz
+                    oLibro.IdLibro = txbIdLibro.Text;
                     oLibro.Titulo = txbTitulo.Text;
                     oLibro.Anio_publicacion = txbAnio.Text;
                     oLibro.Edicion = txbEdicion.Text;

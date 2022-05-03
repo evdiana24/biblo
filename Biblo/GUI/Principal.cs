@@ -99,7 +99,7 @@ namespace Biblo.GUI
         //MI PERFIL
         private void btnMiPerfil_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Libros.GUI.LibroEdicion>();
+            AbrirFormulario<General.GUI.AutoresGestion>();
         }
 
         //GENERAL

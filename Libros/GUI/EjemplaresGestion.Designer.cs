@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EjemplaresGestion));
             this.dtgEjemplaresGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -59,6 +60,14 @@
             this.dtgEjemplaresGestion.AllowUserToAddRows = false;
             this.dtgEjemplaresGestion.AllowUserToDeleteRows = false;
             this.dtgEjemplaresGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEjemplaresGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgEjemplaresGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgEjemplaresGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idEjemplar,
@@ -215,10 +224,9 @@
             // 
             this.idEjemplar.DataPropertyName = "idEjemplar";
             this.idEjemplar.FillWeight = 142.132F;
-            this.idEjemplar.HeaderText = "ID";
+            this.idEjemplar.HeaderText = "ID Ejemplar";
             this.idEjemplar.Name = "idEjemplar";
             this.idEjemplar.ReadOnly = true;
-            this.idEjemplar.Width = 70;
             // 
             // idLibro
             // 
@@ -227,7 +235,6 @@
             this.idLibro.HeaderText = "ID Libro";
             this.idLibro.Name = "idLibro";
             this.idLibro.ReadOnly = true;
-            this.idLibro.Width = 70;
             // 
             // titulo
             // 

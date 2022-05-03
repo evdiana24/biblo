@@ -60,7 +60,7 @@ namespace Libros.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = "Titulo LIKE '%" + txbFiltro.Text + "%' OR Editorial LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = "titulo LIKE '%" + txbFiltro.Text + "%' OR editorial LIKE '%" + txbFiltro.Text + "%'";
                 }
                 else
                 {
@@ -81,24 +81,42 @@ namespace Libros.GUI
             InitializeComponent();
         }
 
-        private void btnSeleccionar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
-                _IDLibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["IDLibro"].Value.ToString();
-                _LibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["Titulo"].Value.ToString();
-                _Seleccionado = true;
-                //Close();
+                GUI.LibroEdicion f = new LibroEdicion();
+                f.ShowDialog();
+                CargarDatos();
             }
-            catch(Exception)
+            catch (Exception)
             {
-                MessageBox.Show("Error al seleccionar el registro");
+
             }
         }
 
-        private void txbFiltro_TextChanged(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            Filtrar();
+            try
+            {
+                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    GUI.LibroEdicion f = new LibroEdicion();
+                    f.txbIdLibro.Text = dtgLibrosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
+                    f.txbTitulo.Text = dtgLibrosGestion.CurrentRow.Cells["titulo"].Value.ToString();
+                    f.txbAnio.Text = dtgLibrosGestion.CurrentRow.Cells["anio_publicacion"].Value.ToString();
+                    f.txbEdicion.Text = dtgLibrosGestion.CurrentRow.Cells["edicion"].Value.ToString();
+                    f.txbIdEditorial.Text = dtgLibrosGestion.CurrentRow.Cells["idEditorial"].Value.ToString();
+                    f.txbEditorial.Text = dtgLibrosGestion.CurrentRow.Cells["editorial"].Value.ToString();
+                    f.ShowDialog();
+                    CargarDatos();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione una fila válida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -108,7 +126,7 @@ namespace Libros.GUI
                 if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     CLS.Libros oLibro = new CLS.Libros();
-                    oLibro.IdLibro = dtgLibrosGestion.CurrentRow.Cells["IDLibro"].Value.ToString();
+                    oLibro.IdLibro = dtgLibrosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
                     if (oLibro.Eliminar())
                     {
                         MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -127,42 +145,24 @@ namespace Libros.GUI
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    GUI.LibroEdicion f = new LibroEdicion();
-                    f.txbIdLibro.Text = dtgLibrosGestion.CurrentRow.Cells["IDLibro"].Value.ToString();
-                    f.txbTitulo.Text = dtgLibrosGestion.CurrentRow.Cells["Titulo"].Value.ToString();
-                    f.txbAnio.Text = dtgLibrosGestion.CurrentRow.Cells["Anio_publicacion"].Value.ToString();
-                    f.txbEdicion.Text = dtgLibrosGestion.CurrentRow.Cells["Edicion"].Value.ToString();
-                    f.txbIdEditorial.Text = dtgLibrosGestion.CurrentRow.Cells["IDEditorial"].Value.ToString();
-                    f.txbEditorial.Text = dtgLibrosGestion.CurrentRow.Cells["Editorial"].Value.ToString();
-                    f.ShowDialog();
-                    CargarDatos();
-                }
+                _IDLibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
+                _LibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["titulo"].Value.ToString();
+                _Seleccionado = true;
+                //Close();
             }
             catch (Exception)
             {
-                MessageBox.Show("Seleccione una fila válida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                MessageBox.Show("Error al seleccionar el registro");
             }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void txbFiltro_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                GUI.LibroEdicion f = new LibroEdicion();
-                f.ShowDialog();
-                CargarDatos();
-            }
-            catch (Exception)
-            {
-
-            }
+            Filtrar();
         }
 
         private void LibrosGestion_Load(object sender, EventArgs e)

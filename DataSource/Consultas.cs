@@ -76,6 +76,21 @@ namespace DataSource
             return Resultado;
         }
 
+        public static DataTable TODOS_LOS_ROLES()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT IDRol, Rol FROM roles ORDER BY Rol;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
 
         public static DataTable TODOS_LOS_LIBROS()
         {
@@ -95,11 +110,12 @@ namespace DataSource
             return Resultado;
         }
 
-        public static DataTable TODOS_LOS_EMPLEADOS()
+        public static DataTable TODOS_LOS_EJEMPLARES()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT IDEmpleado, Nombres, Apellidos, Genero 
-            FROM empleados order by Apellidos, Nombres;";
+            String Consulta = @"SELECT a.idEjemplar, a.idLibro, b.titulo, a.estado 
+            FROM ejemplares a, libros b
+            WHERE a.idLibro = b.idLibro;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -112,10 +128,80 @@ namespace DataSource
             return Resultado;
         }
 
-        public static DataTable TODOS_LOS_ROLES()
+        public static DataTable TODOS_LOS_AUTORES()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT IDRol, Rol FROM roles ORDER BY Rol;";
+            String Consulta = @"SELECT a.idAutor, a.nombre, a.genero 
+            FROM autores a;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable TODAS_LAS_CATEGORIAS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idCategoria, a.categoria 
+            FROM categorias a;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable TODAS_LAS_EDITORIALES()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idEditorial, a.editorial 
+            FROM editoriales a;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable TODOS_LOS_EMPLEADOS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idEmpleado, a.nombre, a.fecha_nacimiento, a.dui, a.nit, a.genero, a.telefono,
+            a.correo, a.direccion, a.fecha_contratacion 
+            FROM empleados a;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable TODOS_LOS_LECTORES()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idLector, a.nombre, a.fecha_nacimiento, a.correo, a.telefono, a.genero, a.direccion 
+            FROM lectores a;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {

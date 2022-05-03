@@ -113,7 +113,7 @@
             // 
             this.txbNombres.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNombres.Location = new System.Drawing.Point(234, 168);
+            this.txbNombres.Location = new System.Drawing.Point(234, 171);
             this.txbNombres.Name = "txbNombres";
             this.txbNombres.Size = new System.Drawing.Size(298, 26);
             this.txbNombres.TabIndex = 89;
@@ -177,7 +177,7 @@
             // txbIdAutor
             // 
             this.txbIdAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbIdAutor.Location = new System.Drawing.Point(127, 114);
+            this.txbIdAutor.Location = new System.Drawing.Point(128, 119);
             this.txbIdAutor.Name = "txbIdAutor";
             this.txbIdAutor.ReadOnly = true;
             this.txbIdAutor.Size = new System.Drawing.Size(129, 26);
@@ -216,13 +216,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ComboBox cmbGenero;
-        private System.Windows.Forms.TextBox txbNombres;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ErrorProvider Notificador;
-        private System.Windows.Forms.TextBox txbIdAutor;
+        public System.Windows.Forms.ComboBox cmbGenero;
+        public System.Windows.Forms.TextBox txbNombres;
+        public System.Windows.Forms.TextBox txbIdAutor;
     }
 }

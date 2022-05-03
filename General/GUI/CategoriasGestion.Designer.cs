@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriasGestion));
-            this.dtgBuscarLibros = new System.Windows.Forms.DataGridView();
-            this.tIDCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgCategoriasGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -47,41 +46,37 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).BeginInit();
+            this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCategoriasGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgBuscarLibros
+            // dtgCategoriasGestion
             // 
-            this.dtgBuscarLibros.AllowUserToAddRows = false;
-            this.dtgBuscarLibros.AllowUserToDeleteRows = false;
-            this.dtgBuscarLibros.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgBuscarLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBuscarLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tIDCategoria,
-            this.tCategoria});
-            this.dtgBuscarLibros.Location = new System.Drawing.Point(40, 77);
-            this.dtgBuscarLibros.Name = "dtgBuscarLibros";
-            this.dtgBuscarLibros.ReadOnly = true;
-            this.dtgBuscarLibros.RowHeadersVisible = false;
-            this.dtgBuscarLibros.Size = new System.Drawing.Size(841, 412);
-            this.dtgBuscarLibros.TabIndex = 64;
-            // 
-            // tIDCategoria
-            // 
-            this.tIDCategoria.DataPropertyName = "tID";
-            this.tIDCategoria.HeaderText = "ID Categoria";
-            this.tIDCategoria.Name = "tIDCategoria";
-            this.tIDCategoria.ReadOnly = true;
-            // 
-            // tCategoria
-            // 
-            this.tCategoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tCategoria.DataPropertyName = "tCategoria";
-            this.tCategoria.HeaderText = "Categoria";
-            this.tCategoria.Name = "tCategoria";
-            this.tCategoria.ReadOnly = true;
+            this.dtgCategoriasGestion.AllowUserToAddRows = false;
+            this.dtgCategoriasGestion.AllowUserToDeleteRows = false;
+            this.dtgCategoriasGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgCategoriasGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgCategoriasGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgCategoriasGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idCategoria,
+            this.categoria});
+            this.dtgCategoriasGestion.Location = new System.Drawing.Point(40, 77);
+            this.dtgCategoriasGestion.Name = "dtgCategoriasGestion";
+            this.dtgCategoriasGestion.ReadOnly = true;
+            this.dtgCategoriasGestion.RowHeadersVisible = false;
+            this.dtgCategoriasGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgCategoriasGestion.Size = new System.Drawing.Size(841, 412);
+            this.dtgCategoriasGestion.TabIndex = 64;
             // 
             // toolStrip1
             // 
@@ -215,6 +210,21 @@
             this.lblRegistros.Size = new System.Drawing.Size(133, 17);
             this.lblRegistros.Text = "0 Registros Encontrados";
             // 
+            // idCategoria
+            // 
+            this.idCategoria.DataPropertyName = "idCategoria";
+            this.idCategoria.HeaderText = "ID Categoria";
+            this.idCategoria.Name = "idCategoria";
+            this.idCategoria.ReadOnly = true;
+            // 
+            // categoria
+            // 
+            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.categoria.DataPropertyName = "categoria";
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            // 
             // CategoriasGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,12 +235,12 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgBuscarLibros);
+            this.Controls.Add(this.dtgCategoriasGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CategoriasGestion";
             this.Text = "Gestión de categorías";
             this.Load += new System.EventHandler(this.verCategoria_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCategoriasGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -240,7 +250,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgBuscarLibros;
+        private System.Windows.Forms.DataGridView dtgCategoriasGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -253,10 +263,10 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton btnSeleccionar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIDCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tCategoria;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
     }
 }

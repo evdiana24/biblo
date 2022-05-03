@@ -115,7 +115,9 @@ namespace Libros.CLS
                 Sentencia.Append("titulo='" + this._titulo + "',");
                 Sentencia.Append("anio_publicacion='" + this._anio_publicacion + "',");
                 Sentencia.Append("edicion='" + this._edicion + "',");
-                Sentencia.Append("idEditorial" + this._idEditorial + "' WHERE idLibro=" + this._idLibro + ";");
+                Sentencia.Append("idEditorial='" + this._idEditorial + "' ");
+                Sentencia.Append("WHERE idLibro=" + this._idLibro + ";");
+
                 if (operacion.Actualizar(Sentencia.ToString()) > 0)
                 {
                     Resultado = true;

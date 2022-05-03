@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AutoresGestion));
-            this.dtgVerAutores = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgAutoresGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -48,51 +46,39 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgVerAutores)).BeginInit();
+            this.idAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAutoresGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgVerAutores
+            // dtgAutoresGestion
             // 
-            this.dtgVerAutores.AllowUserToAddRows = false;
-            this.dtgVerAutores.AllowUserToDeleteRows = false;
-            this.dtgVerAutores.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgVerAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgVerAutores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Nombre,
-            this.Genero});
-            this.dtgVerAutores.Location = new System.Drawing.Point(40, 77);
-            this.dtgVerAutores.Name = "dtgVerAutores";
-            this.dtgVerAutores.ReadOnly = true;
-            this.dtgVerAutores.RowHeadersVisible = false;
-            this.dtgVerAutores.Size = new System.Drawing.Size(841, 412);
-            this.dtgVerAutores.TabIndex = 1;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.DataPropertyName = "tID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.DataPropertyName = "tNombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Genero
-            // 
-            this.Genero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Genero.DataPropertyName = "tGenero";
-            this.Genero.HeaderText = "Genero";
-            this.Genero.Name = "Genero";
-            this.Genero.ReadOnly = true;
+            this.dtgAutoresGestion.AllowUserToAddRows = false;
+            this.dtgAutoresGestion.AllowUserToDeleteRows = false;
+            this.dtgAutoresGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgAutoresGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgAutoresGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgAutoresGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAutor,
+            this.nombre,
+            this.genero});
+            this.dtgAutoresGestion.Location = new System.Drawing.Point(40, 77);
+            this.dtgAutoresGestion.Name = "dtgAutoresGestion";
+            this.dtgAutoresGestion.ReadOnly = true;
+            this.dtgAutoresGestion.RowHeadersVisible = false;
+            this.dtgAutoresGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgAutoresGestion.Size = new System.Drawing.Size(841, 412);
+            this.dtgAutoresGestion.TabIndex = 1;
             // 
             // toolStrip1
             // 
@@ -226,6 +212,30 @@
             this.lblRegistros.Size = new System.Drawing.Size(133, 17);
             this.lblRegistros.Text = "0 Registros Encontrados";
             // 
+            // idAutor
+            // 
+            this.idAutor.DataPropertyName = "idAutor";
+            this.idAutor.HeaderText = "ID";
+            this.idAutor.Name = "idAutor";
+            this.idAutor.ReadOnly = true;
+            this.idAutor.Width = 150;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // genero
+            // 
+            this.genero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.genero.DataPropertyName = "genero";
+            this.genero.HeaderText = "Género";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
+            // 
             // AutoresGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,11 +246,11 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgVerAutores);
+            this.Controls.Add(this.dtgAutoresGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AutoresGestion";
             this.Text = "Gestión de autores";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgVerAutores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAutoresGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -250,7 +260,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgVerAutores;
+        private System.Windows.Forms.DataGridView dtgAutoresGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -263,11 +273,11 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton btnSeleccionar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAutor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genero;
     }
 }

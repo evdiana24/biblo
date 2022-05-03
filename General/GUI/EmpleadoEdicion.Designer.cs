@@ -379,22 +379,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txbIdEmpleado;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.DateTimePicker dtFechaContratacion;
-        private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
-        private System.Windows.Forms.ComboBox cmbGenero;
-        private System.Windows.Forms.TextBox txbTelefono;
-        private System.Windows.Forms.TextBox txbDUI;
-        private System.Windows.Forms.TextBox txbNIT;
-        private System.Windows.Forms.TextBox txbCorreo;
-        private System.Windows.Forms.TextBox txbDireccion;
-        private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -405,5 +394,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.TextBox txbIdEmpleado;
+        public System.Windows.Forms.DateTimePicker dtFechaContratacion;
+        public System.Windows.Forms.DateTimePicker dtFechaNacimiento;
+        public System.Windows.Forms.ComboBox cmbGenero;
+        public System.Windows.Forms.TextBox txbTelefono;
+        public System.Windows.Forms.TextBox txbDUI;
+        public System.Windows.Forms.TextBox txbNIT;
+        public System.Windows.Forms.TextBox txbCorreo;
+        public System.Windows.Forms.TextBox txbDireccion;
+        public System.Windows.Forms.TextBox txbNombre;
     }
 }

@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditorialesGestion));
-            this.dtgBuscarLibros = new System.Windows.Forms.DataGridView();
-            this.tIdEditorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tEditorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgEditorialesGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -47,42 +46,37 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).BeginInit();
+            this.idEditorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEditorialesGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgBuscarLibros
+            // dtgEditorialesGestion
             // 
-            this.dtgBuscarLibros.AllowUserToAddRows = false;
-            this.dtgBuscarLibros.AllowUserToDeleteRows = false;
-            this.dtgBuscarLibros.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgBuscarLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBuscarLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tIdEditorial,
-            this.tEditorial});
-            this.dtgBuscarLibros.Location = new System.Drawing.Point(40, 77);
-            this.dtgBuscarLibros.Name = "dtgBuscarLibros";
-            this.dtgBuscarLibros.ReadOnly = true;
-            this.dtgBuscarLibros.RowHeadersVisible = false;
-            this.dtgBuscarLibros.Size = new System.Drawing.Size(841, 412);
-            this.dtgBuscarLibros.TabIndex = 72;
-            // 
-            // tIdEditorial
-            // 
-            this.tIdEditorial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tIdEditorial.DataPropertyName = "tID";
-            this.tIdEditorial.HeaderText = "ID Editorial";
-            this.tIdEditorial.Name = "tIdEditorial";
-            this.tIdEditorial.ReadOnly = true;
-            // 
-            // tEditorial
-            // 
-            this.tEditorial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tEditorial.DataPropertyName = "tEditorial";
-            this.tEditorial.HeaderText = "Editorial";
-            this.tEditorial.Name = "tEditorial";
-            this.tEditorial.ReadOnly = true;
+            this.dtgEditorialesGestion.AllowUserToAddRows = false;
+            this.dtgEditorialesGestion.AllowUserToDeleteRows = false;
+            this.dtgEditorialesGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEditorialesGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgEditorialesGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEditorialesGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idEditorial,
+            this.editorial});
+            this.dtgEditorialesGestion.Location = new System.Drawing.Point(40, 77);
+            this.dtgEditorialesGestion.Name = "dtgEditorialesGestion";
+            this.dtgEditorialesGestion.ReadOnly = true;
+            this.dtgEditorialesGestion.RowHeadersVisible = false;
+            this.dtgEditorialesGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgEditorialesGestion.Size = new System.Drawing.Size(841, 412);
+            this.dtgEditorialesGestion.TabIndex = 72;
             // 
             // toolStrip1
             // 
@@ -216,6 +210,22 @@
             this.lblRegistros.Size = new System.Drawing.Size(133, 17);
             this.lblRegistros.Text = "0 Registros Encontrados";
             // 
+            // idEditorial
+            // 
+            this.idEditorial.DataPropertyName = "idEditorial";
+            this.idEditorial.HeaderText = "ID Editorial";
+            this.idEditorial.Name = "idEditorial";
+            this.idEditorial.ReadOnly = true;
+            this.idEditorial.Width = 150;
+            // 
+            // editorial
+            // 
+            this.editorial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.editorial.DataPropertyName = "editorial";
+            this.editorial.HeaderText = "Editorial";
+            this.editorial.Name = "editorial";
+            this.editorial.ReadOnly = true;
+            // 
             // EditorialesGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,11 +236,11 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgBuscarLibros);
+            this.Controls.Add(this.dtgEditorialesGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditorialesGestion";
             this.Text = "verEditoriales";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEditorialesGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -240,7 +250,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgBuscarLibros;
+        private System.Windows.Forms.DataGridView dtgEditorialesGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -251,12 +261,12 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripTextBox txbFiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdEditorial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tEditorial;
         private System.Windows.Forms.ToolStripButton btnSeleccionar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEditorial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn editorial;
     }
 }

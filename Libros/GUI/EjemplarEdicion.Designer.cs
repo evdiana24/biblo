@@ -214,14 +214,14 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txbIdLibro;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txbIdEjemplar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.TextBox txbIdLibro;
+        public System.Windows.Forms.TextBox txbIdEjemplar;
+        public System.Windows.Forms.ComboBox cmbEstado;
     }
 }

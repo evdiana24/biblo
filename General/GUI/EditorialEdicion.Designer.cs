@@ -183,12 +183,12 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txbEditorial;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txbIdEditorial;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.TextBox txbEditorial;
+        public System.Windows.Forms.TextBox txbIdEditorial;
     }
 }

@@ -93,7 +93,7 @@
             // 
             this.txbCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCategoria.Location = new System.Drawing.Point(160, 176);
+            this.txbCategoria.Location = new System.Drawing.Point(160, 182);
             this.txbCategoria.Name = "txbCategoria";
             this.txbCategoria.Size = new System.Drawing.Size(271, 26);
             this.txbCategoria.TabIndex = 102;
@@ -105,7 +105,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(43, 176);
+            this.label2.Location = new System.Drawing.Point(43, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 23);
             this.label2.TabIndex = 101;
@@ -182,12 +182,12 @@
         #endregion
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txbIdCategoria;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txbCategoria;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.TextBox txbIdCategoria;
+        public System.Windows.Forms.TextBox txbCategoria;
     }
 }

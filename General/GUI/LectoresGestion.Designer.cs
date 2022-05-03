@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LectoresGestion));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgBuscarLibros = new System.Windows.Forms.DataGridView();
             this.tIdLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,21 +53,18 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tIdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tDUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tNIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFecha_Contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgLectoresGestion = new System.Windows.Forms.DataGridView();
+            this.idLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgLectoresGestion)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgBuscarLibros
@@ -278,119 +276,98 @@
             this.lblRegistros.Size = new System.Drawing.Size(133, 17);
             this.lblRegistros.Text = "0 Registros Encontrados";
             // 
-            // dataGridView1
+            // dtgLectoresGestion
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tIdEmpleado,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.tDUI,
-            this.tNIT,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.tFecha_Contrato});
-            this.dataGridView1.Location = new System.Drawing.Point(40, 78);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(841, 412);
-            this.dataGridView1.TabIndex = 86;
+            this.dtgLectoresGestion.AllowUserToAddRows = false;
+            this.dtgLectoresGestion.AllowUserToDeleteRows = false;
+            this.dtgLectoresGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgLectoresGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgLectoresGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgLectoresGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idLector,
+            this.nombre,
+            this.fecha_nacimiento,
+            this.correo,
+            this.telefono,
+            this.genero,
+            this.direccion});
+            this.dtgLectoresGestion.Location = new System.Drawing.Point(40, 78);
+            this.dtgLectoresGestion.Name = "dtgLectoresGestion";
+            this.dtgLectoresGestion.ReadOnly = true;
+            this.dtgLectoresGestion.RowHeadersVisible = false;
+            this.dtgLectoresGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgLectoresGestion.Size = new System.Drawing.Size(841, 412);
+            this.dtgLectoresGestion.TabIndex = 86;
             // 
-            // tIdEmpleado
+            // idLector
             // 
-            this.tIdEmpleado.DataPropertyName = "tIdEmpleado";
-            this.tIdEmpleado.FillWeight = 253.8071F;
-            this.tIdEmpleado.HeaderText = "ID";
-            this.tIdEmpleado.Name = "tIdEmpleado";
-            this.tIdEmpleado.ReadOnly = true;
-            this.tIdEmpleado.Width = 35;
+            this.idLector.DataPropertyName = "idLector";
+            this.idLector.FillWeight = 253.8071F;
+            this.idLector.HeaderText = "ID";
+            this.idLector.Name = "idLector";
+            this.idLector.ReadOnly = true;
+            this.idLector.Width = 70;
             // 
-            // dataGridViewTextBoxColumn1
+            // nombre
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "tNombre";
-            this.dataGridViewTextBoxColumn1.FillWeight = 82.91032F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.FillWeight = 82.91032F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // fecha_nacimiento
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "tFecha_Nacimiento";
-            this.dataGridViewTextBoxColumn2.FillWeight = 82.91032F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Fecha Nacimiento";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.fecha_nacimiento.DataPropertyName = "fecha_nacimiento";
+            this.fecha_nacimiento.FillWeight = 82.91032F;
+            this.fecha_nacimiento.HeaderText = "Fecha Nacimiento";
+            this.fecha_nacimiento.Name = "fecha_nacimiento";
+            this.fecha_nacimiento.ReadOnly = true;
+            this.fecha_nacimiento.Width = 80;
             // 
-            // tDUI
+            // correo
             // 
-            this.tDUI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tDUI.DataPropertyName = "tDUI";
-            this.tDUI.FillWeight = 82.91032F;
-            this.tDUI.HeaderText = "DUI";
-            this.tDUI.Name = "tDUI";
-            this.tDUI.ReadOnly = true;
+            this.correo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.correo.DataPropertyName = "correo";
+            this.correo.FillWeight = 82.91032F;
+            this.correo.HeaderText = "Correo";
+            this.correo.Name = "correo";
+            this.correo.ReadOnly = true;
             // 
-            // tNIT
+            // telefono
             // 
-            this.tNIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tNIT.DataPropertyName = "tNIT";
-            this.tNIT.FillWeight = 82.91032F;
-            this.tNIT.HeaderText = "NIT";
-            this.tNIT.Name = "tNIT";
-            this.tNIT.ReadOnly = true;
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.FillWeight = 82.91032F;
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            this.telefono.Width = 80;
             // 
-            // dataGridViewTextBoxColumn3
+            // genero
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "tGenero";
-            this.dataGridViewTextBoxColumn3.FillWeight = 82.91032F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Genero";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.genero.DataPropertyName = "genero";
+            this.genero.FillWeight = 82.91032F;
+            this.genero.HeaderText = "Genero";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
+            this.genero.Width = 80;
             // 
-            // dataGridViewTextBoxColumn4
+            // direccion
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "tTelefono";
-            this.dataGridViewTextBoxColumn4.FillWeight = 82.91032F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "tCorreo";
-            this.dataGridViewTextBoxColumn5.FillWeight = 82.91032F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Correo";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "tDireccion";
-            this.dataGridViewTextBoxColumn6.FillWeight = 82.91032F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Dirección";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // tFecha_Contrato
-            // 
-            this.tFecha_Contrato.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tFecha_Contrato.DataPropertyName = "tFecha_Contrato";
-            this.tFecha_Contrato.FillWeight = 82.91032F;
-            this.tFecha_Contrato.HeaderText = "Fecha de contratación";
-            this.tFecha_Contrato.Name = "tFecha_Contrato";
-            this.tFecha_Contrato.ReadOnly = true;
+            this.direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.FillWeight = 82.91032F;
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
             // 
             // LectoresGestion
             // 
@@ -401,7 +378,7 @@
             this.ClientSize = new System.Drawing.Size(920, 570);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgLectoresGestion);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dtgBuscarLibros);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -412,7 +389,7 @@
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgLectoresGestion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,16 +418,13 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tDUI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tNIT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tFecha_Contrato;
+        private System.Windows.Forms.DataGridView dtgLectoresGestion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLector;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_nacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
     }
 }

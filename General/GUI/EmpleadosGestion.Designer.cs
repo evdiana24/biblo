@@ -29,17 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpleadosGestion));
-            this.dtgBuscarLibros = new System.Windows.Forms.DataGridView();
-            this.tIdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFecha_Nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tDUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tNIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFecha_Contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -55,125 +45,21 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).BeginInit();
+            this.dtgEmpleadosGestion = new System.Windows.Forms.DataGridView();
+            this.idEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dui = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleadosGestion)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dtgBuscarLibros
-            // 
-            this.dtgBuscarLibros.AllowUserToAddRows = false;
-            this.dtgBuscarLibros.AllowUserToDeleteRows = false;
-            this.dtgBuscarLibros.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgBuscarLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBuscarLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tIdEmpleado,
-            this.tNombre,
-            this.tFecha_Nacimiento,
-            this.tDUI,
-            this.tNIT,
-            this.tGenero,
-            this.tTelefono,
-            this.tCorreo,
-            this.tDireccion,
-            this.tFecha_Contrato});
-            this.dtgBuscarLibros.Location = new System.Drawing.Point(40, 77);
-            this.dtgBuscarLibros.Name = "dtgBuscarLibros";
-            this.dtgBuscarLibros.ReadOnly = true;
-            this.dtgBuscarLibros.RowHeadersVisible = false;
-            this.dtgBuscarLibros.Size = new System.Drawing.Size(841, 412);
-            this.dtgBuscarLibros.TabIndex = 8;
-            this.dtgBuscarLibros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgBuscarLibros_CellContentClick);
-            // 
-            // tIdEmpleado
-            // 
-            this.tIdEmpleado.DataPropertyName = "tIdEmpleado";
-            this.tIdEmpleado.FillWeight = 253.8071F;
-            this.tIdEmpleado.HeaderText = "ID";
-            this.tIdEmpleado.Name = "tIdEmpleado";
-            this.tIdEmpleado.ReadOnly = true;
-            this.tIdEmpleado.Width = 35;
-            // 
-            // tNombre
-            // 
-            this.tNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tNombre.DataPropertyName = "tNombre";
-            this.tNombre.FillWeight = 82.91032F;
-            this.tNombre.HeaderText = "Nombre";
-            this.tNombre.Name = "tNombre";
-            this.tNombre.ReadOnly = true;
-            // 
-            // tFecha_Nacimiento
-            // 
-            this.tFecha_Nacimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tFecha_Nacimiento.DataPropertyName = "tFecha_Nacimiento";
-            this.tFecha_Nacimiento.FillWeight = 82.91032F;
-            this.tFecha_Nacimiento.HeaderText = "Fecha Nacimiento";
-            this.tFecha_Nacimiento.Name = "tFecha_Nacimiento";
-            this.tFecha_Nacimiento.ReadOnly = true;
-            // 
-            // tDUI
-            // 
-            this.tDUI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tDUI.DataPropertyName = "tDUI";
-            this.tDUI.FillWeight = 82.91032F;
-            this.tDUI.HeaderText = "DUI";
-            this.tDUI.Name = "tDUI";
-            this.tDUI.ReadOnly = true;
-            // 
-            // tNIT
-            // 
-            this.tNIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tNIT.DataPropertyName = "tNIT";
-            this.tNIT.FillWeight = 82.91032F;
-            this.tNIT.HeaderText = "NIT";
-            this.tNIT.Name = "tNIT";
-            this.tNIT.ReadOnly = true;
-            // 
-            // tGenero
-            // 
-            this.tGenero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tGenero.DataPropertyName = "tGenero";
-            this.tGenero.FillWeight = 82.91032F;
-            this.tGenero.HeaderText = "Genero";
-            this.tGenero.Name = "tGenero";
-            this.tGenero.ReadOnly = true;
-            // 
-            // tTelefono
-            // 
-            this.tTelefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tTelefono.DataPropertyName = "tTelefono";
-            this.tTelefono.FillWeight = 82.91032F;
-            this.tTelefono.HeaderText = "Telefono";
-            this.tTelefono.Name = "tTelefono";
-            this.tTelefono.ReadOnly = true;
-            // 
-            // tCorreo
-            // 
-            this.tCorreo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tCorreo.DataPropertyName = "tCorreo";
-            this.tCorreo.FillWeight = 82.91032F;
-            this.tCorreo.HeaderText = "Correo";
-            this.tCorreo.Name = "tCorreo";
-            this.tCorreo.ReadOnly = true;
-            // 
-            // tDireccion
-            // 
-            this.tDireccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tDireccion.DataPropertyName = "tDireccion";
-            this.tDireccion.FillWeight = 82.91032F;
-            this.tDireccion.HeaderText = "Dirección";
-            this.tDireccion.Name = "tDireccion";
-            this.tDireccion.ReadOnly = true;
-            // 
-            // tFecha_Contrato
-            // 
-            this.tFecha_Contrato.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tFecha_Contrato.DataPropertyName = "tFecha_Contrato";
-            this.tFecha_Contrato.FillWeight = 82.91032F;
-            this.tFecha_Contrato.HeaderText = "Fecha de contratación";
-            this.tFecha_Contrato.Name = "tFecha_Contrato";
-            this.tFecha_Contrato.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -307,6 +193,129 @@
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // dtgEmpleadosGestion
+            // 
+            this.dtgEmpleadosGestion.AllowUserToAddRows = false;
+            this.dtgEmpleadosGestion.AllowUserToDeleteRows = false;
+            this.dtgEmpleadosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEmpleadosGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgEmpleadosGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEmpleadosGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idEmpleado,
+            this.nombre,
+            this.fecha_nacimiento,
+            this.dui,
+            this.nit,
+            this.genero,
+            this.telefono,
+            this.correo,
+            this.direccion,
+            this.fecha_contrato});
+            this.dtgEmpleadosGestion.Location = new System.Drawing.Point(40, 79);
+            this.dtgEmpleadosGestion.Name = "dtgEmpleadosGestion";
+            this.dtgEmpleadosGestion.ReadOnly = true;
+            this.dtgEmpleadosGestion.RowHeadersVisible = false;
+            this.dtgEmpleadosGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgEmpleadosGestion.Size = new System.Drawing.Size(841, 412);
+            this.dtgEmpleadosGestion.TabIndex = 87;
+            // 
+            // idEmpleado
+            // 
+            this.idEmpleado.DataPropertyName = "idEmpleado";
+            this.idEmpleado.FillWeight = 253.8071F;
+            this.idEmpleado.HeaderText = "ID";
+            this.idEmpleado.Name = "idEmpleado";
+            this.idEmpleado.ReadOnly = true;
+            this.idEmpleado.Width = 40;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.FillWeight = 82.91032F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // fecha_nacimiento
+            // 
+            this.fecha_nacimiento.DataPropertyName = "fecha_nacimiento";
+            this.fecha_nacimiento.FillWeight = 82.91032F;
+            this.fecha_nacimiento.HeaderText = "Fecha Nacimiento";
+            this.fecha_nacimiento.Name = "fecha_nacimiento";
+            this.fecha_nacimiento.ReadOnly = true;
+            this.fecha_nacimiento.Width = 70;
+            // 
+            // dui
+            // 
+            this.dui.DataPropertyName = "dui";
+            this.dui.FillWeight = 82.91032F;
+            this.dui.HeaderText = "DUI";
+            this.dui.Name = "dui";
+            this.dui.ReadOnly = true;
+            this.dui.Width = 70;
+            // 
+            // nit
+            // 
+            this.nit.DataPropertyName = "nit";
+            this.nit.FillWeight = 82.91032F;
+            this.nit.HeaderText = "NIT";
+            this.nit.Name = "nit";
+            this.nit.ReadOnly = true;
+            this.nit.Width = 70;
+            // 
+            // genero
+            // 
+            this.genero.DataPropertyName = "genero";
+            this.genero.FillWeight = 82.91032F;
+            this.genero.HeaderText = "Genero";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
+            this.genero.Width = 70;
+            // 
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.FillWeight = 82.91032F;
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            this.telefono.Width = 70;
+            // 
+            // correo
+            // 
+            this.correo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.correo.DataPropertyName = "correo";
+            this.correo.FillWeight = 82.91032F;
+            this.correo.HeaderText = "Correo";
+            this.correo.Name = "correo";
+            this.correo.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.FillWeight = 82.91032F;
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // fecha_contrato
+            // 
+            this.fecha_contrato.DataPropertyName = "fecha_contrato";
+            this.fecha_contrato.FillWeight = 82.91032F;
+            this.fecha_contrato.HeaderText = "Fecha de contratación";
+            this.fecha_contrato.Name = "fecha_contrato";
+            this.fecha_contrato.ReadOnly = true;
+            this.fecha_contrato.Width = 70;
+            // 
             // EmpleadosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,24 +323,23 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(920, 570);
+            this.Controls.Add(this.dtgEmpleadosGestion);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgBuscarLibros);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmpleadosGestion";
             this.Text = "Gestión de empleados";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleadosGestion)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgBuscarLibros;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -342,20 +350,21 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripTextBox txbFiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tFecha_Nacimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tDUI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tNIT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tGenero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tCorreo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tDireccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tFecha_Contrato;
         private System.Windows.Forms.ToolStripButton btnSeleccionar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.DataGridView dtgEmpleadosGestion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_nacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dui;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_contrato;
     }
 }

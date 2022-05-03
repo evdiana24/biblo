@@ -23,8 +23,8 @@ namespace Prestamos.GUI
 
                     //Sincronizar el objeto con la interfaz
                     oPrestamo.IdPrestamo = txbIdPrestamo.Text;
-                    oPrestamo.IdUsuario_lector = txbIdLector.Text;
-                    oPrestamo.IdUsuario_empleado = txbIdEmpleado.Text;
+                    oPrestamo.IdUsuario_lector = txbIdUsuarioLector.Text;
+                    oPrestamo.IdUsuario_empleado = txbIdUsuarioEmpleado.Text;
                     oPrestamo.Fecha_prestamo = dtFechaPrestamo.Value.Date.ToString("yyyy/MM/dd");
 
                     //Operamos segun sea el caso
@@ -72,14 +72,14 @@ namespace Prestamos.GUI
             try
             {
                 Notificador.Clear();
-                if (txbIdLector.TextLength == 0)
+                if (txbIdUsuarioLector.TextLength == 0)
                 {
-                    Notificador.SetError(txbIdLector, "Escriba el ID del lector");
+                    Notificador.SetError(txbIdUsuarioLector, "Escriba el ID del lector");
                     Validado = false;
                 }
-                if (txbIdEmpleado.Text.Length == 0)
+                if (txbIdUsuarioEmpleado.Text.Length == 0)
                 {
-                    Notificador.SetError(txbIdEmpleado, "Escriba el ID del empleado");
+                    Notificador.SetError(txbIdUsuarioEmpleado, "Escriba el ID del empleado");
                     Validado = false;
                 }
                 if (dtFechaPrestamo.Text.Length == 0)
@@ -108,6 +108,16 @@ namespace Prestamos.GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnBuscarLector_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarEmpleado_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

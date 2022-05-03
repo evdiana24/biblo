@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriasGestion));
             this.dtgBuscarLibros = new System.Windows.Forms.DataGridView();
-            this.tIDCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -42,6 +40,10 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.txbFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tIDCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,23 +60,9 @@
             this.dtgBuscarLibros.Location = new System.Drawing.Point(50, 112);
             this.dtgBuscarLibros.Name = "dtgBuscarLibros";
             this.dtgBuscarLibros.ReadOnly = true;
+            this.dtgBuscarLibros.RowHeadersVisible = false;
             this.dtgBuscarLibros.Size = new System.Drawing.Size(708, 412);
             this.dtgBuscarLibros.TabIndex = 64;
-            // 
-            // tIDCategoria
-            // 
-            this.tIDCategoria.DataPropertyName = "tIDCategoria";
-            this.tIDCategoria.HeaderText = "ID Categoria";
-            this.tIDCategoria.Name = "tIDCategoria";
-            this.tIDCategoria.ReadOnly = true;
-            // 
-            // tCategoria
-            // 
-            this.tCategoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tCategoria.DataPropertyName = "tCategoria";
-            this.tCategoria.HeaderText = "Categoria";
-            this.tCategoria.Name = "tCategoria";
-            this.tCategoria.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -91,7 +79,9 @@
             this.btnEliminar,
             this.toolStripSeparator4,
             this.txbFiltrar,
-            this.toolStripLabel1});
+            this.toolStripLabel1,
+            this.btnSeleccionar,
+            this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(50, 52);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(2);
@@ -159,6 +149,34 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(53, 32);
             this.toolStripLabel1.Text = "Filtrar";
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
+            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(87, 32);
+            this.btnSeleccionar.Text = "Seleccionar";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 35);
+            // 
+            // tIDCategoria
+            // 
+            this.tIDCategoria.DataPropertyName = "tID";
+            this.tIDCategoria.HeaderText = "ID Categoria";
+            this.tIDCategoria.Name = "tIDCategoria";
+            this.tIDCategoria.ReadOnly = true;
+            // 
+            // tCategoria
+            // 
+            this.tCategoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tCategoria.DataPropertyName = "tCategoria";
+            this.tCategoria.HeaderText = "Categoria";
+            this.tCategoria.Name = "tCategoria";
+            this.tCategoria.ReadOnly = true;
+            // 
             // CategoriasGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,8 +199,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dtgBuscarLibros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIDCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tCategoria;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -193,5 +209,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripTextBox txbFiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton btnSeleccionar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tIDCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tCategoria;
     }
 }

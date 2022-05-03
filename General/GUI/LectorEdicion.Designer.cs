@@ -59,7 +59,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(38, 39);
+            this.label1.Location = new System.Drawing.Point(38, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 63);
             this.label1.TabIndex = 138;
@@ -71,7 +71,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(119, 57);
+            this.label11.Location = new System.Drawing.Point(119, 53);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(166, 38);
             this.label11.TabIndex = 137;
@@ -88,7 +88,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(442, 382);
+            this.btnCancelar.Location = new System.Drawing.Point(449, 388);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(153, 41);
             this.btnCancelar.TabIndex = 136;
@@ -107,7 +107,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(273, 382);
+            this.btnGuardar.Location = new System.Drawing.Point(280, 388);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(155, 41);
             this.btnGuardar.TabIndex = 135;
@@ -123,7 +123,7 @@
             this.cmbGenero.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.cmbGenero.Location = new System.Drawing.Point(147, 248);
+            this.cmbGenero.Location = new System.Drawing.Point(148, 254);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(170, 28);
             this.cmbGenero.TabIndex = 132;
@@ -131,7 +131,7 @@
             // txbTelefono
             // 
             this.txbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbTelefono.Location = new System.Drawing.Point(445, 250);
+            this.txbTelefono.Location = new System.Drawing.Point(446, 256);
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.Size = new System.Drawing.Size(157, 26);
             this.txbTelefono.TabIndex = 131;
@@ -139,7 +139,7 @@
             // txbCorreo
             // 
             this.txbCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbCorreo.Location = new System.Drawing.Point(146, 289);
+            this.txbCorreo.Location = new System.Drawing.Point(147, 295);
             this.txbCorreo.Name = "txbCorreo";
             this.txbCorreo.Size = new System.Drawing.Size(303, 26);
             this.txbCorreo.TabIndex = 128;
@@ -147,7 +147,7 @@
             // txbDireccion
             // 
             this.txbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbDireccion.Location = new System.Drawing.Point(146, 207);
+            this.txbDireccion.Location = new System.Drawing.Point(147, 213);
             this.txbDireccion.Name = "txbDireccion";
             this.txbDireccion.Size = new System.Drawing.Size(455, 26);
             this.txbDireccion.TabIndex = 127;
@@ -155,7 +155,7 @@
             // txbNombre
             // 
             this.txbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbNombre.Location = new System.Drawing.Point(232, 170);
+            this.txbNombre.Location = new System.Drawing.Point(229, 170);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(369, 26);
             this.txbNombre.TabIndex = 126;
@@ -166,7 +166,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(41, 210);
+            this.label9.Location = new System.Drawing.Point(42, 216);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 23);
             this.label9.TabIndex = 124;
@@ -178,7 +178,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(42, 289);
+            this.label8.Location = new System.Drawing.Point(43, 295);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 23);
             this.label8.TabIndex = 123;
@@ -190,7 +190,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(347, 250);
+            this.label7.Location = new System.Drawing.Point(348, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 23);
             this.label7.TabIndex = 122;
@@ -202,7 +202,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(42, 250);
+            this.label6.Location = new System.Drawing.Point(43, 256);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 23);
             this.label6.TabIndex = 121;
@@ -214,7 +214,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(42, 333);
+            this.label3.Location = new System.Drawing.Point(43, 339);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 23);
             this.label3.TabIndex = 118;
@@ -226,7 +226,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(41, 170);
+            this.label2.Location = new System.Drawing.Point(38, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 23);
             this.label2.TabIndex = 117;
@@ -235,7 +235,7 @@
             // txbIdLector
             // 
             this.txbIdLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdLector.Location = new System.Drawing.Point(146, 130);
+            this.txbIdLector.Location = new System.Drawing.Point(146, 126);
             this.txbIdLector.Name = "txbIdLector";
             this.txbIdLector.ReadOnly = true;
             this.txbIdLector.Size = new System.Drawing.Size(129, 26);
@@ -248,7 +248,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(41, 130);
+            this.label12.Location = new System.Drawing.Point(41, 126);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(33, 23);
             this.label12.TabIndex = 139;
@@ -259,7 +259,7 @@
             this.dtFechaNacimiento.CustomFormat = "dd/MM/yyyy";
             this.dtFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(279, 331);
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(280, 337);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(170, 26);
             this.dtFechaNacimiento.TabIndex = 159;
@@ -295,9 +295,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LectorEdicion";
-            this.Text = "AgregarLector";
+            this.Text = "Lector";
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

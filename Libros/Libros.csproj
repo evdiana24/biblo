@@ -99,6 +99,14 @@
       <Project>{55ae3030-7e04-4543-937a-7101b9829dd2}</Project>
       <Name>DataManager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataSource\DataSource.csproj">
+      <Project>{42e51e7c-cd09-4528-b6e2-5dd80ffd34f5}</Project>
+      <Name>DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\General\General.csproj">
+      <Project>{0633c326-b44d-439b-bbd4-1bc7bfd90f98}</Project>
+      <Name>General</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

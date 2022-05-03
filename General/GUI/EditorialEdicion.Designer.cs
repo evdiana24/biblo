@@ -53,7 +53,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(412, 344);
+            this.btnCancelar.Location = new System.Drawing.Point(313, 239);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(153, 41);
             this.btnCancelar.TabIndex = 112;
@@ -72,7 +72,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(243, 344);
+            this.btnGuardar.Location = new System.Drawing.Point(144, 239);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(155, 41);
             this.btnGuardar.TabIndex = 111;
@@ -84,7 +84,7 @@
             // 
             this.txbEditorial.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbEditorial.Location = new System.Drawing.Point(211, 264);
+            this.txbEditorial.Location = new System.Drawing.Point(149, 178);
             this.txbEditorial.Name = "txbEditorial";
             this.txbEditorial.Size = new System.Drawing.Size(317, 26);
             this.txbEditorial.TabIndex = 110;
@@ -96,7 +96,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(93, 263);
+            this.label2.Location = new System.Drawing.Point(50, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 23);
             this.label2.TabIndex = 109;
@@ -109,7 +109,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
-            this.label5.Location = new System.Drawing.Point(76, 84);
+            this.label5.Location = new System.Drawing.Point(38, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 63);
             this.label5.TabIndex = 108;
@@ -121,16 +121,16 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(157, 96);
+            this.label4.Location = new System.Drawing.Point(119, 41);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 38);
+            this.label4.Size = new System.Drawing.Size(205, 38);
             this.label4.TabIndex = 107;
-            this.label4.Text = "EDITORIAL";
+            this.label4.Text = "EDITORIALES";
             // 
             // txbIdEditorial
             // 
             this.txbIdEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdEditorial.Location = new System.Drawing.Point(211, 187);
+            this.txbIdEditorial.Location = new System.Drawing.Point(149, 118);
             this.txbIdEditorial.Name = "txbIdEditorial";
             this.txbIdEditorial.ReadOnly = true;
             this.txbIdEditorial.Size = new System.Drawing.Size(129, 26);
@@ -143,7 +143,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(93, 187);
+            this.label1.Location = new System.Drawing.Point(50, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 23);
             this.label1.TabIndex = 105;
@@ -161,7 +161,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(640, 469);
+            this.ClientSize = new System.Drawing.Size(521, 320);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txbEditorial);
@@ -170,9 +170,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txbIdEditorial);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EditorialEdicion";
-            this.Text = "agregarEditorial";
+            this.Text = "Editorial";
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

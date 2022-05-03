@@ -77,16 +77,12 @@ namespace DataSource
         }
 
 
-        public static DataTable TODOS_LOS_USUARIOS()
+        public static DataTable TODOS_LOS_LIBROS()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT 
-            a.IDUsuario, a.Usuario, a.IDEmpleado, a.IDRol,
-            b.Nombres, b.Apellidos, b.Genero,
-            c.Rol  
-            FROM usuarios a, empleados b, roles c 
-            WHERE a.IDEmpleado=b.IDEmpleado 
-            AND a.IDRol=c.IDRol ORDER BY Apellidos;";
+            String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, b.editorial 
+            FROM libros a, editoriales b
+            WHERE a.idEditorial = b.idEditorial;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -98,6 +94,7 @@ namespace DataSource
             }
             return Resultado;
         }
+
         public static DataTable TODOS_LOS_EMPLEADOS()
         {
             DataTable Resultado = new DataTable();

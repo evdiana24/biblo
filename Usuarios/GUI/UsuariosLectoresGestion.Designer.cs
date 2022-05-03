@@ -30,14 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuariosLectoresGestion));
             this.dtgBuscarLibros = new System.Windows.Forms.DataGridView();
-            this.tIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tClave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tCarnet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFecha_Creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tIdLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tIdRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -48,6 +40,15 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.txbFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tCarnet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tFecha_Creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tIdLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tIdRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,6 @@
             this.dtgBuscarLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tIdUsuario,
             this.tUsuario,
-            this.tClave,
             this.tEstado,
             this.tCarnet,
             this.tFecha_Creacion,
@@ -70,72 +70,9 @@
             this.dtgBuscarLibros.Location = new System.Drawing.Point(50, 112);
             this.dtgBuscarLibros.Name = "dtgBuscarLibros";
             this.dtgBuscarLibros.ReadOnly = true;
+            this.dtgBuscarLibros.RowHeadersVisible = false;
             this.dtgBuscarLibros.Size = new System.Drawing.Size(708, 412);
             this.dtgBuscarLibros.TabIndex = 24;
-            // 
-            // tIdUsuario
-            // 
-            this.tIdUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tIdUsuario.DataPropertyName = "tIdUsuario";
-            this.tIdUsuario.HeaderText = "ID Usuario";
-            this.tIdUsuario.Name = "tIdUsuario";
-            this.tIdUsuario.ReadOnly = true;
-            // 
-            // tUsuario
-            // 
-            this.tUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tUsuario.DataPropertyName = "tUsuario";
-            this.tUsuario.HeaderText = "Usuario";
-            this.tUsuario.Name = "tUsuario";
-            this.tUsuario.ReadOnly = true;
-            // 
-            // tClave
-            // 
-            this.tClave.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tClave.DataPropertyName = "tClave";
-            this.tClave.HeaderText = "Clave";
-            this.tClave.Name = "tClave";
-            this.tClave.ReadOnly = true;
-            // 
-            // tEstado
-            // 
-            this.tEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tEstado.DataPropertyName = "tEstado";
-            this.tEstado.HeaderText = "Estado";
-            this.tEstado.Name = "tEstado";
-            this.tEstado.ReadOnly = true;
-            // 
-            // tCarnet
-            // 
-            this.tCarnet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tCarnet.DataPropertyName = "tCarnet";
-            this.tCarnet.HeaderText = "Carnet";
-            this.tCarnet.Name = "tCarnet";
-            this.tCarnet.ReadOnly = true;
-            // 
-            // tFecha_Creacion
-            // 
-            this.tFecha_Creacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tFecha_Creacion.DataPropertyName = "tFecha_Creacion";
-            this.tFecha_Creacion.HeaderText = "Fecha Creación";
-            this.tFecha_Creacion.Name = "tFecha_Creacion";
-            this.tFecha_Creacion.ReadOnly = true;
-            // 
-            // tIdLector
-            // 
-            this.tIdLector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tIdLector.DataPropertyName = "tIdLector";
-            this.tIdLector.HeaderText = "ID Lector";
-            this.tIdLector.Name = "tIdLector";
-            this.tIdLector.ReadOnly = true;
-            // 
-            // tIdRol
-            // 
-            this.tIdRol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tIdRol.DataPropertyName = "tIdRol";
-            this.tIdRol.HeaderText = "ID Rol";
-            this.tIdRol.Name = "tIdRol";
-            this.tIdRol.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -152,7 +89,9 @@
             this.btnEliminar,
             this.toolStripSeparator4,
             this.txbFiltrar,
-            this.toolStripLabel1});
+            this.toolStripLabel1,
+            this.btnSeleccionar,
+            this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(50, 52);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(2);
@@ -220,6 +159,75 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(53, 32);
             this.toolStripLabel1.Text = "Filtrar";
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
+            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(87, 32);
+            this.btnSeleccionar.Text = "Seleccionar";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 35);
+            // 
+            // tIdUsuario
+            // 
+            this.tIdUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tIdUsuario.DataPropertyName = "tIdUsuario";
+            this.tIdUsuario.HeaderText = "ID Usuario";
+            this.tIdUsuario.Name = "tIdUsuario";
+            this.tIdUsuario.ReadOnly = true;
+            // 
+            // tUsuario
+            // 
+            this.tUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tUsuario.DataPropertyName = "tUsuario";
+            this.tUsuario.HeaderText = "Usuario";
+            this.tUsuario.Name = "tUsuario";
+            this.tUsuario.ReadOnly = true;
+            // 
+            // tEstado
+            // 
+            this.tEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tEstado.DataPropertyName = "tEstado";
+            this.tEstado.HeaderText = "Estado";
+            this.tEstado.Name = "tEstado";
+            this.tEstado.ReadOnly = true;
+            // 
+            // tCarnet
+            // 
+            this.tCarnet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tCarnet.DataPropertyName = "tCarnet";
+            this.tCarnet.HeaderText = "Carnet";
+            this.tCarnet.Name = "tCarnet";
+            this.tCarnet.ReadOnly = true;
+            // 
+            // tFecha_Creacion
+            // 
+            this.tFecha_Creacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tFecha_Creacion.DataPropertyName = "tFecha_Creacion";
+            this.tFecha_Creacion.HeaderText = "Fecha Creación";
+            this.tFecha_Creacion.Name = "tFecha_Creacion";
+            this.tFecha_Creacion.ReadOnly = true;
+            // 
+            // tIdLector
+            // 
+            this.tIdLector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tIdLector.DataPropertyName = "tIdLector";
+            this.tIdLector.HeaderText = "ID Lector";
+            this.tIdLector.Name = "tIdLector";
+            this.tIdLector.ReadOnly = true;
+            // 
+            // tIdRol
+            // 
+            this.tIdRol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tIdRol.DataPropertyName = "tIdRol";
+            this.tIdRol.HeaderText = "ID Rol";
+            this.tIdRol.Name = "tIdRol";
+            this.tIdRol.ReadOnly = true;
+            // 
             // UsuariosLectoresGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,14 +249,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dtgBuscarLibros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tClave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tEstado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tCarnet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tFecha_Creacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdLector;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdRol;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -259,5 +259,14 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripTextBox txbFiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tIdUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tEstado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tCarnet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tFecha_Creacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tIdLector;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tIdRol;
+        private System.Windows.Forms.ToolStripButton btnSeleccionar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
     }
 }

@@ -87,7 +87,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(37, 19);
+            this.label1.Location = new System.Drawing.Point(30, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 63);
             this.label1.TabIndex = 162;
@@ -99,7 +99,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(119, 32);
+            this.label11.Location = new System.Drawing.Point(112, 30);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(202, 38);
             this.label11.TabIndex = 161;
@@ -116,7 +116,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(459, 408);
+            this.btnCancelar.Location = new System.Drawing.Point(444, 416);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(153, 41);
             this.btnCancelar.TabIndex = 160;
@@ -135,7 +135,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(290, 408);
+            this.btnGuardar.Location = new System.Drawing.Point(275, 416);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(155, 41);
             this.btnGuardar.TabIndex = 159;
@@ -219,7 +219,7 @@
             // txbNombre
             // 
             this.txbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbNombre.Location = new System.Drawing.Point(234, 132);
+            this.txbNombre.Location = new System.Drawing.Point(234, 131);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(368, 26);
             this.txbNombre.TabIndex = 150;
@@ -326,7 +326,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(43, 135);
+            this.label2.Location = new System.Drawing.Point(43, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 23);
             this.label2.TabIndex = 141;
@@ -344,7 +344,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(640, 469);
+            this.ClientSize = new System.Drawing.Size(645, 493);
             this.Controls.Add(this.txbIdEmpleado);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
@@ -369,9 +369,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EmpleadoEdicion";
-            this.Text = "agregarEmpleado";
+            this.Text = "Empleado";
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

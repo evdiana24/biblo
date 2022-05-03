@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrestamoEdicion));
-            this.txbIdEmpleado = new System.Windows.Forms.TextBox();
-            this.txbIdLector = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txbIdPrestamo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,53 +39,23 @@
             this.dtFechaPrestamo = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnBuscarEmpleado = new System.Windows.Forms.Button();
+            this.btnBuscarLector = new System.Windows.Forms.Button();
+            this.txbUsuarioEmpleado = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txbUsuarioLector = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txbIdUsuarioEmpleado = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txbIdUsuarioLector = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txbIdEmpleado
-            // 
-            this.txbIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbIdEmpleado.Location = new System.Drawing.Point(299, 248);
-            this.txbIdEmpleado.Name = "txbIdEmpleado";
-            this.txbIdEmpleado.Size = new System.Drawing.Size(139, 26);
-            this.txbIdEmpleado.TabIndex = 176;
-            // 
-            // txbIdLector
-            // 
-            this.txbIdLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbIdLector.Location = new System.Drawing.Point(299, 208);
-            this.txbIdLector.Name = "txbIdLector";
-            this.txbIdLector.Size = new System.Drawing.Size(139, 26);
-            this.txbIdLector.TabIndex = 175;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(83, 248);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(210, 23);
-            this.label9.TabIndex = 174;
-            this.label9.Text = "ID Usuario-Empleado:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(82, 208);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 23);
-            this.label2.TabIndex = 173;
-            this.label2.Text = "ID Usuario-Lector:";
             // 
             // txbIdPrestamo
             // 
             this.txbIdPrestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdPrestamo.Location = new System.Drawing.Point(299, 170);
+            this.txbIdPrestamo.Location = new System.Drawing.Point(279, 135);
             this.txbIdPrestamo.Name = "txbIdPrestamo";
             this.txbIdPrestamo.ReadOnly = true;
             this.txbIdPrestamo.Size = new System.Drawing.Size(139, 26);
@@ -102,7 +68,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(83, 170);
+            this.label12.Location = new System.Drawing.Point(66, 135);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(33, 23);
             this.label12.TabIndex = 171;
@@ -115,7 +81,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(70, 81);
+            this.label1.Location = new System.Drawing.Point(53, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 63);
             this.label1.TabIndex = 170;
@@ -127,7 +93,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(151, 93);
+            this.label11.Location = new System.Drawing.Point(134, 58);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(198, 38);
             this.label11.TabIndex = 169;
@@ -144,7 +110,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(418, 350);
+            this.btnCancelar.Location = new System.Drawing.Point(424, 384);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(153, 41);
             this.btnCancelar.TabIndex = 168;
@@ -163,7 +129,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(249, 350);
+            this.btnGuardar.Location = new System.Drawing.Point(255, 384);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(155, 41);
             this.btnGuardar.TabIndex = 167;
@@ -176,7 +142,7 @@
             this.dtFechaPrestamo.CustomFormat = "dd/MM/yyyy";
             this.dtFechaPrestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtFechaPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFechaPrestamo.Location = new System.Drawing.Point(299, 287);
+            this.dtFechaPrestamo.Location = new System.Drawing.Point(279, 331);
             this.dtFechaPrestamo.Name = "dtFechaPrestamo";
             this.dtFechaPrestamo.Size = new System.Drawing.Size(170, 26);
             this.dtFechaPrestamo.TabIndex = 182;
@@ -187,7 +153,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(83, 289);
+            this.label5.Location = new System.Drawing.Point(66, 333);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(200, 23);
             this.label5.TabIndex = 181;
@@ -198,6 +164,110 @@
             this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.Notificador.ContainerControl = this;
             // 
+            // btnBuscarEmpleado
+            // 
+            this.btnBuscarEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarEmpleado.BackgroundImage")));
+            this.btnBuscarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscarEmpleado.Location = new System.Drawing.Point(506, 252);
+            this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
+            this.btnBuscarEmpleado.Size = new System.Drawing.Size(71, 34);
+            this.btnBuscarEmpleado.TabIndex = 196;
+            this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
+            this.btnBuscarEmpleado.Click += new System.EventHandler(this.btnBuscarEmpleado_Click);
+            // 
+            // btnBuscarLector
+            // 
+            this.btnBuscarLector.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarLector.BackgroundImage")));
+            this.btnBuscarLector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscarLector.Location = new System.Drawing.Point(506, 174);
+            this.btnBuscarLector.Name = "btnBuscarLector";
+            this.btnBuscarLector.Size = new System.Drawing.Size(71, 34);
+            this.btnBuscarLector.TabIndex = 195;
+            this.btnBuscarLector.UseVisualStyleBackColor = true;
+            this.btnBuscarLector.Click += new System.EventHandler(this.btnBuscarLector_Click);
+            // 
+            // txbUsuarioEmpleado
+            // 
+            this.txbUsuarioEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbUsuarioEmpleado.Location = new System.Drawing.Point(279, 290);
+            this.txbUsuarioEmpleado.Name = "txbUsuarioEmpleado";
+            this.txbUsuarioEmpleado.Size = new System.Drawing.Size(298, 26);
+            this.txbUsuarioEmpleado.TabIndex = 194;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(66, 293);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(186, 23);
+            this.label7.TabIndex = 193;
+            this.label7.Text = "Usuario empleado:";
+            // 
+            // txbUsuarioLector
+            // 
+            this.txbUsuarioLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbUsuarioLector.Location = new System.Drawing.Point(279, 214);
+            this.txbUsuarioLector.Name = "txbUsuarioLector";
+            this.txbUsuarioLector.Size = new System.Drawing.Size(298, 26);
+            this.txbUsuarioLector.TabIndex = 192;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(65, 217);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(141, 23);
+            this.label6.TabIndex = 191;
+            this.label6.Text = "Usuario lector:";
+            // 
+            // txbIdUsuarioEmpleado
+            // 
+            this.txbIdUsuarioEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbIdUsuarioEmpleado.Location = new System.Drawing.Point(279, 252);
+            this.txbIdUsuarioEmpleado.Name = "txbIdUsuarioEmpleado";
+            this.txbIdUsuarioEmpleado.ReadOnly = true;
+            this.txbIdUsuarioEmpleado.Size = new System.Drawing.Size(139, 26);
+            this.txbIdUsuarioEmpleado.TabIndex = 190;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(66, 255);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 23);
+            this.label3.TabIndex = 189;
+            this.label3.Text = "ID usuario empleado:";
+            // 
+            // txbIdUsuarioLector
+            // 
+            this.txbIdUsuarioLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbIdUsuarioLector.Location = new System.Drawing.Point(279, 177);
+            this.txbIdUsuarioLector.Name = "txbIdUsuarioLector";
+            this.txbIdUsuarioLector.ReadOnly = true;
+            this.txbIdUsuarioLector.Size = new System.Drawing.Size(139, 26);
+            this.txbIdUsuarioLector.TabIndex = 188;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(66, 177);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(162, 23);
+            this.label4.TabIndex = 187;
+            this.label4.Text = "ID usuario lector:";
+            // 
             // PrestamoEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,21 +276,27 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(640, 469);
+            this.Controls.Add(this.btnBuscarEmpleado);
+            this.Controls.Add(this.btnBuscarLector);
+            this.Controls.Add(this.txbUsuarioEmpleado);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txbUsuarioLector);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txbIdUsuarioEmpleado);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txbIdUsuarioLector);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dtFechaPrestamo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txbIdEmpleado);
-            this.Controls.Add(this.txbIdLector);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txbIdPrestamo);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PrestamoEdicion";
-            this.Text = "agregarPrestamos";
+            this.Text = "Préstamo";
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -228,11 +304,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txbIdEmpleado;
-        private System.Windows.Forms.TextBox txbIdLector;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbIdPrestamo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
@@ -242,5 +313,15 @@
         private System.Windows.Forms.DateTimePicker dtFechaPrestamo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ErrorProvider Notificador;
+        private System.Windows.Forms.Button btnBuscarEmpleado;
+        private System.Windows.Forms.Button btnBuscarLector;
+        private System.Windows.Forms.TextBox txbUsuarioEmpleado;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txbUsuarioLector;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txbIdUsuarioEmpleado;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txbIdUsuarioLector;
+        private System.Windows.Forms.Label label4;
     }
 }

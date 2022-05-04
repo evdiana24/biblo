@@ -265,20 +265,20 @@
 
         #endregion
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbEstadoMora;
-        private System.Windows.Forms.TextBox txbTotal;
-        private System.Windows.Forms.TextBox txbIdDetalle;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbIdMora;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ErrorProvider Notificador;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.ComboBox cmbEstadoMora;
+        public System.Windows.Forms.TextBox txbTotal;
+        public System.Windows.Forms.TextBox txbIdDetalle;
+        public System.Windows.Forms.TextBox txbIdMora;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

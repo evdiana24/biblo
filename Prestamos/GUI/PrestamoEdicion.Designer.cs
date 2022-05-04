@@ -304,24 +304,24 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txbIdPrestamo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.DateTimePicker dtFechaPrestamo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ErrorProvider Notificador;
         private System.Windows.Forms.Button btnBuscarEmpleado;
         private System.Windows.Forms.Button btnBuscarLector;
-        private System.Windows.Forms.TextBox txbUsuarioEmpleado;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txbUsuarioLector;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txbIdUsuarioEmpleado;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbIdUsuarioLector;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox txbIdPrestamo;
+        public System.Windows.Forms.DateTimePicker dtFechaPrestamo;
+        public System.Windows.Forms.TextBox txbUsuarioEmpleado;
+        public System.Windows.Forms.TextBox txbUsuarioLector;
+        public System.Windows.Forms.TextBox txbIdUsuarioEmpleado;
+        public System.Windows.Forms.TextBox txbIdUsuarioLector;
     }
 }

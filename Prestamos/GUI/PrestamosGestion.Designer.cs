@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrestamosGestion));
-            this.dtgBuscarLibros = new System.Windows.Forms.DataGridView();
-            this.tIdPrestamos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tIdUsuarioLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tIdUsuarioEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFecha_Prestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgPrestamosGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -49,60 +46,45 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).BeginInit();
+            this.idPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario_lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario_lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_prestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamosGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgBuscarLibros
+            // dtgPrestamosGestion
             // 
-            this.dtgBuscarLibros.AllowUserToAddRows = false;
-            this.dtgBuscarLibros.AllowUserToDeleteRows = false;
-            this.dtgBuscarLibros.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgBuscarLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBuscarLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tIdPrestamos,
-            this.tIdUsuarioLector,
-            this.tIdUsuarioEmpleado,
-            this.tFecha_Prestamo});
-            this.dtgBuscarLibros.Location = new System.Drawing.Point(40, 77);
-            this.dtgBuscarLibros.Name = "dtgBuscarLibros";
-            this.dtgBuscarLibros.ReadOnly = true;
-            this.dtgBuscarLibros.RowHeadersVisible = false;
-            this.dtgBuscarLibros.Size = new System.Drawing.Size(841, 412);
-            this.dtgBuscarLibros.TabIndex = 40;
-            // 
-            // tIdPrestamos
-            // 
-            this.tIdPrestamos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tIdPrestamos.DataPropertyName = "tIdPrestamo";
-            this.tIdPrestamos.HeaderText = "ID Prestamos";
-            this.tIdPrestamos.Name = "tIdPrestamos";
-            this.tIdPrestamos.ReadOnly = true;
-            // 
-            // tIdUsuarioLector
-            // 
-            this.tIdUsuarioLector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tIdUsuarioLector.DataPropertyName = "tIdUsuarioLector";
-            this.tIdUsuarioLector.HeaderText = "ID Usuario Lector";
-            this.tIdUsuarioLector.Name = "tIdUsuarioLector";
-            this.tIdUsuarioLector.ReadOnly = true;
-            // 
-            // tIdUsuarioEmpleado
-            // 
-            this.tIdUsuarioEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tIdUsuarioEmpleado.DataPropertyName = "tIdUsuarioEmpleado";
-            this.tIdUsuarioEmpleado.HeaderText = "ID Usuario Empleado";
-            this.tIdUsuarioEmpleado.Name = "tIdUsuarioEmpleado";
-            this.tIdUsuarioEmpleado.ReadOnly = true;
-            // 
-            // tFecha_Prestamo
-            // 
-            this.tFecha_Prestamo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tFecha_Prestamo.DataPropertyName = "tFecha_Prestamo";
-            this.tFecha_Prestamo.HeaderText = "Fecha Prestamos";
-            this.tFecha_Prestamo.Name = "tFecha_Prestamo";
-            this.tFecha_Prestamo.ReadOnly = true;
+            this.dtgPrestamosGestion.AllowUserToAddRows = false;
+            this.dtgPrestamosGestion.AllowUserToDeleteRows = false;
+            this.dtgPrestamosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPrestamosGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgPrestamosGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPrestamosGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idPrestamo,
+            this.idUsuario_lector,
+            this.usuario_lector,
+            this.idUsuario_empleado,
+            this.usuario_empleado,
+            this.fecha_prestamo});
+            this.dtgPrestamosGestion.Location = new System.Drawing.Point(40, 77);
+            this.dtgPrestamosGestion.Name = "dtgPrestamosGestion";
+            this.dtgPrestamosGestion.ReadOnly = true;
+            this.dtgPrestamosGestion.RowHeadersVisible = false;
+            this.dtgPrestamosGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgPrestamosGestion.Size = new System.Drawing.Size(841, 412);
+            this.dtgPrestamosGestion.TabIndex = 40;
             // 
             // toolStrip1
             // 
@@ -236,6 +218,48 @@
             this.lblRegistros.Size = new System.Drawing.Size(133, 17);
             this.lblRegistros.Text = "0 Registros Encontrados";
             // 
+            // idPrestamo
+            // 
+            this.idPrestamo.DataPropertyName = "idPrestamo";
+            this.idPrestamo.HeaderText = "ID Préstamo";
+            this.idPrestamo.Name = "idPrestamo";
+            this.idPrestamo.ReadOnly = true;
+            // 
+            // idUsuario_lector
+            // 
+            this.idUsuario_lector.DataPropertyName = "idUsuario_lector";
+            this.idUsuario_lector.HeaderText = "ID Usuario Lector";
+            this.idUsuario_lector.Name = "idUsuario_lector";
+            this.idUsuario_lector.ReadOnly = true;
+            // 
+            // usuario_lector
+            // 
+            this.usuario_lector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuario_lector.HeaderText = "Usuario lector";
+            this.usuario_lector.Name = "usuario_lector";
+            this.usuario_lector.ReadOnly = true;
+            // 
+            // idUsuario_empleado
+            // 
+            this.idUsuario_empleado.DataPropertyName = "idUsuario_empleado";
+            this.idUsuario_empleado.HeaderText = "ID Usuario Empleado";
+            this.idUsuario_empleado.Name = "idUsuario_empleado";
+            this.idUsuario_empleado.ReadOnly = true;
+            // 
+            // usuario_empleado
+            // 
+            this.usuario_empleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuario_empleado.HeaderText = "Usuario empleado";
+            this.usuario_empleado.Name = "usuario_empleado";
+            this.usuario_empleado.ReadOnly = true;
+            // 
+            // fecha_prestamo
+            // 
+            this.fecha_prestamo.DataPropertyName = "fecha_prestamo";
+            this.fecha_prestamo.HeaderText = "Fecha Prestamos";
+            this.fecha_prestamo.Name = "fecha_prestamo";
+            this.fecha_prestamo.ReadOnly = true;
+            // 
             // PrestamosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,11 +270,11 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgBuscarLibros);
+            this.Controls.Add(this.dtgPrestamosGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PrestamosGestion";
             this.Text = "verPrestamos";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamosGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -260,11 +284,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgBuscarLibros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdPrestamos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdUsuarioLector;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdUsuarioEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tFecha_Prestamo;
+        private System.Windows.Forms.DataGridView dtgPrestamosGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -280,5 +300,11 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_lector;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuario_lector;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuario_empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_prestamo;
     }
 }

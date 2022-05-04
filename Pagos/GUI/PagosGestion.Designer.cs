@@ -28,14 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PagosGestion));
-            this.dtgBuscarLibros = new System.Windows.Forms.DataGridView();
-            this.tIDPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFecha_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tIdUsuarioLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tIdUsuarioEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgPrestamosGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -51,75 +46,49 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).BeginInit();
+            this.idPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario_lectorr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamosGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgBuscarLibros
+            // dtgPrestamosGestion
             // 
-            this.dtgBuscarLibros.AllowUserToAddRows = false;
-            this.dtgBuscarLibros.AllowUserToDeleteRows = false;
-            this.dtgBuscarLibros.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgBuscarLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBuscarLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tIDPago,
-            this.tDescripcion,
-            this.tFecha_pago,
-            this.tTotal,
-            this.tIdUsuarioLector,
-            this.tIdUsuarioEmpleado});
-            this.dtgBuscarLibros.Location = new System.Drawing.Point(40, 77);
-            this.dtgBuscarLibros.Name = "dtgBuscarLibros";
-            this.dtgBuscarLibros.ReadOnly = true;
-            this.dtgBuscarLibros.RowHeadersVisible = false;
-            this.dtgBuscarLibros.Size = new System.Drawing.Size(841, 412);
-            this.dtgBuscarLibros.TabIndex = 48;
-            // 
-            // tIDPago
-            // 
-            this.tIDPago.DataPropertyName = "tIDPago";
-            this.tIDPago.HeaderText = "ID Pago";
-            this.tIDPago.Name = "tIDPago";
-            this.tIDPago.ReadOnly = true;
-            // 
-            // tDescripcion
-            // 
-            this.tDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tDescripcion.DataPropertyName = "tDescripcion";
-            this.tDescripcion.HeaderText = "Descripción";
-            this.tDescripcion.Name = "tDescripcion";
-            this.tDescripcion.ReadOnly = true;
-            // 
-            // tFecha_pago
-            // 
-            this.tFecha_pago.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tFecha_pago.DataPropertyName = "tFecha_pago";
-            this.tFecha_pago.HeaderText = "Fecha Pago";
-            this.tFecha_pago.Name = "tFecha_pago";
-            this.tFecha_pago.ReadOnly = true;
-            // 
-            // tTotal
-            // 
-            this.tTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tTotal.DataPropertyName = "tTotal";
-            this.tTotal.HeaderText = "Total";
-            this.tTotal.Name = "tTotal";
-            this.tTotal.ReadOnly = true;
-            // 
-            // tIdUsuarioLector
-            // 
-            this.tIdUsuarioLector.DataPropertyName = "tIdUsuarioLector";
-            this.tIdUsuarioLector.HeaderText = "ID Usuario Lector";
-            this.tIdUsuarioLector.Name = "tIdUsuarioLector";
-            this.tIdUsuarioLector.ReadOnly = true;
-            // 
-            // tIdUsuarioEmpleado
-            // 
-            this.tIdUsuarioEmpleado.DataPropertyName = "tIDUsuarioEmpleado";
-            this.tIdUsuarioEmpleado.HeaderText = "ID Usuario Empleado";
-            this.tIdUsuarioEmpleado.Name = "tIdUsuarioEmpleado";
-            this.tIdUsuarioEmpleado.ReadOnly = true;
+            this.dtgPrestamosGestion.AllowUserToAddRows = false;
+            this.dtgPrestamosGestion.AllowUserToDeleteRows = false;
+            this.dtgPrestamosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPrestamosGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgPrestamosGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPrestamosGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idPago,
+            this.descripcion,
+            this.fecha_pago,
+            this.total,
+            this.idUsuario_lectorr,
+            this.usuarioLector,
+            this.idUsuario_empleado,
+            this.usuarioEmpleado});
+            this.dtgPrestamosGestion.Location = new System.Drawing.Point(40, 77);
+            this.dtgPrestamosGestion.Name = "dtgPrestamosGestion";
+            this.dtgPrestamosGestion.ReadOnly = true;
+            this.dtgPrestamosGestion.RowHeadersVisible = false;
+            this.dtgPrestamosGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgPrestamosGestion.Size = new System.Drawing.Size(841, 412);
+            this.dtgPrestamosGestion.TabIndex = 48;
             // 
             // toolStrip1
             // 
@@ -254,6 +223,65 @@
             this.lblRegistros.Size = new System.Drawing.Size(133, 17);
             this.lblRegistros.Text = "0 Registros Encontrados";
             // 
+            // idPago
+            // 
+            this.idPago.DataPropertyName = "idPago";
+            this.idPago.HeaderText = "ID Pago";
+            this.idPago.Name = "idPago";
+            this.idPago.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // fecha_pago
+            // 
+            this.fecha_pago.DataPropertyName = "fecha_pago";
+            this.fecha_pago.HeaderText = "Fecha Pago";
+            this.fecha_pago.Name = "fecha_pago";
+            this.fecha_pago.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            // 
+            // idUsuario_lectorr
+            // 
+            this.idUsuario_lectorr.DataPropertyName = "idUsuario_lector";
+            this.idUsuario_lectorr.HeaderText = "ID Usuario Lector";
+            this.idUsuario_lectorr.Name = "idUsuario_lectorr";
+            this.idUsuario_lectorr.ReadOnly = true;
+            // 
+            // usuarioLector
+            // 
+            this.usuarioLector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuarioLector.DataPropertyName = "usuarioLector";
+            this.usuarioLector.HeaderText = "Usuario Lector";
+            this.usuarioLector.Name = "usuarioLector";
+            this.usuarioLector.ReadOnly = true;
+            // 
+            // idUsuario_empleado
+            // 
+            this.idUsuario_empleado.DataPropertyName = "idUsuario_empleado";
+            this.idUsuario_empleado.HeaderText = "ID Usuario Empleado";
+            this.idUsuario_empleado.Name = "idUsuario_empleado";
+            this.idUsuario_empleado.ReadOnly = true;
+            // 
+            // usuarioEmpleado
+            // 
+            this.usuarioEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuarioEmpleado.DataPropertyName = "usuarioEmpleado";
+            this.usuarioEmpleado.HeaderText = "usuarioEmpleado";
+            this.usuarioEmpleado.Name = "usuarioEmpleado";
+            this.usuarioEmpleado.ReadOnly = true;
+            // 
             // PagosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,11 +292,11 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgBuscarLibros);
+            this.Controls.Add(this.dtgPrestamosGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PagosGestion";
             this.Text = "verPagos";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamosGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -278,13 +306,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgBuscarLibros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIDPago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tFecha_pago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdUsuarioLector;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIdUsuarioEmpleado;
+        private System.Windows.Forms.DataGridView dtgPrestamosGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -300,5 +322,13 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_pago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_lectorr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioLector;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioEmpleado;
     }
 }

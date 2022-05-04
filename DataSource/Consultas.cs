@@ -213,6 +213,63 @@ namespace DataSource
             }
             return Resultado;
         }
+
+        public static DataTable TODAS_LAS_MORAS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idMora, a.idDetalle, a.totalMora, a.estado 
+            FROM moras;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable TODOS_LOS_PAGOS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idPago, a.descripcion, a.fecha_pago, a.total, 
+            a.idUsuario_lector, b.usuario, a.idUsuario_empleado, c.usuario
+            FROM pagos a, usuarios_lectores b, usuarios_empleados c
+            WHERE a.idUsuario_lector = b.idUsuario
+            AND a.idUsuario_empleado = c.idUsuario;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable TODOS_LOS_PRESTAMOS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idPrestamo, a.idUsuario_lector, b.usuario, 
+            a.idUsuario_empleado, c.usuario, a.fecha_prestamo
+            FROM prestamos a, usuarios_lectores b, usuarios_empleados c
+            WHERE a.idUsuario_lector = b.idUsuario
+            AND a.idUsuario_empleado = c.idUsuario;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
     }
 }
 

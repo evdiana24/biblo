@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MorasGestion));
-            this.dtgBuscarLibros = new System.Windows.Forms.DataGridView();
-            this.tIDMora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tIDDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tTotalMora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgMorasGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -49,60 +46,41 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).BeginInit();
+            this.idMora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalMora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMorasGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgBuscarLibros
+            // dtgMorasGestion
             // 
-            this.dtgBuscarLibros.AllowUserToAddRows = false;
-            this.dtgBuscarLibros.AllowUserToDeleteRows = false;
-            this.dtgBuscarLibros.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgBuscarLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgBuscarLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tIDMora,
-            this.tIDDetalle,
-            this.tTotalMora,
-            this.tEstado});
-            this.dtgBuscarLibros.Location = new System.Drawing.Point(40, 77);
-            this.dtgBuscarLibros.Name = "dtgBuscarLibros";
-            this.dtgBuscarLibros.ReadOnly = true;
-            this.dtgBuscarLibros.RowHeadersVisible = false;
-            this.dtgBuscarLibros.Size = new System.Drawing.Size(841, 412);
-            this.dtgBuscarLibros.TabIndex = 56;
-            // 
-            // tIDMora
-            // 
-            this.tIDMora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tIDMora.DataPropertyName = "tIDMora";
-            this.tIDMora.HeaderText = "ID Mora";
-            this.tIDMora.Name = "tIDMora";
-            this.tIDMora.ReadOnly = true;
-            // 
-            // tIDDetalle
-            // 
-            this.tIDDetalle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tIDDetalle.DataPropertyName = "tIDDetalle";
-            this.tIDDetalle.HeaderText = "ID Detalle";
-            this.tIDDetalle.Name = "tIDDetalle";
-            this.tIDDetalle.ReadOnly = true;
-            // 
-            // tTotalMora
-            // 
-            this.tTotalMora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tTotalMora.DataPropertyName = "tTotalMora";
-            this.tTotalMora.HeaderText = "Total Mora";
-            this.tTotalMora.Name = "tTotalMora";
-            this.tTotalMora.ReadOnly = true;
-            // 
-            // tEstado
-            // 
-            this.tEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tEstado.DataPropertyName = "tEstado";
-            this.tEstado.HeaderText = "Estado";
-            this.tEstado.Name = "tEstado";
-            this.tEstado.ReadOnly = true;
+            this.dtgMorasGestion.AllowUserToAddRows = false;
+            this.dtgMorasGestion.AllowUserToDeleteRows = false;
+            this.dtgMorasGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgMorasGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgMorasGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgMorasGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idMora,
+            this.idDetalle,
+            this.totalMora,
+            this.estado});
+            this.dtgMorasGestion.Location = new System.Drawing.Point(40, 77);
+            this.dtgMorasGestion.Name = "dtgMorasGestion";
+            this.dtgMorasGestion.ReadOnly = true;
+            this.dtgMorasGestion.RowHeadersVisible = false;
+            this.dtgMorasGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgMorasGestion.Size = new System.Drawing.Size(841, 412);
+            this.dtgMorasGestion.TabIndex = 56;
             // 
             // toolStrip1
             // 
@@ -236,6 +214,38 @@
             this.lblRegistros.Size = new System.Drawing.Size(133, 17);
             this.lblRegistros.Text = "0 Registros Encontrados";
             // 
+            // idMora
+            // 
+            this.idMora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idMora.DataPropertyName = "idMora";
+            this.idMora.HeaderText = "ID Mora";
+            this.idMora.Name = "idMora";
+            this.idMora.ReadOnly = true;
+            // 
+            // idDetalle
+            // 
+            this.idDetalle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDetalle.DataPropertyName = "idDetalle";
+            this.idDetalle.HeaderText = "ID Detalle";
+            this.idDetalle.Name = "idDetalle";
+            this.idDetalle.ReadOnly = true;
+            // 
+            // totalMora
+            // 
+            this.totalMora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.totalMora.DataPropertyName = "totalMora";
+            this.totalMora.HeaderText = "Total Mora";
+            this.totalMora.Name = "totalMora";
+            this.totalMora.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
             // MorasGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,11 +256,11 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgBuscarLibros);
+            this.Controls.Add(this.dtgMorasGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MorasGestion";
             this.Text = "verMoras";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgBuscarLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMorasGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -260,11 +270,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgBuscarLibros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIDMora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tIDDetalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tTotalMora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tEstado;
+        private System.Windows.Forms.DataGridView dtgMorasGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -280,5 +286,9 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDetalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalMora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
     }
 }

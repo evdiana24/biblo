@@ -300,6 +300,7 @@
             this.btnBuscarLector.Size = new System.Drawing.Size(71, 34);
             this.btnBuscarLector.TabIndex = 185;
             this.btnBuscarLector.UseVisualStyleBackColor = true;
+            this.btnBuscarLector.Click += new System.EventHandler(this.btnBuscarLector_Click);
             // 
             // btnBuscarEmpleado
             // 
@@ -310,6 +311,7 @@
             this.btnBuscarEmpleado.Size = new System.Drawing.Size(71, 34);
             this.btnBuscarEmpleado.TabIndex = 186;
             this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
+            this.btnBuscarEmpleado.Click += new System.EventHandler(this.btnBuscarEmpleado_Click);
             // 
             // PagoEdicion
             // 

@@ -120,12 +120,12 @@ namespace Libros.GUI
         {
             try
             {
-                GUI.LibrosGestion f = new LibrosGestion();
+                General.GUI.EditorialesGestion f = new General.GUI.EditorialesGestion();
                 f.ShowDialog();
                 if (f.Seleccionado)
                 {
-                    txbIdLibro.Text = f.IDLibroSeleccionado;
-                    txbTitulo.Text = f.LibroSeleccionado;
+                    txbIdEditorial.Text = f.IDEditorialSeleccionado;
+                    txbEditorial.Text = f.EditorialSeleccionado;
                 }
             }
             catch (Exception)

@@ -9,7 +9,8 @@ namespace General.CLS
     class Empleados
     {
         String _idEmpleado;
-        String _nombre;
+        String _nombres;
+        String _apellidos;
         String _fecha_nacimiento;
         String _dui;
         String _nit;
@@ -32,16 +33,29 @@ namespace General.CLS
             }
         }
 
-        public string Nombre
+        public string Nombres
         {
             get
             {
-                return _nombre;
+                return _nombres;
             }
 
             set
             {
-                _nombre = value;
+                _nombres = value;
+            }
+        }
+
+        public string Apellidos
+        {
+            get
+            {
+                return _apellidos;
+            }
+
+            set
+            {
+                _apellidos = value;
             }
         }
 
@@ -156,8 +170,9 @@ namespace General.CLS
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
             try
             {
-                Sentencia.Append("INSERT INTO empleados(nombre,fecha_nacimiento,dui,nit,genero,telefono,correo,direccion,fecha_contratacion) values(");
-                Sentencia.Append("'" + this._nombre + "',");
+                Sentencia.Append("INSERT INTO empleados(nombres,apellidos,fecha_nacimiento,dui,nit,genero,telefono,correo,direccion,fecha_contratacion) values(");
+                Sentencia.Append("'" + this._nombres + "',");
+                Sentencia.Append("'" + this._apellidos + "',");
                 Sentencia.Append("'" + this._fecha_nacimiento + "',");
                 Sentencia.Append("'" + this._dui + "',");
                 Sentencia.Append("'" + this._nit + "',");
@@ -186,7 +201,8 @@ namespace General.CLS
             try
             {
                 Sentencia.Append("UPDATE empleados SET ");
-                Sentencia.Append("nombre='" + this._nombre + "',");
+                Sentencia.Append("nombres='" + this._nombres + "',");
+                Sentencia.Append("apellidos='" + this._apellidos + "',");
                 Sentencia.Append("fecha_nacimiento='" + this._fecha_nacimiento + "',");
                 Sentencia.Append("dui='" + this._dui + "',");
                 Sentencia.Append("nit='" + this._nit + "',");
@@ -194,7 +210,8 @@ namespace General.CLS
                 Sentencia.Append("telefono='" + this._telefono + "',");
                 Sentencia.Append("correo='" + this._correo + "',");
                 Sentencia.Append("direccion='" + this._direccion + "',");
-                Sentencia.Append("fecha_contratacion" + this._fecha_contratacion + "' WHERE idEmpleado=" + this._idEmpleado + ";");
+                Sentencia.Append("fecha_contratacion='" + this._fecha_contratacion + "' ");
+                Sentencia.Append("WHERE idEmpleado=" + this._idEmpleado + ";");
                 if (operacion.Actualizar(Sentencia.ToString()) > 0)
                 {
                     Resultado = true;

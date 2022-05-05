@@ -112,12 +112,38 @@ namespace Prestamos.GUI
 
         private void btnBuscarLector_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Usuarios.GUI.UsuariosLectoresGestion f = new Usuarios.GUI.UsuariosLectoresGestion();
+                f.ShowDialog();
+                if (f.Seleccionado)
+                {
+                    txbIdUsuarioLector.Text = f.IDUsuarioSeleccionado;
+                    txbUsuarioLector.Text = f.UsuarioSeleccionado;
+                }
+            }
+            catch (Exception)
+            {
 
+            }
         }
 
         private void btnBuscarEmpleado_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Usuarios.GUI.UsuariosEmpleadosGestion f = new Usuarios.GUI.UsuariosEmpleadosGestion();
+                f.ShowDialog();
+                if (f.Seleccionado)
+                {
+                    txbIdUsuarioEmpleado.Text = f.IDUsuarioSeleccionado;
+                    txbUsuarioEmpleado.Text = f.UsuarioSeleccionado;
+                }
+            }
+            catch (Exception)
+            {
 
+            }
         }
     }
 }

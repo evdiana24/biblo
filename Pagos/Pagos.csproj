@@ -99,6 +99,10 @@
       <Project>{55ae3030-7e04-4543-937a-7101b9829dd2}</Project>
       <Name>DataManager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Usuarios\Usuarios.csproj">
+      <Project>{be4f7cbe-52ed-44ec-8990-5c721db624b8}</Project>
+      <Name>Usuarios</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

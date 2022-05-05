@@ -9,7 +9,8 @@ namespace General.CLS
     class Autores
     {
         String _idAutor;
-        String _nombre;
+        String _nombres;
+        String _apellidos;
         String _genero;
 
         public string IdAutor
@@ -25,16 +26,29 @@ namespace General.CLS
             }
         }
 
-        public string Nombre
+        public string Nombres
         {
             get
             {
-                return _nombre;
+                return _nombres;
             }
 
             set
             {
-                _nombre = value;
+                _nombres = value;
+            }
+        }
+
+        public string Apellidos
+        {
+            get
+            {
+                return _apellidos;
+            }
+
+            set
+            {
+                _apellidos = value;
             }
         }
 
@@ -58,8 +72,9 @@ namespace General.CLS
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
             try
             {
-                Sentencia.Append("INSERT INTO autores(nombre,genero) values(");
-                Sentencia.Append("'" + this._nombre + "',");
+                Sentencia.Append("INSERT INTO autores(nombres,apellidos,genero) values(");
+                Sentencia.Append("'" + this._nombres + "',");
+                Sentencia.Append("'" + this._apellidos + "',");
                 Sentencia.Append("'" + this._genero + "');");
 
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
@@ -82,7 +97,8 @@ namespace General.CLS
             try
             {
                 Sentencia.Append("UPDATE autores SET ");
-                Sentencia.Append("nombre='" + this._nombre + "',");
+                Sentencia.Append("nombres='" + this._nombres + "',");
+                Sentencia.Append("apellidos='" + this._apellidos + "',");
                 Sentencia.Append("genero='" + this._genero + "' WHERE idAutor=" + this._idAutor + ";");
                 if (operacion.Actualizar(Sentencia.ToString()) > 0)
                 {

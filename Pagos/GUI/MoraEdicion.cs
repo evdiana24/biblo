@@ -109,5 +109,23 @@ namespace Pagos.GUI
         {
             Close();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+            //    General.GUI.EditorialesGestion f = new General.GUI.EditorialesGestion();
+            //    f.ShowDialog();
+            //    if (f.Seleccionado)
+            //    {
+            //        txbIdEditorial.Text = f.IDEditorialSeleccionado;
+            //        txbEditorial.Text = f.EditorialSeleccionado;
+            //    }
+            //}
+            //catch (Exception)
+            //{
+
+            //}
+        }
     }
 }

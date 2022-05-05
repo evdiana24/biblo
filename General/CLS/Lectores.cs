@@ -9,7 +9,8 @@ namespace General.CLS
     class Lectores
     {
         String _idLector;
-        String _nombre;
+        String _nombres;
+        String _apellidos;
         String _fecha_nacimiento;
         String _correo;
         String _telefono;
@@ -29,16 +30,29 @@ namespace General.CLS
             }
         }
 
-        public string Nombre
+        public string Nombres
         {
             get
             {
-                return _nombre;
+                return _nombres;
             }
 
             set
             {
-                _nombre = value;
+                _nombres = value;
+            }
+        }
+
+        public string Apellidos
+        {
+            get
+            {
+                return _apellidos;
+            }
+
+            set
+            {
+                _apellidos = value;
             }
         }
 
@@ -114,8 +128,9 @@ namespace General.CLS
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
             try
             {
-                Sentencia.Append("INSERT INTO lectores(nombre,fecha_nacimiento,correo,telefono,genero,direccion) values(");
-                Sentencia.Append("'" + this._nombre + "',");
+                Sentencia.Append("INSERT INTO lectores(nombres,apellidos,fecha_nacimiento,correo,telefono,genero,direccion) values(");
+                Sentencia.Append("'" + this._nombres + "',");
+                Sentencia.Append("'" + this._apellidos + "',");
                 Sentencia.Append("'" + this._fecha_nacimiento + "',");
                 Sentencia.Append("'" + this._correo + "',");
                 Sentencia.Append("'" + this._telefono + "',");
@@ -141,12 +156,14 @@ namespace General.CLS
             try
             {
                 Sentencia.Append("UPDATE lectores SET ");
-                Sentencia.Append("nombre='" + this._nombre + "',");
+                Sentencia.Append("nombres='" + this._nombres + "',");
+                Sentencia.Append("apellidos='" + this._apellidos + "',");
                 Sentencia.Append("fecha_nacimiento='" + this._fecha_nacimiento + "',");
-                Sentencia.Append("dui='" + this._correo + "',");
-                Sentencia.Append("nit='" + this._telefono + "',");
+                Sentencia.Append("correo='" + this._correo + "',");
+                Sentencia.Append("telefono='" + this._telefono + "',");
                 Sentencia.Append("genero='" + this._genero + "',");
-                Sentencia.Append("fecha_contratacion" + this._direccion + "' WHERE idLector=" + this._idLector + ";");
+                Sentencia.Append("direccion='" + this._direccion + "' ");
+                Sentencia.Append("WHERE idLector=" + this._idLector + ";");
                 if (operacion.Actualizar(Sentencia.ToString()) > 0)
                 {
                     Resultado = true;

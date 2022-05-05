@@ -316,9 +316,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(61, 332);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 23);
+            this.label7.Size = new System.Drawing.Size(111, 23);
             this.label7.TabIndex = 213;
-            this.label7.Text = "ID de Empleado:";
+            this.label7.Text = "Empleado:";
             // 
             // textBox3
             // 
@@ -337,9 +337,9 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(60, 403);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 23);
+            this.label10.Size = new System.Drawing.Size(43, 23);
             this.label10.TabIndex = 215;
-            this.label10.Text = "ID de Rol:";
+            this.label10.Text = "Rol:";
             // 
             // button1
             // 
@@ -397,6 +397,7 @@
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UsuarioEmpleadoEdicion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios Empleados";
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
@@ -405,33 +406,32 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txbClave;
-        private System.Windows.Forms.TextBox txbUsuario;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbIdUsuario;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtFechaCreacion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txbIdEmpleado;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbIdRol;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ErrorProvider Notificador;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBuscarEmpleado;
+        public System.Windows.Forms.TextBox txbClave;
+        public System.Windows.Forms.TextBox txbUsuario;
+        public System.Windows.Forms.TextBox txbIdUsuario;
+        public System.Windows.Forms.ComboBox cmbEstado;
+        public System.Windows.Forms.DateTimePicker dtFechaCreacion;
+        public System.Windows.Forms.TextBox txbIdEmpleado;
+        public System.Windows.Forms.TextBox txbIdRol;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

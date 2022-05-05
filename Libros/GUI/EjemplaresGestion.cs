@@ -63,7 +63,7 @@ namespace Libros.GUI
                 _DATOS.DataSource = DataSource.Consultas.TODOS_LOS_EJEMPLARES();
                 Filtrar();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 MessageBox.Show("Error al cargar datos");
             }

@@ -80,6 +80,10 @@
       <Project>{55ae3030-7e04-4543-937a-7101b9829dd2}</Project>
       <Name>DataManager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataSource\DataSource.csproj">
+      <Project>{42e51e7c-cd09-4528-b6e2-5dd80ffd34f5}</Project>
+      <Name>DataSource</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

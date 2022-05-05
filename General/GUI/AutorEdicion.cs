@@ -23,7 +23,8 @@ namespace General.GUI
 
                     //Sincronizar el objeto con la interfaz
                     oAutor.IdAutor = txbIdAutor.Text;
-                    oAutor.Nombre = txbNombres.Text;
+                    oAutor.Nombres = txbNombres.Text;
+                    oAutor.Apellidos = txbApellidos.Text;
                     oAutor.Genero = cmbGenero.Text;
 
                     //Operamos segun sea el caso
@@ -74,6 +75,12 @@ namespace General.GUI
                 if (txbNombres.TextLength == 0)
                 {
                     Notificador.SetError(txbNombres, "Escriba al menos un nombre");
+                    Validado = false;
+                }
+
+                if (txbApellidos.TextLength == 0)
+                {
+                    Notificador.SetError(txbApellidos, "Escriba al menos un apellido");
                     Validado = false;
                 }
 

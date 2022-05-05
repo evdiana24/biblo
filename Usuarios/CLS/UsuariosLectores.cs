@@ -160,9 +160,9 @@ namespace Usuarios.CLS
                 Sentencia.Append("usuario='" + this._Usuario + "',");
                 Sentencia.Append("clave='" + this._Clave + "',");
                 Sentencia.Append("estado='" + this._Estado + "',");
-                Sentencia.Append("estado='" + this._Carnet + "',");
+                Sentencia.Append("carnet='" + this._Carnet + "',");
                 Sentencia.Append("fecha_creacion='" + this._Fecha_Creacion + "',");
-                Sentencia.Append("idEmpleado='" + this._IDLector + "',");
+                Sentencia.Append("idLector='" + this._IDLector + "',");
                 Sentencia.Append("idRol='" + this._IDRol + "' ");
                 Sentencia.Append("WHERE idUsuario=" + this._IDUsuario + ";");
                 if (operacion.Insertar(Sentencia.ToString()) > 0)

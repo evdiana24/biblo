@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EjemplaresGestion));
             this.dtgEjemplaresGestion = new System.Windows.Forms.DataGridView();
+            this.idEjemplar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -46,10 +50,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
-            this.idEjemplar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEjemplaresGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -60,27 +61,62 @@
             this.dtgEjemplaresGestion.AllowUserToAddRows = false;
             this.dtgEjemplaresGestion.AllowUserToDeleteRows = false;
             this.dtgEjemplaresGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgEjemplaresGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEjemplaresGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgEjemplaresGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgEjemplaresGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idEjemplar,
             this.idLibro,
             this.titulo,
             this.estado});
-            this.dtgEjemplaresGestion.Location = new System.Drawing.Point(40, 77);
+            this.dtgEjemplaresGestion.Location = new System.Drawing.Point(39, 92);
             this.dtgEjemplaresGestion.Name = "dtgEjemplaresGestion";
             this.dtgEjemplaresGestion.ReadOnly = true;
             this.dtgEjemplaresGestion.RowHeadersVisible = false;
+            this.dtgEjemplaresGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgEjemplaresGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEjemplaresGestion.Size = new System.Drawing.Size(841, 412);
+            this.dtgEjemplaresGestion.Size = new System.Drawing.Size(897, 412);
             this.dtgEjemplaresGestion.TabIndex = 80;
+            // 
+            // idEjemplar
+            // 
+            this.idEjemplar.DataPropertyName = "idEjemplar";
+            this.idEjemplar.FillWeight = 142.132F;
+            this.idEjemplar.HeaderText = "ID Ejemplar";
+            this.idEjemplar.Name = "idEjemplar";
+            this.idEjemplar.ReadOnly = true;
+            // 
+            // idLibro
+            // 
+            this.idLibro.DataPropertyName = "idLibro";
+            this.idLibro.FillWeight = 102.2544F;
+            this.idLibro.HeaderText = "ID Libro";
+            this.idLibro.Name = "idLibro";
+            this.idLibro.ReadOnly = true;
+            // 
+            // titulo
+            // 
+            this.titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titulo.DataPropertyName = "titulo";
+            this.titulo.FillWeight = 13.65031F;
+            this.titulo.HeaderText = "Título";
+            this.titulo.Name = "titulo";
+            this.titulo.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.FillWeight = 141.9633F;
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Width = 200;
             // 
             // toolStrip1
             // 
@@ -100,10 +136,10 @@
             this.toolStripLabel1,
             this.btnSeleccionar,
             this.toolStripSeparator5});
-            this.toolStrip1.Location = new System.Drawing.Point(40, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(40, 45);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(2);
-            this.toolStrip1.Size = new System.Drawing.Size(841, 39);
+            this.toolStrip1.Size = new System.Drawing.Size(896, 39);
             this.toolStrip1.TabIndex = 81;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -190,7 +226,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(783, 520);
+            this.btnCancelar.Location = new System.Drawing.Point(838, 539);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(98, 32);
             this.btnCancelar.TabIndex = 87;
@@ -206,9 +242,9 @@
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblRegistros});
-            this.statusStrip1.Location = new System.Drawing.Point(40, 490);
+            this.statusStrip1.Location = new System.Drawing.Point(40, 505);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(841, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(896, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 86;
             this.statusStrip1.Text = "statusStrip1";
@@ -220,39 +256,16 @@
             this.lblRegistros.Size = new System.Drawing.Size(133, 17);
             this.lblRegistros.Text = "0 Registros Encontrados";
             // 
-            // idEjemplar
+            // label1
             // 
-            this.idEjemplar.DataPropertyName = "idEjemplar";
-            this.idEjemplar.FillWeight = 142.132F;
-            this.idEjemplar.HeaderText = "ID Ejemplar";
-            this.idEjemplar.Name = "idEjemplar";
-            this.idEjemplar.ReadOnly = true;
-            // 
-            // idLibro
-            // 
-            this.idLibro.DataPropertyName = "idLibro";
-            this.idLibro.FillWeight = 102.2544F;
-            this.idLibro.HeaderText = "ID Libro";
-            this.idLibro.Name = "idLibro";
-            this.idLibro.ReadOnly = true;
-            // 
-            // titulo
-            // 
-            this.titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titulo.DataPropertyName = "titulo";
-            this.titulo.FillWeight = 13.65031F;
-            this.titulo.HeaderText = "Título";
-            this.titulo.Name = "titulo";
-            this.titulo.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.FillWeight = 141.9633F;
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Width = 200;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(453, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 17);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "EJEMPLARES";
             // 
             // EjemplaresGestion
             // 
@@ -260,7 +273,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(920, 570);
+            this.ClientSize = new System.Drawing.Size(975, 600);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
@@ -275,6 +289,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -299,5 +314,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idLibro;
         private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.Label label1;
     }
 }

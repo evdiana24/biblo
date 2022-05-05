@@ -23,7 +23,8 @@ namespace General.GUI
 
                     //Sincronizar el objeto con la interfaz
                     oEmpleado.IdEmpleado = txbIdEmpleado.Text;
-                    oEmpleado.Nombre = txbNombre.Text;
+                    oEmpleado.Nombres = txbNombres.Text;
+                    oEmpleado.Apellidos = txbApellidos.Text;
                     oEmpleado.Fecha_nacimiento = dtFechaNacimiento.Value.Date.ToString("yyyy/MM/dd");
                     oEmpleado.Dui = txbDUI.Text;
                     oEmpleado.Nit = txbNIT.Text;
@@ -78,11 +79,18 @@ namespace General.GUI
             try
             {
                 Notificador.Clear();
-                if (txbNombre.TextLength == 0)
+                if (txbNombres.TextLength == 0)
                 {
-                    Notificador.SetError(txbNombre, "Escriba al menos un nombre");
+                    Notificador.SetError(txbNombres, "Escriba al menos un nombre");
                     Validado = false;
                 }
+
+                if (txbApellidos.TextLength == 0)
+                {
+                    Notificador.SetError(txbApellidos, "Escriba al menos un apellido");
+                    Validado = false;
+                }
+
                 if (dtFechaNacimiento.Text.Length == 0)
                 {
                     Notificador.SetError(dtFechaNacimiento, "Escriba la fecha de nacimiento");

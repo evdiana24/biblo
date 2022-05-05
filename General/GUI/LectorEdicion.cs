@@ -23,7 +23,8 @@ namespace General.GUI
 
                     //Sincronizar el objeto con la interfaz
                     oLector.IdLector = txbIdLector.Text;
-                    oLector.Nombre = txbNombre.Text;
+                    oLector.Nombres = txbNombres.Text;
+                    oLector.Apellidos = txbApellidos.Text;
                     oLector.Fecha_nacimiento = dtFechaNacimiento.Value.Date.ToString("yyyy/MM/dd");
                     oLector.Correo = txbCorreo.Text;
                     oLector.Telefono = txbTelefono.Text;
@@ -75,9 +76,14 @@ namespace General.GUI
             try
             {
                 Notificador.Clear();
-                if (txbNombre.TextLength == 0)
+                if (txbNombres.TextLength == 0)
                 {
-                    Notificador.SetError(txbNombre, "Escriba al menos un nombre");
+                    Notificador.SetError(txbNombres, "Escriba al menos un nombre");
+                    Validado = false;
+                }
+                if (txbApellidos.TextLength == 0)
+                {
+                    Notificador.SetError(txbApellidos, "Escriba al menos un apellido");
                     Validado = false;
                 }
                 if (dtFechaNacimiento.Text.Length == 0)

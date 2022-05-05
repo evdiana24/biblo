@@ -216,9 +216,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(54, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 23);
+            this.label3.Size = new System.Drawing.Size(81, 23);
             this.label3.TabIndex = 165;
-            this.label3.Text = "ID Detalle:";
+            this.label3.Text = "Detalle:";
             // 
             // btnBuscar
             // 
@@ -229,6 +229,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(71, 34);
             this.btnBuscar.TabIndex = 167;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // MoraEdicion
             // 

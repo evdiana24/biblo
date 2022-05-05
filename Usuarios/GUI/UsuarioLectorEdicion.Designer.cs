@@ -67,7 +67,6 @@
             this.txbIdRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbIdRol.Location = new System.Drawing.Point(192, 384);
             this.txbIdRol.Name = "txbIdRol";
-            this.txbIdRol.ReadOnly = true;
             this.txbIdRol.Size = new System.Drawing.Size(139, 26);
             this.txbIdRol.TabIndex = 206;
             // 
@@ -89,7 +88,6 @@
             this.txbIdLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbIdLector.Location = new System.Drawing.Point(192, 311);
             this.txbIdLector.Name = "txbIdLector";
-            this.txbIdLector.ReadOnly = true;
             this.txbIdLector.Size = new System.Drawing.Size(139, 26);
             this.txbIdLector.TabIndex = 204;
             // 
@@ -428,6 +426,7 @@
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UsuarioLectorEdicion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios Lectores";
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
@@ -436,35 +435,34 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txbIdRol;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txbIdLector;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtFechaCreacion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txbClave;
-        private System.Windows.Forms.TextBox txbUsuario;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbIdUsuario;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbCarnet;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider Notificador;
-        private System.Windows.Forms.TextBox txbLector;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txbRol;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBuscarEmpleado;
+        public System.Windows.Forms.TextBox txbIdRol;
+        public System.Windows.Forms.TextBox txbIdLector;
+        public System.Windows.Forms.DateTimePicker dtFechaCreacion;
+        public System.Windows.Forms.TextBox txbClave;
+        public System.Windows.Forms.TextBox txbUsuario;
+        public System.Windows.Forms.TextBox txbIdUsuario;
+        public System.Windows.Forms.ComboBox cmbEstado;
+        public System.Windows.Forms.ComboBox cmbCarnet;
+        public System.Windows.Forms.TextBox txbLector;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txbRol;
     }
 }

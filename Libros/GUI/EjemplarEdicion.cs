@@ -23,7 +23,7 @@ namespace Libros.GUI
 
                     //Sincronizar el objeto con la interfaz
                     oEjemplar.IDEjemplar = txbIdEjemplar.Text;
-                    oEjemplar.IDLibro = txbIdLibro.Text;
+                    oEjemplar.IDLibro = txbLibro.Text;
                     oEjemplar.Estado = cmbEstado.Text;
 
                     //Operamos segun sea el caso
@@ -71,9 +71,9 @@ namespace Libros.GUI
             try
             {
                 Notificador.Clear();
-                if (txbIdLibro.TextLength == 0)
+                if (txbLibro.TextLength == 0)
                 {
-                    Notificador.SetError(txbIdLibro, "Seleccione el Libro");
+                    Notificador.SetError(txbLibro, "Seleccione el Libro");
                     Validado = false;
                 }
                 if (cmbEstado.Text.Length == 0)
@@ -102,6 +102,24 @@ namespace Libros.GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnBuscarLibro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GUI.LibrosGestion f = new GUI.LibrosGestion();
+                f.ShowDialog();
+                if (f.Seleccionado)
+                {
+                    txbIdLibro.Text = f.IDLibroSeleccionado;
+                    txbLibro.Text = f.LibroSeleccionado;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

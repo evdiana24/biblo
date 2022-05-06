@@ -55,7 +55,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(55, 286);
+            this.label4.Location = new System.Drawing.Point(55, 283);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 6;
@@ -65,7 +65,7 @@
             // 
             this.cmbEstadoMora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbEstadoMora.FormattingEnabled = true;
-            this.cmbEstadoMora.Location = new System.Drawing.Point(174, 286);
+            this.cmbEstadoMora.Location = new System.Drawing.Point(174, 283);
             this.cmbEstadoMora.Name = "cmbEstadoMora";
             this.cmbEstadoMora.Size = new System.Drawing.Size(139, 28);
             this.cmbEstadoMora.TabIndex = 19;
@@ -73,15 +73,16 @@
             // txbTotal
             // 
             this.txbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbTotal.Location = new System.Drawing.Point(174, 244);
+            this.txbTotal.Location = new System.Drawing.Point(174, 241);
             this.txbTotal.Name = "txbTotal";
             this.txbTotal.Size = new System.Drawing.Size(139, 26);
             this.txbTotal.TabIndex = 164;
+            this.txbTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTotal_KeyPress);
             // 
             // txbIdDetalle
             // 
             this.txbIdDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbIdDetalle.Location = new System.Drawing.Point(174, 164);
+            this.txbIdDetalle.Location = new System.Drawing.Point(174, 165);
             this.txbIdDetalle.Name = "txbIdDetalle";
             this.txbIdDetalle.ReadOnly = true;
             this.txbIdDetalle.Size = new System.Drawing.Size(139, 26);
@@ -93,7 +94,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(55, 244);
+            this.label9.Location = new System.Drawing.Point(55, 241);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 23);
             this.label9.TabIndex = 162;
@@ -105,7 +106,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(54, 164);
+            this.label2.Location = new System.Drawing.Point(54, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 23);
             this.label2.TabIndex = 159;
@@ -169,7 +170,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(363, 344);
+            this.btnCancelar.Location = new System.Drawing.Point(354, 338);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(153, 41);
             this.btnCancelar.TabIndex = 154;
@@ -188,7 +189,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(194, 344);
+            this.btnGuardar.Location = new System.Drawing.Point(185, 338);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(155, 41);
             this.btnGuardar.TabIndex = 153;
@@ -204,7 +205,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(174, 204);
+            this.textBox1.Location = new System.Drawing.Point(174, 200);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(251, 26);
@@ -216,7 +217,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(54, 204);
+            this.label3.Location = new System.Drawing.Point(54, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 23);
             this.label3.TabIndex = 165;
@@ -226,7 +227,7 @@
             // 
             this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBuscar.Location = new System.Drawing.Point(354, 161);
+            this.btnBuscar.Location = new System.Drawing.Point(354, 162);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(71, 34);
             this.btnBuscar.TabIndex = 167;

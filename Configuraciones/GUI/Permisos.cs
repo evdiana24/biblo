@@ -18,7 +18,7 @@ namespace Configuraciones.GUI
         {
             try
             {
-                _DATOS.DataSource = DataSource.Consultas.PERMISOS_DE_UN_ROL(cbbRol.SelectedValue.ToString());
+                _DATOS.DataSource = DataSource.Consultas.PERMISOS_DE_UN_ROL(cmbRol.SelectedValue.ToString());
                 dtgDatos.DataSource = _DATOS;
             }
             catch
@@ -31,9 +31,9 @@ namespace Configuraciones.GUI
         {
             try
             {
-                cbbRol.DataSource = DataSource.Consultas.TODOS_LOS_ROLES();
-                cbbRol.DisplayMember = "Rol";
-                cbbRol.ValueMember = "IDRol";
+                cmbRol.DataSource = DataSource.Consultas.TODOS_LOS_ROLES();
+                cmbRol.DisplayMember = "rol";
+                cmbRol.ValueMember = "idRol";
                 Cargar();
             }
             catch (Exception)
@@ -67,13 +67,13 @@ namespace Configuraciones.GUI
                     Valor = dtgDatos.CurrentRow.Cells["Asignado"].Value.ToString();
                     if (Valor.Equals("1"))
                     {
-                        oPermiso.IDPermiso = dtgDatos.CurrentRow.Cells["IDPermiso"].Value.ToString();
+                        oPermiso.IDPermiso = dtgDatos.CurrentRow.Cells["idPermiso"].Value.ToString();
                         oPermiso.Eliminar();
                     }
                     else
                     {
-                        oPermiso.IDOpcion = dtgDatos.CurrentRow.Cells["IDOpcion"].Value.ToString();
-                        oPermiso.IDRol = cbbRol.SelectedValue.ToString();
+                        oPermiso.IDOpcion = dtgDatos.CurrentRow.Cells["idOpcion"].Value.ToString();
+                        oPermiso.IDRol = cmbRol.SelectedValue.ToString();
                         oPermiso.Guardar();
                     }
                     Cargar();

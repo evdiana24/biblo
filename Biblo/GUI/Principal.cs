@@ -30,10 +30,12 @@ namespace Biblo.GUI
             panelLibros.Visible = false;
             panelPrestamos.Visible = false;
             panelPagos.Visible = false;
+            panelConfiguraciones.Visible = false;
 
             if (oSesion.IDRol == "2")
             {
-                btnMisPrestamos.Visible = false;
+                btnConfiguraciones.Visible = false;
+                btnGPrestamos.Visible = false;
             }
 
         }
@@ -59,6 +61,10 @@ namespace Biblo.GUI
             if (panelPagos.Visible == true)
             {
                 panelPagos.Visible = false;
+            }
+            if (panelConfiguraciones.Visible == true)
+            {
+                panelConfiguraciones.Visible = false;
             }
         }
 
@@ -237,6 +243,30 @@ namespace Biblo.GUI
         private void btnHistorialPagos_Click(object sender, EventArgs e)
         {
             //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
+            hideSubMenu();
+        }
+
+        //CONFIGURACIONES
+        private void btnConfiguraciones_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelConfiguraciones);
+        }
+
+        private void btnRoles_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Configuraciones.GUI.RolesGestion>();
+            hideSubMenu();
+        }
+
+        private void btnPermisos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Configuraciones.GUI.Permisos>();
+            hideSubMenu();
+        }
+
+        private void btnOpciones_Click(object sender, EventArgs e)
+        {
+            //AbrirFormulario<Configuraciones.GUI.OpcionesGestion>();
             hideSubMenu();
         }
 

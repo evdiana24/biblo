@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EjemplarEdicion));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txbIdLibro = new System.Windows.Forms.TextBox();
+            this.txbLibro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,6 +41,9 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txbIdLibro = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnBuscarLibro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +58,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(347, 278);
+            this.btnCancelar.Location = new System.Drawing.Point(369, 299);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(153, 41);
             this.btnCancelar.TabIndex = 112;
@@ -74,7 +77,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(178, 278);
+            this.btnGuardar.Location = new System.Drawing.Point(200, 299);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(155, 41);
             this.btnGuardar.TabIndex = 111;
@@ -82,14 +85,15 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txbIdLibro
+            // txbLibro
             // 
-            this.txbIdLibro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbIdLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdLibro.Location = new System.Drawing.Point(158, 173);
-            this.txbIdLibro.Name = "txbIdLibro";
-            this.txbIdLibro.Size = new System.Drawing.Size(271, 26);
-            this.txbIdLibro.TabIndex = 110;
+            this.txbLibro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbLibro.Location = new System.Drawing.Point(188, 199);
+            this.txbLibro.Name = "txbLibro";
+            this.txbLibro.ReadOnly = true;
+            this.txbLibro.Size = new System.Drawing.Size(321, 26);
+            this.txbLibro.TabIndex = 110;
             // 
             // label2
             // 
@@ -98,7 +102,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(67, 173);
+            this.label2.Location = new System.Drawing.Point(57, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 23);
             this.label2.TabIndex = 109;
@@ -111,7 +115,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
-            this.label5.Location = new System.Drawing.Point(59, 42);
+            this.label5.Location = new System.Drawing.Point(50, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 63);
             this.label5.TabIndex = 108;
@@ -123,7 +127,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(140, 60);
+            this.label4.Location = new System.Drawing.Point(131, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(204, 38);
             this.label4.TabIndex = 107;
@@ -132,7 +136,7 @@
             // txbIdEjemplar
             // 
             this.txbIdEjemplar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdEjemplar.Location = new System.Drawing.Point(160, 131);
+            this.txbIdEjemplar.Location = new System.Drawing.Point(189, 122);
             this.txbIdEjemplar.Name = "txbIdEjemplar";
             this.txbIdEjemplar.ReadOnly = true;
             this.txbIdEjemplar.Size = new System.Drawing.Size(129, 26);
@@ -145,11 +149,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(67, 131);
+            this.label1.Location = new System.Drawing.Point(58, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 23);
+            this.label1.Size = new System.Drawing.Size(122, 23);
             this.label1.TabIndex = 105;
-            this.label1.Text = "ID:";
+            this.label1.Text = "ID ejemplar:";
             // 
             // cmbEstado
             // 
@@ -160,7 +164,7 @@
             this.cmbEstado.Items.AddRange(new object[] {
             "Disponible",
             "No Disponible"});
-            this.cmbEstado.Location = new System.Drawing.Point(159, 215);
+            this.cmbEstado.Location = new System.Drawing.Point(188, 241);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(130, 28);
             this.cmbEstado.TabIndex = 114;
@@ -172,7 +176,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(67, 215);
+            this.label3.Location = new System.Drawing.Point(57, 241);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 23);
             this.label3.TabIndex = 113;
@@ -183,6 +187,40 @@
             this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.Notificador.ContainerControl = this;
             // 
+            // txbIdLibro
+            // 
+            this.txbIdLibro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbIdLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIdLibro.Location = new System.Drawing.Point(189, 164);
+            this.txbIdLibro.Name = "txbIdLibro";
+            this.txbIdLibro.ReadOnly = true;
+            this.txbIdLibro.Size = new System.Drawing.Size(129, 26);
+            this.txbIdLibro.TabIndex = 116;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(58, 164);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 23);
+            this.label6.TabIndex = 115;
+            this.label6.Text = "ID libro:";
+            // 
+            // btnBuscarLibro
+            // 
+            this.btnBuscarLibro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarLibro.BackgroundImage")));
+            this.btnBuscarLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscarLibro.Location = new System.Drawing.Point(438, 161);
+            this.btnBuscarLibro.Name = "btnBuscarLibro";
+            this.btnBuscarLibro.Size = new System.Drawing.Size(71, 34);
+            this.btnBuscarLibro.TabIndex = 219;
+            this.btnBuscarLibro.UseVisualStyleBackColor = true;
+            this.btnBuscarLibro.Click += new System.EventHandler(this.btnBuscarLibro_Click);
+            // 
             // EjemplarEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,11 +229,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(557, 373);
+            this.Controls.Add(this.btnBuscarLibro);
+            this.Controls.Add(this.txbIdLibro);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txbIdLibro);
+            this.Controls.Add(this.txbLibro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -221,8 +262,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ErrorProvider Notificador;
-        public System.Windows.Forms.TextBox txbIdLibro;
+        public System.Windows.Forms.TextBox txbLibro;
         public System.Windows.Forms.TextBox txbIdEjemplar;
         public System.Windows.Forms.ComboBox cmbEstado;
+        public System.Windows.Forms.TextBox txbIdLibro;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnBuscarLibro;
     }
 }

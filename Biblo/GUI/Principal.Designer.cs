@@ -75,6 +75,11 @@
             this.btnGeneral = new System.Windows.Forms.Button();
             this.btnMiPerfil = new System.Windows.Forms.Button();
             this.panelFormularios = new System.Windows.Forms.Panel();
+            this.btnConfiguraciones = new System.Windows.Forms.Button();
+            this.panelConfiguraciones = new System.Windows.Forms.Panel();
+            this.btnOpciones = new System.Windows.Forms.Button();
+            this.btnPermisos = new System.Windows.Forms.Button();
+            this.btnRoles = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
@@ -88,6 +93,7 @@
             this.panelLibros.SuspendLayout();
             this.panelUsuarios.SuspendLayout();
             this.panelGeneral.SuspendLayout();
+            this.panelConfiguraciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRestaurar
@@ -181,7 +187,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(22, 95);
+            this.label2.Location = new System.Drawing.Point(11, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 16);
@@ -194,7 +200,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(22, 69);
+            this.label1.Location = new System.Drawing.Point(11, 69);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 16);
@@ -207,7 +213,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblUsuario.Location = new System.Drawing.Point(94, 69);
+            this.lblUsuario.Location = new System.Drawing.Point(85, 69);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(0, 16);
@@ -219,7 +225,7 @@
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblRol.Location = new System.Drawing.Point(62, 95);
+            this.lblRol.Location = new System.Drawing.Point(85, 95);
             this.lblRol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(0, 16);
@@ -241,6 +247,8 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.panelConfiguraciones);
+            this.panel1.Controls.Add(this.btnConfiguraciones);
             this.panel1.Controls.Add(this.btnInformes);
             this.panel1.Controls.Add(this.panelPagos);
             this.panel1.Controls.Add(this.btnPagos);
@@ -663,7 +671,7 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 975);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 1147);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
@@ -829,6 +837,94 @@
             this.panelFormularios.Size = new System.Drawing.Size(975, 600);
             this.panelFormularios.TabIndex = 8;
             // 
+            // btnConfiguraciones
+            // 
+            this.btnConfiguraciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConfiguraciones.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnConfiguraciones.FlatAppearance.BorderSize = 0;
+            this.btnConfiguraciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(51)))));
+            this.btnConfiguraciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguraciones.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguraciones.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnConfiguraciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguraciones.Location = new System.Drawing.Point(0, 975);
+            this.btnConfiguraciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfiguraciones.Name = "btnConfiguraciones";
+            this.btnConfiguraciones.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnConfiguraciones.Size = new System.Drawing.Size(228, 29);
+            this.btnConfiguraciones.TabIndex = 29;
+            this.btnConfiguraciones.Text = "CONFIGURACIONES";
+            this.btnConfiguraciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguraciones.UseVisualStyleBackColor = true;
+            this.btnConfiguraciones.Click += new System.EventHandler(this.btnConfiguraciones_Click);
+            // 
+            // panelConfiguraciones
+            // 
+            this.panelConfiguraciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
+            this.panelConfiguraciones.Controls.Add(this.btnOpciones);
+            this.panelConfiguraciones.Controls.Add(this.btnPermisos);
+            this.panelConfiguraciones.Controls.Add(this.btnRoles);
+            this.panelConfiguraciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConfiguraciones.Location = new System.Drawing.Point(0, 1004);
+            this.panelConfiguraciones.Margin = new System.Windows.Forms.Padding(2);
+            this.panelConfiguraciones.Name = "panelConfiguraciones";
+            this.panelConfiguraciones.Size = new System.Drawing.Size(228, 143);
+            this.panelConfiguraciones.TabIndex = 30;
+            // 
+            // btnOpciones
+            // 
+            this.btnOpciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOpciones.FlatAppearance.BorderSize = 0;
+            this.btnOpciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpciones.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpciones.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnOpciones.Location = new System.Drawing.Point(0, 52);
+            this.btnOpciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOpciones.Name = "btnOpciones";
+            this.btnOpciones.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.btnOpciones.Size = new System.Drawing.Size(228, 26);
+            this.btnOpciones.TabIndex = 2;
+            this.btnOpciones.Text = "Gestionar opciones";
+            this.btnOpciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpciones.UseVisualStyleBackColor = true;
+            this.btnOpciones.Click += new System.EventHandler(this.btnOpciones_Click);
+            // 
+            // btnPermisos
+            // 
+            this.btnPermisos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPermisos.FlatAppearance.BorderSize = 0;
+            this.btnPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPermisos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPermisos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPermisos.Location = new System.Drawing.Point(0, 26);
+            this.btnPermisos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPermisos.Name = "btnPermisos";
+            this.btnPermisos.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.btnPermisos.Size = new System.Drawing.Size(228, 26);
+            this.btnPermisos.TabIndex = 1;
+            this.btnPermisos.Text = "Gestionar permisos";
+            this.btnPermisos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPermisos.UseVisualStyleBackColor = true;
+            this.btnPermisos.Click += new System.EventHandler(this.btnPermisos_Click);
+            // 
+            // btnRoles
+            // 
+            this.btnRoles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRoles.FlatAppearance.BorderSize = 0;
+            this.btnRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoles.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoles.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRoles.Location = new System.Drawing.Point(0, 0);
+            this.btnRoles.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRoles.Name = "btnRoles";
+            this.btnRoles.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.btnRoles.Size = new System.Drawing.Size(228, 26);
+            this.btnRoles.TabIndex = 0;
+            this.btnRoles.Text = "Gestionar roles";
+            this.btnRoles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRoles.UseVisualStyleBackColor = true;
+            this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -858,6 +954,7 @@
             this.panelLibros.ResumeLayout(false);
             this.panelUsuarios.ResumeLayout(false);
             this.panelGeneral.ResumeLayout(false);
+            this.panelConfiguraciones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -907,6 +1004,11 @@
         private System.Windows.Forms.Button btnGUsuariosLectores;
         private System.Windows.Forms.Button btnGUsuarios;
         private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Button btnConfiguraciones;
+        private System.Windows.Forms.Panel panelConfiguraciones;
+        private System.Windows.Forms.Button btnOpciones;
+        private System.Windows.Forms.Button btnPermisos;
+        private System.Windows.Forms.Button btnRoles;
     }
 }
 

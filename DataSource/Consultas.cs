@@ -64,9 +64,9 @@ namespace DataSource
         public static DataTable PERMISOS_DE_UN_ROL(String pIDRol)
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT IDOpcion, Opcion, 
-            IFNULL((SELECT IDPermiso FROM permisos z WHERE z.IDROL = " + pIDRol + @" AND z.IDOpcion = a.IDOpcion), 0) IDPermiso,
-            (SELECT COUNT(IDPermiso) FROM permisos z WHERE z.IDROL = " + pIDRol + @" AND z.IDOpcion = a.IDOpcion) Asignado
+            String Consulta = @"SELECT idOpcion, opcion, 
+            IFNULL((SELECT idPermiso FROM permisos z WHERE z.IDROL = " + pIDRol + @" AND z.idOpcion = a.idOpcion), 0) idPermiso,
+            (SELECT COUNT(IDPermiso) FROM permisos z WHERE z.IDROL = " + pIDRol + @" AND z.idOpcion = a.idOpcion) Asignado
             FROM opciones a;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
@@ -83,7 +83,7 @@ namespace DataSource
         public static DataTable TODOS_LOS_ROLES()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT IDRol, Rol FROM roles ORDER BY Rol;";
+            String Consulta = @"SELECT idRol, rol FROM roles ORDER BY rol;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -301,9 +301,9 @@ namespace DataSource
         public static DataTable TODOS_LOS_USUARIOS_LECTORES()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT a.idUsuario, a.usuario, a.estado, a.carnet, a.fecha_creacion, b.idLector, CONCAT(b.nombres, ' ', b.apellidos) AS nombre, a.idRol, c.rol
-            FROM usuarios_lectores a, lectores b, roles c
-            WHERE a.idLector = b.idLector AND a.idRol = c.idRol
+            String Consulta = @"SELECT a.idUsuario, a.usuario, a.estado, a.carnet, a.fecha_creacion, b.idLector, CONCAT(b.nombres, ' ', b.apellidos) AS nombre
+            FROM usuarios_lectores a, lectores b
+            WHERE a.idLector = b.idLector
             ORDER BY nombre;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try

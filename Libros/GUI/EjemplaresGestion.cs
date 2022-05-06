@@ -118,7 +118,7 @@ namespace Libros.GUI
                 {
                     GUI.EjemplarEdicion f = new EjemplarEdicion();
                     f.txbIdEjemplar.Text = dtgEjemplaresGestion.CurrentRow.Cells["idEjemplar"].Value.ToString();
-                    f.txbIdLibro.Text = dtgEjemplaresGestion.CurrentRow.Cells["idLibro"].Value.ToString();
+                    f.txbLibro.Text = dtgEjemplaresGestion.CurrentRow.Cells["idLibro"].Value.ToString();
                     f.cmbEstado.Text = dtgEjemplaresGestion.CurrentRow.Cells["estado"].Value.ToString();
                     f.ShowDialog();
                     CargarDatos();

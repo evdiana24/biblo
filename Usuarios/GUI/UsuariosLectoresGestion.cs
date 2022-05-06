@@ -123,6 +123,7 @@ namespace Usuarios.GUI
                     f.cmbCarnet.Text = dtgUsuariosGestion.CurrentRow.Cells["carnet"].Value.ToString();
                     f.dtFechaCreacion.Text = dtgUsuariosGestion.CurrentRow.Cells["fecha_creacion"].Value.ToString();
                     f.txbIdLector.Text = dtgUsuariosGestion.CurrentRow.Cells["idLector"].Value.ToString();
+                    f.txbLector.Text = dtgUsuariosGestion.CurrentRow.Cells["nombre"].Value.ToString();
                     //f.txbIdRol.Text = dtgUsuariosGestion.CurrentRow.Cells["idRol"].Value.ToString();
                     f.ShowDialog();
                     CargarDatos();

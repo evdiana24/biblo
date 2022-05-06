@@ -63,6 +63,7 @@
             this.txbTotal.Name = "txbTotal";
             this.txbTotal.Size = new System.Drawing.Size(139, 26);
             this.txbTotal.TabIndex = 176;
+            this.txbTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTotal_KeyPress);
             // 
             // txbIdUsuarioLector
             // 

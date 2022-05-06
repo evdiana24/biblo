@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuariosLectoresGestion));
             this.dtgUsuariosGestion = new System.Windows.Forms.DataGridView();
+            this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carnet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -46,13 +53,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carnet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuariosGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -62,6 +62,7 @@
             // 
             this.dtgUsuariosGestion.AllowUserToAddRows = false;
             this.dtgUsuariosGestion.AllowUserToDeleteRows = false;
+            this.dtgUsuariosGestion.AllowUserToResizeRows = false;
             this.dtgUsuariosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgUsuariosGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuariosGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -80,6 +81,62 @@
             this.dtgUsuariosGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgUsuariosGestion.Size = new System.Drawing.Size(897, 412);
             this.dtgUsuariosGestion.TabIndex = 24;
+            // 
+            // idUsuario
+            // 
+            this.idUsuario.DataPropertyName = "idUsuario";
+            this.idUsuario.HeaderText = "ID";
+            this.idUsuario.Name = "idUsuario";
+            this.idUsuario.ReadOnly = true;
+            this.idUsuario.Width = 50;
+            // 
+            // usuario
+            // 
+            this.usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuario.DataPropertyName = "usuario";
+            this.usuario.HeaderText = "Usuario";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Width = 90;
+            // 
+            // carnet
+            // 
+            this.carnet.DataPropertyName = "carnet";
+            this.carnet.HeaderText = "Carnet";
+            this.carnet.Name = "carnet";
+            this.carnet.ReadOnly = true;
+            this.carnet.Width = 120;
+            // 
+            // fecha_creacion
+            // 
+            this.fecha_creacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fecha_creacion.DataPropertyName = "fecha_creacion";
+            this.fecha_creacion.HeaderText = "Fecha Creación";
+            this.fecha_creacion.Name = "fecha_creacion";
+            this.fecha_creacion.ReadOnly = true;
+            // 
+            // idLector
+            // 
+            this.idLector.DataPropertyName = "idLector";
+            this.idLector.HeaderText = "ID Lector";
+            this.idLector.Name = "idLector";
+            this.idLector.ReadOnly = true;
+            this.idLector.Width = 80;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Lector";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -229,62 +286,6 @@
             this.label1.Size = new System.Drawing.Size(137, 17);
             this.label1.TabIndex = 89;
             this.label1.Text = "USUARIOS LECTORES";
-            // 
-            // idUsuario
-            // 
-            this.idUsuario.DataPropertyName = "idUsuario";
-            this.idUsuario.HeaderText = "ID";
-            this.idUsuario.Name = "idUsuario";
-            this.idUsuario.ReadOnly = true;
-            this.idUsuario.Width = 50;
-            // 
-            // usuario
-            // 
-            this.usuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.usuario.DataPropertyName = "usuario";
-            this.usuario.HeaderText = "Usuario";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Width = 90;
-            // 
-            // carnet
-            // 
-            this.carnet.DataPropertyName = "carnet";
-            this.carnet.HeaderText = "Carnet";
-            this.carnet.Name = "carnet";
-            this.carnet.ReadOnly = true;
-            this.carnet.Width = 120;
-            // 
-            // fecha_creacion
-            // 
-            this.fecha_creacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fecha_creacion.DataPropertyName = "fecha_creacion";
-            this.fecha_creacion.HeaderText = "Fecha Creación";
-            this.fecha_creacion.Name = "fecha_creacion";
-            this.fecha_creacion.ReadOnly = true;
-            // 
-            // idLector
-            // 
-            this.idLector.DataPropertyName = "idLector";
-            this.idLector.HeaderText = "ID Lector";
-            this.idLector.Name = "idLector";
-            this.idLector.ReadOnly = true;
-            this.idLector.Width = 80;
-            // 
-            // nombre
-            // 
-            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "Lector";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
             // 
             // UsuariosLectoresGestion
             // 

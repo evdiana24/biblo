@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataManager;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,9 +32,10 @@ namespace Biblo.GUI
         private void Validar()
         {
             DataTable Datos = new DataTable();
+            String clave = Encriptacion.Encrypt(txbClave.Text);
             try
             {
-                Datos = DataSource.Consultas.INICIO_SESION(txbUsuario.Text, txbClave.Text);
+                Datos = DataSource.Consultas.INICIO_SESION(txbUsuario.Text, clave);
                 if(Datos.Rows.Count == 1)
                 {
                     oSesion.IDUsuario = Datos.Rows[0]["IDUsuario"].ToString();

@@ -206,6 +206,7 @@
             // 
             this.dtgEmpleadosGestion.AllowUserToAddRows = false;
             this.dtgEmpleadosGestion.AllowUserToDeleteRows = false;
+            this.dtgEmpleadosGestion.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgEmpleadosGestion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgEmpleadosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;

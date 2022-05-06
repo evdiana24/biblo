@@ -63,7 +63,7 @@
             this.txbIdLector.Location = new System.Drawing.Point(194, 367);
             this.txbIdLector.Name = "txbIdLector";
             this.txbIdLector.ReadOnly = true;
-            this.txbIdLector.Size = new System.Drawing.Size(139, 26);
+            this.txbIdLector.Size = new System.Drawing.Size(98, 26);
             this.txbIdLector.TabIndex = 204;
             // 
             // label3
@@ -84,9 +84,9 @@
             this.dtFechaCreacion.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.dtFechaCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtFechaCreacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFechaCreacion.Location = new System.Drawing.Point(280, 323);
+            this.dtFechaCreacion.Location = new System.Drawing.Point(291, 323);
             this.dtFechaCreacion.Name = "dtFechaCreacion";
-            this.dtFechaCreacion.Size = new System.Drawing.Size(322, 26);
+            this.dtFechaCreacion.Size = new System.Drawing.Size(311, 26);
             this.dtFechaCreacion.TabIndex = 202;
             // 
             // label5
@@ -235,9 +235,9 @@
             this.cmbEstado.Items.AddRange(new object[] {
             "Activo",
             "Suspendido"});
-            this.cmbEstado.Location = new System.Drawing.Point(144, 276);
+            this.cmbEstado.Location = new System.Drawing.Point(153, 276);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(127, 28);
+            this.cmbEstado.Size = new System.Drawing.Size(139, 28);
             this.cmbEstado.TabIndex = 190;
             // 
             // label4
@@ -260,9 +260,9 @@
             this.cmbCarnet.Items.AddRange(new object[] {
             "Verdadero",
             "Falso"});
-            this.cmbCarnet.Location = new System.Drawing.Point(371, 276);
+            this.cmbCarnet.Location = new System.Drawing.Point(392, 276);
             this.cmbCarnet.Name = "cmbCarnet";
-            this.cmbCarnet.Size = new System.Drawing.Size(226, 28);
+            this.cmbCarnet.Size = new System.Drawing.Size(211, 28);
             this.cmbCarnet.TabIndex = 208;
             // 
             // label7
@@ -271,7 +271,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(287, 276);
+            this.label7.Location = new System.Drawing.Point(308, 276);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 23);
             this.label7.TabIndex = 207;

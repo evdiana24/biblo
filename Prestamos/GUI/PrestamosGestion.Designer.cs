@@ -62,6 +62,7 @@
             // 
             this.dtgPrestamosGestion.AllowUserToAddRows = false;
             this.dtgPrestamosGestion.AllowUserToDeleteRows = false;
+            this.dtgPrestamosGestion.AllowUserToResizeRows = false;
             this.dtgPrestamosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

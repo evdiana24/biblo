@@ -123,8 +123,7 @@ namespace Usuarios.GUI
                     f.dtFechaCreacion.Text = dtgUsuariosGestion.CurrentRow.Cells["fecha_creacion"].Value.ToString();
                     f.txbIdEmpleado.Text = dtgUsuariosGestion.CurrentRow.Cells["idEmpleado"].Value.ToString();
                     f.txbEmpleado.Text = dtgUsuariosGestion.CurrentRow.Cells["nombre"].Value.ToString();
-                    f.txbIdRol.Text = dtgUsuariosGestion.CurrentRow.Cells["idRol"].Value.ToString();
-                    f.txbRol.Text = dtgUsuariosGestion.CurrentRow.Cells["rol"].Value.ToString();
+                    f.cmbRol.Text = dtgUsuariosGestion.CurrentRow.Cells["rol"].Value.ToString();
                     f.ShowDialog();
                     CargarDatos();
                 }

@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Permisos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.idPermiso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idOpcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asignado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dtgDatos = new System.Windows.Forms.DataGridView();
+            this.Asignado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idOpcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPermiso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbRol
             // 
             this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Location = new System.Drawing.Point(50, 137);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(305, 28);
+            this.cmbRol.Size = new System.Drawing.Size(305, 26);
             this.cmbRol.TabIndex = 23;
             this.cmbRol.SelectedIndexChanged += new System.EventHandler(this.cbbRol_SelectedIndexChanged);
             // 
@@ -59,7 +59,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(49, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 19);
@@ -84,36 +84,46 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(130, 46);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(170, 38);
             this.label11.TabIndex = 139;
             this.label11.Text = "PERMISOS";
             // 
-            // idPermiso
+            // dtgDatos
             // 
-            this.idPermiso.DataPropertyName = "idPermiso";
-            this.idPermiso.HeaderText = "IDPermiso";
-            this.idPermiso.Name = "idPermiso";
-            this.idPermiso.ReadOnly = true;
-            this.idPermiso.Visible = false;
-            // 
-            // opcion
-            // 
-            this.opcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.opcion.DataPropertyName = "opcion";
-            this.opcion.HeaderText = "Opcion";
-            this.opcion.Name = "opcion";
-            this.opcion.ReadOnly = true;
-            // 
-            // idOpcion
-            // 
-            this.idOpcion.DataPropertyName = "idOpcion";
-            this.idOpcion.HeaderText = "ID";
-            this.idOpcion.Name = "idOpcion";
-            this.idOpcion.ReadOnly = true;
-            this.idOpcion.Width = 80;
+            this.dtgDatos.AllowUserToAddRows = false;
+            this.dtgDatos.AllowUserToDeleteRows = false;
+            this.dtgDatos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.dtgDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgDatos.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dtgDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Asignado,
+            this.idOpcion,
+            this.opcion,
+            this.idPermiso});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgDatos.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgDatos.Location = new System.Drawing.Point(50, 186);
+            this.dtgDatos.MultiSelect = false;
+            this.dtgDatos.Name = "dtgDatos";
+            this.dtgDatos.ReadOnly = true;
+            this.dtgDatos.RowHeadersVisible = false;
+            this.dtgDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgDatos.Size = new System.Drawing.Size(471, 246);
+            this.dtgDatos.TabIndex = 24;
+            this.dtgDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDatos_CellContentClick);
             // 
             // Asignado
             // 
@@ -126,39 +136,29 @@
             this.Asignado.TrueValue = "1";
             this.Asignado.Width = 70;
             // 
-            // dtgDatos
+            // idOpcion
             // 
-            this.dtgDatos.AllowUserToAddRows = false;
-            this.dtgDatos.AllowUserToDeleteRows = false;
-            this.dtgDatos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.dtgDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgDatos.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dtgDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Asignado,
-            this.idOpcion,
-            this.opcion,
-            this.idPermiso});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgDatos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgDatos.Location = new System.Drawing.Point(50, 191);
-            this.dtgDatos.MultiSelect = false;
-            this.dtgDatos.Name = "dtgDatos";
-            this.dtgDatos.ReadOnly = true;
-            this.dtgDatos.RowHeadersVisible = false;
-            this.dtgDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDatos.Size = new System.Drawing.Size(461, 246);
-            this.dtgDatos.TabIndex = 24;
-            this.dtgDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDatos_CellContentClick);
+            this.idOpcion.DataPropertyName = "idOpcion";
+            this.idOpcion.HeaderText = "ID";
+            this.idOpcion.Name = "idOpcion";
+            this.idOpcion.ReadOnly = true;
+            this.idOpcion.Width = 80;
+            // 
+            // opcion
+            // 
+            this.opcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.opcion.DataPropertyName = "opcion";
+            this.opcion.HeaderText = "Opción";
+            this.opcion.Name = "opcion";
+            this.opcion.ReadOnly = true;
+            // 
+            // idPermiso
+            // 
+            this.idPermiso.DataPropertyName = "idPermiso";
+            this.idPermiso.HeaderText = "IDPermiso";
+            this.idPermiso.Name = "idPermiso";
+            this.idPermiso.ReadOnly = true;
+            this.idPermiso.Visible = false;
             // 
             // Permisos
             // 
@@ -187,10 +187,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPermiso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idOpcion;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Asignado;
         private System.Windows.Forms.DataGridView dtgDatos;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Asignado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOpcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPermiso;
     }
 }

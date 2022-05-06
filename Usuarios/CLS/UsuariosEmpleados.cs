@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataManager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -116,7 +117,7 @@ namespace Usuarios.CLS
             {
                 Sentencia.Append("INSERT INTO usuarios_empleados(usuario,clave,estado,fecha_creacion,idEmpleado,idRol) values(");
                 Sentencia.Append("'" + this._Usuario + "',");
-                Sentencia.Append("'" + this._Clave + "',");
+                Sentencia.Append("'" + Encriptacion.Encrypt(this._Clave) + "',");
                 Sentencia.Append("'" + this._Estado + "',");
                 Sentencia.Append("'" + this._Fecha_Creacion + "',");
                 Sentencia.Append("'" + this._IDEmpleado + "',");
@@ -143,7 +144,7 @@ namespace Usuarios.CLS
             {
                 Sentencia.Append("UPDATE usuarios_empleados SET ");
                 Sentencia.Append("usuario='" + this._Usuario + "',");
-                Sentencia.Append("clave='" + this._Clave + "',");
+                Sentencia.Append("clave='" + Encriptacion.Encrypt(this._Clave) + "',");
                 Sentencia.Append("estado='" + this._Estado + "',");
                 Sentencia.Append("fecha_creacion='" + this._Fecha_Creacion + "',");
                 Sentencia.Append("idEmpleado='" + this._IDEmpleado + "',");

@@ -115,26 +115,6 @@ namespace Configuraciones.GUI
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    GUI.RolesEdicion f = new RolesEdicion();
-                    f.txbIdRol.Text = dtgRolesGestion.CurrentRow.Cells["idRol"].Value.ToString();
-                    f.txbRol.Text = dtgRolesGestion.CurrentRow.Cells["rol"].Value.ToString();
-                    f.ShowDialog();
-                    CargarDatos();
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Seleccione una fila válida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try

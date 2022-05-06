@@ -12,6 +12,20 @@ namespace Usuarios.GUI
 {
     public partial class UsuarioEmpleadoEdicion : Form
     {
+        private void LlenarRoles()
+        {
+            try
+            {
+                cmbRol.DataSource = DataSource.Consultas.TODOS_LOS_ROLES();
+                cmbRol.DisplayMember = "Rol";
+                cmbRol.ValueMember = "IDRol";
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
         private void Procesar()
         {
             try
@@ -28,7 +42,7 @@ namespace Usuarios.GUI
                     oUsuarioEmpleado.Estado = cmbEstado.Text;
                     oUsuarioEmpleado.Fecha_Creacion = dtFechaCreacion.Value.ToString("yyyy/MM/dd HH:mm:ss");
                     oUsuarioEmpleado.IDEmpleado = txbIdEmpleado.Text;
-                    oUsuarioEmpleado.IdRol = txbIdRol.Text;
+                    oUsuarioEmpleado.IdRol = cmbRol.SelectedValue.ToString();
 
                     //Operamos segun sea el caso
                     if (txbIdUsuario.TextLength > 0)
@@ -105,9 +119,9 @@ namespace Usuarios.GUI
                     Notificador.SetError(txbIdEmpleado, "Seleccione el ID del empleado");
                     Validado = false;
                 }
-                if (txbIdRol.TextLength == 0)
+                if (cmbRol.Text.Length == 0)
                 {
-                    Notificador.SetError(txbIdRol, "Escriba el ID del rol");
+                    Notificador.SetError(cmbRol, "Seleccione un rol");
                     Validado = false;
                 }
             }
@@ -121,6 +135,7 @@ namespace Usuarios.GUI
         public UsuarioEmpleadoEdicion()
         {
             InitializeComponent();
+            LlenarRoles();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -143,24 +158,6 @@ namespace Usuarios.GUI
                 {
                     txbIdEmpleado.Text = f.IDEmpleadoSeleccionado;
                     txbEmpleado.Text = f.EmpleadoSeleccionado;
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
-        private void btnBuscarRol_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Configuraciones.GUI.RolesGestion f = new Configuraciones.GUI.RolesGestion();
-                f.ShowDialog();
-                if (f.Seleccionado)
-                {
-                    txbIdRol.Text = f.IDRolSeleccionado;
-                    txbRol.Text = f.RolSeleccionado;
                 }
             }
             catch (Exception)

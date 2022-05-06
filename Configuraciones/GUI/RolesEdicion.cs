@@ -25,37 +25,19 @@ namespace Configuraciones.GUI
                     oRol.IdRol = txbIdRol.Text;
                     oRol.Rol = txbRol.Text;
 
-                    //Operamos segun sea el caso
-                    if (txbIdRol.TextLength > 0)
+                    //Estoy insertando un nuevo registro
+                    if (oRol.Guardar())
                     {
-                        //Estoy editando
-                        if (oRol.Actualizar())
-                        {
-                            //Se actualizo correctamente
-                            MessageBox.Show("El registro fue actualizado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Close();
-                        }
-                        else
-                        {
-                            //No se actualizo correctamente
-                            MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                        //Se guardo correctamente
+                        MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
                     }
                     else
                     {
-                        //Estoy insertando un nuevo registro
-                        if (oRol.Guardar())
-                        {
-                            //Se guardo correctamente
-                            MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Close();
-                        }
-                        else
-                        {
-                            //No se guardo correctamente
-                            MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                        //No se guardo correctamente
+                        MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+                    
                 }
             }
             catch (Exception)

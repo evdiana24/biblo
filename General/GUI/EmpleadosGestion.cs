@@ -178,7 +178,7 @@ namespace General.GUI
                 _IDEmpleadoSeleccionado = dtgEmpleadosGestion.CurrentRow.Cells["idEmpleado"].Value.ToString();
                 _EmpleadoSeleccionado = dtgEmpleadosGestion.CurrentRow.Cells["nombres"].Value.ToString() + " " + dtgEmpleadosGestion.CurrentRow.Cells["apellidos"].Value.ToString();
                 _Seleccionado = true;
-                //Close();
+                Close();
             }
             catch (Exception)
             {

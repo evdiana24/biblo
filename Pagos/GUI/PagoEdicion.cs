@@ -24,7 +24,7 @@ namespace Pagos.GUI
                     //Sincronizar el objeto con la interfaz
                     oPago.IDpago = txbIdPago.Text;
                     oPago.Descripcion = cmbDescripcion.Text;
-                    oPago.Fecha_Pago = dtFechaPago.Value.Date.ToString("yyyy/MM/dd");
+                    oPago.Fecha_Pago = dtFechaPago.Value.ToString("yyyy/MM/dd HH:mm:ss");
                     oPago.Total = txbTotal.Text;
                     oPago.IDUsuario_Lector = txbIdUsuarioLector.Text;
                     oPago.IDUsuario_Empleado = txbIdUsuarioEmpleado.Text;

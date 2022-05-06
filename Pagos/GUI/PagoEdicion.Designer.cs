@@ -184,11 +184,18 @@
             // 
             // cmbDescripcion
             // 
+            this.cmbDescripcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbDescripcion.FormattingEnabled = true;
+            this.cmbDescripcion.Items.AddRange(new object[] {
+            "Pago de mora",
+            "Reposición de carnet",
+            "Reposición de libro",
+            "Daño de libro",
+            "Donación"});
             this.cmbDescripcion.Location = new System.Drawing.Point(287, 148);
             this.cmbDescripcion.Name = "cmbDescripcion";
-            this.cmbDescripcion.Size = new System.Drawing.Size(139, 28);
+            this.cmbDescripcion.Size = new System.Drawing.Size(298, 28);
             this.cmbDescripcion.TabIndex = 166;
             // 
             // label4
@@ -226,12 +233,12 @@
             // 
             // dtFechaPago
             // 
-            this.dtFechaPago.CustomFormat = "dd/MM/yyyy";
+            this.dtFechaPago.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.dtFechaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFechaPago.Location = new System.Drawing.Point(287, 186);
             this.dtFechaPago.Name = "dtFechaPago";
-            this.dtFechaPago.Size = new System.Drawing.Size(170, 26);
+            this.dtFechaPago.Size = new System.Drawing.Size(298, 26);
             this.dtFechaPago.TabIndex = 180;
             // 
             // label5
@@ -256,6 +263,7 @@
             this.txbUsuarioLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txbUsuarioLector.Location = new System.Drawing.Point(287, 303);
             this.txbUsuarioLector.Name = "txbUsuarioLector";
+            this.txbUsuarioLector.ReadOnly = true;
             this.txbUsuarioLector.Size = new System.Drawing.Size(298, 26);
             this.txbUsuarioLector.TabIndex = 182;
             // 
@@ -276,6 +284,7 @@
             this.txbUsuarioEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txbUsuarioEmpleado.Location = new System.Drawing.Point(287, 379);
             this.txbUsuarioEmpleado.Name = "txbUsuarioEmpleado";
+            this.txbUsuarioEmpleado.ReadOnly = true;
             this.txbUsuarioEmpleado.Size = new System.Drawing.Size(298, 26);
             this.txbUsuarioEmpleado.TabIndex = 184;
             // 

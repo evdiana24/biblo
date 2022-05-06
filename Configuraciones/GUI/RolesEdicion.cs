@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Prestamos.GUI
+namespace Configuraciones.GUI
 {
-    public partial class PrestamoEdicion : Form
+    public partial class RolesEdicion : Form
     {
         private void Procesar()
         {
@@ -19,19 +19,17 @@ namespace Prestamos.GUI
                 if (Validar())
                 {
                     //Creamos el objeto entidad
-                    CLS.Prestamos oPrestamo = new CLS.Prestamos();
+                    CLS.Roles oRol = new CLS.Roles();
 
                     //Sincronizar el objeto con la interfaz
-                    oPrestamo.IdPrestamo = txbIdPrestamo.Text;
-                    oPrestamo.IdUsuario_lector = txbIdUsuarioLector.Text;
-                    oPrestamo.IdUsuario_empleado = txbIdUsuarioEmpleado.Text;
-                    oPrestamo.Fecha_prestamo = dtFechaPrestamo.Value.ToString("yyyy/MM/dd HH:mm:ss");
+                    oRol.IdRol = txbIdRol.Text;
+                    oRol.Rol = txbRol.Text;
 
                     //Operamos segun sea el caso
-                    if (txbIdPrestamo.TextLength > 0)
+                    if (txbIdRol.TextLength > 0)
                     {
                         //Estoy editando
-                        if (oPrestamo.Actualizar())
+                        if (oRol.Actualizar())
                         {
                             //Se actualizo correctamente
                             MessageBox.Show("El registro fue actualizado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -46,7 +44,7 @@ namespace Prestamos.GUI
                     else
                     {
                         //Estoy insertando un nuevo registro
-                        if (oPrestamo.Guardar())
+                        if (oRol.Guardar())
                         {
                             //Se guardo correctamente
                             MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -72,19 +70,9 @@ namespace Prestamos.GUI
             try
             {
                 Notificador.Clear();
-                if (txbIdUsuarioLector.TextLength == 0)
+                if (txbRol.TextLength == 0)
                 {
-                    Notificador.SetError(txbIdUsuarioLector, "Escriba el ID del lector");
-                    Validado = false;
-                }
-                if (txbIdUsuarioEmpleado.Text.Length == 0)
-                {
-                    Notificador.SetError(txbIdUsuarioEmpleado, "Escriba el ID del empleado");
-                    Validado = false;
-                }
-                if (dtFechaPrestamo.Text.Length == 0)
-                {
-                    Notificador.SetError(dtFechaPrestamo, "Seleccione la fecha del prestamo");
+                    Notificador.SetError(txbRol, "Escriba un rol");
                     Validado = false;
                 }
             }
@@ -95,7 +83,7 @@ namespace Prestamos.GUI
             return Validado;
         }
 
-        public PrestamoEdicion()
+        public RolesEdicion()
         {
             InitializeComponent();
         }
@@ -108,42 +96,6 @@ namespace Prestamos.GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void btnBuscarLector_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Usuarios.GUI.UsuariosLectoresGestion f = new Usuarios.GUI.UsuariosLectoresGestion();
-                f.ShowDialog();
-                if (f.Seleccionado)
-                {
-                    txbIdUsuarioLector.Text = f.IDUsuarioSeleccionado;
-                    txbUsuarioLector.Text = f.UsuarioSeleccionado;
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
-        private void btnBuscarEmpleado_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Usuarios.GUI.UsuariosEmpleadosGestion f = new Usuarios.GUI.UsuariosEmpleadosGestion();
-                f.ShowDialog();
-                if (f.Seleccionado)
-                {
-                    txbIdUsuarioEmpleado.Text = f.IDUsuarioSeleccionado;
-                    txbUsuarioEmpleado.Text = f.UsuarioSeleccionado;
-                }
-            }
-            catch (Exception)
-            {
-
-            }
         }
     }
 }

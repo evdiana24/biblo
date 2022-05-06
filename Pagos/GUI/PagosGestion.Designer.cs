@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PagosGestion));
-            this.dtgPrestamosGestion = new System.Windows.Forms.DataGridView();
-            this.idPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUsuario_lectorr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUsuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgPagosGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -47,7 +39,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.txbFiltrar = new System.Windows.Forms.ToolStripTextBox();
+            this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -55,101 +47,50 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamosGestion)).BeginInit();
+            this.idPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario_lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioLector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPagosGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgPrestamosGestion
+            // dtgPagosGestion
             // 
-            this.dtgPrestamosGestion.AllowUserToAddRows = false;
-            this.dtgPrestamosGestion.AllowUserToDeleteRows = false;
-            this.dtgPrestamosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPrestamosGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgPrestamosGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPrestamosGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgPagosGestion.AllowUserToAddRows = false;
+            this.dtgPagosGestion.AllowUserToDeleteRows = false;
+            this.dtgPagosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPagosGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgPagosGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPagosGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPago,
             this.descripcion,
             this.fecha_pago,
             this.total,
-            this.idUsuario_lectorr,
+            this.idUsuario_lector,
             this.usuarioLector,
             this.idUsuario_empleado,
             this.usuarioEmpleado});
-            this.dtgPrestamosGestion.Location = new System.Drawing.Point(39, 92);
-            this.dtgPrestamosGestion.Name = "dtgPrestamosGestion";
-            this.dtgPrestamosGestion.ReadOnly = true;
-            this.dtgPrestamosGestion.RowHeadersVisible = false;
-            this.dtgPrestamosGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dtgPrestamosGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgPrestamosGestion.Size = new System.Drawing.Size(897, 412);
-            this.dtgPrestamosGestion.TabIndex = 48;
-            // 
-            // idPago
-            // 
-            this.idPago.DataPropertyName = "idPago";
-            this.idPago.HeaderText = "ID Pago";
-            this.idPago.Name = "idPago";
-            this.idPago.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcion.DataPropertyName = "descripcion";
-            this.descripcion.HeaderText = "Descripción";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // fecha_pago
-            // 
-            this.fecha_pago.DataPropertyName = "fecha_pago";
-            this.fecha_pago.HeaderText = "Fecha Pago";
-            this.fecha_pago.Name = "fecha_pago";
-            this.fecha_pago.ReadOnly = true;
-            // 
-            // total
-            // 
-            this.total.DataPropertyName = "total";
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            // 
-            // idUsuario_lectorr
-            // 
-            this.idUsuario_lectorr.DataPropertyName = "idUsuario_lector";
-            this.idUsuario_lectorr.HeaderText = "ID Usuario Lector";
-            this.idUsuario_lectorr.Name = "idUsuario_lectorr";
-            this.idUsuario_lectorr.ReadOnly = true;
-            // 
-            // usuarioLector
-            // 
-            this.usuarioLector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.usuarioLector.DataPropertyName = "usuarioLector";
-            this.usuarioLector.HeaderText = "Usuario Lector";
-            this.usuarioLector.Name = "usuarioLector";
-            this.usuarioLector.ReadOnly = true;
-            // 
-            // idUsuario_empleado
-            // 
-            this.idUsuario_empleado.DataPropertyName = "idUsuario_empleado";
-            this.idUsuario_empleado.HeaderText = "ID Usuario Empleado";
-            this.idUsuario_empleado.Name = "idUsuario_empleado";
-            this.idUsuario_empleado.ReadOnly = true;
-            // 
-            // usuarioEmpleado
-            // 
-            this.usuarioEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.usuarioEmpleado.DataPropertyName = "usuarioEmpleado";
-            this.usuarioEmpleado.HeaderText = "usuarioEmpleado";
-            this.usuarioEmpleado.Name = "usuarioEmpleado";
-            this.usuarioEmpleado.ReadOnly = true;
+            this.dtgPagosGestion.Location = new System.Drawing.Point(39, 92);
+            this.dtgPagosGestion.Name = "dtgPagosGestion";
+            this.dtgPagosGestion.ReadOnly = true;
+            this.dtgPagosGestion.RowHeadersVisible = false;
+            this.dtgPagosGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dtgPagosGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgPagosGestion.Size = new System.Drawing.Size(897, 412);
+            this.dtgPagosGestion.TabIndex = 48;
             // 
             // toolStrip1
             // 
@@ -165,7 +106,7 @@
             this.toolStripSeparator3,
             this.btnEliminar,
             this.toolStripSeparator4,
-            this.txbFiltrar,
+            this.txbFiltro,
             this.toolStripLabel1,
             this.btnSeleccionar,
             this.toolStripSeparator5});
@@ -188,6 +129,7 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(69, 32);
             this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -201,6 +143,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(57, 32);
             this.btnEditar.Text = "Editar";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // toolStripSeparator3
             // 
@@ -214,19 +157,21 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(70, 32);
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 35);
             // 
-            // txbFiltrar
+            // txbFiltro
             // 
-            this.txbFiltrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.txbFiltrar.AutoSize = false;
-            this.txbFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFiltrar.Name = "txbFiltrar";
-            this.txbFiltrar.Size = new System.Drawing.Size(200, 23);
+            this.txbFiltro.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.txbFiltro.AutoSize = false;
+            this.txbFiltro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFiltro.Name = "txbFiltro";
+            this.txbFiltro.Size = new System.Drawing.Size(200, 23);
+            this.txbFiltro.TextChanged += new System.EventHandler(this.txbFiltrar_TextChanged);
             // 
             // toolStripLabel1
             // 
@@ -243,6 +188,7 @@
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(87, 32);
             this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // toolStripSeparator5
             // 
@@ -295,6 +241,65 @@
             this.label1.TabIndex = 89;
             this.label1.Text = "PAGOS";
             // 
+            // idPago
+            // 
+            this.idPago.DataPropertyName = "idPago";
+            this.idPago.HeaderText = "ID Pago";
+            this.idPago.Name = "idPago";
+            this.idPago.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // fecha_pago
+            // 
+            this.fecha_pago.DataPropertyName = "fecha_pago";
+            this.fecha_pago.HeaderText = "Fecha Pago";
+            this.fecha_pago.Name = "fecha_pago";
+            this.fecha_pago.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            // 
+            // idUsuario_lector
+            // 
+            this.idUsuario_lector.DataPropertyName = "idUsuario_lector";
+            this.idUsuario_lector.HeaderText = "ID Usuario Lector";
+            this.idUsuario_lector.Name = "idUsuario_lector";
+            this.idUsuario_lector.ReadOnly = true;
+            // 
+            // usuarioLector
+            // 
+            this.usuarioLector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuarioLector.DataPropertyName = "usuarioLector";
+            this.usuarioLector.HeaderText = "Usuario Lector";
+            this.usuarioLector.Name = "usuarioLector";
+            this.usuarioLector.ReadOnly = true;
+            // 
+            // idUsuario_empleado
+            // 
+            this.idUsuario_empleado.DataPropertyName = "idUsuario_empleado";
+            this.idUsuario_empleado.HeaderText = "ID Usuario Empleado";
+            this.idUsuario_empleado.Name = "idUsuario_empleado";
+            this.idUsuario_empleado.ReadOnly = true;
+            // 
+            // usuarioEmpleado
+            // 
+            this.usuarioEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuarioEmpleado.DataPropertyName = "usuarioEmpleado";
+            this.usuarioEmpleado.HeaderText = "Usuario Empleado";
+            this.usuarioEmpleado.Name = "usuarioEmpleado";
+            this.usuarioEmpleado.ReadOnly = true;
+            // 
             // PagosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,11 +311,12 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgPrestamosGestion);
+            this.Controls.Add(this.dtgPagosGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PagosGestion";
             this.Text = "verPagos";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamosGestion)).EndInit();
+            this.Load += new System.EventHandler(this.PagosGestion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPagosGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -321,7 +327,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgPrestamosGestion;
+        private System.Windows.Forms.DataGridView dtgPagosGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -330,21 +336,21 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripTextBox txbFiltrar;
+        private System.Windows.Forms.ToolStripTextBox txbFiltro;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton btnSeleccionar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_pago;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_lectorr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_lector;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioLector;
         private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_empleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioEmpleado;
-        private System.Windows.Forms.Label label1;
     }
 }

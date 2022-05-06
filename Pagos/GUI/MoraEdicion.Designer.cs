@@ -83,6 +83,7 @@
             this.txbIdDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txbIdDetalle.Location = new System.Drawing.Point(174, 164);
             this.txbIdDetalle.Name = "txbIdDetalle";
+            this.txbIdDetalle.ReadOnly = true;
             this.txbIdDetalle.Size = new System.Drawing.Size(139, 26);
             this.txbIdDetalle.TabIndex = 163;
             // 
@@ -113,7 +114,7 @@
             // txbIdMora
             // 
             this.txbIdMora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdMora.Location = new System.Drawing.Point(174, 126);
+            this.txbIdMora.Location = new System.Drawing.Point(174, 123);
             this.txbIdMora.Name = "txbIdMora";
             this.txbIdMora.ReadOnly = true;
             this.txbIdMora.Size = new System.Drawing.Size(139, 26);
@@ -205,6 +206,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox1.Location = new System.Drawing.Point(174, 204);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(251, 26);
             this.textBox1.TabIndex = 166;
             // 

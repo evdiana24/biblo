@@ -242,7 +242,7 @@ namespace DataSource
         {
             DataTable Resultado = new DataTable();
             String Consulta = @"SELECT a.idPago, a.descripcion, a.fecha_pago, a.total, 
-            a.idUsuario_lector, b.usuario, a.idUsuario_empleado, c.usuario
+            a.idUsuario_lector, b.usuario AS usuarioLector, a.idUsuario_empleado, c.usuario AS usuarioEmpleado
             FROM pagos a, usuarios_lectores b, usuarios_empleados c
             WHERE a.idUsuario_lector = b.idUsuario
             AND a.idUsuario_empleado = c.idUsuario;";

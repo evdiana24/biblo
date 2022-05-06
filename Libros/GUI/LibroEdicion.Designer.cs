@@ -141,6 +141,7 @@
             this.txbIdEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txbIdEditorial.Location = new System.Drawing.Point(199, 291);
             this.txbIdEditorial.Name = "txbIdEditorial";
+            this.txbIdEditorial.ReadOnly = true;
             this.txbIdEditorial.Size = new System.Drawing.Size(128, 26);
             this.txbIdEditorial.TabIndex = 151;
             // 
@@ -226,6 +227,7 @@
             this.txbEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txbEditorial.Location = new System.Drawing.Point(199, 332);
             this.txbEditorial.Name = "txbEditorial";
+            this.txbEditorial.ReadOnly = true;
             this.txbEditorial.Size = new System.Drawing.Size(316, 26);
             this.txbEditorial.TabIndex = 154;
             // 

@@ -1,6 +1,6 @@
-﻿namespace Pagos.GUI
+﻿namespace Configuraciones.GUI
 {
-    partial class MorasGestion
+    partial class RolesGestion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MorasGestion));
-            this.dtgMorasGestion = new System.Windows.Forms.DataGridView();
-            this.idMora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalMora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RolesGestion));
+            this.dtgRolesGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -51,70 +47,38 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMorasGestion)).BeginInit();
+            this.idRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRolesGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgMorasGestion
+            // dtgRolesGestion
             // 
-            this.dtgMorasGestion.AllowUserToAddRows = false;
-            this.dtgMorasGestion.AllowUserToDeleteRows = false;
-            this.dtgMorasGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgMorasGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgMorasGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgMorasGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idMora,
-            this.idDetalle,
-            this.totalMora,
-            this.estado});
-            this.dtgMorasGestion.Location = new System.Drawing.Point(39, 92);
-            this.dtgMorasGestion.Name = "dtgMorasGestion";
-            this.dtgMorasGestion.ReadOnly = true;
-            this.dtgMorasGestion.RowHeadersVisible = false;
-            this.dtgMorasGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dtgMorasGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgMorasGestion.Size = new System.Drawing.Size(897, 412);
-            this.dtgMorasGestion.TabIndex = 56;
-            // 
-            // idMora
-            // 
-            this.idMora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idMora.DataPropertyName = "idMora";
-            this.idMora.HeaderText = "ID Mora";
-            this.idMora.Name = "idMora";
-            this.idMora.ReadOnly = true;
-            // 
-            // idDetalle
-            // 
-            this.idDetalle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDetalle.DataPropertyName = "idDetalle";
-            this.idDetalle.HeaderText = "ID Detalle";
-            this.idDetalle.Name = "idDetalle";
-            this.idDetalle.ReadOnly = true;
-            // 
-            // totalMora
-            // 
-            this.totalMora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.totalMora.DataPropertyName = "totalMora";
-            this.totalMora.HeaderText = "Total Mora";
-            this.totalMora.Name = "totalMora";
-            this.totalMora.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
+            this.dtgRolesGestion.AllowUserToAddRows = false;
+            this.dtgRolesGestion.AllowUserToDeleteRows = false;
+            this.dtgRolesGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgRolesGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgRolesGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgRolesGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idRol,
+            this.rol});
+            this.dtgRolesGestion.Location = new System.Drawing.Point(39, 92);
+            this.dtgRolesGestion.Name = "dtgRolesGestion";
+            this.dtgRolesGestion.ReadOnly = true;
+            this.dtgRolesGestion.RowHeadersVisible = false;
+            this.dtgRolesGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dtgRolesGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgRolesGestion.Size = new System.Drawing.Size(897, 412);
+            this.dtgRolesGestion.TabIndex = 64;
             // 
             // toolStrip1
             // 
@@ -138,7 +102,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(2);
             this.toolStrip1.Size = new System.Drawing.Size(896, 39);
-            this.toolStrip1.TabIndex = 59;
+            this.toolStrip1.TabIndex = 74;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
@@ -227,7 +191,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(838, 539);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(98, 32);
-            this.btnCancelar.TabIndex = 87;
+            this.btnCancelar.TabIndex = 90;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -240,11 +204,11 @@
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblRegistros});
-            this.statusStrip1.Location = new System.Drawing.Point(40, 505);
+            this.statusStrip1.Location = new System.Drawing.Point(40, 504);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(896, 22);
             this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 86;
+            this.statusStrip1.TabIndex = 89;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblRegistros
@@ -259,13 +223,28 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(464, 26);
+            this.label1.Location = new System.Drawing.Point(466, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 17);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "MORAS";
+            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.TabIndex = 91;
+            this.label1.Text = "ROLES";
             // 
-            // MorasGestion
+            // idRol
+            // 
+            this.idRol.DataPropertyName = "idRol";
+            this.idRol.HeaderText = "ID Rol";
+            this.idRol.Name = "idRol";
+            this.idRol.ReadOnly = true;
+            // 
+            // rol
+            // 
+            this.rol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rol.DataPropertyName = "rol";
+            this.rol.HeaderText = "Rol";
+            this.rol.Name = "rol";
+            this.rol.ReadOnly = true;
+            // 
+            // RolesGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -276,12 +255,12 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgMorasGestion);
+            this.Controls.Add(this.dtgRolesGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MorasGestion";
-            this.Text = "verMoras";
-            this.Load += new System.EventHandler(this.MorasGestion_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMorasGestion)).EndInit();
+            this.Name = "RolesGestion";
+            this.Text = "Gestión de categorías";
+            this.Load += new System.EventHandler(this.verCategoria_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRolesGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -292,7 +271,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgMorasGestion;
+        private System.Windows.Forms.DataGridView dtgRolesGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -308,10 +287,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDetalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalMora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idRol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rol;
     }
 }

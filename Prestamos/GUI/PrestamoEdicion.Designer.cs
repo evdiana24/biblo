@@ -139,12 +139,12 @@
             // 
             // dtFechaPrestamo
             // 
-            this.dtFechaPrestamo.CustomFormat = "dd/MM/yyyy";
+            this.dtFechaPrestamo.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.dtFechaPrestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtFechaPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFechaPrestamo.Location = new System.Drawing.Point(279, 331);
             this.dtFechaPrestamo.Name = "dtFechaPrestamo";
-            this.dtFechaPrestamo.Size = new System.Drawing.Size(170, 26);
+            this.dtFechaPrestamo.Size = new System.Drawing.Size(298, 26);
             this.dtFechaPrestamo.TabIndex = 182;
             // 
             // label5

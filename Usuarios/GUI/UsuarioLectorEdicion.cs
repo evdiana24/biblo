@@ -27,9 +27,10 @@ namespace Usuarios.GUI
                     oUsuarioLector.Clave = txbClave.Text;
                     oUsuarioLector.Estado = cmbEstado.Text;
                     oUsuarioLector.Carnet = cmbCarnet.Text;
-                    oUsuarioLector.Fecha_Creacion = dtFechaCreacion.Value.Date.ToString("yyyy/MM/dd");
+                    oUsuarioLector.Fecha_Creacion = dtFechaCreacion.Value.ToString("yyyy/MM/dd hh:mm:ss");
                     oUsuarioLector.IDLector = txbIdLector.Text;
-                    oUsuarioLector.IDRol = txbIdRol.Text;
+                    //oUsuarioLector.IDRol = txbIdRol.Text;
+                    oUsuarioLector.IDRol = "2";
 
                     //Operamos segun sea el caso
                     if (txbIdUsuario.TextLength > 0)
@@ -86,6 +87,11 @@ namespace Usuarios.GUI
                     Notificador.SetError(txbClave, "Escriba la contraseña");
                     Validado = false;
                 }
+                if (!txbClave.Text.Equals(txbRepiteClave.Text))
+                {
+                    Notificador.SetError(txbRepiteClave, "Las claves no concuerdan");
+                    Validado = false;
+                }
                 if (cmbEstado.Text.Length == 0)
                 {
                     Notificador.SetError(cmbEstado, "Seleccione el estado del usuario");
@@ -106,11 +112,11 @@ namespace Usuarios.GUI
                     Notificador.SetError(txbIdLector, "Seleccione el ID del lector");
                     Validado = false;
                 }
-                if (txbIdRol.TextLength == 0)
-                {
-                    Notificador.SetError(txbIdRol, "Escriba el ID del rol");
-                    Validado = false;
-                }
+                //if (txbIdRol.TextLength == 0)
+                //{
+                //    Notificador.SetError(txbIdRol, "Escriba el ID del rol");
+                //    Validado = false;
+                //}
             }
             catch (Exception)
             {
@@ -132,6 +138,24 @@ namespace Usuarios.GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnBuscarLector_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                General.GUI.LectoresGestion f = new General.GUI.LectoresGestion();
+                f.ShowDialog();
+                if (f.Seleccionado)
+                {
+                    txbIdLector.Text = f.IDLectorSeleccionado;
+                    txbLector.Text = f.LectorSeleccionado;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

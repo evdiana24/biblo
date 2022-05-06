@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE4F7CBE-52ED-44EC-8990-5C721DB624B8}</ProjectGuid>
+    <ProjectGuid>{DC399A59-4204-4DEC-8273-52F75FC8976A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Usuarios</RootNamespace>
-    <AssemblyName>Usuarios</AssemblyName>
+    <RootNamespace>Configuraciones</RootNamespace>
+    <AssemblyName>Configuraciones</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,44 +42,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CLS\UsuariosEmpleados.cs" />
-    <Compile Include="CLS\UsuariosLectores.cs" />
-    <Compile Include="GUI\UsuarioLectorEdicion.cs">
+    <Compile Include="CLS\Permisos.cs" />
+    <Compile Include="CLS\Roles.cs" />
+    <Compile Include="GUI\RolesGestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\UsuarioLectorEdicion.Designer.cs">
-      <DependentUpon>UsuarioLectorEdicion.cs</DependentUpon>
+    <Compile Include="GUI\RolesGestion.Designer.cs">
+      <DependentUpon>RolesGestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UsuarioEmpleadoEdicion.cs">
+    <Compile Include="GUI\RolesEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\UsuarioEmpleadoEdicion.Designer.cs">
-      <DependentUpon>UsuarioEmpleadoEdicion.cs</DependentUpon>
+    <Compile Include="GUI\RolesEdicion.Designer.cs">
+      <DependentUpon>RolesEdicion.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UsuariosEmpleadosGestion.cs">
+    <Compile Include="GUI\Permisos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\UsuariosEmpleadosGestion.Designer.cs">
-      <DependentUpon>UsuariosEmpleadosGestion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\UsuariosLectoresGestion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\UsuariosLectoresGestion.Designer.cs">
-      <DependentUpon>UsuariosLectoresGestion.cs</DependentUpon>
+    <Compile Include="GUI\Permisos.Designer.cs">
+      <DependentUpon>Permisos.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Configuraciones\Configuraciones.csproj">
-      <Project>{dc399a59-4204-4dec-8273-52f75fc8976a}</Project>
-      <Name>Configuraciones</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataManager\DataManager.csproj">
       <Project>{55ae3030-7e04-4543-937a-7101b9829dd2}</Project>
       <Name>DataManager</Name>
@@ -88,28 +73,16 @@
       <Project>{42e51e7c-cd09-4528-b6e2-5dd80ffd34f5}</Project>
       <Name>DataSource</Name>
     </ProjectReference>
-    <ProjectReference Include="..\General\General.csproj">
-      <Project>{0633c326-b44d-439b-bbd4-1bc7bfd90f98}</Project>
-      <Name>General</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="GUI\UsuarioLectorEdicion.resx">
-      <DependentUpon>UsuarioLectorEdicion.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\RolesGestion.resx">
+      <DependentUpon>RolesGestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UsuarioEmpleadoEdicion.resx">
-      <DependentUpon>UsuarioEmpleadoEdicion.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\RolesEdicion.resx">
+      <DependentUpon>RolesEdicion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UsuariosEmpleadosGestion.resx">
-      <DependentUpon>UsuariosEmpleadosGestion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UsuariosLectoresGestion.resx">
-      <DependentUpon>UsuariosLectoresGestion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="GUI\Permisos.resx">
+      <DependentUpon>Permisos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

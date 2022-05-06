@@ -8,38 +8,38 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pagos.GUI
+namespace Configuraciones.GUI
 {
-    public partial class MorasGestion : Form
+    public partial class RolesGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
-        String _IDMoraSeleccionado;
-        String _MoraSeleccionado;
+        String _IDRolSeleccionado;
+        String _RolSeleccionado;
         bool _Seleccionado = false;
 
-        public string IDMoraSeleccionado
+        public string IDRolSeleccionado
         {
             get
             {
-                return _IDMoraSeleccionado;
+                return _IDRolSeleccionado;
             }
 
             set
             {
-                _IDMoraSeleccionado = value;
+                _IDRolSeleccionado = value;
             }
         }
 
-        public string MoraSeleccionado
+        public string RolSeleccionado
         {
             get
             {
-                return _MoraSeleccionado;
+                return _RolSeleccionado;
             }
 
             set
             {
-                _MoraSeleccionado = value;
+                _RolSeleccionado = value;
             }
         }
 
@@ -60,7 +60,7 @@ namespace Pagos.GUI
         {
             try
             {
-                _DATOS.DataSource = DataSource.Consultas.TODAS_LAS_MORAS();
+                _DATOS.DataSource = DataSource.Consultas.TODOS_LOS_ROLES();
                 Filtrar();
             }
             catch (Exception)
@@ -75,15 +75,15 @@ namespace Pagos.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = "titulo LIKE '%" + txbFiltro.Text + "%' OR editorial LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = "rol LIKE '%" + txbFiltro.Text + "%'";
                 }
                 else
                 {
                     _DATOS.RemoveFilter();
                 }
-                dtgMorasGestion.AutoGenerateColumns = false;
-                dtgMorasGestion.DataSource = _DATOS;
-                lblRegistros.Text = dtgMorasGestion.Rows.Count.ToString() + " Registros Encontrados";
+                dtgRolesGestion.AutoGenerateColumns = false;
+                dtgRolesGestion.DataSource = _DATOS;
+                lblRegistros.Text = dtgRolesGestion.Rows.Count.ToString() + " Registros Encontrados";
             }
             catch (Exception)
             {
@@ -91,16 +91,21 @@ namespace Pagos.GUI
             }
         }
 
-        public MorasGestion()
+        public RolesGestion()
         {
             InitializeComponent();
+        }
+
+        private void verCategoria_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
-                GUI.MoraEdicion f = new MoraEdicion();
+                GUI.RolesEdicion f = new RolesEdicion();
                 f.ShowDialog();
                 CargarDatos();
             }
@@ -116,11 +121,9 @@ namespace Pagos.GUI
             {
                 if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    GUI.MoraEdicion f = new MoraEdicion();
-                    f.txbIdMora.Text = dtgMorasGestion.CurrentRow.Cells["idMora"].Value.ToString();
-                    f.txbIdDetalle.Text = dtgMorasGestion.CurrentRow.Cells["idDetalle"].Value.ToString();
-                    f.txbTotal.Text = dtgMorasGestion.CurrentRow.Cells["total"].Value.ToString();
-                    f.cmbEstadoMora.Text = dtgMorasGestion.CurrentRow.Cells["estado"].Value.ToString();
+                    GUI.RolesEdicion f = new RolesEdicion();
+                    f.txbIdRol.Text = dtgRolesGestion.CurrentRow.Cells["idRol"].Value.ToString();
+                    f.txbRol.Text = dtgRolesGestion.CurrentRow.Cells["rol"].Value.ToString();
                     f.ShowDialog();
                     CargarDatos();
                 }
@@ -138,9 +141,9 @@ namespace Pagos.GUI
             {
                 if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    CLS.Moras oMora = new CLS.Moras();
-                    oMora.IdMora = dtgMorasGestion.CurrentRow.Cells["idMora"].Value.ToString();
-                    if (oMora.Eliminar())
+                    CLS.Roles oRol = new CLS.Roles();
+                    oRol.IdRol = dtgRolesGestion.CurrentRow.Cells["idRol"].Value.ToString();
+                    if (oRol.Eliminar())
                     {
                         MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDatos();
@@ -162,10 +165,10 @@ namespace Pagos.GUI
         {
             try
             {
-                _IDMoraSeleccionado = dtgMorasGestion.CurrentRow.Cells["idMora"].Value.ToString();
-                _MoraSeleccionado = dtgMorasGestion.CurrentRow.Cells["total"].Value.ToString();
-                _Seleccionado = true;
-                //Close();
+                _IDRolSeleccionado = dtgRolesGestion.CurrentRow.Cells["idRol"].Value.ToString();
+                _RolSeleccionado = dtgRolesGestion.CurrentRow.Cells["rol"].Value.ToString();
+                Seleccionado = true;
+                Close();
             }
             catch (Exception)
             {
@@ -176,11 +179,6 @@ namespace Pagos.GUI
         private void txbFiltro_TextChanged(object sender, EventArgs e)
         {
             Filtrar();
-        }
-
-        private void MorasGestion_Load(object sender, EventArgs e)
-        {
-            CargarDatos();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

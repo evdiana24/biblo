@@ -131,11 +131,11 @@ namespace Usuarios.CLS
                 Sentencia.Append("INSERT INTO usuarios_lectores(usuario, clave, estado, carnet, fecha_creacion, idLector, idRol) values(");
                 Sentencia.Append("'" + this._Usuario + "',");
                 Sentencia.Append("'" + this._Clave + "',");
-                Sentencia.Append("'" + this._Estado + "',");
-                Sentencia.Append("'" + this._Carnet + "',");
+                Sentencia.Append("'" + this.Estado + "',");
+                Sentencia.Append("'" + this.Carnet + "',");
                 Sentencia.Append("'" + this._Fecha_Creacion + "',");
                 Sentencia.Append("'" + this._IDLector + "',");
-                Sentencia.Append("'" + this._IDRol + "');");
+                Sentencia.Append("'" + this.IDRol + "');");
 
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
                 {

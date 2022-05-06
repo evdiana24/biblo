@@ -49,13 +49,13 @@
             this.txbIdRol = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbRepiteClave = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbEmpleado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbRol = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscarRol = new System.Windows.Forms.Button();
             this.btnBuscarEmpleado = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.txbClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txbClave.Location = new System.Drawing.Point(276, 142);
             this.txbClave.Name = "txbClave";
+            this.txbClave.PasswordChar = '●';
             this.txbClave.Size = new System.Drawing.Size(312, 26);
             this.txbClave.TabIndex = 176;
             // 
@@ -103,7 +104,7 @@
             // txbIdUsuario
             // 
             this.txbIdUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdUsuario.Location = new System.Drawing.Point(102, 104);
+            this.txbIdUsuario.Location = new System.Drawing.Point(99, 104);
             this.txbIdUsuario.Name = "txbIdUsuario";
             this.txbIdUsuario.ReadOnly = true;
             this.txbIdUsuario.Size = new System.Drawing.Size(139, 26);
@@ -116,7 +117,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(60, 107);
+            this.label12.Location = new System.Drawing.Point(61, 104);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(33, 23);
             this.label12.TabIndex = 171;
@@ -212,13 +213,14 @@
             // 
             // dtFechaCreacion
             // 
-            this.dtFechaCreacion.CustomFormat = "dd/MM/yyyy";
+            this.dtFechaCreacion.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.dtFechaCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtFechaCreacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFechaCreacion.Location = new System.Drawing.Point(264, 257);
             this.dtFechaCreacion.Name = "dtFechaCreacion";
-            this.dtFechaCreacion.Size = new System.Drawing.Size(170, 26);
+            this.dtFechaCreacion.Size = new System.Drawing.Size(324, 26);
             this.dtFechaCreacion.TabIndex = 184;
+            this.dtFechaCreacion.Value = new System.DateTime(2022, 5, 5, 18, 55, 57, 0);
             // 
             // label5
             // 
@@ -237,6 +239,7 @@
             this.txbIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbIdEmpleado.Location = new System.Drawing.Point(264, 299);
             this.txbIdEmpleado.Name = "txbIdEmpleado";
+            this.txbIdEmpleado.ReadOnly = true;
             this.txbIdEmpleado.Size = new System.Drawing.Size(139, 26);
             this.txbIdEmpleado.TabIndex = 186;
             // 
@@ -258,6 +261,7 @@
             this.txbIdRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbIdRol.Location = new System.Drawing.Point(264, 367);
             this.txbIdRol.Name = "txbIdRol";
+            this.txbIdRol.ReadOnly = true;
             this.txbIdRol.Size = new System.Drawing.Size(139, 26);
             this.txbIdRol.TabIndex = 188;
             // 
@@ -279,13 +283,14 @@
             this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.Notificador.ContainerControl = this;
             // 
-            // textBox1
+            // txbRepiteClave
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(276, 179);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 26);
-            this.textBox1.TabIndex = 212;
+            this.txbRepiteClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbRepiteClave.Location = new System.Drawing.Point(276, 179);
+            this.txbRepiteClave.Name = "txbRepiteClave";
+            this.txbRepiteClave.PasswordChar = '●';
+            this.txbRepiteClave.Size = new System.Drawing.Size(312, 26);
+            this.txbRepiteClave.TabIndex = 212;
             // 
             // label8
             // 
@@ -299,13 +304,14 @@
             this.label8.TabIndex = 211;
             this.label8.Text = "Repita la contraseña:";
             // 
-            // textBox2
+            // txbEmpleado
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(264, 332);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(324, 26);
-            this.textBox2.TabIndex = 214;
+            this.txbEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbEmpleado.Location = new System.Drawing.Point(264, 332);
+            this.txbEmpleado.Name = "txbEmpleado";
+            this.txbEmpleado.ReadOnly = true;
+            this.txbEmpleado.Size = new System.Drawing.Size(324, 26);
+            this.txbEmpleado.TabIndex = 214;
             // 
             // label7
             // 
@@ -320,13 +326,14 @@
             this.label7.TabIndex = 213;
             this.label7.Text = "Empleado:";
             // 
-            // textBox3
+            // txbRol
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(264, 403);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(322, 26);
-            this.textBox3.TabIndex = 216;
+            this.txbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbRol.Location = new System.Drawing.Point(264, 403);
+            this.txbRol.Name = "txbRol";
+            this.txbRol.ReadOnly = true;
+            this.txbRol.Size = new System.Drawing.Size(322, 26);
+            this.txbRol.TabIndex = 216;
             // 
             // label10
             // 
@@ -335,31 +342,33 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(60, 403);
+            this.label10.Location = new System.Drawing.Point(61, 403);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 23);
             this.label10.TabIndex = 215;
             this.label10.Text = "Rol:";
             // 
-            // button1
+            // btnBuscarRol
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(517, 364);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 34);
-            this.button1.TabIndex = 218;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscarRol.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarRol.BackgroundImage")));
+            this.btnBuscarRol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscarRol.Location = new System.Drawing.Point(517, 367);
+            this.btnBuscarRol.Name = "btnBuscarRol";
+            this.btnBuscarRol.Size = new System.Drawing.Size(71, 34);
+            this.btnBuscarRol.TabIndex = 218;
+            this.btnBuscarRol.UseVisualStyleBackColor = true;
+            this.btnBuscarRol.Click += new System.EventHandler(this.btnBuscarRol_Click);
             // 
             // btnBuscarEmpleado
             // 
             this.btnBuscarEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarEmpleado.BackgroundImage")));
             this.btnBuscarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBuscarEmpleado.Location = new System.Drawing.Point(517, 291);
+            this.btnBuscarEmpleado.Location = new System.Drawing.Point(516, 295);
             this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
             this.btnBuscarEmpleado.Size = new System.Drawing.Size(71, 34);
             this.btnBuscarEmpleado.TabIndex = 217;
             this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
+            this.btnBuscarEmpleado.Click += new System.EventHandler(this.btnBuscarEmpleado_Click);
             // 
             // UsuarioEmpleadoEdicion
             // 
@@ -369,13 +378,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(644, 513);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscarRol);
             this.Controls.Add(this.btnBuscarEmpleado);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txbRol);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbEmpleado);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbRepiteClave);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txbIdRol);
             this.Controls.Add(this.label6);
@@ -421,7 +430,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscarRol;
         private System.Windows.Forms.Button btnBuscarEmpleado;
         public System.Windows.Forms.TextBox txbClave;
         public System.Windows.Forms.TextBox txbUsuario;
@@ -430,8 +439,8 @@
         public System.Windows.Forms.DateTimePicker dtFechaCreacion;
         public System.Windows.Forms.TextBox txbIdEmpleado;
         public System.Windows.Forms.TextBox txbIdRol;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txbRol;
+        public System.Windows.Forms.TextBox txbEmpleado;
+        public System.Windows.Forms.TextBox txbRepiteClave;
     }
 }

@@ -26,7 +26,7 @@ namespace Usuarios.GUI
                     oUsuarioEmpleado.Usuario = txbUsuario.Text;
                     oUsuarioEmpleado.Clave = txbClave.Text;
                     oUsuarioEmpleado.Estado = cmbEstado.Text;
-                    oUsuarioEmpleado.Fecha_Creacion = dtFechaCreacion.Value.Date.ToString("yyyy/MM/dd");
+                    oUsuarioEmpleado.Fecha_Creacion = dtFechaCreacion.Value.ToString("yyyy/MM/dd HH:mm:ss");
                     oUsuarioEmpleado.IDEmpleado = txbIdEmpleado.Text;
                     oUsuarioEmpleado.IdRol = txbIdRol.Text;
 
@@ -85,6 +85,11 @@ namespace Usuarios.GUI
                     Notificador.SetError(txbClave, "Escriba la contraseña");
                     Validado = false;
                 }
+                if (!txbClave.Text.Equals(txbRepiteClave.Text))
+                {
+                    Notificador.SetError(txbRepiteClave, "Las claves no concuerdan");
+                    Validado = false;
+                }
                 if (cmbEstado.Text.Length == 0)
                 {
                     Notificador.SetError(cmbEstado, "Seleccione el estado del usuario");
@@ -126,6 +131,42 @@ namespace Usuarios.GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnBuscarEmpleado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                General.GUI.EmpleadosGestion f = new General.GUI.EmpleadosGestion();
+                f.ShowDialog();
+                if (f.Seleccionado)
+                {
+                    txbIdEmpleado.Text = f.IDEmpleadoSeleccionado;
+                    txbEmpleado.Text = f.EmpleadoSeleccionado;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void btnBuscarRol_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Configuraciones.GUI.RolesGestion f = new Configuraciones.GUI.RolesGestion();
+                f.ShowDialog();
+                if (f.Seleccionado)
+                {
+                    txbIdRol.Text = f.IDRolSeleccionado;
+                    txbRol.Text = f.RolSeleccionado;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

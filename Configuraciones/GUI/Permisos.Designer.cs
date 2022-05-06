@@ -1,4 +1,4 @@
-﻿namespace General.GUI
+﻿namespace Configuraciones.GUI
 {
     partial class Permisos
     {

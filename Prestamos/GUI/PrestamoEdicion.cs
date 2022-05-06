@@ -115,6 +115,7 @@ namespace Prestamos.GUI
             try
             {
                 Usuarios.GUI.UsuariosLectoresGestion f = new Usuarios.GUI.UsuariosLectoresGestion();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
                 f.ShowDialog();
                 if (f.Seleccionado)
                 {

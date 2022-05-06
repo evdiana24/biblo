@@ -110,30 +110,6 @@ namespace Pagos.GUI
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //    {
-            //        GUI.LibroEdicion f = new LibroEdicion();
-            //        f.txbIdLibro.Text = dtgLibrosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
-            //        f.txbTitulo.Text = dtgLibrosGestion.CurrentRow.Cells["titulo"].Value.ToString();
-            //        f.txbAnio.Text = dtgLibrosGestion.CurrentRow.Cells["anio_publicacion"].Value.ToString();
-            //        f.txbEdicion.Text = dtgLibrosGestion.CurrentRow.Cells["edicion"].Value.ToString();
-            //        f.txbIdEditorial.Text = dtgLibrosGestion.CurrentRow.Cells["idEditorial"].Value.ToString();
-            //        f.txbEditorial.Text = dtgLibrosGestion.CurrentRow.Cells["editorial"].Value.ToString();
-            //        f.ShowDialog();
-            //        CargarDatos();
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("Seleccione una fila válida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            //}
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try

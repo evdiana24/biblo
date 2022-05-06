@@ -117,6 +117,8 @@ namespace Usuarios.GUI
                 if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     GUI.UsuarioEmpleadoEdicion f = new UsuarioEmpleadoEdicion();
+                    f.txbClave.ReadOnly = true;
+                    f.txbRepiteClave.ReadOnly = true;
                     f.txbIdUsuario.Text = dtgUsuariosGestion.CurrentRow.Cells["idUsuario"].Value.ToString();
                     f.txbUsuario.Text = dtgUsuariosGestion.CurrentRow.Cells["usuario"].Value.ToString();
                     f.cmbEstado.Text = dtgUsuariosGestion.CurrentRow.Cells["estado"].Value.ToString();

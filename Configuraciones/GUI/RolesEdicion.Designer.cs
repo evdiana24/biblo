@@ -94,6 +94,7 @@
             this.txbRol.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbRol.Location = new System.Drawing.Point(113, 155);
+            this.txbRol.MaxLength = 45;
             this.txbRol.Name = "txbRol";
             this.txbRol.Size = new System.Drawing.Size(271, 26);
             this.txbRol.TabIndex = 102;

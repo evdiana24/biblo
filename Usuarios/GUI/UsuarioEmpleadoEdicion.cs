@@ -94,15 +94,18 @@ namespace Usuarios.GUI
                     Notificador.SetError(txbUsuario, "Escriba el nombre de usuario");
                     Validado = false;
                 }
-                if (txbClave.TextLength == 0)
+                if (String.IsNullOrEmpty(txbIdUsuario.Text))
                 {
-                    Notificador.SetError(txbClave, "Escriba la contraseña");
-                    Validado = false;
-                }
-                if (!txbClave.Text.Equals(txbRepiteClave.Text))
-                {
-                    Notificador.SetError(txbRepiteClave, "Las claves no concuerdan");
-                    Validado = false;
+                    if (txbClave.TextLength == 0)
+                    {
+                        Notificador.SetError(txbClave, "Escriba la contraseña");
+                        Validado = false;
+                    }
+                    if (!txbClave.Text.Equals(txbRepiteClave.Text))
+                    {
+                        Notificador.SetError(txbRepiteClave, "Las claves no concuerdan");
+                        Validado = false;
+                    }
                 }
                 if (cmbEstado.Text.Length == 0)
                 {
@@ -153,6 +156,7 @@ namespace Usuarios.GUI
             try
             {
                 General.GUI.EmpleadosGestion f = new General.GUI.EmpleadosGestion();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
                 f.ShowDialog();
                 if (f.Seleccionado)
                 {

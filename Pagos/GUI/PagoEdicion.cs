@@ -29,37 +29,18 @@ namespace Pagos.GUI
                     oPago.IDUsuario_Lector = txbIdUsuarioLector.Text;
                     oPago.IDUsuario_Empleado = txbIdUsuarioEmpleado.Text;
 
-                    //Operamos segun sea el caso
-                    if (txbIdPago.TextLength > 0)
+                    //Estoy insertando un nuevo registro
+                    if (oPago.Guardar())
                     {
-                        //Estoy editando
-                        if (oPago.Actualizar())
-                        {
-                            //Se actualizo correctamente
-                            MessageBox.Show("El registro fue actualizado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Close();
-                        }
-                        else
-                        {
-                            //No se actualizo correctamente
-                            MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                        //Se guardo correctamente
+                        MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
                     }
                     else
                     {
-                        //Estoy insertando un nuevo registro
-                        if (oPago.Guardar())
-                        {
-                            //Se guardo correctamente
-                            MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Close();
-                        }
-                        else
-                        {
-                            //No se guardo correctamente
-                            MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
+                        //No se guardo correctamente
+                        MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }  
                 }
             }
             catch (Exception)
@@ -127,6 +108,7 @@ namespace Pagos.GUI
             try
             {
                 Usuarios.GUI.UsuariosLectoresGestion f = new Usuarios.GUI.UsuariosLectoresGestion();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
                 f.ShowDialog();
                 if (f.Seleccionado)
                 {
@@ -145,6 +127,7 @@ namespace Pagos.GUI
             try
             {
                 Usuarios.GUI.UsuariosEmpleadosGestion f = new Usuarios.GUI.UsuariosEmpleadosGestion();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
                 f.ShowDialog();
                 if (f.Seleccionado)
                 {

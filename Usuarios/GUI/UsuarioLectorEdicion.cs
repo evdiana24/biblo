@@ -145,6 +145,7 @@ namespace Usuarios.GUI
             try
             {
                 General.GUI.LectoresGestion f = new General.GUI.LectoresGestion();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
                 f.ShowDialog();
                 if (f.Seleccionado)
                 {

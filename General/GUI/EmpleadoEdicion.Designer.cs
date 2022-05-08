@@ -40,8 +40,6 @@
             this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.txbTelefono = new System.Windows.Forms.TextBox();
-            this.txbDUI = new System.Windows.Forms.TextBox();
-            this.txbNIT = new System.Windows.Forms.TextBox();
             this.txbCorreo = new System.Windows.Forms.TextBox();
             this.txbDireccion = new System.Windows.Forms.TextBox();
             this.txbNombres = new System.Windows.Forms.TextBox();
@@ -57,6 +55,8 @@
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.txbApellidos = new System.Windows.Forms.TextBox();
+            this.txbDUI = new System.Windows.Forms.MaskedTextBox();
+            this.txbNIT = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,7 +175,7 @@
             "Femenino"});
             this.cmbGenero.Location = new System.Drawing.Point(147, 281);
             this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(147, 28);
+            this.cmbGenero.Size = new System.Drawing.Size(155, 28);
             this.cmbGenero.TabIndex = 156;
             // 
             // txbTelefono
@@ -185,22 +185,6 @@
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.Size = new System.Drawing.Size(157, 26);
             this.txbTelefono.TabIndex = 155;
-            // 
-            // txbDUI
-            // 
-            this.txbDUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbDUI.Location = new System.Drawing.Point(146, 242);
-            this.txbDUI.Name = "txbDUI";
-            this.txbDUI.Size = new System.Drawing.Size(148, 26);
-            this.txbDUI.TabIndex = 154;
-            // 
-            // txbNIT
-            // 
-            this.txbNIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbNIT.Location = new System.Drawing.Point(445, 245);
-            this.txbNIT.Name = "txbNIT";
-            this.txbNIT.Size = new System.Drawing.Size(157, 26);
-            this.txbNIT.TabIndex = 153;
             // 
             // txbCorreo
             // 
@@ -292,7 +276,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(386, 248);
+            this.label5.Location = new System.Drawing.Point(386, 246);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 23);
             this.label5.TabIndex = 144;
@@ -304,7 +288,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(42, 248);
+            this.label4.Location = new System.Drawing.Point(42, 246);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 23);
             this.label4.TabIndex = 143;
@@ -359,6 +343,24 @@
             this.txbApellidos.Size = new System.Drawing.Size(313, 26);
             this.txbApellidos.TabIndex = 166;
             // 
+            // txbDUI
+            // 
+            this.txbDUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbDUI.Location = new System.Drawing.Point(146, 243);
+            this.txbDUI.Mask = "00000000-0";
+            this.txbDUI.Name = "txbDUI";
+            this.txbDUI.Size = new System.Drawing.Size(156, 26);
+            this.txbDUI.TabIndex = 167;
+            // 
+            // txbNIT
+            // 
+            this.txbNIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbNIT.Location = new System.Drawing.Point(445, 243);
+            this.txbNIT.Mask = "0000-000000-000-0";
+            this.txbNIT.Name = "txbNIT";
+            this.txbNIT.Size = new System.Drawing.Size(157, 26);
+            this.txbNIT.TabIndex = 168;
+            // 
             // EmpleadoEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,6 +369,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(649, 515);
+            this.Controls.Add(this.txbNIT);
+            this.Controls.Add(this.txbDUI);
             this.Controls.Add(this.txbApellidos);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txbIdEmpleado);
@@ -379,8 +383,6 @@
             this.Controls.Add(this.dtFechaNacimiento);
             this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.txbTelefono);
-            this.Controls.Add(this.txbDUI);
-            this.Controls.Add(this.txbNIT);
             this.Controls.Add(this.txbCorreo);
             this.Controls.Add(this.txbDireccion);
             this.Controls.Add(this.txbNombres);
@@ -424,12 +426,12 @@
         public System.Windows.Forms.DateTimePicker dtFechaNacimiento;
         public System.Windows.Forms.ComboBox cmbGenero;
         public System.Windows.Forms.TextBox txbTelefono;
-        public System.Windows.Forms.TextBox txbDUI;
-        public System.Windows.Forms.TextBox txbNIT;
         public System.Windows.Forms.TextBox txbCorreo;
         public System.Windows.Forms.TextBox txbDireccion;
         public System.Windows.Forms.TextBox txbNombres;
         public System.Windows.Forms.TextBox txbApellidos;
         private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.MaskedTextBox txbNIT;
+        public System.Windows.Forms.MaskedTextBox txbDUI;
     }
 }

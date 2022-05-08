@@ -1,6 +1,6 @@
-﻿namespace Biblo.GUI
+﻿namespace Libros.GUI
 {
-    partial class buscarLibro
+    partial class BuscarLibro
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buscarLibro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarLibro));
             this.cbxElegir = new System.Windows.Forms.ComboBox();
             this.txbBuscarLibro = new System.Windows.Forms.TextBox();
             this.dtgBuscarLibros = new System.Windows.Forms.DataGridView();

@@ -53,15 +53,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnBuscarLector = new System.Windows.Forms.Button();
             this.btnBuscarEmpleado = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // txbTotal
             // 
             this.txbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbTotal.Location = new System.Drawing.Point(287, 227);
+            this.txbTotal.Location = new System.Drawing.Point(304, 227);
             this.txbTotal.Name = "txbTotal";
-            this.txbTotal.Size = new System.Drawing.Size(139, 26);
+            this.txbTotal.Size = new System.Drawing.Size(122, 26);
             this.txbTotal.TabIndex = 176;
             this.txbTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTotal_KeyPress);
             // 
@@ -323,6 +324,18 @@
             this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
             this.btnBuscarEmpleado.Click += new System.EventHandler(this.btnBuscarEmpleado_Click);
             // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label8.Location = new System.Drawing.Point(287, 227);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(139, 26);
+            this.label8.TabIndex = 187;
+            this.label8.Text = "$";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // PagoEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,6 +344,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(644, 514);
+            this.Controls.Add(this.txbTotal);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnBuscarEmpleado);
             this.Controls.Add(this.btnBuscarLector);
             this.Controls.Add(this.txbUsuarioEmpleado);
@@ -341,7 +356,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbIdUsuarioEmpleado);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txbTotal);
             this.Controls.Add(this.txbIdUsuarioLector);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
@@ -387,5 +401,6 @@
         public System.Windows.Forms.DateTimePicker dtFechaPago;
         public System.Windows.Forms.TextBox txbUsuarioLector;
         public System.Windows.Forms.TextBox txbUsuarioEmpleado;
+        private System.Windows.Forms.Label label8;
     }
 }

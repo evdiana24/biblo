@@ -18,6 +18,7 @@ namespace Biblo.GUI
         public Principal()
         {
             InitializeComponent();
+            RestringirOpciones();
             CustomizeDesign();
             lblUsuario.Text = oSesion.Usuario;
             lblRol.Text = oSesion.Rol;
@@ -31,13 +32,29 @@ namespace Biblo.GUI
             panelPrestamos.Visible = false;
             panelPagos.Visible = false;
             panelConfiguraciones.Visible = false;
+        }
+
+        private void RestringirOpciones()
+        {
+            if (oSesion.IDRol == "1")
+            {
+                btnConfiguraciones.Visible = false;
+            }
 
             if (oSesion.IDRol == "2")
             {
                 btnConfiguraciones.Visible = false;
-                btnGPrestamos.Visible = false;
+                btnInformes.Visible = false;
+                btnUsuarios.Visible = false;
+                btnGeneral.Visible = false;
             }
 
+            if (oSesion.IDRol == "4")
+            {
+                btnConfiguraciones.Visible = false;
+                btnInformes.Visible = false;
+                btnUsuarios.Visible = false;
+            }
         }
 
         private void hideSubMenu()
@@ -105,13 +122,44 @@ namespace Biblo.GUI
         //MI PERFIL
         private void btnMiPerfil_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<General.GUI.AutoresGestion>();
+            if (oSesion.IDRol == "2")
+            {
+                AbrirFormulario<Perfiles.GUI.PerfilLector>();
+            }
+            else
+            {
+                AbrirFormulario<Perfiles.GUI.PerfilEmpleado>();
+            }
         }
 
         //GENERAL
         private void btnGeneral_Click(object sender, EventArgs e)
         {
             showSubMenu(panelGeneral);
+            if (!oSesion.VerificarPermiso(2))
+            {
+                btnGAutores.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(3))
+            {
+                btnGCategorias.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(4))
+            {
+                btnGEditoriales.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(5))
+            {
+                btnGEmpleados.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(6))
+            {
+                btnGLectores.Visible = false;
+            }
         }
 
         private void btnGAutores_Click(object sender, EventArgs e)
@@ -148,6 +196,16 @@ namespace Biblo.GUI
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             showSubMenu(panelUsuarios);
+
+            if (!oSesion.VerificarPermiso(7))
+            {
+                btnGUsuariosEmpleados.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(8))
+            {
+                btnGUsuariosLectores.Visible = false;
+            }
         }
 
         private void btnGUsuarios_Click(object sender, EventArgs e)
@@ -166,6 +224,21 @@ namespace Biblo.GUI
         private void btnLibros_Click(object sender, EventArgs e)
         {
             showSubMenu(panelLibros);
+
+            if (!oSesion.VerificarPermiso(9))
+            {
+                btnGLibros.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(10))
+            {
+                btnGEjemplares.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(11))
+            {
+                btnBuscarLibros.Visible = false;
+            }
         }
 
         private void btnGLibros_Click(object sender, EventArgs e)
@@ -190,6 +263,26 @@ namespace Biblo.GUI
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
             showSubMenu(panelPrestamos);
+
+            if (!oSesion.VerificarPermiso(12))
+            {
+                btnGPrestamos.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(13))
+            {
+                btnDetallesPrestamos.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(14))
+            {
+                btnMisPrestamos.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(15))
+            {
+                btnGestionarDevoluciones.Visible = false;
+            }
         }
 
         private void btnGPrestamos_Click(object sender, EventArgs e)
@@ -206,7 +299,7 @@ namespace Biblo.GUI
 
         private void btnMisPrestamos_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
+            AbrirFormulario<Prestamos.GUI.misPrestamos>();
             hideSubMenu();
         }
 
@@ -220,6 +313,26 @@ namespace Biblo.GUI
         private void btnPagos_Click(object sender, EventArgs e)
         {
             showSubMenu(panelPagos);
+
+            if (!oSesion.VerificarPermiso(16))
+            {
+                btnGMoras.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(17))
+            {
+                btnMisMoras.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(18))
+            {
+                btnGPagos.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(19))
+            {
+                btnHistorialPagos.Visible = false;
+            }
         }
 
         private void btnMisMoras_Click(object sender, EventArgs e)
@@ -246,10 +359,32 @@ namespace Biblo.GUI
             hideSubMenu();
         }
 
+
+        //INFORMES
+        private void btnInformes_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //CONFIGURACIONES
         private void btnConfiguraciones_Click(object sender, EventArgs e)
         {
             showSubMenu(panelConfiguraciones);
+
+            if (!oSesion.VerificarPermiso(21))
+            {
+                btnGRoles.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(22))
+            {
+                btnGPermisos.Visible = false;
+            }
+
+            if (!oSesion.VerificarPermiso(23))
+            {
+                btnGOpciones.Visible = false;
+            }
         }
 
         private void btnRoles_Click(object sender, EventArgs e)
@@ -304,6 +439,11 @@ namespace Biblo.GUI
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

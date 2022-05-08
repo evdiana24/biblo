@@ -35,6 +35,8 @@ namespace SessionManager
         String _Usuario;
         String _IDRol;
         String _Rol;
+        String _Estado;
+
         DataTable _Permisos = new DataTable();
 
         public string IDUsuario
@@ -97,6 +99,19 @@ namespace SessionManager
             }
         }
 
+        public string Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+
+            set
+            {
+                _Estado = value;
+            }
+        }
+
         public void ObtenerPermisos()
         {
             try
@@ -122,12 +137,6 @@ namespace SessionManager
                     break;
                 }
             }
-
-            if (!verificado)
-            {
-                System.Windows.Forms.MessageBox.Show("Su usuario no cuenta con la autorización para realizar esta tarea", "Permiso "+pID.ToString(), System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Warning);
-            }
-
             return verificado; 
         }
 

@@ -109,6 +109,7 @@ namespace Libros.GUI
             try
             {
                 GUI.LibrosGestion f = new GUI.LibrosGestion();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
                 f.ShowDialog();
                 if (f.Seleccionado)
                 {

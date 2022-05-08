@@ -46,6 +46,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,9 +74,9 @@
             // txbTotal
             // 
             this.txbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbTotal.Location = new System.Drawing.Point(174, 241);
+            this.txbTotal.Location = new System.Drawing.Point(191, 241);
             this.txbTotal.Name = "txbTotal";
-            this.txbTotal.Size = new System.Drawing.Size(139, 26);
+            this.txbTotal.Size = new System.Drawing.Size(122, 26);
             this.txbTotal.TabIndex = 164;
             this.txbTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTotal_KeyPress);
             // 
@@ -234,6 +235,18 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label8.Location = new System.Drawing.Point(174, 241);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(139, 26);
+            this.label8.TabIndex = 188;
+            this.label8.Text = "$";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // MoraEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,10 +255,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(555, 418);
+            this.Controls.Add(this.txbTotal);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txbTotal);
             this.Controls.Add(this.txbIdDetalle);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
@@ -284,5 +298,6 @@
         public System.Windows.Forms.TextBox txbIdDetalle;
         public System.Windows.Forms.TextBox txbIdMora;
         public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
     }
 }

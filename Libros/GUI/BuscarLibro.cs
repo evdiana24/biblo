@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Biblo.GUI
+namespace Libros.GUI
 {
-    public partial class buscarLibro : Form
+    public partial class BuscarLibro : Form
     {
-        public buscarLibro()
+        public BuscarLibro()
         {
             InitializeComponent();
         }

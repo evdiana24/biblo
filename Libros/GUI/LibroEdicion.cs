@@ -121,6 +121,7 @@ namespace Libros.GUI
             try
             {
                 General.GUI.EditorialesGestion f = new General.GUI.EditorialesGestion();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
                 f.ShowDialog();
                 if (f.Seleccionado)
                 {

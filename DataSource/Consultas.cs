@@ -13,13 +13,13 @@ namespace DataSource
         {
             DataTable Resultado = new DataTable();
 
-            String Consulta = @"SELECT m.idUsuario, m.usuario, m.clave, m.nombres, m.apellidos, m.genero, m.idRol, m.rol
+            String Consulta = @"SELECT m.idUsuario, m.usuario, m.clave, m.estado, m.nombres, m.apellidos, m.genero, m.idRol, m.rol
             FROM 
-            (SELECT a.idUsuario, a.usuario, a.clave, a.idRol, b.nombres, b.apellidos, b.genero, c.rol 
+            (SELECT a.idUsuario, a.usuario, a.clave, a.estado, a.idRol, b.nombres, b.apellidos, b.genero, c.rol 
             FROM usuarios_lectores a, lectores b, roles c 
             WHERE a.idRol = c.idRol AND a.idLector = b.idLector
             UNION ALL 
-            SELECT a.idUsuario, a.usuario, a.clave, a.idRol, b.nombres, b.apellidos, b.genero, c.rol 
+            SELECT a.idUsuario, a.usuario, a.clave, a.estado, a.idRol, b.nombres, b.apellidos, b.genero, c.rol 
             FROM usuarios_empleados a, empleados b, roles c 
             WHERE a.idRol = c.idRol AND a.idEmpleado = b.idEmpleado) AS m
             WHERE usuario = '" + pUsuario + @"'
@@ -314,6 +314,52 @@ namespace DataSource
             {
                 Resultado = new DataTable();
             }
+            return Resultado;
+        }
+
+        public static DataTable DATOS_EMPLEADO(String pIDUsuario)
+        {
+            DataTable Resultado = new DataTable();
+
+            String Consulta = @"SELECT CONCAT(a.nombres, ' ', a.apellidos) AS nombre, a.fecha_nacimiento, 
+            a.dui, a.nit, a.genero, a.telefono, a.correo, a.direccion, a.fecha_contratacion, b.usuario, b.fecha_creacion, c.rol
+            FROM empleados a, usuarios_empleados b, roles c
+            WHERE a.idEmpleado = b.idEmpleado AND b.idRol = c.idRol AND b.idUsuario = " + pIDUsuario + ";";
+
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+
+        public static DataTable DATOS_LECTOR(String pIDUsuario)
+        {
+            DataTable Resultado = new DataTable();
+
+            String Consulta = @"SELECT CONCAT(a.nombres, ' ', a.apellidos) AS nombre, a.fecha_nacimiento, 
+            a.genero, a.telefono, a.correo, a.direccion, b.usuario, b.fecha_creacion, b.carnet, c.rol
+            FROM lectores a, usuarios_lectores b, roles c
+            WHERE a.idLector = b.idLector AND b.idRol = c.idRol AND b.idUsuario = " + pIDUsuario + ";";
+
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
             return Resultado;
         }
     }

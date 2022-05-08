@@ -47,29 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\AppManager.cs" />
-    <Compile Include="GUI\buscarLibro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\buscarLibro.Designer.cs">
-      <DependentUpon>buscarLibro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\CambiarContra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\CambiarContra.Designer.cs">
-      <DependentUpon>CambiarContra.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\misDatos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\misDatos.Designer.cs">
-      <DependentUpon>misDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Principal.cs">
       <SubType>Form</SubType>
@@ -85,17 +67,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\buscarLibro.resx">
-      <DependentUpon>buscarLibro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\CambiarContra.resx">
-      <DependentUpon>CambiarContra.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\misDatos.resx">
-      <DependentUpon>misDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -150,6 +123,10 @@
     <ProjectReference Include="..\Pagos\Pagos.csproj">
       <Project>{a8672bc9-2c26-4d21-9d02-06da36b55c05}</Project>
       <Name>Pagos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Perfiles\Perfiles.csproj">
+      <Project>{622a9ec2-f251-4bd2-a459-ff0c10f175bb}</Project>
+      <Name>Perfiles</Name>
     </ProjectReference>
     <ProjectReference Include="..\Prestamos\Prestamos.csproj">
       <Project>{5de519b6-172f-4210-96e4-296e9974e647}</Project>

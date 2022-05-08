@@ -43,8 +43,17 @@ namespace Biblo.GUI
                     oSesion.IDRol = Datos.Rows[0]["IDRol"].ToString();
                     oSesion.Rol = Datos.Rows[0]["Rol"].ToString();
                     oSesion.ObtenerPermisos();
-                    _Autorizado = true;
-                    Close();
+
+                    if (Datos.Rows[0]["Estado"].ToString() == "SUSPENDIDO")
+                    {
+                        MessageBox.Show("Su usuario ha sido SUSPENDIDO. Para obtener más información puede acercarse a administración.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        _Autorizado = false;
+                    }
+                    else
+                    {
+                        _Autorizado = true;
+                        Close();
+                    } 
                 }
 
                 else

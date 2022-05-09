@@ -31,12 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrosGestion));
             this.dtgLibrosGestion = new System.Windows.Forms.DataGridView();
-            this.idLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anio_publicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEditorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -53,6 +47,14 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.idLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anio_publicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEditorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgLibrosGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -78,6 +80,8 @@
             this.titulo,
             this.anio_publicacion,
             this.edicion,
+            this.autor,
+            this.categoria,
             this.idEditorial,
             this.editorial});
             this.dtgLibrosGestion.Location = new System.Drawing.Point(39, 92);
@@ -88,54 +92,6 @@
             this.dtgLibrosGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgLibrosGestion.Size = new System.Drawing.Size(897, 412);
             this.dtgLibrosGestion.TabIndex = 0;
-            // 
-            // idLibro
-            // 
-            this.idLibro.DataPropertyName = "idLibro";
-            this.idLibro.HeaderText = "ID Libro";
-            this.idLibro.Name = "idLibro";
-            this.idLibro.ReadOnly = true;
-            // 
-            // titulo
-            // 
-            this.titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titulo.DataPropertyName = "titulo";
-            this.titulo.FillWeight = 35.08772F;
-            this.titulo.HeaderText = "Título";
-            this.titulo.Name = "titulo";
-            this.titulo.ReadOnly = true;
-            // 
-            // anio_publicacion
-            // 
-            this.anio_publicacion.DataPropertyName = "anio_publicacion";
-            this.anio_publicacion.FillWeight = 294.7368F;
-            this.anio_publicacion.HeaderText = "Año de publicación";
-            this.anio_publicacion.Name = "anio_publicacion";
-            this.anio_publicacion.ReadOnly = true;
-            // 
-            // edicion
-            // 
-            this.edicion.DataPropertyName = "edicion";
-            this.edicion.FillWeight = 35.08772F;
-            this.edicion.HeaderText = "Edición";
-            this.edicion.Name = "edicion";
-            this.edicion.ReadOnly = true;
-            // 
-            // idEditorial
-            // 
-            this.idEditorial.DataPropertyName = "idEditorial";
-            this.idEditorial.HeaderText = "ID Editorial";
-            this.idEditorial.Name = "idEditorial";
-            this.idEditorial.ReadOnly = true;
-            // 
-            // editorial
-            // 
-            this.editorial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.editorial.DataPropertyName = "editorial";
-            this.editorial.FillWeight = 35.08772F;
-            this.editorial.HeaderText = "Editorial";
-            this.editorial.Name = "editorial";
-            this.editorial.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -286,6 +242,69 @@
             this.label1.TabIndex = 90;
             this.label1.Text = "LIBROS";
             // 
+            // idLibro
+            // 
+            this.idLibro.DataPropertyName = "idLibro";
+            this.idLibro.HeaderText = "ID";
+            this.idLibro.Name = "idLibro";
+            this.idLibro.ReadOnly = true;
+            this.idLibro.Width = 35;
+            // 
+            // titulo
+            // 
+            this.titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titulo.DataPropertyName = "titulo";
+            this.titulo.FillWeight = 35.08772F;
+            this.titulo.HeaderText = "Título";
+            this.titulo.Name = "titulo";
+            this.titulo.ReadOnly = true;
+            // 
+            // anio_publicacion
+            // 
+            this.anio_publicacion.DataPropertyName = "anio_publicacion";
+            this.anio_publicacion.FillWeight = 294.7368F;
+            this.anio_publicacion.HeaderText = "Año de publicación";
+            this.anio_publicacion.Name = "anio_publicacion";
+            this.anio_publicacion.ReadOnly = true;
+            // 
+            // edicion
+            // 
+            this.edicion.DataPropertyName = "edicion";
+            this.edicion.FillWeight = 35.08772F;
+            this.edicion.HeaderText = "Edición";
+            this.edicion.Name = "edicion";
+            this.edicion.ReadOnly = true;
+            // 
+            // autor
+            // 
+            this.autor.DataPropertyName = "autor";
+            this.autor.HeaderText = "Autor";
+            this.autor.Name = "autor";
+            this.autor.ReadOnly = true;
+            // 
+            // categoria
+            // 
+            this.categoria.DataPropertyName = "categoria";
+            this.categoria.HeaderText = "Categoría";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            // 
+            // idEditorial
+            // 
+            this.idEditorial.DataPropertyName = "idEditorial";
+            this.idEditorial.HeaderText = "ID Editorial";
+            this.idEditorial.Name = "idEditorial";
+            this.idEditorial.ReadOnly = true;
+            // 
+            // editorial
+            // 
+            this.editorial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.editorial.DataPropertyName = "editorial";
+            this.editorial.FillWeight = 35.08772F;
+            this.editorial.HeaderText = "Editorial";
+            this.editorial.Name = "editorial";
+            this.editorial.ReadOnly = true;
+            // 
             // LibrosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,12 +349,14 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idLibro;
         private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn anio_publicacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn edicion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEditorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn editorial;
-        private System.Windows.Forms.Label label1;
     }
 }

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS\DetallesPrestamos.cs" />
     <Compile Include="CLS\Prestamos.cs" />
     <Compile Include="GUI\misPrestamos.cs">
       <SubType>Form</SubType>
@@ -54,6 +55,12 @@
     </Compile>
     <Compile Include="GUI\PrestamoEdicion.Designer.cs">
       <DependentUpon>PrestamoEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PrestamosGestiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PrestamosGestiones.Designer.cs">
+      <DependentUpon>PrestamosGestiones.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\PrestamosGestion.cs">
       <SubType>Form</SubType>
@@ -73,6 +80,10 @@
       <Project>{55ae3030-7e04-4543-937a-7101b9829dd2}</Project>
       <Name>DataManager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataSource\DataSource.csproj">
+      <Project>{42e51e7c-cd09-4528-b6e2-5dd80ffd34f5}</Project>
+      <Name>DataSource</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Usuarios\Usuarios.csproj">
       <Project>{be4f7cbe-52ed-44ec-8990-5c721db624b8}</Project>
       <Name>Usuarios</Name>
@@ -84,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PrestamoEdicion.resx">
       <DependentUpon>PrestamoEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PrestamosGestiones.resx">
+      <DependentUpon>PrestamosGestiones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PrestamosGestion.resx">
       <DependentUpon>PrestamosGestion.cs</DependentUpon>

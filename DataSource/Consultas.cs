@@ -114,6 +114,24 @@ namespace DataSource
             return Resultado;
         }
 
+        public static DataTable TODOS_LOS_EJEPLARES_PRESTAMOS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, a.idEditorial, b.editorial 
+            FROM libros a, editoriales b
+            WHERE a.idEditorial = b.idEditorial;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
         public static DataTable TODOS_LOS_EJEMPLARES()
         {
             DataTable Resultado = new DataTable();
@@ -261,8 +279,8 @@ namespace DataSource
         public static DataTable TODOS_LOS_PRESTAMOS()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT a.idPrestamo, a.idUsuario_lector, b.usuario, 
-            a.idUsuario_empleado, c.usuario, a.fecha_prestamo
+            String Consulta = @"SELECT a.idPrestamo, a.idUsuario_lector, b.usuario AS usuario_lector, 
+            a.idUsuario_empleado, c.usuario AS usuario_empleado, a.fecha_prestamo
             FROM prestamos a, usuarios_lectores b, usuarios_empleados c
             WHERE a.idUsuario_lector = b.idUsuario
             AND a.idUsuario_empleado = c.idUsuario;";
@@ -360,6 +378,25 @@ namespace DataSource
                 Resultado = new DataTable();
             }
 
+            return Resultado;
+        }
+
+        public static DataTable TODOS_LOS_EJEMPLARES_DISPONIBLES()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idEjemplar, b.titulo, d.categoria, CONCAT(f.nombres, ' ', f.apellidos) AS autor, g.editorial
+            FROM ejemplares a, libros b, libros_categorias c, categorias d, libros_autores e, autores f, editoriales g
+            WHERE a.idLibro = b.idLibro AND c.idCategoria = d.idCategoria AND c.idLibro = b.idLibro AND e.idAutor = f.idAutor 
+            AND e.idLibro = b.idLibro AND g.idEditorial = b.idEditorial AND a.estado = 'DISPONIBLE';";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
             return Resultado;
         }
     }

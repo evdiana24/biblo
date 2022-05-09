@@ -35,7 +35,6 @@ namespace SessionManager
         String _Usuario;
         String _IDRol;
         String _Rol;
-        String _Estado;
 
         DataTable _Permisos = new DataTable();
 
@@ -96,19 +95,6 @@ namespace SessionManager
             get
             {
                 return _Permisos;
-            }
-        }
-
-        public string Estado
-        {
-            get
-            {
-                return _Estado;
-            }
-
-            set
-            {
-                _Estado = value;
             }
         }
 

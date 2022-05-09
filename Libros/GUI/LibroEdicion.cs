@@ -83,14 +83,24 @@ namespace Libros.GUI
                     Notificador.SetError(txbAnio, "Escriba el año de publicación");
                     Validado = false;
                 }
-                if (txbEdicion.TextLength == 0)
+                if (txbEdicion.Text.Length == 0)
                 {
                     Notificador.SetError(txbEdicion, "Escriba la edición");
                     Validado = false;
                 }
                 if (txbIdEditorial.TextLength == 0)
                 {
-                    Notificador.SetError(txbIdEditorial, "Escriba el ID de la editorial");
+                    Notificador.SetError(txbIdEditorial, "Seleccione el ID de la editorial");
+                    Validado = false;
+                }
+                if (txbIdCategoria.TextLength == 0)
+                {
+                    Notificador.SetError(txbIdCategoria, "Seleccione el ID de la categoría");
+                    Validado = false;
+                }
+                if (txbIdAutor.TextLength == 0)
+                {
+                    Notificador.SetError(txbIdAutor, "Seleccione el ID del autor");
                     Validado = false;
                 }
             }

@@ -28,15 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrestamosGestion));
             this.dtgPrestamosGestion = new System.Windows.Forms.DataGridView();
-            this.idPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUsuario_lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario_lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUsuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_prestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -45,14 +39,20 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.txbFiltrar = new System.Windows.Forms.ToolStripTextBox();
+            this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
+            this.btnAgregarDetalles = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.idPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario_lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario_lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_prestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamosGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -64,14 +64,14 @@
             this.dtgPrestamosGestion.AllowUserToDeleteRows = false;
             this.dtgPrestamosGestion.AllowUserToResizeRows = false;
             this.dtgPrestamosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgPrestamosGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPrestamosGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgPrestamosGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgPrestamosGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPrestamo,
@@ -89,48 +89,6 @@
             this.dtgPrestamosGestion.Size = new System.Drawing.Size(897, 412);
             this.dtgPrestamosGestion.TabIndex = 40;
             // 
-            // idPrestamo
-            // 
-            this.idPrestamo.DataPropertyName = "idPrestamo";
-            this.idPrestamo.HeaderText = "ID Préstamo";
-            this.idPrestamo.Name = "idPrestamo";
-            this.idPrestamo.ReadOnly = true;
-            // 
-            // idUsuario_lector
-            // 
-            this.idUsuario_lector.DataPropertyName = "idUsuario_lector";
-            this.idUsuario_lector.HeaderText = "ID Usuario Lector";
-            this.idUsuario_lector.Name = "idUsuario_lector";
-            this.idUsuario_lector.ReadOnly = true;
-            // 
-            // usuario_lector
-            // 
-            this.usuario_lector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.usuario_lector.HeaderText = "Usuario lector";
-            this.usuario_lector.Name = "usuario_lector";
-            this.usuario_lector.ReadOnly = true;
-            // 
-            // idUsuario_empleado
-            // 
-            this.idUsuario_empleado.DataPropertyName = "idUsuario_empleado";
-            this.idUsuario_empleado.HeaderText = "ID Usuario Empleado";
-            this.idUsuario_empleado.Name = "idUsuario_empleado";
-            this.idUsuario_empleado.ReadOnly = true;
-            // 
-            // usuario_empleado
-            // 
-            this.usuario_empleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.usuario_empleado.HeaderText = "Usuario empleado";
-            this.usuario_empleado.Name = "usuario_empleado";
-            this.usuario_empleado.ReadOnly = true;
-            // 
-            // fecha_prestamo
-            // 
-            this.fecha_prestamo.DataPropertyName = "fecha_prestamo";
-            this.fecha_prestamo.HeaderText = "Fecha Prestamos";
-            this.fecha_prestamo.Name = "fecha_prestamo";
-            this.fecha_prestamo.ReadOnly = true;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.AutoSize = false;
@@ -145,9 +103,9 @@
             this.toolStripSeparator3,
             this.btnEliminar,
             this.toolStripSeparator4,
-            this.txbFiltrar,
+            this.txbFiltro,
             this.toolStripLabel1,
-            this.btnSeleccionar,
+            this.btnAgregarDetalles,
             this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(40, 45);
             this.toolStrip1.Name = "toolStrip1";
@@ -168,6 +126,7 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(69, 32);
             this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -181,6 +140,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(57, 32);
             this.btnEditar.Text = "Editar";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // toolStripSeparator3
             // 
@@ -194,19 +154,21 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(70, 32);
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 35);
             // 
-            // txbFiltrar
+            // txbFiltro
             // 
-            this.txbFiltrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.txbFiltrar.AutoSize = false;
-            this.txbFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFiltrar.Name = "txbFiltrar";
-            this.txbFiltrar.Size = new System.Drawing.Size(200, 23);
+            this.txbFiltro.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.txbFiltro.AutoSize = false;
+            this.txbFiltro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFiltro.Name = "txbFiltro";
+            this.txbFiltro.Size = new System.Drawing.Size(200, 23);
+            this.txbFiltro.TextChanged += new System.EventHandler(this.txbFiltro_TextChanged);
             // 
             // toolStripLabel1
             // 
@@ -216,13 +178,14 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(53, 32);
             this.toolStripLabel1.Text = "Filtrar";
             // 
-            // btnSeleccionar
+            // btnAgregarDetalles
             // 
-            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
-            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(87, 32);
-            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnAgregarDetalles.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarDetalles.Image")));
+            this.btnAgregarDetalles.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAgregarDetalles.Name = "btnAgregarDetalles";
+            this.btnAgregarDetalles.Size = new System.Drawing.Size(101, 32);
+            this.btnAgregarDetalles.Text = "Agregar libros";
+            this.btnAgregarDetalles.Click += new System.EventHandler(this.btnAgregarDetalles_Click);
             // 
             // toolStripSeparator5
             // 
@@ -269,11 +232,55 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(453, 27);
+            this.label1.Location = new System.Drawing.Point(467, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 17);
             this.label1.TabIndex = 89;
             this.label1.Text = "PRÉSTAMOS";
+            // 
+            // idPrestamo
+            // 
+            this.idPrestamo.DataPropertyName = "idPrestamo";
+            this.idPrestamo.HeaderText = "ID Préstamo";
+            this.idPrestamo.Name = "idPrestamo";
+            this.idPrestamo.ReadOnly = true;
+            // 
+            // idUsuario_lector
+            // 
+            this.idUsuario_lector.DataPropertyName = "idUsuario_lector";
+            this.idUsuario_lector.HeaderText = "ID Usuario Lector";
+            this.idUsuario_lector.Name = "idUsuario_lector";
+            this.idUsuario_lector.ReadOnly = true;
+            // 
+            // usuario_lector
+            // 
+            this.usuario_lector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuario_lector.DataPropertyName = "usuario_lector";
+            this.usuario_lector.HeaderText = "Usuario lector";
+            this.usuario_lector.Name = "usuario_lector";
+            this.usuario_lector.ReadOnly = true;
+            // 
+            // idUsuario_empleado
+            // 
+            this.idUsuario_empleado.DataPropertyName = "idUsuario_empleado";
+            this.idUsuario_empleado.HeaderText = "ID Usuario Empleado";
+            this.idUsuario_empleado.Name = "idUsuario_empleado";
+            this.idUsuario_empleado.ReadOnly = true;
+            // 
+            // usuario_empleado
+            // 
+            this.usuario_empleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuario_empleado.DataPropertyName = "usuario_empleado";
+            this.usuario_empleado.HeaderText = "Usuario empleado";
+            this.usuario_empleado.Name = "usuario_empleado";
+            this.usuario_empleado.ReadOnly = true;
+            // 
+            // fecha_prestamo
+            // 
+            this.fecha_prestamo.DataPropertyName = "fecha_prestamo";
+            this.fecha_prestamo.HeaderText = "Fecha del préstamo";
+            this.fecha_prestamo.Name = "fecha_prestamo";
+            this.fecha_prestamo.ReadOnly = true;
             // 
             // PrestamosGestion
             // 
@@ -290,6 +297,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PrestamosGestion";
             this.Text = "verPrestamos";
+            this.Load += new System.EventHandler(this.PrestamosGestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamosGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -310,19 +318,19 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripTextBox txbFiltrar;
+        private System.Windows.Forms.ToolStripTextBox txbFiltro;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton btnSeleccionar;
+        private System.Windows.Forms.ToolStripButton btnAgregarDetalles;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamo;
         private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_lector;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario_lector;
         private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_empleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario_empleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_prestamo;
-        private System.Windows.Forms.Label label1;
     }
 }

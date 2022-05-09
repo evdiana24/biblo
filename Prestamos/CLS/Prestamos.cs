@@ -97,9 +97,9 @@ namespace Prestamos.CLS
             try
             {
                 Sentencia.Append("UPDATE prestamos SET ");
-                Sentencia.Append("nombre='" + this._idUsuario_lector + "',");
-                Sentencia.Append("fecha_nacimiento='" + this._idUsuario_empleado + "',");
-                Sentencia.Append("fecha_contratacion" + this._fecha_prestamo + "' WHERE idPrestamo=" + this._idPrestamo + ";");
+                Sentencia.Append("idUsuario_lector='" + this._idUsuario_lector + "',");
+                Sentencia.Append("idUsuario_empleado='" + this._idUsuario_empleado + "',");
+                Sentencia.Append("fecha_prestamo" + this._fecha_prestamo + "' WHERE idPrestamo=" + this._idPrestamo + ";");
                 if (operacion.Actualizar(Sentencia.ToString()) > 0)
                 {
                     Resultado = true;

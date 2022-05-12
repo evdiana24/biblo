@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CambiarClave));
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txbUsuario = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbNuevaClave = new System.Windows.Forms.TextBox();
+            this.txbRepitaClave = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -63,23 +66,23 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Repita la contraseña:";
             // 
-            // txbUsuario
+            // txbNuevaClave
             // 
-            this.txbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbUsuario.Location = new System.Drawing.Point(257, 107);
-            this.txbUsuario.Name = "txbUsuario";
-            this.txbUsuario.PasswordChar = '●';
-            this.txbUsuario.Size = new System.Drawing.Size(225, 26);
-            this.txbUsuario.TabIndex = 176;
+            this.txbNuevaClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbNuevaClave.Location = new System.Drawing.Point(257, 107);
+            this.txbNuevaClave.Name = "txbNuevaClave";
+            this.txbNuevaClave.PasswordChar = '●';
+            this.txbNuevaClave.Size = new System.Drawing.Size(225, 26);
+            this.txbNuevaClave.TabIndex = 176;
             // 
-            // textBox1
+            // txbRepitaClave
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(257, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '●';
-            this.textBox1.Size = new System.Drawing.Size(225, 26);
-            this.textBox1.TabIndex = 177;
+            this.txbRepitaClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbRepitaClave.Location = new System.Drawing.Point(257, 151);
+            this.txbRepitaClave.Name = "txbRepitaClave";
+            this.txbRepitaClave.PasswordChar = '●';
+            this.txbRepitaClave.Size = new System.Drawing.Size(225, 26);
+            this.txbRepitaClave.TabIndex = 177;
             // 
             // btnCancelar
             // 
@@ -117,6 +120,7 @@
             this.btnGuardar.TabIndex = 178;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label1
             // 
@@ -143,7 +147,12 @@
             this.label11.TabIndex = 180;
             this.label11.Text = "VALIDACIÓN";
             // 
-            // CambiarContra
+            // Notificador
+            // 
+            this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Notificador.ContainerControl = this;
+            // 
+            // CambiarClave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,14 +164,15 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txbUsuario);
+            this.Controls.Add(this.txbRepitaClave);
+            this.Controls.Add(this.txbNuevaClave);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "CambiarContra";
+            this.Name = "CambiarClave";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambio de contraseña";
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,11 +181,12 @@
         #endregion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox txbUsuario;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txbNuevaClave;
+        public System.Windows.Forms.TextBox txbRepitaClave;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }

@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace Prestamos.GUI
 {
-    public partial class PrestamosGestiones : Form
+    public partial class DetallesPrestamos : Form
     {
         BindingSource _DATOS = new BindingSource();
+        BindingSource _DETALLES = new BindingSource();
         String _IDEjemplarSeleccionado;
         String _EjemplarSeleccionado;
         bool _Seleccionado = false;
@@ -56,12 +57,26 @@ namespace Prestamos.GUI
             }
         }
 
-        private void CargarDatos()
+        private void CargarEjemplares()
         {
             try
             {
                 _DATOS.DataSource = DataSource.Consultas.TODOS_LOS_EJEMPLARES_DISPONIBLES();
                 Filtrar();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar datos");
+            }
+        }
+
+        private void CargarDetallesPrestamos()
+        {
+            try
+            {
+                _DETALLES.DataSource = DataSource.Consultas.DETALLES_POR_ID_PRESTAMO(txbIdPrestamo.Text);
+                dtgDetallesPrestamos.AutoGenerateColumns = false;
+                dtgDetallesPrestamos.DataSource = _DETALLES;
             }
             catch (Exception)
             {
@@ -91,7 +106,7 @@ namespace Prestamos.GUI
             }
         }
 
-        public PrestamosGestiones()
+        public DetallesPrestamos()
         {
             InitializeComponent();
         }
@@ -103,7 +118,8 @@ namespace Prestamos.GUI
 
         private void PrestamosGestiones_Load(object sender, EventArgs e)
         {
-            CargarDatos();
+            CargarEjemplares();
+            CargarDetallesPrestamos();
         }
 
         private void txbFiltro_TextChanged(object sender, EventArgs e)
@@ -146,7 +162,7 @@ namespace Prestamos.GUI
                 {
                     //Se guardo correctamente
                     MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
+                    //Close();
                 }
                 else
                 {
@@ -154,7 +170,7 @@ namespace Prestamos.GUI
                     MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-                
+
             catch (Exception)
             {
                 MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -163,9 +179,42 @@ namespace Prestamos.GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Procesar();
-
-            //txbIdPrestamo.Text = dtgDetallesPrestamos
+            try
+            {
+                Procesar();
+                CargarDetallesPrestamos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    CLS.DetallesPrestamos oDetalle = new CLS.DetallesPrestamos();
+                    oDetalle.IdDetalle = dtgDetallesPrestamos.CurrentRow.Cells["idDetalle"].Value.ToString();
+                    if (oDetalle.Eliminar())
+                    {
+                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarDetallesPrestamos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El registro no fue eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

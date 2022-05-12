@@ -56,11 +56,11 @@
     <Compile Include="GUI\PrestamoEdicion.Designer.cs">
       <DependentUpon>PrestamoEdicion.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\PrestamosGestiones.cs">
+    <Compile Include="GUI\DetallesPrestamos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\PrestamosGestiones.Designer.cs">
-      <DependentUpon>PrestamosGestiones.cs</DependentUpon>
+    <Compile Include="GUI\DetallesPrestamos.Designer.cs">
+      <DependentUpon>DetallesPrestamos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\PrestamosGestion.cs">
       <SubType>Form</SubType>
@@ -96,8 +96,8 @@
     <EmbeddedResource Include="GUI\PrestamoEdicion.resx">
       <DependentUpon>PrestamoEdicion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PrestamosGestiones.resx">
-      <DependentUpon>PrestamosGestiones.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\DetallesPrestamos.resx">
+      <DependentUpon>DetallesPrestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PrestamosGestion.resx">
       <DependentUpon>PrestamosGestion.cs</DependentUpon>

@@ -39,6 +39,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txbUsuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txbCarnet = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txbTelefono = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txbCorreo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txbDireccion = new System.Windows.Forms.TextBox();
@@ -49,10 +53,6 @@
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txbTelefono = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txbCarnet = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -179,134 +179,6 @@
             this.label4.TabIndex = 105;
             this.label4.Text = "Usuario:";
             // 
-            // txbCorreo
-            // 
-            this.txbCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbCorreo.Location = new System.Drawing.Point(288, 164);
-            this.txbCorreo.Name = "txbCorreo";
-            this.txbCorreo.ReadOnly = true;
-            this.txbCorreo.Size = new System.Drawing.Size(181, 26);
-            this.txbCorreo.TabIndex = 207;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(70, 160);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 23);
-            this.label10.TabIndex = 206;
-            this.label10.Text = "Correo:";
-            // 
-            // txbDireccion
-            // 
-            this.txbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbDireccion.Location = new System.Drawing.Point(726, 210);
-            this.txbDireccion.MaxLength = 150;
-            this.txbDireccion.Multiline = true;
-            this.txbDireccion.Name = "txbDireccion";
-            this.txbDireccion.ReadOnly = true;
-            this.txbDireccion.Size = new System.Drawing.Size(181, 67);
-            this.txbDireccion.TabIndex = 205;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(508, 206);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 23);
-            this.label9.TabIndex = 204;
-            this.label9.Text = "Dirección:";
-            // 
-            // txbGenero
-            // 
-            this.txbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbGenero.Location = new System.Drawing.Point(726, 164);
-            this.txbGenero.Name = "txbGenero";
-            this.txbGenero.ReadOnly = true;
-            this.txbGenero.Size = new System.Drawing.Size(181, 26);
-            this.txbGenero.TabIndex = 203;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(508, 160);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 23);
-            this.label8.TabIndex = 202;
-            this.label8.Text = "Género:";
-            // 
-            // txbFechaNacimiento
-            // 
-            this.txbFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbFechaNacimiento.Location = new System.Drawing.Point(726, 118);
-            this.txbFechaNacimiento.Name = "txbFechaNacimiento";
-            this.txbFechaNacimiento.ReadOnly = true;
-            this.txbFechaNacimiento.Size = new System.Drawing.Size(181, 26);
-            this.txbFechaNacimiento.TabIndex = 197;
-            // 
-            // txbNombre
-            // 
-            this.txbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbNombre.Location = new System.Drawing.Point(183, 118);
-            this.txbNombre.Name = "txbNombre";
-            this.txbNombre.ReadOnly = true;
-            this.txbNombre.Size = new System.Drawing.Size(286, 26);
-            this.txbNombre.TabIndex = 196;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(508, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 23);
-            this.label3.TabIndex = 195;
-            this.label3.Text = "Fecha de nacimiento:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(70, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 23);
-            this.label2.TabIndex = 194;
-            this.label2.Text = "Nombre:";
-            // 
-            // txbTelefono
-            // 
-            this.txbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbTelefono.Location = new System.Drawing.Point(288, 210);
-            this.txbTelefono.Name = "txbTelefono";
-            this.txbTelefono.ReadOnly = true;
-            this.txbTelefono.Size = new System.Drawing.Size(181, 26);
-            this.txbTelefono.TabIndex = 209;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(70, 206);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 23);
-            this.label5.TabIndex = 208;
-            this.label5.Text = "Teléfono:";
-            // 
             // txbCarnet
             // 
             this.txbCarnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -328,6 +200,134 @@
             this.label7.TabIndex = 210;
             this.label7.Text = "Carnet:";
             // 
+            // txbTelefono
+            // 
+            this.txbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbTelefono.Location = new System.Drawing.Point(288, 212);
+            this.txbTelefono.Name = "txbTelefono";
+            this.txbTelefono.ReadOnly = true;
+            this.txbTelefono.Size = new System.Drawing.Size(181, 26);
+            this.txbTelefono.TabIndex = 223;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(70, 208);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 23);
+            this.label5.TabIndex = 222;
+            this.label5.Text = "Teléfono:";
+            // 
+            // txbCorreo
+            // 
+            this.txbCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbCorreo.Location = new System.Drawing.Point(288, 166);
+            this.txbCorreo.Name = "txbCorreo";
+            this.txbCorreo.ReadOnly = true;
+            this.txbCorreo.Size = new System.Drawing.Size(181, 26);
+            this.txbCorreo.TabIndex = 221;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(70, 162);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 23);
+            this.label10.TabIndex = 220;
+            this.label10.Text = "Correo:";
+            // 
+            // txbDireccion
+            // 
+            this.txbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbDireccion.Location = new System.Drawing.Point(726, 212);
+            this.txbDireccion.MaxLength = 150;
+            this.txbDireccion.Multiline = true;
+            this.txbDireccion.Name = "txbDireccion";
+            this.txbDireccion.ReadOnly = true;
+            this.txbDireccion.Size = new System.Drawing.Size(181, 67);
+            this.txbDireccion.TabIndex = 219;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(508, 208);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 23);
+            this.label9.TabIndex = 218;
+            this.label9.Text = "Dirección:";
+            // 
+            // txbGenero
+            // 
+            this.txbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbGenero.Location = new System.Drawing.Point(726, 166);
+            this.txbGenero.Name = "txbGenero";
+            this.txbGenero.ReadOnly = true;
+            this.txbGenero.Size = new System.Drawing.Size(181, 26);
+            this.txbGenero.TabIndex = 217;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(508, 162);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 23);
+            this.label8.TabIndex = 216;
+            this.label8.Text = "Género:";
+            // 
+            // txbFechaNacimiento
+            // 
+            this.txbFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbFechaNacimiento.Location = new System.Drawing.Point(727, 118);
+            this.txbFechaNacimiento.Name = "txbFechaNacimiento";
+            this.txbFechaNacimiento.ReadOnly = true;
+            this.txbFechaNacimiento.Size = new System.Drawing.Size(181, 26);
+            this.txbFechaNacimiento.TabIndex = 215;
+            // 
+            // txbNombre
+            // 
+            this.txbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbNombre.Location = new System.Drawing.Point(183, 120);
+            this.txbNombre.Name = "txbNombre";
+            this.txbNombre.ReadOnly = true;
+            this.txbNombre.Size = new System.Drawing.Size(286, 26);
+            this.txbNombre.TabIndex = 214;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(508, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(212, 23);
+            this.label3.TabIndex = 213;
+            this.label3.Text = "Fecha de nacimiento:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(70, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 23);
+            this.label2.TabIndex = 212;
+            this.label2.Text = "Nombre:";
+            // 
             // PerfilLector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,8 +335,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(975, 600);
-            this.Controls.Add(this.txbCarnet);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.txbTelefono);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbCorreo);
@@ -349,6 +347,8 @@
             this.Controls.Add(this.txbNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.txbCarnet);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txbRol);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txbFechaCreacion);
@@ -378,6 +378,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txbUsuario;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txbCarnet;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txbTelefono;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txbCorreo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txbDireccion;
@@ -388,9 +392,5 @@
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbTelefono;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txbCarnet;
-        private System.Windows.Forms.Label label7;
     }
 }

@@ -102,7 +102,7 @@ namespace Prestamos.GUI
             {
                 if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    GUI.PrestamosGestiones f = new PrestamosGestiones();
+                    GUI.DetallesPrestamos f = new DetallesPrestamos();
                     f.txbIdPrestamo.Text = dtgPrestamosGestion.CurrentRow.Cells["idPrestamo"].Value.ToString();
                     f.ShowDialog();
                     CargarDatos();
@@ -148,7 +148,7 @@ namespace Prestamos.GUI
                 _IDPrestamoSeleccionado = dtgPrestamosGestion.CurrentRow.Cells["idPrestamo"].Value.ToString();
                 _Seleccionado = true;
 
-                GUI.PrestamosGestiones f = new PrestamosGestiones();
+                GUI.DetallesPrestamos f = new DetallesPrestamos();
                 f.txbIdPrestamo.Text = dtgPrestamosGestion.CurrentRow.Cells["idPrestamo"].Value.ToString();
                 f.ShowDialog();
                 CargarDatos();

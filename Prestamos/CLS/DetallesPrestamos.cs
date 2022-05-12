@@ -89,30 +89,6 @@ namespace Prestamos.CLS
             return Resultado;
         }
 
-        //public Boolean Actualizar()
-        //{
-        //    Boolean Resultado = false;
-        //    StringBuilder Sentencia = new StringBuilder();
-        //    DataManager.DBOperacion operacion = new DataManager.DBOperacion();
-        //    try
-        //    {
-        //        Sentencia.Append("UPDATE prestamos_detalles SET ");
-        //        Sentencia.Append("idDetalle='" + this._idDetalle + "',");
-        //        Sentencia.Append("idPrestamo='" + this._idPrestamo + "',");
-        //        Sentencia.Append("idEjemplar='" + this._idEjemplar + "',");
-        //        Sentencia.Append("fecha_prestamo" + this._fecha_devolucion + "' WHERE idDetalle=" + this.IdDetalle + ";");
-        //        if (operacion.Actualizar(Sentencia.ToString()) > 0)
-        //        {
-        //            Resultado = true;
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        Resultado = false;
-        //    }
-        //    return Resultado;
-        //}
-
         public Boolean Eliminar()
         {
             Boolean Resultado = false;

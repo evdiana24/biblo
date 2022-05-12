@@ -399,6 +399,25 @@ namespace DataSource
             }
             return Resultado;
         }
+
+        public static DataTable DETALLES_POR_ID_PRESTAMO(String pIDPrestamo)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idDetalle, a.idPrestamo, a.idEjemplar AS idEjemplarDetalle, c.titulo AS tituloDetalle, a.fecha_devolucion
+            FROM detalles_prestamos a, ejemplares b, libros c
+            WHERE a.idEjemplar = b.idEjemplar AND b.idLibro = c.idLibro AND a.idPrestamo = " + pIDPrestamo + ";";
+
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
     }
 }
 

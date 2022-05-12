@@ -1,6 +1,6 @@
 ﻿namespace Prestamos.GUI
 {
-    partial class PrestamosGestiones
+    partial class DetallesPrestamos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrestamosGestiones));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetallesPrestamos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dtgEjemplares = new System.Windows.Forms.DataGridView();
             this.idEjemplar = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +56,7 @@
             this.txbIdEjemplar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgDetallesPrestamos = new System.Windows.Forms.DataGridView();
+            this.idDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEjemplarDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tituloDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,14 +102,14 @@
             this.dtgEjemplares.AllowUserToDeleteRows = false;
             this.dtgEjemplares.AllowUserToResizeRows = false;
             this.dtgEjemplares.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgEjemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEjemplares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgEjemplares.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idEjemplar,
@@ -283,6 +284,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -365,16 +367,17 @@
             this.dtgDetallesPrestamos.AllowUserToDeleteRows = false;
             this.dtgDetallesPrestamos.AllowUserToResizeRows = false;
             this.dtgDetallesPrestamos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgDetallesPrestamos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgDetallesPrestamos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgDetallesPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDetallesPrestamos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDetalle,
             this.idPrestamo,
             this.idEjemplarDetalle,
             this.tituloDetalle,
@@ -389,17 +392,23 @@
             this.dtgDetallesPrestamos.Size = new System.Drawing.Size(943, 169);
             this.dtgDetallesPrestamos.TabIndex = 82;
             // 
+            // idDetalle
+            // 
+            this.idDetalle.DataPropertyName = "idDetalle";
+            this.idDetalle.HeaderText = "ID Detalle";
+            this.idDetalle.Name = "idDetalle";
+            this.idDetalle.ReadOnly = true;
+            // 
             // idPrestamo
             // 
             this.idPrestamo.DataPropertyName = "idPrestamo";
-            this.idPrestamo.HeaderText = "ID Prestamo";
+            this.idPrestamo.HeaderText = "ID Préstamo";
             this.idPrestamo.Name = "idPrestamo";
             this.idPrestamo.ReadOnly = true;
             // 
             // idEjemplarDetalle
             // 
             this.idEjemplarDetalle.DataPropertyName = "idEjemplarDetalle";
-            this.idEjemplarDetalle.FillWeight = 142.132F;
             this.idEjemplarDetalle.HeaderText = "ID Ejemplar";
             this.idEjemplarDetalle.Name = "idEjemplarDetalle";
             this.idEjemplarDetalle.ReadOnly = true;
@@ -408,7 +417,6 @@
             // 
             this.tituloDetalle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tituloDetalle.DataPropertyName = "tituloDetalle";
-            this.tituloDetalle.FillWeight = 13.65031F;
             this.tituloDetalle.HeaderText = "Título";
             this.tituloDetalle.Name = "tituloDetalle";
             this.tituloDetalle.ReadOnly = true;
@@ -416,11 +424,10 @@
             // fecha_devolucion
             // 
             this.fecha_devolucion.DataPropertyName = "fecha_devolucion";
-            this.fecha_devolucion.FillWeight = 102.2544F;
-            this.fecha_devolucion.HeaderText = "Fecha de devolución";
+            this.fecha_devolucion.HeaderText = "Fecha devolución";
             this.fecha_devolucion.Name = "fecha_devolucion";
             this.fecha_devolucion.ReadOnly = true;
-            this.fecha_devolucion.Width = 150;
+            this.fecha_devolucion.Width = 200;
             // 
             // dataGridView1
             // 
@@ -439,7 +446,7 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // PrestamosGestiones
+            // DetallesPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -448,7 +455,7 @@
             this.ClientSize = new System.Drawing.Size(975, 600);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "PrestamosGestiones";
+            this.Name = "DetallesPrestamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Préstamos";
             this.Load += new System.EventHandler(this.PrestamosGestiones_Load);
@@ -498,11 +505,12 @@
         private System.Windows.Forms.ToolStripButton btnSeleccionar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.DataGridView dtgDetallesPrestamos;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox txbIdPrestamo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDetalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamo;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEjemplarDetalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn tituloDetalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_devolucion;
-        private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox txbIdPrestamo;
     }
 }

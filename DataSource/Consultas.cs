@@ -99,9 +99,17 @@ namespace DataSource
         public static DataTable TODOS_LOS_LIBROS()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, a.idEditorial, b.editorial 
-            FROM libros a, editoriales b
-            WHERE a.idEditorial = b.idEditorial;";
+            String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, CONCAT(b.nombres, ' ',b.apellidos) AS autor, 
+            c.categoria, a.idEditorial, f.editorial, IFNULL(COUNT(g.idLibro), 0) AS ejemplares
+            FROM libros a, autores b, categorias c, libros_categorias d, libros_autores e, editoriales f, ejemplares g
+            WHERE a.idLibro = g.idLibro
+            AND b.idAutor = e.idAutor
+            AND e.idLibro = a.idLibro
+            AND c.idCategoria = d.idCategoria
+            AND d.idLibro = a.idLibro
+            AND f.idEditorial = a.idEditorial
+            AND g.idLibro = g.idLibro
+            GROUP BY a.idLibro;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -135,7 +143,7 @@ namespace DataSource
         public static DataTable TODOS_LOS_EJEMPLARES()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT a.idEjemplar, a.idLibro, b.titulo, a.estado 
+            String Consulta = @"SELECT a.idEjemplar, a.idLibro, b.titulo, a.estado, a.fecha_ingreso
             FROM ejemplares a, libros b
             WHERE a.idLibro = b.idLibro;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
@@ -283,7 +291,8 @@ namespace DataSource
             a.idUsuario_empleado, c.usuario AS usuario_empleado, a.fecha_prestamo
             FROM prestamos a, usuarios_lectores b, usuarios_empleados c
             WHERE a.idUsuario_lector = b.idUsuario
-            AND a.idUsuario_empleado = c.idUsuario;";
+            AND a.idUsuario_empleado = c.idUsuario
+            ORDER BY a.idPrestamo DESC;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -400,12 +409,108 @@ namespace DataSource
             return Resultado;
         }
 
+        public static DataTable BUSCAR_LIBRO()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, CONCAT(b.nombres, ' ',b.apellidos) AS autor, 
+            c.categoria, f.editorial, IFNULL(COUNT(g.idLibro), 0) AS ejemplares
+            FROM libros a, autores b, categorias c, libros_categorias d, libros_autores e, editoriales f, ejemplares g
+            WHERE a.idLibro = g.idLibro
+            AND b.idAutor = e.idAutor
+            AND e.idLibro = a.idLibro
+            AND c.idCategoria = d.idCategoria
+            AND d.idLibro = a.idLibro
+            AND f.idEditorial = a.idEditorial
+            AND g.idLibro = g.idLibro
+            GROUP BY a.idLibro;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
         public static DataTable DETALLES_POR_ID_PRESTAMO(String pIDPrestamo)
         {
             DataTable Resultado = new DataTable();
             String Consulta = @"SELECT a.idDetalle, a.idPrestamo, a.idEjemplar AS idEjemplarDetalle, c.titulo AS tituloDetalle, a.fecha_devolucion
             FROM detalles_prestamos a, ejemplares b, libros c
             WHERE a.idEjemplar = b.idEjemplar AND b.idLibro = c.idLibro AND a.idPrestamo = " + pIDPrestamo + ";";
+
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable MIS_PRESTAMOS(String pIDUsuario)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT c.titulo, f.categoria, CONCAT(h.nombres, ' ', h.apellidos) AS autor, i.editorial, a.fecha_prestamo, b.fecha_devolucion
+            FROM prestamos a, detalles_prestamos b, libros c, ejemplares d, libros_categorias e, categorias f, libros_autores g, autores h, editoriales i
+            WHERE a.idPrestamo = b.idPrestamo
+            AND b.idEjemplar = d.idEjemplar
+            AND c.idLibro = d.idLibro
+            AND e.idCategoria = f.idCategoria
+            AND e.idLibro = c.idLibro
+            AND g.idAutor = h.idAutor
+            AND c.idLibro = g.idLibro
+            AND c.idEditorial = i.idEditorial
+            AND a.idUsuario_lector = " + pIDUsuario + ";";
+
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable HISTORIAL_PAGOS(String pIDUsuario)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT descripcion, fecha_pago, total FROM 
+            pagos
+            WHERE idUsuario_lector = " + pIDUsuario + ";";
+
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable MIS_MORAS(String pIDUsuario)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT b.titulo, c.fecha_prestamo, d.fecha_devolucion, a.totalMora, a.estado
+            FROM moras a, libros b, prestamos c, detalles_prestamos d, ejemplares e
+            WHERE d.idEjemplar = e.idEjemplar
+            AND b.idLibro = e.idLibro
+            AND a.idDetalle = d.idDetalle
+            AND c.idPrestamo = d.idPrestamo
+            AND a.estado = 'PENDIENTE'
+            AND c.idUsuario_lector = " + pIDUsuario + ";";
 
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try

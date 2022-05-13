@@ -64,8 +64,12 @@
             // 
             // cmbEstadoMora
             // 
+            this.cmbEstadoMora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoMora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbEstadoMora.FormattingEnabled = true;
+            this.cmbEstadoMora.Items.AddRange(new object[] {
+            "PENDIENTE",
+            "CANCELADA"});
             this.cmbEstadoMora.Location = new System.Drawing.Point(174, 283);
             this.cmbEstadoMora.Name = "cmbEstadoMora";
             this.cmbEstadoMora.Size = new System.Drawing.Size(139, 28);

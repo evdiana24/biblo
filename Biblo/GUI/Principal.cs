@@ -255,7 +255,7 @@ namespace Biblo.GUI
 
         private void btnBuscarLibros_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<Libros.GUI.LibrosGestion>();
+            AbrirFormulario<Libros.GUI.BuscarLibro>();
             hideSubMenu();
         }
 
@@ -337,7 +337,7 @@ namespace Biblo.GUI
 
         private void btnMisMoras_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
+            AbrirFormulario<Pagos.GUI.MisMoras>();
             hideSubMenu();
         }
 
@@ -355,10 +355,9 @@ namespace Biblo.GUI
 
         private void btnHistorialPagos_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
+            AbrirFormulario<Pagos.GUI.HistorialPagos>();
             hideSubMenu();
         }
-
 
         //INFORMES
         private void btnInformes_Click(object sender, EventArgs e)

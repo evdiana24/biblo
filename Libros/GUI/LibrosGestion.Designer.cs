@@ -55,6 +55,7 @@
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEditorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ejemplares = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgLibrosGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -83,7 +84,8 @@
             this.autor,
             this.categoria,
             this.idEditorial,
-            this.editorial});
+            this.editorial,
+            this.ejemplares});
             this.dtgLibrosGestion.Location = new System.Drawing.Point(39, 92);
             this.dtgLibrosGestion.Name = "dtgLibrosGestion";
             this.dtgLibrosGestion.ReadOnly = true;
@@ -305,6 +307,13 @@
             this.editorial.Name = "editorial";
             this.editorial.ReadOnly = true;
             // 
+            // ejemplares
+            // 
+            this.ejemplares.DataPropertyName = "ejemplares";
+            this.ejemplares.HeaderText = "Ejemplares disponibles";
+            this.ejemplares.Name = "ejemplares";
+            this.ejemplares.ReadOnly = true;
+            // 
             // LibrosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,5 +367,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEditorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn editorial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ejemplares;
     }
 }

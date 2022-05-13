@@ -62,6 +62,12 @@
     <Compile Include="GUI\DetallesPrestamos.Designer.cs">
       <DependentUpon>DetallesPrestamos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Detalles_Prestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Detalles_Prestamos.Designer.cs">
+      <DependentUpon>Detalles_Prestamos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PrestamosGestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,10 @@
       <Project>{42e51e7c-cd09-4528-b6e2-5dd80ffd34f5}</Project>
       <Name>DataSource</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SessionManager\SessionManager.csproj">
+      <Project>{d457ebfd-6d9a-4fea-be01-1b8c5ae08f6b}</Project>
+      <Name>SessionManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Usuarios\Usuarios.csproj">
       <Project>{be4f7cbe-52ed-44ec-8990-5c721db624b8}</Project>
       <Name>Usuarios</Name>
@@ -98,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DetallesPrestamos.resx">
       <DependentUpon>DetallesPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Detalles_Prestamos.resx">
+      <DependentUpon>Detalles_Prestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PrestamosGestion.resx">
       <DependentUpon>PrestamosGestion.cs</DependentUpon>

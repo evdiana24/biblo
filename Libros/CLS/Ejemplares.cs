@@ -11,6 +11,7 @@ namespace Libros.CLS
         String _IDEjemplar;
         String _IDLibro;
         String _Estado;
+        String _Fecha_ingreso;
 
         public string IDEjemplar
         {
@@ -51,6 +52,19 @@ namespace Libros.CLS
             }
         }
 
+        public string Fecha_ingreso
+        {
+            get
+            {
+                return _Fecha_ingreso;
+            }
+
+            set
+            {
+                _Fecha_ingreso = value;
+            }
+        }
+
         public Boolean Guardar()
         {
             Boolean Resultado = false;
@@ -58,9 +72,10 @@ namespace Libros.CLS
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
             try
             {
-                Sentencia.Append("INSERT INTO ejemplares(idLibro, estado) values(");
+                Sentencia.Append("INSERT INTO ejemplares(idLibro, estado, fecha_ingreso) values(");
                 Sentencia.Append("'" + this._IDLibro + "',");
-                Sentencia.Append("'" + this._Estado + "');");
+                Sentencia.Append("'" + this._Estado + "',");
+                Sentencia.Append("'" + this._Fecha_ingreso + "');");
 
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
                 {
@@ -84,6 +99,7 @@ namespace Libros.CLS
                 Sentencia.Append("UPDATE ejemplares SET ");
                 Sentencia.Append("idLibro='" + this._IDLibro + "',");
                 Sentencia.Append("estado='" + this._Estado + "' ");
+                Sentencia.Append("fecha_ingreso='" + this._Fecha_ingreso + "' ");
                 Sentencia.Append("WHERE idEjemplar=" + this._IDEjemplar + ";");
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
                 {

@@ -1,6 +1,6 @@
-﻿namespace Libros.GUI
+﻿namespace Prestamos.GUI
 {
-    partial class EjemplaresGestion
+    partial class Detalles_Prestamos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EjemplaresGestion));
-            this.dtgEjemplaresGestion = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detalles_Prestamos));
+            this.dtgPrestamosGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -41,51 +41,53 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
+            this.btnAgregarDetalles = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.idEjemplar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEjemplaresGestion)).BeginInit();
+            this.idPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario_lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario_lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_prestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamosGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgEjemplaresGestion
+            // dtgPrestamosGestion
             // 
-            this.dtgEjemplaresGestion.AllowUserToAddRows = false;
-            this.dtgEjemplaresGestion.AllowUserToDeleteRows = false;
-            this.dtgEjemplaresGestion.AllowUserToResizeRows = false;
-            this.dtgEjemplaresGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgEjemplaresGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgEjemplaresGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEjemplaresGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idEjemplar,
-            this.idLibro,
-            this.titulo,
-            this.estado,
-            this.fecha_ingreso});
-            this.dtgEjemplaresGestion.Location = new System.Drawing.Point(39, 92);
-            this.dtgEjemplaresGestion.Name = "dtgEjemplaresGestion";
-            this.dtgEjemplaresGestion.ReadOnly = true;
-            this.dtgEjemplaresGestion.RowHeadersVisible = false;
-            this.dtgEjemplaresGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dtgEjemplaresGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEjemplaresGestion.Size = new System.Drawing.Size(897, 412);
-            this.dtgEjemplaresGestion.TabIndex = 80;
+            this.dtgPrestamosGestion.AllowUserToAddRows = false;
+            this.dtgPrestamosGestion.AllowUserToDeleteRows = false;
+            this.dtgPrestamosGestion.AllowUserToResizeRows = false;
+            this.dtgPrestamosGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgPrestamosGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgPrestamosGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPrestamosGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idPrestamo,
+            this.idUsuario_lector,
+            this.usuario_lector,
+            this.idUsuario_empleado,
+            this.usuario_empleado,
+            this.fecha_prestamo});
+            this.dtgPrestamosGestion.Location = new System.Drawing.Point(39, 92);
+            this.dtgPrestamosGestion.Name = "dtgPrestamosGestion";
+            this.dtgPrestamosGestion.ReadOnly = true;
+            this.dtgPrestamosGestion.RowHeadersVisible = false;
+            this.dtgPrestamosGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dtgPrestamosGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgPrestamosGestion.Size = new System.Drawing.Size(897, 412);
+            this.dtgPrestamosGestion.TabIndex = 40;
             // 
             // toolStrip1
             // 
@@ -103,13 +105,13 @@
             this.toolStripSeparator4,
             this.txbFiltro,
             this.toolStripLabel1,
-            this.btnSeleccionar,
+            this.btnAgregarDetalles,
             this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(40, 45);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(2);
             this.toolStrip1.Size = new System.Drawing.Size(896, 39);
-            this.toolStrip1.TabIndex = 81;
+            this.toolStrip1.TabIndex = 59;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
@@ -176,14 +178,14 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(53, 32);
             this.toolStripLabel1.Text = "Filtrar";
             // 
-            // btnSeleccionar
+            // btnAgregarDetalles
             // 
-            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
-            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(87, 32);
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            this.btnAgregarDetalles.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarDetalles.Image")));
+            this.btnAgregarDetalles.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAgregarDetalles.Name = "btnAgregarDetalles";
+            this.btnAgregarDetalles.Size = new System.Drawing.Size(101, 32);
+            this.btnAgregarDetalles.Text = "Agregar libros";
+            this.btnAgregarDetalles.Click += new System.EventHandler(this.btnAgregarDetalles_Click);
             // 
             // toolStripSeparator5
             // 
@@ -230,54 +232,57 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(453, 27);
+            this.label1.Location = new System.Drawing.Point(467, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 17);
+            this.label1.Size = new System.Drawing.Size(83, 17);
             this.label1.TabIndex = 89;
-            this.label1.Text = "EJEMPLARES";
+            this.label1.Text = "PRÉSTAMOS";
             // 
-            // idEjemplar
+            // idPrestamo
             // 
-            this.idEjemplar.DataPropertyName = "idEjemplar";
-            this.idEjemplar.FillWeight = 142.132F;
-            this.idEjemplar.HeaderText = "ID Ejemplar";
-            this.idEjemplar.Name = "idEjemplar";
-            this.idEjemplar.ReadOnly = true;
+            this.idPrestamo.DataPropertyName = "idPrestamo";
+            this.idPrestamo.HeaderText = "ID Préstamo";
+            this.idPrestamo.Name = "idPrestamo";
+            this.idPrestamo.ReadOnly = true;
             // 
-            // idLibro
+            // idUsuario_lector
             // 
-            this.idLibro.DataPropertyName = "idLibro";
-            this.idLibro.FillWeight = 102.2544F;
-            this.idLibro.HeaderText = "ID Libro";
-            this.idLibro.Name = "idLibro";
-            this.idLibro.ReadOnly = true;
+            this.idUsuario_lector.DataPropertyName = "idUsuario_lector";
+            this.idUsuario_lector.HeaderText = "ID Usuario Lector";
+            this.idUsuario_lector.Name = "idUsuario_lector";
+            this.idUsuario_lector.ReadOnly = true;
             // 
-            // titulo
+            // usuario_lector
             // 
-            this.titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.titulo.DataPropertyName = "titulo";
-            this.titulo.FillWeight = 13.65031F;
-            this.titulo.HeaderText = "Título";
-            this.titulo.Name = "titulo";
-            this.titulo.ReadOnly = true;
+            this.usuario_lector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuario_lector.DataPropertyName = "usuario_lector";
+            this.usuario_lector.HeaderText = "Usuario lector";
+            this.usuario_lector.Name = "usuario_lector";
+            this.usuario_lector.ReadOnly = true;
             // 
-            // estado
+            // idUsuario_empleado
             // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.FillWeight = 141.9633F;
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Width = 200;
+            this.idUsuario_empleado.DataPropertyName = "idUsuario_empleado";
+            this.idUsuario_empleado.HeaderText = "ID Usuario Empleado";
+            this.idUsuario_empleado.Name = "idUsuario_empleado";
+            this.idUsuario_empleado.ReadOnly = true;
             // 
-            // fecha_ingreso
+            // usuario_empleado
             // 
-            this.fecha_ingreso.DataPropertyName = "fecha_ingreso";
-            this.fecha_ingreso.HeaderText = "Fecha de ingreso";
-            this.fecha_ingreso.Name = "fecha_ingreso";
-            this.fecha_ingreso.ReadOnly = true;
+            this.usuario_empleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.usuario_empleado.DataPropertyName = "usuario_empleado";
+            this.usuario_empleado.HeaderText = "Usuario empleado";
+            this.usuario_empleado.Name = "usuario_empleado";
+            this.usuario_empleado.ReadOnly = true;
             // 
-            // EjemplaresGestion
+            // fecha_prestamo
+            // 
+            this.fecha_prestamo.DataPropertyName = "fecha_prestamo";
+            this.fecha_prestamo.HeaderText = "Fecha del préstamo";
+            this.fecha_prestamo.Name = "fecha_prestamo";
+            this.fecha_prestamo.ReadOnly = true;
+            // 
+            // PrestamosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -288,12 +293,12 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgEjemplaresGestion);
+            this.Controls.Add(this.dtgPrestamosGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EjemplaresGestion";
-            this.Text = "verEjemplares";
-            this.Load += new System.EventHandler(this.EjemplaresGestion_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEjemplaresGestion)).EndInit();
+            this.Name = "PrestamosGestion";
+            this.Text = "verPrestamos";
+            this.Load += new System.EventHandler(this.PrestamosGestion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamosGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -304,7 +309,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgEjemplaresGestion;
+        private System.Windows.Forms.DataGridView dtgPrestamosGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -315,16 +320,17 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripTextBox txbFiltro;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton btnSeleccionar;
+        private System.Windows.Forms.ToolStripButton btnAgregarDetalles;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEjemplar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idLibro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_ingreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_lector;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuario_lector;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario_empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuario_empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_prestamo;
     }
 }

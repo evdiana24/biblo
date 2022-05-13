@@ -44,6 +44,12 @@
   <ItemGroup>
     <Compile Include="CLS\Moras.cs" />
     <Compile Include="CLS\Pagos.cs" />
+    <Compile Include="GUI\MisMoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MisMoras.Designer.cs">
+      <DependentUpon>MisMoras.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PagoEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,12 @@
     <Compile Include="GUI\MorasGestion.Designer.cs">
       <DependentUpon>MorasGestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HistorialPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HistorialPagos.Designer.cs">
+      <DependentUpon>HistorialPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PagosGestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +88,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\MisMoras.resx">
+      <DependentUpon>MisMoras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\PagoEdicion.resx">
       <DependentUpon>PagoEdicion.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MorasGestion.resx">
       <DependentUpon>MorasGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HistorialPagos.resx">
+      <DependentUpon>HistorialPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PagosGestion.resx">
       <DependentUpon>PagosGestion.cs</DependentUpon>
@@ -102,6 +120,10 @@
     <ProjectReference Include="..\DataSource\DataSource.csproj">
       <Project>{42e51e7c-cd09-4528-b6e2-5dd80ffd34f5}</Project>
       <Name>DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SessionManager\SessionManager.csproj">
+      <Project>{d457ebfd-6d9a-4fea-be01-1b8c5ae08f6b}</Project>
+      <Name>SessionManager</Name>
     </ProjectReference>
     <ProjectReference Include="..\Usuarios\Usuarios.csproj">
       <Project>{be4f7cbe-52ed-44ec-8990-5c721db624b8}</Project>

@@ -25,6 +25,7 @@ namespace Libros.GUI
                     oEjemplar.IDEjemplar = txbIdEjemplar.Text;
                     oEjemplar.IDLibro = txbLibro.Text;
                     oEjemplar.Estado = cmbEstado.Text;
+                    oEjemplar.Fecha_ingreso = dtFechaIngreso.Value.ToString("yyyy/MM/dd HH:mm:ss");
 
                     //Operamos segun sea el caso
                     if (txbIdEjemplar.TextLength > 0)
@@ -116,6 +117,7 @@ namespace Libros.GUI
                     txbIdLibro.Text = f.IDLibroSeleccionado;
                     txbLibro.Text = f.LibroSeleccionado;
                 }
+                Close();
             }
             catch (Exception)
             {

@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(misPrestamos));
-            this.txbBuscarPrest = new System.Windows.Forms.TextBox();
+            this.txbFiltro = new System.Windows.Forms.TextBox();
             this.dtgMisPrestamos = new System.Windows.Forms.DataGridView();
-            this.libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_prestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_devolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -49,17 +42,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_prestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_devolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMisPrestamos)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txbBuscarPrest
+            // txbFiltro
             // 
-            this.txbBuscarPrest.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbBuscarPrest.Location = new System.Drawing.Point(648, 57);
-            this.txbBuscarPrest.Name = "txbBuscarPrest";
-            this.txbBuscarPrest.Size = new System.Drawing.Size(288, 23);
-            this.txbBuscarPrest.TabIndex = 2;
+            this.txbFiltro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbFiltro.Location = new System.Drawing.Point(648, 57);
+            this.txbFiltro.Name = "txbFiltro";
+            this.txbFiltro.Size = new System.Drawing.Size(288, 23);
+            this.txbFiltro.TabIndex = 2;
             // 
             // dtgMisPrestamos
             // 
@@ -67,23 +66,22 @@
             this.dtgMisPrestamos.AllowUserToDeleteRows = false;
             this.dtgMisPrestamos.AllowUserToResizeRows = false;
             this.dtgMisPrestamos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgMisPrestamos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgMisPrestamos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgMisPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMisPrestamos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.libro,
+            this.titulo,
             this.categoria,
             this.autor,
             this.editorial,
             this.fecha_prestamo,
-            this.fecha_devolucion,
-            this.estado});
+            this.fecha_devolucion});
             this.dtgMisPrestamos.Location = new System.Drawing.Point(39, 98);
             this.dtgMisPrestamos.Name = "dtgMisPrestamos";
             this.dtgMisPrestamos.ReadOnly = true;
@@ -91,55 +89,6 @@
             this.dtgMisPrestamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgMisPrestamos.Size = new System.Drawing.Size(897, 406);
             this.dtgMisPrestamos.TabIndex = 3;
-            // 
-            // libro
-            // 
-            this.libro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.libro.DataPropertyName = "libro";
-            this.libro.HeaderText = "Libro";
-            this.libro.Name = "libro";
-            this.libro.ReadOnly = true;
-            // 
-            // categoria
-            // 
-            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categoria.HeaderText = "Categoría";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            // 
-            // autor
-            // 
-            this.autor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.autor.HeaderText = "Autor";
-            this.autor.Name = "autor";
-            this.autor.ReadOnly = true;
-            // 
-            // editorial
-            // 
-            this.editorial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.editorial.HeaderText = "Editorial";
-            this.editorial.Name = "editorial";
-            this.editorial.ReadOnly = true;
-            // 
-            // fecha_prestamo
-            // 
-            this.fecha_prestamo.HeaderText = "Fecha del préstamo";
-            this.fecha_prestamo.Name = "fecha_prestamo";
-            this.fecha_prestamo.ReadOnly = true;
-            this.fecha_prestamo.Width = 90;
-            // 
-            // fecha_devolucion
-            // 
-            this.fecha_devolucion.HeaderText = "Fecha de devolución";
-            this.fecha_devolucion.Name = "fecha_devolucion";
-            this.fecha_devolucion.ReadOnly = true;
-            this.fecha_devolucion.Width = 90;
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
             // 
             // label1
             // 
@@ -250,6 +199,54 @@
             this.label6.Size = new System.Drawing.Size(38, 32);
             this.label6.TabIndex = 100;
             // 
+            // titulo
+            // 
+            this.titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titulo.DataPropertyName = "titulo";
+            this.titulo.HeaderText = "Libro";
+            this.titulo.Name = "titulo";
+            this.titulo.ReadOnly = true;
+            // 
+            // categoria
+            // 
+            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.categoria.DataPropertyName = "categoria";
+            this.categoria.HeaderText = "Categoría";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            // 
+            // autor
+            // 
+            this.autor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.autor.DataPropertyName = "autor";
+            this.autor.HeaderText = "Autor";
+            this.autor.Name = "autor";
+            this.autor.ReadOnly = true;
+            // 
+            // editorial
+            // 
+            this.editorial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.editorial.DataPropertyName = "editorial";
+            this.editorial.HeaderText = "Editorial";
+            this.editorial.Name = "editorial";
+            this.editorial.ReadOnly = true;
+            // 
+            // fecha_prestamo
+            // 
+            this.fecha_prestamo.DataPropertyName = "fecha_prestamo";
+            this.fecha_prestamo.HeaderText = "Fecha del préstamo";
+            this.fecha_prestamo.Name = "fecha_prestamo";
+            this.fecha_prestamo.ReadOnly = true;
+            this.fecha_prestamo.Width = 90;
+            // 
+            // fecha_devolucion
+            // 
+            this.fecha_devolucion.DataPropertyName = "fecha_devolucion";
+            this.fecha_devolucion.HeaderText = "Fecha de devolución";
+            this.fecha_devolucion.Name = "fecha_devolucion";
+            this.fecha_devolucion.ReadOnly = true;
+            this.fecha_devolucion.Width = 90;
+            // 
             // misPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,10 +264,11 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgMisPrestamos);
-            this.Controls.Add(this.txbBuscarPrest);
+            this.Controls.Add(this.txbFiltro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "misPrestamos";
             this.Text = "misPrestamos";
+            this.Load += new System.EventHandler(this.misPrestamos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgMisPrestamos)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -280,24 +278,23 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txbBuscarPrest;
+        private System.Windows.Forms.TextBox txbFiltro;
         private System.Windows.Forms.DataGridView dtgMisPrestamos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn libro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn autor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn editorial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_prestamo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_devolucion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn editorial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_prestamo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_devolucion;
     }
 }

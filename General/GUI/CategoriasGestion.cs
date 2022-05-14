@@ -168,7 +168,7 @@ namespace General.GUI
                 _IDCategoriaSeleccionado = dtgCategoriasGestion.CurrentRow.Cells["idcategoria"].Value.ToString();
                 _CategoriaSeleccionado = dtgCategoriasGestion.CurrentRow.Cells["categoria"].Value.ToString();
                 _Seleccionado = true;
-                //Close();
+                Close();
             }
             catch (Exception)
             {

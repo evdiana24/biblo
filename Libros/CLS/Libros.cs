@@ -9,10 +9,13 @@ namespace Libros.CLS
     class Libros
     {
         String _idLibro;
+        String _ISBN;
         String _titulo;
         String _anio_publicacion;
         String _edicion;
         String _idEditorial;
+        String _idAutor;
+        String _idCategoria;
 
         public string IdLibro
         {
@@ -24,6 +27,19 @@ namespace Libros.CLS
             set
             {
                 _idLibro = value;
+            }
+        }
+
+        public string ISBN
+        {
+            get
+            {
+                return _ISBN;
+            }
+
+            set
+            {
+                _ISBN = value;
             }
         }
 
@@ -86,11 +102,58 @@ namespace Libros.CLS
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
             try
             {
-                Sentencia.Append("INSERT INTO libros(titulo,anio_publicacion,edicion,idEditorial) values(");
+                Sentencia.Append("INSERT INTO libros(ISBN,titulo,anio_publicacion,edicion,idEditorial) values(");
+                Sentencia.Append("'" + this._ISBN + "',");
                 Sentencia.Append("'" + this._titulo + "',");
                 Sentencia.Append("'" + this._anio_publicacion + "',");
                 Sentencia.Append("'" + this._edicion + "',");
                 Sentencia.Append("'" + this._idEditorial + "');");
+
+                if (operacion.Insertar(Sentencia.ToString()) > 0)
+                {
+                    Resultado = true;
+                }
+            }
+            catch (Exception)
+            {
+                Resultado = false;
+            }
+            return Resultado;
+        }
+
+        public Boolean Guardar_Autor()
+        {
+            Boolean Resultado = false;
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("INSERT INTO libros_autores(idLibro,idAutor) values(");
+                Sentencia.Append("'" + this._idLibro + "',");
+                Sentencia.Append("'" + this._idAutor + "');");
+
+                if (operacion.Insertar(Sentencia.ToString()) > 0)
+                {
+                    Resultado = true;
+                }
+            }
+            catch (Exception)
+            {
+                Resultado = false;
+            }
+            return Resultado;
+        }
+
+        public Boolean Guardar_Categoria()
+        {
+            Boolean Resultado = false;
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("INSERT INTO libros_categorias(idLibro,idCategoria) values(");
+                Sentencia.Append("'" + this._idLibro + "',");
+                Sentencia.Append("'" + this._idCategoria + "');");
 
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
                 {
@@ -112,6 +175,7 @@ namespace Libros.CLS
             try
             {
                 Sentencia.Append("UPDATE libros SET ");
+                Sentencia.Append("ISBN='" + this._ISBN + "',");
                 Sentencia.Append("titulo='" + this._titulo + "',");
                 Sentencia.Append("anio_publicacion='" + this._anio_publicacion + "',");
                 Sentencia.Append("edicion='" + this._edicion + "',");

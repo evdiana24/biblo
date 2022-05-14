@@ -1,6 +1,6 @@
-﻿namespace General.GUI
+﻿namespace Prestamos.GUI
 {
-    partial class CategoriasGestion
+    partial class DevolucionesGestion
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriasGestion));
-            this.dtgCategoriasGestion = new System.Windows.Forms.DataGridView();
-            this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevolucionesGestion));
+            this.dtgDevolucionesGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -43,23 +41,26 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgCategoriasGestion)).BeginInit();
+            this.idDevolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.condicion_libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_entregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDevolucionesGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgCategoriasGestion
+            // dtgDevolucionesGestion
             // 
-            this.dtgCategoriasGestion.AllowUserToAddRows = false;
-            this.dtgCategoriasGestion.AllowUserToDeleteRows = false;
-            this.dtgCategoriasGestion.AllowUserToResizeRows = false;
-            this.dtgCategoriasGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dtgDevolucionesGestion.AllowUserToAddRows = false;
+            this.dtgDevolucionesGestion.AllowUserToDeleteRows = false;
+            this.dtgDevolucionesGestion.AllowUserToResizeRows = false;
+            this.dtgDevolucionesGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -67,34 +68,22 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgCategoriasGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgCategoriasGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgCategoriasGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idCategoria,
-            this.categoria});
-            this.dtgCategoriasGestion.Location = new System.Drawing.Point(39, 92);
-            this.dtgCategoriasGestion.Name = "dtgCategoriasGestion";
-            this.dtgCategoriasGestion.ReadOnly = true;
-            this.dtgCategoriasGestion.RowHeadersVisible = false;
-            this.dtgCategoriasGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dtgCategoriasGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgCategoriasGestion.Size = new System.Drawing.Size(897, 412);
-            this.dtgCategoriasGestion.TabIndex = 64;
-            // 
-            // idCategoria
-            // 
-            this.idCategoria.DataPropertyName = "idCategoria";
-            this.idCategoria.HeaderText = "ID Categoria";
-            this.idCategoria.Name = "idCategoria";
-            this.idCategoria.ReadOnly = true;
-            // 
-            // categoria
-            // 
-            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categoria.DataPropertyName = "categoria";
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
+            this.dtgDevolucionesGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgDevolucionesGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDevolucionesGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDevolucion,
+            this.idDetalle,
+            this.condicion_libro,
+            this.descripcion,
+            this.fecha_entregado});
+            this.dtgDevolucionesGestion.Location = new System.Drawing.Point(39, 92);
+            this.dtgDevolucionesGestion.Name = "dtgDevolucionesGestion";
+            this.dtgDevolucionesGestion.ReadOnly = true;
+            this.dtgDevolucionesGestion.RowHeadersVisible = false;
+            this.dtgDevolucionesGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dtgDevolucionesGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgDevolucionesGestion.Size = new System.Drawing.Size(897, 412);
+            this.dtgDevolucionesGestion.TabIndex = 40;
             // 
             // toolStrip1
             // 
@@ -111,14 +100,12 @@
             this.btnEliminar,
             this.toolStripSeparator4,
             this.txbFiltro,
-            this.toolStripLabel1,
-            this.btnSeleccionar,
-            this.toolStripSeparator5});
+            this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(40, 45);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(2);
             this.toolStrip1.Size = new System.Drawing.Size(896, 39);
-            this.toolStrip1.TabIndex = 74;
+            this.toolStrip1.TabIndex = 59;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
@@ -185,20 +172,6 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(53, 32);
             this.toolStripLabel1.Text = "Filtrar";
             // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
-            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(87, 32);
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 35);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -207,7 +180,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(838, 539);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(98, 32);
-            this.btnCancelar.TabIndex = 90;
+            this.btnCancelar.TabIndex = 87;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -220,11 +193,11 @@
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblRegistros});
-            this.statusStrip1.Location = new System.Drawing.Point(40, 504);
+            this.statusStrip1.Location = new System.Drawing.Point(40, 505);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(896, 22);
             this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 89;
+            this.statusStrip1.TabIndex = 86;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblRegistros
@@ -239,13 +212,50 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(466, 22);
+            this.label1.Location = new System.Drawing.Point(452, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 17);
-            this.label1.TabIndex = 91;
-            this.label1.Text = "CATEGORÍAS";
+            this.label1.Size = new System.Drawing.Size(106, 17);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "DEVOLUCIONES";
             // 
-            // CategoriasGestion
+            // idDevolucion
+            // 
+            this.idDevolucion.DataPropertyName = "idDevolucion";
+            this.idDevolucion.HeaderText = "ID Devolución";
+            this.idDevolucion.Name = "idDevolucion";
+            this.idDevolucion.ReadOnly = true;
+            // 
+            // idDetalle
+            // 
+            this.idDetalle.DataPropertyName = "idDetalle";
+            this.idDetalle.HeaderText = "ID Detalle";
+            this.idDetalle.Name = "idDetalle";
+            this.idDetalle.ReadOnly = true;
+            // 
+            // condicion_libro
+            // 
+            this.condicion_libro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.condicion_libro.DataPropertyName = "condicion_libro";
+            this.condicion_libro.HeaderText = "Condición del libro";
+            this.condicion_libro.Name = "condicion_libro";
+            this.condicion_libro.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // fecha_entregado
+            // 
+            this.fecha_entregado.DataPropertyName = "fecha_entregado";
+            this.fecha_entregado.HeaderText = "Fecha entregado";
+            this.fecha_entregado.Name = "fecha_entregado";
+            this.fecha_entregado.ReadOnly = true;
+            // 
+            // DevolucionesGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,13 +266,12 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgCategoriasGestion);
+            this.Controls.Add(this.dtgDevolucionesGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CategoriasGestion";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestión de categorías";
-            this.Load += new System.EventHandler(this.verCategoria_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgCategoriasGestion)).EndInit();
+            this.Name = "DevolucionesGestion";
+            this.Text = "verPrestamos";
+            this.Load += new System.EventHandler(this.PrestamosGestion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDevolucionesGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -273,7 +282,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgCategoriasGestion;
+        private System.Windows.Forms.DataGridView dtgDevolucionesGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -284,13 +293,14 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripTextBox txbFiltro;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton btnSeleccionar;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDevolucion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDetalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn condicion_libro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_entregado;
     }
 }

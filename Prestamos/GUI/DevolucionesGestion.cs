@@ -8,44 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Libros.GUI
+namespace Prestamos.GUI
 {
-    public partial class LibrosGestion : Form
+    public partial class DevolucionesGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
-        String _IDLibroSeleccionado;
-        String _LibroSeleccionado;
-        bool _Seleccionado = false;
-        
-        public string IDLibroSeleccionado
-        {
-            get
-            {
-                return _IDLibroSeleccionado;
-            }
-        }
-
-        public string LibroSeleccionado
-        {
-            get
-            {
-                return _LibroSeleccionado;
-            }
-        }
-
-        public bool Seleccionado
-        {
-            get
-            {
-                return _Seleccionado;
-            }
-        }
 
         private void CargarDatos()
         {
             try
             {
-                _DATOS.DataSource = DataSource.Consultas.TODOS_LOS_LIBROS();
+                _DATOS.DataSource = DataSource.Consultas.TODAS_LAS_DEVOLUCIONES();
                 Filtrar();
             }
             catch (Exception)
@@ -60,15 +33,15 @@ namespace Libros.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = "titulo LIKE '%" + txbFiltro.Text + "%' OR autor LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = "titulo LIKE '%" + txbFiltro.Text + "%' OR editorial LIKE '%" + txbFiltro.Text + "%'";
                 }
                 else
                 {
                     _DATOS.RemoveFilter();
                 }
-                dtgLibrosGestion.AutoGenerateColumns = false;
-                dtgLibrosGestion.DataSource = _DATOS;
-                lblRegistros.Text = dtgLibrosGestion.Rows.Count.ToString() + " Registros Encontrados";
+                dtgDevolucionesGestion.AutoGenerateColumns = false;
+                dtgDevolucionesGestion.DataSource = _DATOS;
+                lblRegistros.Text = dtgDevolucionesGestion.Rows.Count.ToString() + " Registros Encontrados";
             }
             catch (Exception)
             {
@@ -76,7 +49,7 @@ namespace Libros.GUI
             }
         }
 
-        public LibrosGestion()
+        public DevolucionesGestion()
         {
             InitializeComponent();
         }
@@ -85,7 +58,7 @@ namespace Libros.GUI
         {
             try
             {
-                GUI.LibroEdicion f = new LibroEdicion();
+                GUI.DevolucionEdicion f = new DevolucionEdicion();
                 f.ShowDialog();
                 CargarDatos();
             }
@@ -101,13 +74,12 @@ namespace Libros.GUI
             {
                 if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    GUI.LibroEdicion f = new LibroEdicion();
-                    f.txbIdLibro.Text = dtgLibrosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
-                    f.txbTitulo.Text = dtgLibrosGestion.CurrentRow.Cells["titulo"].Value.ToString();
-                    f.txbAnio.Text = dtgLibrosGestion.CurrentRow.Cells["anio_publicacion"].Value.ToString();
-                    f.txbEdicion.Text = dtgLibrosGestion.CurrentRow.Cells["edicion"].Value.ToString();
-                    f.txbIdEditorial.Text = dtgLibrosGestion.CurrentRow.Cells["idEditorial"].Value.ToString();
-                    f.txbEditorial.Text = dtgLibrosGestion.CurrentRow.Cells["editorial"].Value.ToString();
+                    GUI.DevolucionEdicion f = new DevolucionEdicion();
+                    f.txbIdDevolucion.Text = dtgDevolucionesGestion.CurrentRow.Cells["idDevolucion"].Value.ToString();
+                    f.txbIdDetalle.Text = dtgDevolucionesGestion.CurrentRow.Cells["idDetalle"].Value.ToString();
+                    f.cmbCondicion.Text = dtgDevolucionesGestion.CurrentRow.Cells["condicion_libro"].Value.ToString();
+                    f.txbDescripcion.Text = dtgDevolucionesGestion.CurrentRow.Cells["descripcion"].Value.ToString();
+                    f.dtFechaEntregado.Text = dtgDevolucionesGestion.CurrentRow.Cells["fecha_entregado"].Value.ToString();
                     f.ShowDialog();
                     CargarDatos();
                 }
@@ -125,9 +97,9 @@ namespace Libros.GUI
             {
                 if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    CLS.Libros oLibro = new CLS.Libros();
-                    oLibro.IdLibro = dtgLibrosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
-                    if (oLibro.Eliminar())
+                    CLS.Devoluciones oDevolucion = new CLS.Devoluciones();
+                    oDevolucion.IdDevolucion = dtgDevolucionesGestion.CurrentRow.Cells["idDevolucion"].Value.ToString();
+                    if (oDevolucion.Eliminar())
                     {
                         MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDatos();
@@ -136,6 +108,7 @@ namespace Libros.GUI
                     {
                         MessageBox.Show("El registro no fue eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+
                 }
             }
             catch (Exception)
@@ -144,39 +117,14 @@ namespace Libros.GUI
             }
         }
 
-        private void btnSeleccionar_Click(object sender, EventArgs e)
+        private void PrestamosGestion_Load(object sender, EventArgs e)
         {
-            try
-            {
-                _IDLibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
-                _LibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["titulo"].Value.ToString();
-                _Seleccionado = true;
-                //Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al seleccionar el registro");
-            }
-        }
-
-        private void btnAutor_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCategoria_Click(object sender, EventArgs e)
-        {
-
+            CargarDatos();
         }
 
         private void txbFiltro_TextChanged(object sender, EventArgs e)
         {
             Filtrar();
-        }
-
-        private void LibrosGestion_Load(object sender, EventArgs e)
-        {
-            CargarDatos();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

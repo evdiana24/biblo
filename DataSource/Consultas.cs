@@ -99,7 +99,7 @@ namespace DataSource
         public static DataTable TODOS_LOS_LIBROS()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, CONCAT(b.nombres, ' ',b.apellidos) AS autor, 
+            String Consulta = @"SELECT a.idLibro, a.ISBN, a.titulo, a.anio_publicacion, a.edicion, CONCAT(b.nombres, ' ',b.apellidos) AS autor, 
             c.categoria, a.idEditorial, f.editorial, IFNULL(COUNT(g.idLibro), 0) AS ejemplares
             FROM libros a, autores b, categorias c, libros_categorias d, libros_autores e, editoriales f, ejemplares g
             WHERE a.idLibro = g.idLibro
@@ -512,6 +512,46 @@ namespace DataSource
             AND a.estado = 'PENDIENTE'
             AND c.idUsuario_lector = " + pIDUsuario + ";";
 
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable TODAS_LAS_DEVOLUCIONES()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idDevolucion, a.idDetalle, a.condicion_libro, a.descripcion, a.fecha_entregado 
+            FROM devoluciones a;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable TODOS_LOS_DETALLES_PRESTAMOS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idDetalle, a.idPrestamo, CONCAT(d.nombres, ' ', d.apellidos) AS lector, a.idEjemplar, b.titulo, a.fecha_devolucion
+            FROM detalles_prestamos a, libros b, ejemplares c, lectores d, usuarios_lectores e, prestamos f
+            WHERE b.idLibro = c.idLibro
+            AND a.idEjemplar = c.idEjemplar
+            AND f.idPrestamo = a.idPrestamo
+            AND f.idUsuario_lector = e.idUsuario
+            AND e.idLector = d.idLector 
+            ORDER BY a.idDetalle DESC;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {

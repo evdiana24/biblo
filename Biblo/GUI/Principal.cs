@@ -305,7 +305,7 @@ namespace Biblo.GUI
 
         private void btnRegistrarDev_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
+            AbrirFormulario<Prestamos.GUI.DevolucionesGestion>();
             hideSubMenu();
         }
         
@@ -440,9 +440,24 @@ namespace Biblo.GUI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        //private void mainForm_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    this.Close();
+        //}
+
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //if (MessageBox.Show("¿Estas seguro de cerrar sesión?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            //{
+            //    Login login = new Login();
+            //    login.FormClosed += new FormClosedEventHandler(mainForm_FormClosed);
+
+            //    login.Show();
+            //    this.Hide();
+            //    this.Close();
+            //}
+
+            Environment.Exit(0);
         }
     }
 }

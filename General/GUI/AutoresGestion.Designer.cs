@@ -279,6 +279,7 @@
             this.Controls.Add(this.dtgAutoresGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AutoresGestion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de autores";
             this.Load += new System.EventHandler(this.AutoresGestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgAutoresGestion)).EndInit();

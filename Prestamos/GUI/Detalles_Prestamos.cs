@@ -13,12 +13,68 @@ namespace Prestamos.GUI
     public partial class Detalles_Prestamos : Form
     {
         BindingSource _DATOS = new BindingSource();
+        String _IDDetalleSeleccionado;
+        String _LectorSeleccionado;
+        String _TituloSeleccionado;
+        bool _Seleccionado = false;
+
+        public string IDDetalleSeleccionado
+        {
+            get
+            {
+                return _IDDetalleSeleccionado;
+            }
+
+            set
+            {
+                _IDDetalleSeleccionado = value;
+            }
+        }
+
+        public string LectorSeleccionado
+        {
+            get
+            {
+                return _LectorSeleccionado;
+            }
+
+            set
+            {
+                _LectorSeleccionado = value;
+            }
+        }
+
+        public string TituloSeleccionado
+        {
+            get
+            {
+                return _TituloSeleccionado;
+            }
+
+            set
+            {
+                _TituloSeleccionado = value;
+            }
+        }
+
+        public bool Seleccionado
+        {
+            get
+            {
+                return _Seleccionado;
+            }
+
+            set
+            {
+                _Seleccionado = value;
+            }
+        }
 
         private void CargarDatos()
         {
             try
             {
-                _DATOS.DataSource = DataSource.Consultas.TODOS_LOS_PRESTAMOS();
+                _DATOS.DataSource = DataSource.Consultas.TODOS_LOS_DETALLES_PRESTAMOS();
                 Filtrar();
             }
             catch (Exception)
@@ -33,15 +89,15 @@ namespace Prestamos.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = "titulo LIKE '%" + txbFiltro.Text + "%' OR editorial LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = "lector LIKE '%" + txbFiltro.Text + "%' OR titulo LIKE '%" + txbFiltro.Text + "%'";
                 }
                 else
                 {
                     _DATOS.RemoveFilter();
                 }
-                dtgPrestamosGestion.AutoGenerateColumns = false;
-                dtgPrestamosGestion.DataSource = _DATOS;
-                lblRegistros.Text = dtgPrestamosGestion.Rows.Count.ToString() + " Registros Encontrados";
+                dtgDetallesPrestamos.AutoGenerateColumns = false;
+                dtgDetallesPrestamos.DataSource = _DATOS;
+                lblRegistros.Text = dtgDetallesPrestamos.Rows.Count.ToString() + " Registros Encontrados";
             }
             catch (Exception)
             {
@@ -54,74 +110,15 @@ namespace Prestamos.GUI
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             try
             {
-                GUI.PrestamoEdicion f = new PrestamoEdicion();
-                f.ShowDialog();
-                CargarDatos();
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    GUI.DetallesPrestamos f = new DetallesPrestamos();
-                    f.txbIdPrestamo.Text = dtgPrestamosGestion.CurrentRow.Cells["idPrestamo"].Value.ToString();
-                    f.ShowDialog();
-                    CargarDatos();
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Seleccione una fila válida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    CLS.Prestamos oPrestamo = new CLS.Prestamos();
-                    oPrestamo.IdPrestamo = dtgPrestamosGestion.CurrentRow.Cells["idPrestamo"].Value.ToString();
-                    if (oPrestamo.Eliminar())
-                    {
-                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        CargarDatos();
-                    }
-                    else
-                    {
-                        MessageBox.Show("El registro no fue eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnAgregarDetalles_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                GUI.DetallesPrestamos f = new DetallesPrestamos();
-                f.txbIdPrestamo.Text = dtgPrestamosGestion.CurrentRow.Cells["idPrestamo"].Value.ToString();
-                f.ShowDialog();
-                CargarDatos();
+                _IDDetalleSeleccionado = dtgDetallesPrestamos.CurrentRow.Cells["idDetalle"].Value.ToString();
+                _TituloSeleccionado = dtgDetallesPrestamos.CurrentRow.Cells["titulo"].Value.ToString();
+                _LectorSeleccionado = dtgDetallesPrestamos.CurrentRow.Cells["lector"].Value.ToString();
+                _Seleccionado = true;
+                Close();
             }
             catch (Exception)
             {

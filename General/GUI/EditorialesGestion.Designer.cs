@@ -260,6 +260,7 @@
             this.Controls.Add(this.dtgEditorialesGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditorialesGestion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "verEditoriales";
             this.Load += new System.EventHandler(this.EditorialesGestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgEditorialesGestion)).EndInit();

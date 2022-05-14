@@ -23,6 +23,7 @@ namespace Libros.GUI
 
                     //Sincronizar el objeto con la interfaz
                     oLibro.IdLibro = txbIdLibro.Text;
+                    oLibro.ISBN = txbISBN.Text;
                     oLibro.Titulo = txbTitulo.Text;
                     oLibro.Anio_publicacion = txbAnio.Text;
                     oLibro.Edicion = txbEdicion.Text;
@@ -78,6 +79,11 @@ namespace Libros.GUI
                     Notificador.SetError(txbTitulo, "Escriba el título del libro");
                     Validado = false;
                 }
+                if (txbISBN.TextLength == 0)
+                {
+                    Notificador.SetError(txbISBN, "Escriba el ISBN del libro");
+                    Validado = false;
+                }
                 if (txbAnio.Text.Length == 0)
                 {
                     Notificador.SetError(txbAnio, "Escriba el año de publicación");
@@ -93,16 +99,16 @@ namespace Libros.GUI
                     Notificador.SetError(txbIdEditorial, "Seleccione el ID de la editorial");
                     Validado = false;
                 }
-                if (txbIdCategoria.TextLength == 0)
-                {
-                    Notificador.SetError(txbIdCategoria, "Seleccione el ID de la categoría");
-                    Validado = false;
-                }
-                if (txbIdAutor.TextLength == 0)
-                {
-                    Notificador.SetError(txbIdAutor, "Seleccione el ID del autor");
-                    Validado = false;
-                }
+                //if (txbIdCategoria.TextLength == 0)
+                //{
+                //    Notificador.SetError(txbIdCategoria, "Seleccione el ID de la categoría");
+                //    Validado = false;
+                //}
+                //if (txbIdAutor.TextLength == 0)
+                //{
+                //    Notificador.SetError(txbIdAutor, "Seleccione el ID del autor");
+                //    Validado = false;
+                //}
             }
             catch (Exception)
             {
@@ -137,6 +143,44 @@ namespace Libros.GUI
                 {
                     txbIdEditorial.Text = f.IDEditorialSeleccionado;
                     txbEditorial.Text = f.EditorialSeleccionado;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void btnBuscarCategoria_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                General.GUI.CategoriasGestion f = new General.GUI.CategoriasGestion();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
+                f.ShowDialog();
+                if (f.Seleccionado)
+                {
+                    txbIdCategoria.Text = f.IDcategoriaSeleccionado;
+                    txbCategoria.Text = f.CategoriaSeleccionado;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void btnBuscarAutor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                General.GUI.AutoresGestion f = new General.GUI.AutoresGestion();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
+                f.ShowDialog();
+                if (f.Seleccionado)
+                {
+                    txbIdAutor.Text = f.IDEAutorSeleccionado;
+                    txbAutor.Text = f.AutorSeleccionado;
                 }
             }
             catch (Exception)

@@ -151,7 +151,7 @@ namespace Libros.GUI
                 _IDLibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
                 _LibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["titulo"].Value.ToString();
                 _Seleccionado = true;
-                //Close();
+                Close();
             }
             catch (Exception)
             {

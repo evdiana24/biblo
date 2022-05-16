@@ -77,6 +77,7 @@ namespace Prestamos.GUI
                 _DETALLES.DataSource = DataSource.Consultas.DETALLES_POR_ID_PRESTAMO(txbIdPrestamo.Text);
                 dtgDetallesPrestamos.AutoGenerateColumns = false;
                 dtgDetallesPrestamos.DataSource = _DETALLES;
+                lblEstado.Text = dtgDetallesPrestamos.Rows.Count.ToString() + " Registro(s) Encontrado(s)";
             }
             catch (Exception)
             {
@@ -98,7 +99,6 @@ namespace Prestamos.GUI
                 }
                 dtgEjemplares.AutoGenerateColumns = false;
                 dtgEjemplares.DataSource = _DATOS;
-                dtgEjemplares.Text = dtgEjemplares.Rows.Count.ToString() + " Registros Encontrados";
             }
             catch (Exception)
             {

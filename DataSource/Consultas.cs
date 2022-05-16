@@ -275,7 +275,8 @@ namespace DataSource
             a.idUsuario_lector, b.usuario AS usuarioLector, a.idUsuario_empleado, c.usuario AS usuarioEmpleado
             FROM pagos a, usuarios_lectores b, usuarios_empleados c
             WHERE a.idUsuario_lector = b.idUsuario
-            AND a.idUsuario_empleado = c.idUsuario;";
+            AND a.idUsuario_empleado = c.idUsuario
+            ORDER BY a.idPago DESC;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -417,15 +418,13 @@ namespace DataSource
         {
             DataTable Resultado = new DataTable();
             String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, CONCAT(b.nombres, ' ',b.apellidos) AS autor, 
-            c.categoria, f.editorial, IFNULL(COUNT(g.idLibro), 0) AS ejemplares
-            FROM libros a, autores b, categorias c, libros_categorias d, libros_autores e, editoriales f, ejemplares g
-            WHERE a.idLibro = g.idLibro
-            AND b.idAutor = e.idAutor
+            c.categoria, f.editorial, (SELECT IFNULL(COUNT(g.idLibro), 0) FROM ejemplares g WHERE estado = 'DISPONIBLE' AND g.idLibro = a.idLibro) AS ejemplares
+            FROM libros a, autores b, categorias c, libros_categorias d, libros_autores e, editoriales f
+            WHERE b.idAutor = e.idAutor
             AND e.idLibro = a.idLibro
             AND c.idCategoria = d.idCategoria
             AND d.idLibro = a.idLibro
             AND f.idEditorial = a.idEditorial
-            AND g.idLibro = g.idLibro
             GROUP BY a.idLibro;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
@@ -573,7 +572,8 @@ namespace DataSource
         {
             DataTable Resultado = new DataTable();
             String Consulta = @"SELECT a.idDevolucion, a.idDetalle, a.condicion_libro, a.descripcion, a.fecha_entregado 
-            FROM devoluciones a;";
+            FROM devoluciones a
+            ORDER BY a.idDevolucion DESC;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -589,7 +589,7 @@ namespace DataSource
         public static DataTable TODOS_LOS_DETALLES_PRESTAMOS()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT a.idDetalle, a.idPrestamo, CONCAT(d.nombres, ' ', d.apellidos) AS lector, a.idEjemplar, b.titulo, a.fecha_devolucion
+            String Consulta = @"SELECT a.idDetalle, a.idPrestamo, CONCAT(d.nombres, ' ', d.apellidos) AS lector, a.idEjemplar, b.titulo, f.fecha_prestamo, a.fecha_devolucion
             FROM detalles_prestamos a, libros b, ejemplares c, lectores d, usuarios_lectores e, prestamos f
             WHERE b.idLibro = c.idLibro
             AND a.idEjemplar = c.idEjemplar

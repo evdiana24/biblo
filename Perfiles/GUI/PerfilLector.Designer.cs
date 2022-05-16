@@ -53,6 +53,10 @@
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -61,7 +65,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(455, 331);
+            this.label6.Location = new System.Drawing.Point(403, 11);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 23);
             this.label6.TabIndex = 5;
@@ -69,6 +73,7 @@
             // 
             // btnCambiarContra
             // 
+            this.btnCambiarContra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCambiarContra.BackColor = System.Drawing.Color.White;
             this.btnCambiarContra.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnCambiarContra.FlatAppearance.BorderSize = 2;
@@ -91,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(400, 63);
+            this.label1.Location = new System.Drawing.Point(341, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 23);
             this.label1.TabIndex = 90;
@@ -99,7 +104,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnCancelar.FlatAppearance.BorderSize = 2;
@@ -119,7 +124,7 @@
             // txbRol
             // 
             this.txbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbRol.Location = new System.Drawing.Point(181, 437);
+            this.txbRol.Location = new System.Drawing.Point(125, 103);
             this.txbRol.Name = "txbRol";
             this.txbRol.ReadOnly = true;
             this.txbRol.Size = new System.Drawing.Size(286, 26);
@@ -131,7 +136,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(70, 433);
+            this.label12.Location = new System.Drawing.Point(14, 99);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 23);
             this.label12.TabIndex = 109;
@@ -140,7 +145,7 @@
             // txbFechaCreacion
             // 
             this.txbFechaCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbFechaCreacion.Location = new System.Drawing.Point(724, 391);
+            this.txbFechaCreacion.Location = new System.Drawing.Point(668, 57);
             this.txbFechaCreacion.Name = "txbFechaCreacion";
             this.txbFechaCreacion.ReadOnly = true;
             this.txbFechaCreacion.Size = new System.Drawing.Size(181, 26);
@@ -152,7 +157,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(506, 387);
+            this.label11.Location = new System.Drawing.Point(450, 53);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(190, 23);
             this.label11.TabIndex = 107;
@@ -161,7 +166,7 @@
             // txbUsuario
             // 
             this.txbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbUsuario.Location = new System.Drawing.Point(181, 391);
+            this.txbUsuario.Location = new System.Drawing.Point(125, 57);
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.ReadOnly = true;
             this.txbUsuario.Size = new System.Drawing.Size(286, 26);
@@ -173,7 +178,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(70, 387);
+            this.label4.Location = new System.Drawing.Point(14, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 23);
             this.label4.TabIndex = 105;
@@ -182,7 +187,7 @@
             // txbCarnet
             // 
             this.txbCarnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbCarnet.Location = new System.Drawing.Point(724, 441);
+            this.txbCarnet.Location = new System.Drawing.Point(668, 107);
             this.txbCarnet.Name = "txbCarnet";
             this.txbCarnet.ReadOnly = true;
             this.txbCarnet.Size = new System.Drawing.Size(181, 26);
@@ -194,7 +199,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(506, 437);
+            this.label7.Location = new System.Drawing.Point(450, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 23);
             this.label7.TabIndex = 210;
@@ -203,7 +208,7 @@
             // txbTelefono
             // 
             this.txbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbTelefono.Location = new System.Drawing.Point(288, 212);
+            this.txbTelefono.Location = new System.Drawing.Point(229, 155);
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.ReadOnly = true;
             this.txbTelefono.Size = new System.Drawing.Size(181, 26);
@@ -215,7 +220,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(70, 208);
+            this.label5.Location = new System.Drawing.Point(11, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 23);
             this.label5.TabIndex = 222;
@@ -224,7 +229,7 @@
             // txbCorreo
             // 
             this.txbCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbCorreo.Location = new System.Drawing.Point(288, 166);
+            this.txbCorreo.Location = new System.Drawing.Point(229, 109);
             this.txbCorreo.Name = "txbCorreo";
             this.txbCorreo.ReadOnly = true;
             this.txbCorreo.Size = new System.Drawing.Size(181, 26);
@@ -236,7 +241,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(70, 162);
+            this.label10.Location = new System.Drawing.Point(11, 105);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 23);
             this.label10.TabIndex = 220;
@@ -245,7 +250,7 @@
             // txbDireccion
             // 
             this.txbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbDireccion.Location = new System.Drawing.Point(726, 212);
+            this.txbDireccion.Location = new System.Drawing.Point(667, 155);
             this.txbDireccion.MaxLength = 150;
             this.txbDireccion.Multiline = true;
             this.txbDireccion.Name = "txbDireccion";
@@ -259,7 +264,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(508, 208);
+            this.label9.Location = new System.Drawing.Point(449, 151);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 23);
             this.label9.TabIndex = 218;
@@ -268,7 +273,7 @@
             // txbGenero
             // 
             this.txbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbGenero.Location = new System.Drawing.Point(726, 166);
+            this.txbGenero.Location = new System.Drawing.Point(667, 109);
             this.txbGenero.Name = "txbGenero";
             this.txbGenero.ReadOnly = true;
             this.txbGenero.Size = new System.Drawing.Size(181, 26);
@@ -280,7 +285,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(508, 162);
+            this.label8.Location = new System.Drawing.Point(449, 105);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 23);
             this.label8.TabIndex = 216;
@@ -289,7 +294,7 @@
             // txbFechaNacimiento
             // 
             this.txbFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbFechaNacimiento.Location = new System.Drawing.Point(727, 118);
+            this.txbFechaNacimiento.Location = new System.Drawing.Point(668, 61);
             this.txbFechaNacimiento.Name = "txbFechaNacimiento";
             this.txbFechaNacimiento.ReadOnly = true;
             this.txbFechaNacimiento.Size = new System.Drawing.Size(181, 26);
@@ -298,7 +303,7 @@
             // txbNombre
             // 
             this.txbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txbNombre.Location = new System.Drawing.Point(183, 120);
+            this.txbNombre.Location = new System.Drawing.Point(124, 63);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.ReadOnly = true;
             this.txbNombre.Size = new System.Drawing.Size(286, 26);
@@ -310,7 +315,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(508, 116);
+            this.label3.Location = new System.Drawing.Point(449, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 23);
             this.label3.TabIndex = 213;
@@ -322,11 +327,55 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(70, 116);
+            this.label2.Location = new System.Drawing.Point(11, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 212;
             this.label2.Text = "Nombre:";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.txbTelefono);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txbCorreo);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.txbDireccion);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.txbGenero);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.txbFechaNacimiento);
+            this.panel1.Controls.Add(this.txbNombre);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(52, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(869, 244);
+            this.panel1.TabIndex = 224;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.txbCarnet);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.txbRol);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.txbFechaCreacion);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.txbUsuario);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(52, 331);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(868, 161);
+            this.panel2.TabIndex = 225;
             // 
             // PerfilLector
             // 
@@ -335,35 +384,18 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(975, 600);
-            this.Controls.Add(this.txbTelefono);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txbCorreo);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txbDireccion);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txbGenero);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txbFechaNacimiento);
-            this.Controls.Add(this.txbNombre);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txbCarnet);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txbRol);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txbFechaCreacion);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txbUsuario);
             this.Controls.Add(this.btnCambiarContra);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilLector";
             this.Text = "misDatos";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -392,5 +424,7 @@
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

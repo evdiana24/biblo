@@ -106,6 +106,7 @@ namespace Biblo.GUI
             {
                 formulario = new MiForm();
                 formulario.TopLevel = false;
+                formulario.Dock = DockStyle.Fill;
                 panelFormularios.Controls.Add(formulario);
                 panelFormularios.Tag = formulario;
                 formulario.Show();
@@ -452,12 +453,15 @@ namespace Biblo.GUI
             //    Login login = new Login();
             //    login.FormClosed += new FormClosedEventHandler(mainForm_FormClosed);
 
+            //    //instance = null;
+
             //    login.Show();
             //    this.Hide();
             //    this.Close();
             //}
 
-            Environment.Exit(0);
+            //Environment.Exit(0);
+            Application.Restart();
         }
     }
 }

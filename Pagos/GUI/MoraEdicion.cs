@@ -114,7 +114,7 @@ namespace Pagos.GUI
         {
             //try
             //{
-            //    General.GUI.EditorialesGestion f = new General.GUI.EditorialesGestion();
+            //    Prestamos.GUI.DetallesPrestamosVista f = new Prestamos.GUI.DetallesPrestamosVista();
             //    f.ShowDialog();
             //    if (f.Seleccionado)
             //    {

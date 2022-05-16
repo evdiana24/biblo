@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrosCategorias));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.txbIdCategoria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,27 +43,29 @@
             this.txbTitulo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgCategoriasAgregadas = new System.Windows.Forms.DataGridView();
+            this.idLibro_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCategoriaAgregada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaAgregada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dtgCategorias = new System.Windows.Forms.DataGridView();
+            this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.idLibro_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCategoriaAgregada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriaAgregada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblEstado = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCategoriasAgregadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -104,6 +106,7 @@
             // 
             // txbIdCategoria
             // 
+            this.txbIdCategoria.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txbIdCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbIdCategoria.Location = new System.Drawing.Point(134, 49);
             this.txbIdCategoria.Name = "txbIdCategoria";
@@ -113,6 +116,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -124,6 +128,7 @@
             // 
             // txbCategoria
             // 
+            this.txbCategoria.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbCategoria.Location = new System.Drawing.Point(318, 49);
             this.txbCategoria.Name = "txbCategoria";
@@ -133,6 +138,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -144,6 +150,7 @@
             // 
             // txbIdLibro
             // 
+            this.txbIdLibro.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txbIdLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbIdLibro.Location = new System.Drawing.Point(134, 15);
             this.txbIdLibro.Name = "txbIdLibro";
@@ -153,6 +160,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -164,6 +172,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,6 +187,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,6 +202,7 @@
             // 
             // txbTitulo
             // 
+            this.txbTitulo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbTitulo.Location = new System.Drawing.Point(318, 15);
             this.txbTitulo.Name = "txbTitulo";
@@ -201,6 +212,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -216,14 +228,14 @@
             this.dtgCategoriasAgregadas.AllowUserToDeleteRows = false;
             this.dtgCategoriasAgregadas.AllowUserToResizeRows = false;
             this.dtgCategoriasAgregadas.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgCategoriasAgregadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgCategoriasAgregadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgCategoriasAgregadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgCategoriasAgregadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idLibro_categoria,
@@ -239,6 +251,29 @@
             this.dtgCategoriasAgregadas.Size = new System.Drawing.Size(943, 169);
             this.dtgCategoriasAgregadas.TabIndex = 82;
             // 
+            // idLibro_categoria
+            // 
+            this.idLibro_categoria.DataPropertyName = "idLibro_categoria";
+            this.idLibro_categoria.HeaderText = "ID Libro-Categoría";
+            this.idLibro_categoria.Name = "idLibro_categoria";
+            this.idLibro_categoria.ReadOnly = true;
+            this.idLibro_categoria.Width = 150;
+            // 
+            // idCategoriaAgregada
+            // 
+            this.idCategoriaAgregada.DataPropertyName = "idCategoriaAgregada";
+            this.idCategoriaAgregada.HeaderText = "ID Categoría";
+            this.idCategoriaAgregada.Name = "idCategoriaAgregada";
+            this.idCategoriaAgregada.ReadOnly = true;
+            // 
+            // categoriaAgregada
+            // 
+            this.categoriaAgregada.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.categoriaAgregada.DataPropertyName = "categoriaAgregada";
+            this.categoriaAgregada.HeaderText = "Categoría";
+            this.categoriaAgregada.Name = "categoriaAgregada";
+            this.categoriaAgregada.ReadOnly = true;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -250,6 +285,8 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblEstado});
             this.statusStrip1.Location = new System.Drawing.Point(0, 169);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(943, 22);
@@ -258,6 +295,9 @@
             // 
             // splitContainer1
             // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Location = new System.Drawing.Point(16, 19);
             this.splitContainer1.Name = "splitContainer1";
@@ -281,14 +321,14 @@
             this.dtgCategorias.AllowUserToDeleteRows = false;
             this.dtgCategorias.AllowUserToResizeRows = false;
             this.dtgCategorias.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idCategoria,
@@ -302,6 +342,24 @@
             this.dtgCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgCategorias.Size = new System.Drawing.Size(943, 239);
             this.dtgCategorias.TabIndex = 82;
+            // 
+            // idCategoria
+            // 
+            this.idCategoria.DataPropertyName = "idCategoria";
+            this.idCategoria.FillWeight = 142.132F;
+            this.idCategoria.HeaderText = "ID Categoría";
+            this.idCategoria.Name = "idCategoria";
+            this.idCategoria.ReadOnly = true;
+            this.idCategoria.Width = 150;
+            // 
+            // categoria
+            // 
+            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.categoria.DataPropertyName = "categoria";
+            this.categoria.FillWeight = 13.65031F;
+            this.categoria.HeaderText = "Categoría";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -357,46 +415,12 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 29);
             // 
-            // idLibro_categoria
+            // lblEstado
             // 
-            this.idLibro_categoria.DataPropertyName = "idLibro_categoria";
-            this.idLibro_categoria.HeaderText = "ID Libro-Categoría";
-            this.idLibro_categoria.Name = "idLibro_categoria";
-            this.idLibro_categoria.ReadOnly = true;
-            this.idLibro_categoria.Width = 150;
-            // 
-            // idCategoriaAgregada
-            // 
-            this.idCategoriaAgregada.DataPropertyName = "idCategoriaAgregada";
-            this.idCategoriaAgregada.HeaderText = "ID Categoría";
-            this.idCategoriaAgregada.Name = "idCategoriaAgregada";
-            this.idCategoriaAgregada.ReadOnly = true;
-            // 
-            // categoriaAgregada
-            // 
-            this.categoriaAgregada.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categoriaAgregada.DataPropertyName = "categoriaAgregada";
-            this.categoriaAgregada.HeaderText = "Categoría";
-            this.categoriaAgregada.Name = "categoriaAgregada";
-            this.categoriaAgregada.ReadOnly = true;
-            // 
-            // idCategoria
-            // 
-            this.idCategoria.DataPropertyName = "idCategoria";
-            this.idCategoria.FillWeight = 142.132F;
-            this.idCategoria.HeaderText = "ID Categoría";
-            this.idCategoria.Name = "idCategoria";
-            this.idCategoria.ReadOnly = true;
-            this.idCategoria.Width = 150;
-            // 
-            // categoria
-            // 
-            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categoria.DataPropertyName = "categoria";
-            this.categoria.FillWeight = 13.65031F;
-            this.categoria.HeaderText = "Categoría";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
+            this.lblEstado.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(133, 17);
+            this.lblEstado.Text = "0 Registros Encontrados";
             // 
             // LibrosCategorias
             // 
@@ -419,6 +443,8 @@
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgCategoriasAgregadas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -459,5 +485,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categoriaAgregada;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
+        private System.Windows.Forms.ToolStripStatusLabel lblEstado;
     }
 }

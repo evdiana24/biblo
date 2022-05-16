@@ -77,6 +77,7 @@ namespace Libros.GUI
                 _DATOS_CATEGORIAS_AGREGADAS.DataSource = DataSource.Consultas.CATEGORIAS_POR_ID_LIBRO(txbIdLibro.Text);
                 dtgCategoriasAgregadas.AutoGenerateColumns = false;
                 dtgCategoriasAgregadas.DataSource = _DATOS_CATEGORIAS_AGREGADAS;
+                lblEstado.Text = dtgCategoriasAgregadas.Rows.Count.ToString() + " Registro(s) Encontrado(s)";
             }
             catch (Exception)
             {

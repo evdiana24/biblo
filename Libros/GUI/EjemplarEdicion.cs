@@ -23,7 +23,7 @@ namespace Libros.GUI
 
                     //Sincronizar el objeto con la interfaz
                     oEjemplar.IDEjemplar = txbIdEjemplar.Text;
-                    oEjemplar.IDLibro = txbLibro.Text;
+                    oEjemplar.IDLibro = txbIdLibro.Text;
                     oEjemplar.Estado = cmbEstado.Text;
                     oEjemplar.Fecha_ingreso = dtFechaIngreso.Value.ToString("yyyy/MM/dd HH:mm:ss");
 
@@ -117,7 +117,6 @@ namespace Libros.GUI
                     txbIdLibro.Text = f.IDLibroSeleccionado;
                     txbLibro.Text = f.LibroSeleccionado;
                 }
-                Close();
             }
             catch (Exception)
             {

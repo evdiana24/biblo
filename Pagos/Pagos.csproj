@@ -121,6 +121,10 @@
       <Project>{42e51e7c-cd09-4528-b6e2-5dd80ffd34f5}</Project>
       <Name>DataSource</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Prestamos\Prestamos.csproj">
+      <Project>{5de519b6-172f-4210-96e4-296e9974e647}</Project>
+      <Name>Prestamos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SessionManager\SessionManager.csproj">
       <Project>{d457ebfd-6d9a-4fea-be01-1b8c5ae08f6b}</Project>
       <Name>SessionManager</Name>

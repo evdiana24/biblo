@@ -235,10 +235,10 @@
             // imgUsuario
             // 
             this.imgUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgUsuario.Image")));
-            this.imgUsuario.Location = new System.Drawing.Point(88, 13);
+            this.imgUsuario.Location = new System.Drawing.Point(80, 11);
             this.imgUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.imgUsuario.Name = "imgUsuario";
-            this.imgUsuario.Size = new System.Drawing.Size(60, 54);
+            this.imgUsuario.Size = new System.Drawing.Size(69, 66);
             this.imgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgUsuario.TabIndex = 0;
             this.imgUsuario.TabStop = false;

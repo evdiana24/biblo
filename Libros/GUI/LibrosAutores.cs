@@ -91,6 +91,7 @@ namespace Libros.GUI
                 _DATOS_AUTORES_AGREGADOS.DataSource = DataSource.Consultas.AUTORES_POR_ID_LIBRO(txbIdLibro.Text);
                 dtgAutoresAgregados.AutoGenerateColumns = false;
                 dtgAutoresAgregados.DataSource = _DATOS_AUTORES_AGREGADOS;
+                lblEstado.Text = dtgAutoresAgregados.Rows.Count.ToString() + " Registro(s) Encontrado(s)";
             }
             catch (Exception)
             {

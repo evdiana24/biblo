@@ -78,15 +78,16 @@ namespace Libros.CLS
                 Sentencia.Append("'" + this._Fecha_ingreso + "');");
 
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
-                {
-                    Resultado = true;
-                }
+                    {
+                        Resultado = true;
+                    }
             }
+
             catch (Exception)
             {
                 Resultado = false;
             }
-            return Resultado;
+                return Resultado;
         }
 
         public Boolean Actualizar()

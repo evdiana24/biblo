@@ -293,7 +293,7 @@ namespace Biblo.GUI
 
         private void btnDetallesPrestamos_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<Prestamos.GUI.PrestamosGestion>();
+            AbrirFormulario<Prestamos.GUI.DetallesPrestamosVista>();
             hideSubMenu();
         }
 

@@ -14,8 +14,6 @@ namespace Libros.CLS
         String _anio_publicacion;
         String _edicion;
         String _idEditorial;
-        String _idAutor;
-        String _idCategoria;
 
         public string IdLibro
         {
@@ -108,52 +106,6 @@ namespace Libros.CLS
                 Sentencia.Append("'" + this._anio_publicacion + "',");
                 Sentencia.Append("'" + this._edicion + "',");
                 Sentencia.Append("'" + this._idEditorial + "');");
-
-                if (operacion.Insertar(Sentencia.ToString()) > 0)
-                {
-                    Resultado = true;
-                }
-            }
-            catch (Exception)
-            {
-                Resultado = false;
-            }
-            return Resultado;
-        }
-
-        public Boolean Guardar_Autor()
-        {
-            Boolean Resultado = false;
-            StringBuilder Sentencia = new StringBuilder();
-            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
-            try
-            {
-                Sentencia.Append("INSERT INTO libros_autores(idLibro,idAutor) values(");
-                Sentencia.Append("'" + this._idLibro + "',");
-                Sentencia.Append("'" + this._idAutor + "');");
-
-                if (operacion.Insertar(Sentencia.ToString()) > 0)
-                {
-                    Resultado = true;
-                }
-            }
-            catch (Exception)
-            {
-                Resultado = false;
-            }
-            return Resultado;
-        }
-
-        public Boolean Guardar_Categoria()
-        {
-            Boolean Resultado = false;
-            StringBuilder Sentencia = new StringBuilder();
-            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
-            try
-            {
-                Sentencia.Append("INSERT INTO libros_categorias(idLibro,idCategoria) values(");
-                Sentencia.Append("'" + this._idLibro + "',");
-                Sentencia.Append("'" + this._idCategoria + "');");
 
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
                 {

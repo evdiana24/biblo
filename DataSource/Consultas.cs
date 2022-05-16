@@ -99,17 +99,21 @@ namespace DataSource
         public static DataTable TODOS_LOS_LIBROS()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT a.idLibro, a.ISBN, a.titulo, a.anio_publicacion, a.edicion, CONCAT(b.nombres, ' ',b.apellidos) AS autor, 
-            c.categoria, a.idEditorial, f.editorial, IFNULL(COUNT(g.idLibro), 0) AS ejemplares
-            FROM libros a, autores b, categorias c, libros_categorias d, libros_autores e, editoriales f, ejemplares g
-            WHERE a.idLibro = g.idLibro
-            AND b.idAutor = e.idAutor
-            AND e.idLibro = a.idLibro
-            AND c.idCategoria = d.idCategoria
-            AND d.idLibro = a.idLibro
-            AND f.idEditorial = a.idEditorial
-            AND g.idLibro = g.idLibro
-            GROUP BY a.idLibro;";
+            //String Consulta = @"SELECT a.idLibro, a.ISBN, a.titulo, a.anio_publicacion, a.edicion, CONCAT(b.nombres, ' ',b.apellidos) AS autor, 
+            //c.categoria, a.idEditorial, f.editorial, IFNULL(COUNT(g.idLibro), 0) AS ejemplares
+            //FROM libros a, autores b, categorias c, libros_categorias d, libros_autores e, editoriales f, ejemplares g
+            //WHERE a.idLibro = g.idLibro
+            //AND b.idAutor = e.idAutor
+            //AND e.idLibro = a.idLibro
+            //AND c.idCategoria = d.idCategoria
+            //AND d.idLibro = a.idLibro
+            //AND f.idEditorial = a.idEditorial
+            //AND g.idLibro = g.idLibro
+            //GROUP BY a.idLibro;";
+
+            String Consulta = @"SELECT a.idLibro, a.ISBN, a.titulo, a.anio_publicacion, a.edicion, a.idEditorial, b.editorial 
+            FROM libros a, editoriales b
+            WHERE a.idEditorial = b.idEditorial;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -441,6 +445,47 @@ namespace DataSource
             String Consulta = @"SELECT a.idDetalle, a.idPrestamo, a.idEjemplar AS idEjemplarDetalle, c.titulo AS tituloDetalle, a.fecha_devolucion
             FROM detalles_prestamos a, ejemplares b, libros c
             WHERE a.idEjemplar = b.idEjemplar AND b.idLibro = c.idLibro AND a.idPrestamo = " + pIDPrestamo + ";";
+
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable AUTORES_POR_ID_LIBRO(String pIDLibro)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT b.idLibro_autor, a.idAutor AS idAutorAgregado, CONCAT(a.nombres, ' ', a.apellidos) AS autorAgregado
+            FROM autores a, libros_autores b
+            WHERE a.idAutor = b.idAutor
+            AND b.idLibro = " + pIDLibro + ";";
+
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable CATEGORIAS_POR_ID_LIBRO(String pIDLibro)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idLibro_categoria, a.idCategoria AS idCategoriaAgregada, b.categoria AS categoriaAgregada
+            FROM libros_categorias a, categorias b, libros c
+            WHERE a.idLibro = c.idLibro
+            AND a.idCategoria = b.idCategoria
+            AND a.idLibro = " + pIDLibro + ";";
 
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try

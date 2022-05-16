@@ -159,14 +159,42 @@ namespace Libros.GUI
             }
         }
 
-        private void btnAutor_Click(object sender, EventArgs e)
+        private void btnAgregarAutores_Click(object sender, EventArgs e)
         {
+            try
+            {
+                _IDLibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
+                _LibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["titulo"].Value.ToString();
+                _Seleccionado = true;
 
+                GUI.LibrosAutores f = new LibrosAutores();
+                f.txbIdLibro.Text = _IDLibroSeleccionado;
+                f.txbTitulo.Text = _LibroSeleccionado;
+                f.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al seleccionar el registro");
+            }
         }
 
-        private void btnCategoria_Click(object sender, EventArgs e)
+        private void btnAgregarCategorias_Click(object sender, EventArgs e)
         {
+            try
+            {
+                _IDLibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
+                _LibroSeleccionado = dtgLibrosGestion.CurrentRow.Cells["titulo"].Value.ToString();
+                _Seleccionado = true;
 
+                GUI.LibrosCategorias f = new LibrosCategorias();
+                f.txbIdLibro.Text = _IDLibroSeleccionado;
+                f.txbTitulo.Text = _LibroSeleccionado;
+                f.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al seleccionar el registro");
+            }
         }
 
         private void txbFiltro_TextChanged(object sender, EventArgs e)

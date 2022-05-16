@@ -115,7 +115,7 @@ namespace Prestamos.GUI
         {
             try
             {
-                Prestamos.GUI.Detalles_Prestamos f = new Prestamos.GUI.Detalles_Prestamos();
+                Prestamos.GUI.DetallesPrestamosVista f = new Prestamos.GUI.DetallesPrestamosVista();
                 f.FormBorderStyle = FormBorderStyle.FixedSingle;
                 f.ShowDialog();
                 if (f.Seleccionado)

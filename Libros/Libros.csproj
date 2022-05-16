@@ -44,11 +44,25 @@
   <ItemGroup>
     <Compile Include="CLS\Ejemplares.cs" />
     <Compile Include="CLS\Libros.cs" />
+    <Compile Include="CLS\LibrosAutores.cs" />
+    <Compile Include="CLS\LibrosCategorias.cs" />
     <Compile Include="GUI\BuscarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\BuscarLibro.Designer.cs">
       <DependentUpon>BuscarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LibrosCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LibrosCategorias.Designer.cs">
+      <DependentUpon>LibrosCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LibrosAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LibrosAutores.Designer.cs">
+      <DependentUpon>LibrosAutores.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\EjemplarEdicion.cs">
       <SubType>Form</SubType>
@@ -84,6 +98,12 @@
   <ItemGroup>
     <EmbeddedResource Include="GUI\BuscarLibro.resx">
       <DependentUpon>BuscarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LibrosCategorias.resx">
+      <DependentUpon>LibrosCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LibrosAutores.resx">
+      <DependentUpon>LibrosAutores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EjemplarEdicion.resx">
       <DependentUpon>EjemplarEdicion.cs</DependentUpon>

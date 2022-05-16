@@ -1,6 +1,6 @@
 ﻿namespace Prestamos.GUI
 {
-    partial class Detalles_Prestamos
+    partial class DetallesPrestamosVista
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detalles_Prestamos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetallesPrestamosVista));
             this.dtgDetallesPrestamos = new System.Windows.Forms.DataGridView();
             this.idDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();

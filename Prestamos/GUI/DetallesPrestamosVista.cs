@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Prestamos.GUI
 {
-    public partial class Detalles_Prestamos : Form
+    public partial class DetallesPrestamosVista : Form
     {
         BindingSource _DATOS = new BindingSource();
         String _IDDetalleSeleccionado;
@@ -105,7 +105,7 @@ namespace Prestamos.GUI
             }
         }
 
-        public Detalles_Prestamos()
+        public DetallesPrestamosVista()
         {
             InitializeComponent();
         }

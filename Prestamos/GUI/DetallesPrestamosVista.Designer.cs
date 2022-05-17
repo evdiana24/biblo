@@ -48,6 +48,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.dtHasta = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtDesde = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetallesPrestamos)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -79,13 +83,13 @@
             this.titulo,
             this.fecha_prestamo,
             this.fecha_devolucion});
-            this.dtgDetallesPrestamos.Location = new System.Drawing.Point(39, 92);
+            this.dtgDetallesPrestamos.Location = new System.Drawing.Point(39, 126);
             this.dtgDetallesPrestamos.Name = "dtgDetallesPrestamos";
             this.dtgDetallesPrestamos.ReadOnly = true;
             this.dtgDetallesPrestamos.RowHeadersVisible = false;
             this.dtgDetallesPrestamos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgDetallesPrestamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDetallesPrestamos.Size = new System.Drawing.Size(897, 412);
+            this.dtgDetallesPrestamos.Size = new System.Drawing.Size(897, 378);
             this.dtgDetallesPrestamos.TabIndex = 40;
             // 
             // idDetalle
@@ -248,6 +252,52 @@
             this.label1.TabIndex = 89;
             this.label1.Text = "DETALLES DE PRÉSTAMOS";
             // 
+            // label
+            // 
+            this.label.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.Transparent;
+            this.label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(503, 98);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(49, 16);
+            this.label.TabIndex = 113;
+            this.label.Text = "Hasta:";
+            // 
+            // dtHasta
+            // 
+            this.dtHasta.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtHasta.CustomFormat = "dd-MM-yyyy";
+            this.dtHasta.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtHasta.Location = new System.Drawing.Point(557, 93);
+            this.dtHasta.Name = "dtHasta";
+            this.dtHasta.Size = new System.Drawing.Size(119, 23);
+            this.dtHasta.TabIndex = 111;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(313, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.TabIndex = 112;
+            this.label2.Text = "Desde:";
+            // 
+            // dtDesde
+            // 
+            this.dtDesde.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtDesde.CustomFormat = "dd-MM-yyyy";
+            this.dtDesde.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDesde.Location = new System.Drawing.Point(371, 93);
+            this.dtDesde.Name = "dtDesde";
+            this.dtDesde.Size = new System.Drawing.Size(119, 23);
+            this.dtDesde.TabIndex = 110;
+            // 
             // DetallesPrestamosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +305,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(975, 600);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.dtHasta);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtDesde);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
@@ -294,5 +348,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_prestamo;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_devolucion;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.DateTimePicker dtHasta;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtDesde;
     }
 }

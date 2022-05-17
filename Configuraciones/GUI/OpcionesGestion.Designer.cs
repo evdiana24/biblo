@@ -1,6 +1,6 @@
 ﻿namespace Configuraciones.GUI
 {
-    partial class RolesGestion
+    partial class OpcionesGestion
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RolesGestion));
-            this.dtgRolesGestion = new System.Windows.Forms.DataGridView();
-            this.idRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpcionesGestion));
+            this.dtgOpcionesGestion = new System.Windows.Forms.DataGridView();
+            this.idOpcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -45,20 +45,20 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgRolesGestion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgOpcionesGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgRolesGestion
+            // dtgOpcionesGestion
             // 
-            this.dtgRolesGestion.AllowUserToAddRows = false;
-            this.dtgRolesGestion.AllowUserToDeleteRows = false;
-            this.dtgRolesGestion.AllowUserToResizeRows = false;
-            this.dtgRolesGestion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtgOpcionesGestion.AllowUserToAddRows = false;
+            this.dtgOpcionesGestion.AllowUserToDeleteRows = false;
+            this.dtgOpcionesGestion.AllowUserToResizeRows = false;
+            this.dtgOpcionesGestion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgRolesGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dtgOpcionesGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,34 +66,34 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgRolesGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgRolesGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgRolesGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idRol,
-            this.rol});
-            this.dtgRolesGestion.Location = new System.Drawing.Point(39, 92);
-            this.dtgRolesGestion.Name = "dtgRolesGestion";
-            this.dtgRolesGestion.ReadOnly = true;
-            this.dtgRolesGestion.RowHeadersVisible = false;
-            this.dtgRolesGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dtgRolesGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgRolesGestion.Size = new System.Drawing.Size(897, 412);
-            this.dtgRolesGestion.TabIndex = 64;
+            this.dtgOpcionesGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgOpcionesGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgOpcionesGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idOpcion,
+            this.opcion});
+            this.dtgOpcionesGestion.Location = new System.Drawing.Point(39, 92);
+            this.dtgOpcionesGestion.Name = "dtgOpcionesGestion";
+            this.dtgOpcionesGestion.ReadOnly = true;
+            this.dtgOpcionesGestion.RowHeadersVisible = false;
+            this.dtgOpcionesGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dtgOpcionesGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgOpcionesGestion.Size = new System.Drawing.Size(897, 412);
+            this.dtgOpcionesGestion.TabIndex = 64;
             // 
-            // idRol
+            // idOpcion
             // 
-            this.idRol.DataPropertyName = "idRol";
-            this.idRol.HeaderText = "ID Rol";
-            this.idRol.Name = "idRol";
-            this.idRol.ReadOnly = true;
+            this.idOpcion.DataPropertyName = "idOpcion";
+            this.idOpcion.HeaderText = "ID Opción";
+            this.idOpcion.Name = "idOpcion";
+            this.idOpcion.ReadOnly = true;
             // 
-            // rol
+            // opcion
             // 
-            this.rol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.rol.DataPropertyName = "rol";
-            this.rol.HeaderText = "Rol";
-            this.rol.Name = "rol";
-            this.rol.ReadOnly = true;
+            this.opcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.opcion.DataPropertyName = "opcion";
+            this.opcion.HeaderText = "Opción";
+            this.opcion.Name = "opcion";
+            this.opcion.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -213,11 +213,11 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(466, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 91;
-            this.label1.Text = "ROLES";
+            this.label1.Text = "OPCIONES";
             // 
-            // RolesGestion
+            // OpcionesGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,12 +228,12 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dtgRolesGestion);
+            this.Controls.Add(this.dtgOpcionesGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RolesGestion";
+            this.Name = "OpcionesGestion";
             this.Text = "Gestión de categorías";
             this.Load += new System.EventHandler(this.verCategoria_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgRolesGestion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgOpcionesGestion)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -244,7 +244,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgRolesGestion;
+        private System.Windows.Forms.DataGridView dtgOpcionesGestion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
@@ -257,7 +257,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idRol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOpcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opcion;
     }
 }

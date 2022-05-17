@@ -309,6 +309,7 @@
             this.Controls.Add(this.dtgUsuariosGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UsuariosLectoresGestion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "verUsuariosLectores";
             this.Load += new System.EventHandler(this.UsuariosLectoresGestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuariosGestion)).EndInit();

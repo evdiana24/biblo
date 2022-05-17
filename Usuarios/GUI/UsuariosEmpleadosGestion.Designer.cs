@@ -325,6 +325,7 @@
             this.Controls.Add(this.dtgUsuariosGestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UsuariosEmpleadosGestion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "verUsuariosEmpleados";
             this.Load += new System.EventHandler(this.UsuariosEmpleadosGestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuariosGestion)).EndInit();

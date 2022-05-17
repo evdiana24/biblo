@@ -96,6 +96,22 @@ namespace DataSource
             return Resultado;
         }
 
+        public static DataTable TODAS_LAS_OPCIONES()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT idOpcion, opcion FROM opciones;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
         public static DataTable TODOS_LOS_LIBROS()
         {
             DataTable Resultado = new DataTable();
@@ -498,7 +514,7 @@ namespace DataSource
             return Resultado;
         }
 
-        public static DataTable MIS_PRESTAMOS(String pIDUsuario)
+        public static DataTable MIS_PRESTAMOS(String pIDUsuario, String pFechaInicio, String pFechaFinal)
         {
             DataTable Resultado = new DataTable();
             String Consulta = @"SELECT c.titulo, f.categoria, CONCAT(h.nombres, ' ', h.apellidos) AS autor, i.editorial, a.fecha_prestamo, b.fecha_devolucion
@@ -511,6 +527,7 @@ namespace DataSource
             AND g.idAutor = h.idAutor
             AND c.idLibro = g.idLibro
             AND c.idEditorial = i.idEditorial
+            AND a.fecha_prestamo BETWEEN  " + pFechaInicio + " AND " + pFechaFinal + @"'
             AND a.idUsuario_lector = " + pIDUsuario + ";";
 
             DataManager.DBOperacion op = new DataManager.DBOperacion();

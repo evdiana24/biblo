@@ -13,48 +13,6 @@ namespace Libros.GUI
     public partial class EjemplaresGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
-        String _IDEjemplarSeleccionado;
-        String _EjemplarSeleccionado;
-        bool _Seleccionado = false;
-
-        public string IDEjemplarSeleccionado
-        {
-            get
-            {
-                return _IDEjemplarSeleccionado;
-            }
-
-            set
-            {
-                _IDEjemplarSeleccionado = value;
-            }
-        }
-
-        public string EjemplarSeleccionado
-        {
-            get
-            {
-                return _EjemplarSeleccionado;
-            }
-
-            set
-            {
-                _EjemplarSeleccionado = value;
-            }
-        }
-
-        public bool Seleccionado
-        {
-            get
-            {
-                return _Seleccionado;
-            }
-
-            set
-            {
-                _Seleccionado = value;
-            }
-        }
 
         private void CargarDatos()
         {
@@ -155,21 +113,6 @@ namespace Libros.GUI
             catch (Exception)
             {
                 MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _IDEjemplarSeleccionado = dtgEjemplaresGestion.CurrentRow.Cells["idEjemplar"].Value.ToString();
-                _EjemplarSeleccionado = dtgEjemplaresGestion.CurrentRow.Cells["titulo"].Value.ToString();
-                _Seleccionado = true;
-                //Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al seleccionar el registro");
             }
         }
 

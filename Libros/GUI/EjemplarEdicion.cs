@@ -46,7 +46,7 @@ namespace Libros.GUI
                     else
                     {
                         //Estoy insertando un nuevo registro
-                        if (oEjemplar.Guardar())
+                        if (oEjemplar.Guardar(int.Parse(txbCantidad.Text)))
                         {
                             //Se guardo correctamente
                             MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,7 +105,7 @@ namespace Libros.GUI
             Close();
         }
 
-        private void btnBuscarLibro_Click(object sender, EventArgs e)
+        private void btnBuscarLibro_Click_1(object sender, EventArgs e)
         {
             try
             {

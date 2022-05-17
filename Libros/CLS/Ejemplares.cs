@@ -65,17 +65,20 @@ namespace Libros.CLS
             }
         }
 
-        public Boolean Guardar()
+        public Boolean Guardar(int pCantidad)
         {
             Boolean Resultado = false;
             StringBuilder Sentencia = new StringBuilder();
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
             try
             {
-                Sentencia.Append("INSERT INTO ejemplares(idLibro, estado, fecha_ingreso) values(");
-                Sentencia.Append("'" + this._IDLibro + "',");
-                Sentencia.Append("'" + this._Estado + "',");
-                Sentencia.Append("'" + this._Fecha_ingreso + "');");
+                for(int i = 0; i < pCantidad; i++)
+                {
+                    Sentencia.Append("INSERT INTO ejemplares(idLibro, estado, fecha_ingreso) values(");
+                    Sentencia.Append("'" + this._IDLibro + "',");
+                    Sentencia.Append("'" + this._Estado + "',");
+                    Sentencia.Append("'" + this._Fecha_ingreso + "');");
+                }
 
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
                     {

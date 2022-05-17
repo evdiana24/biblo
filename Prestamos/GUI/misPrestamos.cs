@@ -19,7 +19,10 @@ namespace Prestamos.GUI
         {
             try
             {
-                _DATOS.DataSource = DataSource.Consultas.MIS_PRESTAMOS(oSesion.IDUsuario);
+                //String pFechaInicio = dtDesde.Value.AddMonths(-1).ToString("yyyy/MM/dd");
+                //String pFechaFinal = dtHasta.Value.ToString("yyyy/MM/dd");
+                //dtDesde.Value = dtDesde.Value.AddMonths(-1);
+                _DATOS.DataSource = DataSource.Consultas.MIS_PRESTAMOS(oSesion.IDUsuario, dtDesde.Value.ToString("yyyy/MM/dd"), dtHasta.Value.ToString("yyyy/MM/dd"));
                 Filtrar();
             }
             catch (Exception)
@@ -34,7 +37,7 @@ namespace Prestamos.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = "titulo LIKE '%" + txbFiltro.Text + "%' OR editorial LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = "titulo LIKE '%" + label.Text + "%' OR editorial LIKE '%" + label.Text + "%'";
                 }
                 else
                 {
@@ -58,6 +61,7 @@ namespace Prestamos.GUI
         private void misPrestamos_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            //dtDesde.Value = dtDesde.Value.AddMonths(-1);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

@@ -42,8 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS\Opciones.cs" />
     <Compile Include="CLS\Permisos.cs" />
     <Compile Include="CLS\Roles.cs" />
+    <Compile Include="GUI\OpcionesGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OpcionesGestion.Designer.cs">
+      <DependentUpon>OpcionesGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OpcionesEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OpcionesEdicion.Designer.cs">
+      <DependentUpon>OpcionesEdicion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\RolesGestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +93,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\OpcionesGestion.resx">
+      <DependentUpon>OpcionesGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OpcionesEdicion.resx">
+      <DependentUpon>OpcionesEdicion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\RolesGestion.resx">
       <DependentUpon>RolesGestion.cs</DependentUpon>
     </EmbeddedResource>

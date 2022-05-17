@@ -13,48 +13,6 @@ namespace Pagos.GUI
     public partial class PagosGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
-        String _IDPagoSeleccionado;
-        String _PagoSeleccionado;
-        bool _Seleccionado = false;
-
-        public string IDPagoSeleccionado
-        {
-            get
-            {
-                return _IDPagoSeleccionado;
-            }
-
-            set
-            {
-                _IDPagoSeleccionado = value;
-            }
-        }
-
-        public string PagoSeleccionado
-        {
-            get
-            {
-                return _PagoSeleccionado;
-            }
-
-            set
-            {
-                _PagoSeleccionado = value;
-            }
-        }
-
-        public bool Seleccionado
-        {
-            get
-            {
-                return _Seleccionado;
-            }
-
-            set
-            {
-                _Seleccionado = value;
-            }
-        }
 
         private void CargarDatos()
         {
@@ -133,21 +91,6 @@ namespace Pagos.GUI
             catch (Exception)
             {
                 MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _IDPagoSeleccionado = dtgPagosGestion.CurrentRow.Cells["idLibro"].Value.ToString();
-                _PagoSeleccionado = dtgPagosGestion.CurrentRow.Cells["titulo"].Value.ToString();
-                _Seleccionado = true;
-                //Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al seleccionar el registro");
             }
         }
 

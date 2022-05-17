@@ -13,50 +13,7 @@ namespace General.GUI
     public partial class AutoresGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
-        String _IDEAutorSeleccionado;
-        String _AutorSeleccionado;
-        bool _Seleccionado = false;
-
-        public string IDEAutorSeleccionado
-        {
-            get
-            {
-                return _IDEAutorSeleccionado;
-            }
-
-            set
-            {
-                _IDEAutorSeleccionado = value;
-            }
-        }
-
-        public string AutorSeleccionado
-        {
-            get
-            {
-                return _AutorSeleccionado;
-            }
-
-            set
-            {
-                _AutorSeleccionado = value;
-            }
-        }
-
-        public bool Seleccionado
-        {
-            get
-            {
-                return _Seleccionado;
-            }
-
-            set
-            {
-                _Seleccionado = value;
-            }
-        }
-
-
+    
         private void CargarDatos()
         {
             try
@@ -156,21 +113,6 @@ namespace General.GUI
             catch (Exception)
             {
                 MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _IDEAutorSeleccionado = dtgAutoresGestion.CurrentRow.Cells["idAutor"].Value.ToString();
-                _AutorSeleccionado = dtgAutoresGestion.CurrentRow.Cells["nombres"].Value.ToString() + " " + dtgAutoresGestion.CurrentRow.Cells["apellidos"].Value.ToString();
-                _Seleccionado = true;
-                //Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al seleccionar el registro");
             }
         }
 

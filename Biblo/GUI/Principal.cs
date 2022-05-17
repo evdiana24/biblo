@@ -401,7 +401,7 @@ namespace Biblo.GUI
 
         private void btnOpciones_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<Configuraciones.GUI.OpcionesGestion>();
+            AbrirFormulario<Configuraciones.GUI.OpcionesGestion>();
             hideSubMenu();
         }
 

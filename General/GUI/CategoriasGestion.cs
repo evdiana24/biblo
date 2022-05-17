@@ -13,48 +13,6 @@ namespace General.GUI
     public partial class CategoriasGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
-        String _IDCategoriaSeleccionado;
-        String _CategoriaSeleccionado;
-        bool _Seleccionado = false;
-
-        public string IDcategoriaSeleccionado
-        {
-            get
-            {
-                return _IDCategoriaSeleccionado;
-            }
-
-            set
-            {
-                _IDCategoriaSeleccionado = value;
-            }
-        }
-
-        public string CategoriaSeleccionado
-        {
-            get
-            {
-                return _CategoriaSeleccionado;
-            }
-
-            set
-            {
-                _CategoriaSeleccionado = value;
-            }
-        }
-
-        public bool Seleccionado
-        {
-            get
-            {
-                return _Seleccionado;
-            }
-
-            set
-            {
-                _Seleccionado = value;
-            }
-        }
 
         private void CargarDatos()
         {
@@ -158,21 +116,6 @@ namespace General.GUI
             catch (Exception)
             {
                 MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _IDCategoriaSeleccionado = dtgCategoriasGestion.CurrentRow.Cells["idcategoria"].Value.ToString();
-                _CategoriaSeleccionado = dtgCategoriasGestion.CurrentRow.Cells["categoria"].Value.ToString();
-                _Seleccionado = true;
-                Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al seleccionar el registro");
             }
         }
 

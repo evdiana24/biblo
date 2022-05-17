@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Configuraciones.GUI
 {
-    public partial class RolesGestion : Form
+    public partial class OpcionesGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
 
@@ -18,7 +18,7 @@ namespace Configuraciones.GUI
         {
             try
             {
-                _DATOS.DataSource = DataSource.Consultas.TODOS_LOS_ROLES();
+                _DATOS.DataSource = DataSource.Consultas.TODAS_LAS_OPCIONES();
                 Filtrar();
             }
             catch (Exception)
@@ -33,15 +33,15 @@ namespace Configuraciones.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = "rol LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = "opcion LIKE '%" + txbFiltro.Text + "%'";
                 }
                 else
                 {
                     _DATOS.RemoveFilter();
                 }
-                dtgRolesGestion.AutoGenerateColumns = false;
-                dtgRolesGestion.DataSource = _DATOS;
-                lblRegistros.Text = dtgRolesGestion.Rows.Count.ToString() + " Registros Encontrados";
+                dtgOpcionesGestion.AutoGenerateColumns = false;
+                dtgOpcionesGestion.DataSource = _DATOS;
+                lblRegistros.Text = dtgOpcionesGestion.Rows.Count.ToString() + " Registros Encontrados";
             }
             catch (Exception)
             {
@@ -49,7 +49,7 @@ namespace Configuraciones.GUI
             }
         }
 
-        public RolesGestion()
+        public OpcionesGestion()
         {
             InitializeComponent();
         }
@@ -63,7 +63,7 @@ namespace Configuraciones.GUI
         {
             try
             {
-                GUI.RolesEdicion f = new RolesEdicion();
+                GUI.OpcionesEdicion f = new OpcionesEdicion();
                 f.ShowDialog();
                 CargarDatos();
             }
@@ -79,9 +79,9 @@ namespace Configuraciones.GUI
             {
                 if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    CLS.Roles oRol = new CLS.Roles();
-                    oRol.IdRol = dtgRolesGestion.CurrentRow.Cells["idRol"].Value.ToString();
-                    if (oRol.Eliminar())
+                    CLS.Opciones oOpcion = new CLS.Opciones();
+                    oOpcion.IdOpcion = dtgOpcionesGestion.CurrentRow.Cells["idOpcion"].Value.ToString();
+                    if (oOpcion.Eliminar())
                     {
                         MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDatos();

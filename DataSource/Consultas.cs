@@ -142,23 +142,23 @@ namespace DataSource
             return Resultado;
         }
 
-        public static DataTable TODOS_LOS_EJEPLARES_PRESTAMOS()
-        {
-            DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, a.idEditorial, b.editorial 
-            FROM libros a, editoriales b
-            WHERE a.idEditorial = b.idEditorial;";
-            DataManager.DBOperacion op = new DataManager.DBOperacion();
-            try
-            {
-                Resultado = op.Consultar(Consulta);
-            }
-            catch (Exception)
-            {
-                Resultado = new DataTable();
-            }
-            return Resultado;
-        }
+        //public static DataTable TODOS_LOS_EJEPLARES_PRESTAMOS()
+        //{
+        //    DataTable Resultado = new DataTable();
+        //    String Consulta = @"SELECT a.idLibro, a.titulo, a.anio_publicacion, a.edicion, a.idEditorial, b.editorial 
+        //    FROM libros a, editoriales b
+        //    WHERE a.idEditorial = b.idEditorial;";
+        //    DataManager.DBOperacion op = new DataManager.DBOperacion();
+        //    try
+        //    {
+        //        Resultado = op.Consultar(Consulta);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        Resultado = new DataTable();
+        //    }
+        //    return Resultado;
+        //}
 
         public static DataTable TODOS_LOS_EJEMPLARES()
         {
@@ -267,11 +267,32 @@ namespace DataSource
             return Resultado;
         }
 
+        //public static DataTable TODAS_LAS_MORAS()
+        //{
+        //    DataTable Resultado = new DataTable();
+        //    String Consulta = @"SELECT a.idMora, a.idDetalle, a.totalMora, a.estado 
+        //    FROM moras a;";
+        //    DataManager.DBOperacion op = new DataManager.DBOperacion();
+        //    try
+        //    {
+        //        Resultado = op.Consultar(Consulta);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        Resultado = new DataTable();
+        //    }
+        //    return Resultado;
+        //}
+
         public static DataTable TODAS_LAS_MORAS()
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT a.idMora, a.idDetalle, a.totalMora, a.estado 
-            FROM moras;";
+            String Consulta = @"SELECT a.idMora, a.idDetalle, d.idEjemplar, b.titulo, c.fecha_prestamo, d.fecha_devolucion, a.totalMora, a.estado
+            FROM moras a, libros b, prestamos c, detalles_prestamos d, ejemplares e
+            WHERE d.idEjemplar = e.idEjemplar
+            AND b.idLibro = e.idLibro
+            AND a.idDetalle = d.idDetalle
+            AND c.idPrestamo = d.idPrestamo;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -417,7 +438,7 @@ namespace DataSource
             String Consulta = @"SELECT a.idEjemplar, b.titulo, d.categoria, CONCAT(f.nombres, ' ', f.apellidos) AS autor, g.editorial
             FROM ejemplares a, libros b, libros_categorias c, categorias d, libros_autores e, autores f, editoriales g
             WHERE a.idLibro = b.idLibro AND c.idCategoria = d.idCategoria AND c.idLibro = b.idLibro AND e.idAutor = f.idAutor 
-            AND e.idLibro = b.idLibro AND g.idEditorial = b.idEditorial AND a.estado = 'DISPONIBLE';";
+            AND e.idLibro = b.idLibro AND g.idEditorial = b.idEditorial AND a.estado = 'DISPONIBLE' GROUP BY a.idEjemplar;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -514,7 +535,7 @@ namespace DataSource
             return Resultado;
         }
 
-        public static DataTable MIS_PRESTAMOS(String pIDUsuario, String pFechaInicio, String pFechaFinal)
+        public static DataTable MIS_PRESTAMOS(String pIDUsuario)
         {
             DataTable Resultado = new DataTable();
             String Consulta = @"SELECT c.titulo, f.categoria, CONCAT(h.nombres, ' ', h.apellidos) AS autor, i.editorial, a.fecha_prestamo, b.fecha_devolucion
@@ -527,8 +548,8 @@ namespace DataSource
             AND g.idAutor = h.idAutor
             AND c.idLibro = g.idLibro
             AND c.idEditorial = i.idEditorial
-            AND a.fecha_prestamo BETWEEN  " + pFechaInicio + " AND " + pFechaFinal + @"'
-            AND a.idUsuario_lector = " + pIDUsuario + ";";
+            AND a.idUsuario_lector = " + pIDUsuario + @"
+            ORDER BY a.fecha_prestamo;";
 
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
@@ -560,6 +581,26 @@ namespace DataSource
             }
             return Resultado;
         }
+
+        //public static DataTable LIBROS_AUTORES(String pIDLibro)
+        //{
+        //    DataTable Resultado = new DataTable();
+        //    String Consulta = @"SELECT a.idAutor, a.nombres, a.apellidos, a.genero 
+        //    FROM autores a
+        //    WHERE a.idAutor NOT IN (SELECT idAutor FROM libros_autores WHERE idLibro = " + pIDLibro + @"')
+        //    ORDER BY a.apellidos, a.nombres;";
+
+        //    DataManager.DBOperacion op = new DataManager.DBOperacion();
+        //    try
+        //    {
+        //        Resultado = op.Consultar(Consulta);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        Resultado = new DataTable();
+        //    }
+        //    return Resultado;
+        //}
 
         public static DataTable MIS_MORAS(String pIDUsuario)
         {

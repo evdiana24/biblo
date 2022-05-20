@@ -146,7 +146,7 @@
             this.dtFechaEntregado.Location = new System.Drawing.Point(276, 388);
             this.dtFechaEntregado.Name = "dtFechaEntregado";
             this.dtFechaEntregado.Size = new System.Drawing.Size(298, 26);
-            this.dtFechaEntregado.TabIndex = 182;
+            this.dtFechaEntregado.TabIndex = 3;
             // 
             // label5
             // 
@@ -172,7 +172,7 @@
             this.btnBuscarDetalle.Location = new System.Drawing.Point(503, 159);
             this.btnBuscarDetalle.Name = "btnBuscarDetalle";
             this.btnBuscarDetalle.Size = new System.Drawing.Size(71, 34);
-            this.btnBuscarDetalle.TabIndex = 195;
+            this.btnBuscarDetalle.TabIndex = 0;
             this.btnBuscarDetalle.UseVisualStyleBackColor = true;
             this.btnBuscarDetalle.Click += new System.EventHandler(this.btnBuscarDetalle_Click);
             // 
@@ -183,7 +183,7 @@
             this.txbDescripcion.Multiline = true;
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.Size = new System.Drawing.Size(298, 53);
-            this.txbDescripcion.TabIndex = 194;
+            this.txbDescripcion.TabIndex = 2;
             // 
             // label7
             // 
@@ -262,7 +262,7 @@
             this.cmbCondicion.Location = new System.Drawing.Point(276, 275);
             this.cmbCondicion.Name = "cmbCondicion";
             this.cmbCondicion.Size = new System.Drawing.Size(298, 28);
-            this.cmbCondicion.TabIndex = 219;
+            this.cmbCondicion.TabIndex = 1;
             // 
             // label2
             // 

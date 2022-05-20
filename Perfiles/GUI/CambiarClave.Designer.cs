@@ -73,7 +73,7 @@
             this.txbNuevaClave.Name = "txbNuevaClave";
             this.txbNuevaClave.PasswordChar = '●';
             this.txbNuevaClave.Size = new System.Drawing.Size(225, 26);
-            this.txbNuevaClave.TabIndex = 176;
+            this.txbNuevaClave.TabIndex = 0;
             // 
             // txbRepitaClave
             // 
@@ -82,7 +82,7 @@
             this.txbRepitaClave.Name = "txbRepitaClave";
             this.txbRepitaClave.PasswordChar = '●';
             this.txbRepitaClave.Size = new System.Drawing.Size(225, 26);
-            this.txbRepitaClave.TabIndex = 177;
+            this.txbRepitaClave.TabIndex = 2;
             // 
             // btnCancelar
             // 

@@ -74,7 +74,7 @@
             this.txbIdOpcion.Name = "txbIdOpcion";
             this.txbIdOpcion.ReadOnly = true;
             this.txbIdOpcion.Size = new System.Drawing.Size(129, 26);
-            this.txbIdOpcion.TabIndex = 98;
+            this.txbIdOpcion.TabIndex = 0;
             // 
             // label1
             // 
@@ -97,7 +97,7 @@
             this.txbOpcion.MaxLength = 45;
             this.txbOpcion.Name = "txbOpcion";
             this.txbOpcion.Size = new System.Drawing.Size(271, 26);
-            this.txbOpcion.TabIndex = 102;
+            this.txbOpcion.TabIndex = 1;
             // 
             // label2
             // 

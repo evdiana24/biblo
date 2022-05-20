@@ -19,10 +19,7 @@ namespace Prestamos.GUI
         {
             try
             {
-                //String pFechaInicio = dtDesde.Value.AddMonths(-1).ToString("yyyy/MM/dd");
-                //String pFechaFinal = dtHasta.Value.ToString("yyyy/MM/dd");
-                //dtDesde.Value = dtDesde.Value.AddMonths(-1);
-                _DATOS.DataSource = DataSource.Consultas.MIS_PRESTAMOS(oSesion.IDUsuario, dtDesde.Value.ToString("yyyy/MM/dd"), dtHasta.Value.ToString("yyyy/MM/dd"));
+                _DATOS.DataSource = DataSource.Consultas.MIS_PRESTAMOS(oSesion.IDUsuario);
                 Filtrar();
             }
             catch (Exception)
@@ -61,12 +58,38 @@ namespace Prestamos.GUI
         private void misPrestamos_Load(object sender, EventArgs e)
         {
             CargarDatos();
-            //dtDesde.Value = dtDesde.Value.AddMonths(-1);
+            dtDesde.Value = dtDesde.Value.AddMonths(-1);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dtDesde_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtDesde.Value.Date > dtHasta.Value.Date)
+            {
+                MessageBox.Show("La fecha inicial no puede ser mayor a la fecha final", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                _DATOS.Filter = "fecha_prestamo >= '" + dtDesde.Value.Date + "' and  fecha_prestamo <= '" +
+                dtHasta.Value.Date + "'";
+            }
+        }
+
+        private void dtHasta_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtDesde.Value.Date > dtHasta.Value.Date)
+            {
+                MessageBox.Show("La fecha inicial no puede ser mayor a la fecha final", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                _DATOS.Filter = "fecha_prestamo >= '" + dtDesde.Value.Date + "' and  fecha_prestamo <= '" +
+                dtHasta.Value.Date + "'";
+            }
         }
     }
 }

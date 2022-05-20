@@ -87,7 +87,7 @@
             this.txbEditorial.Location = new System.Drawing.Point(149, 178);
             this.txbEditorial.Name = "txbEditorial";
             this.txbEditorial.Size = new System.Drawing.Size(317, 26);
-            this.txbEditorial.TabIndex = 110;
+            this.txbEditorial.TabIndex = 0;
             // 
             // label2
             // 

@@ -174,5 +174,31 @@ namespace Prestamos.GUI
         {
             Close();
         }
+
+        private void dtDesde_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtDesde.Value.Date > dtHasta.Value.Date)
+            {
+                MessageBox.Show("La fecha inicial no puede ser mayor a la fecha final", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                _DATOS.Filter = "fecha_prestamo >= '" + dtDesde.Value.Date + "' and  fecha_prestamo <= '" +
+                dtHasta.Value.Date + "'";
+            }
+        }
+
+        private void dtHasta_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtDesde.Value.Date > dtHasta.Value.Date)
+            {
+                MessageBox.Show("La fecha inicial no puede ser mayor a la fecha final", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                _DATOS.Filter = "fecha_prestamo >= '" + dtDesde.Value.Date + "' and  fecha_prestamo <= '" +
+                dtHasta.Value.Date + "'";
+            }
+        }
     }
 }

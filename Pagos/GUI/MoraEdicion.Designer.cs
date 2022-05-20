@@ -43,7 +43,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbLector = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.cmbEstadoMora.Location = new System.Drawing.Point(174, 276);
             this.cmbEstadoMora.Name = "cmbEstadoMora";
             this.cmbEstadoMora.Size = new System.Drawing.Size(139, 28);
-            this.cmbEstadoMora.TabIndex = 19;
+            this.cmbEstadoMora.TabIndex = 2;
             // 
             // txbTotal
             // 
@@ -81,7 +81,7 @@
             this.txbTotal.Location = new System.Drawing.Point(191, 234);
             this.txbTotal.Name = "txbTotal";
             this.txbTotal.Size = new System.Drawing.Size(122, 26);
-            this.txbTotal.TabIndex = 164;
+            this.txbTotal.TabIndex = 1;
             this.txbTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTotal_KeyPress);
             // 
             // txbIdDetalle
@@ -175,7 +175,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(354, 338);
+            this.btnCancelar.Location = new System.Drawing.Point(354, 340);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(153, 41);
             this.btnCancelar.TabIndex = 154;
@@ -194,7 +194,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(170)))), ((int)(((byte)(79)))));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(185, 338);
+            this.btnGuardar.Location = new System.Drawing.Point(185, 340);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(155, 41);
             this.btnGuardar.TabIndex = 153;
@@ -207,14 +207,14 @@
             this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.Notificador.ContainerControl = this;
             // 
-            // textBox1
+            // txbLector
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(174, 192);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(251, 26);
-            this.textBox1.TabIndex = 166;
+            this.txbLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txbLector.Location = new System.Drawing.Point(174, 192);
+            this.txbLector.Name = "txbLector";
+            this.txbLector.ReadOnly = true;
+            this.txbLector.Size = new System.Drawing.Size(251, 26);
+            this.txbLector.TabIndex = 166;
             // 
             // label3
             // 
@@ -224,9 +224,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(54, 192);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 23);
+            this.label3.Size = new System.Drawing.Size(97, 23);
             this.label3.TabIndex = 165;
-            this.label3.Text = "Lector:";
+            this.label3.Text = "Ejemplar:";
             // 
             // btnBuscar
             // 
@@ -235,7 +235,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(354, 155);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(71, 34);
-            this.btnBuscar.TabIndex = 167;
+            this.btnBuscar.TabIndex = 0;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -262,7 +262,7 @@
             this.Controls.Add(this.txbTotal);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbLector);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txbIdDetalle);
             this.Controls.Add(this.label9);
@@ -301,7 +301,7 @@
         public System.Windows.Forms.TextBox txbTotal;
         public System.Windows.Forms.TextBox txbIdDetalle;
         public System.Windows.Forms.TextBox txbIdMora;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txbLector;
         private System.Windows.Forms.Label label8;
     }
 }

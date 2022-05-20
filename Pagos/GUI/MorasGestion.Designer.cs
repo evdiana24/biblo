@@ -31,10 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MorasGestion));
             this.dtgMorasGestion = new System.Windows.Forms.DataGridView();
-            this.idMora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalMora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
@@ -51,6 +47,14 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.idMora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEjemplar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_prestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_devolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalMora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMorasGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -77,6 +81,10 @@
             this.dtgMorasGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idMora,
             this.idDetalle,
+            this.idEjemplar,
+            this.titulo,
+            this.fecha_prestamo,
+            this.fecha_devolucion,
             this.totalMora,
             this.estado});
             this.dtgMorasGestion.Location = new System.Drawing.Point(39, 92);
@@ -87,38 +95,6 @@
             this.dtgMorasGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgMorasGestion.Size = new System.Drawing.Size(897, 412);
             this.dtgMorasGestion.TabIndex = 56;
-            // 
-            // idMora
-            // 
-            this.idMora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idMora.DataPropertyName = "idMora";
-            this.idMora.HeaderText = "ID Mora";
-            this.idMora.Name = "idMora";
-            this.idMora.ReadOnly = true;
-            // 
-            // idDetalle
-            // 
-            this.idDetalle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDetalle.DataPropertyName = "idDetalle";
-            this.idDetalle.HeaderText = "ID Detalle";
-            this.idDetalle.Name = "idDetalle";
-            this.idDetalle.ReadOnly = true;
-            // 
-            // totalMora
-            // 
-            this.totalMora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.totalMora.DataPropertyName = "totalMora";
-            this.totalMora.HeaderText = "Total Mora";
-            this.totalMora.Name = "totalMora";
-            this.totalMora.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -274,6 +250,68 @@
             this.label1.TabIndex = 89;
             this.label1.Text = "MORAS";
             // 
+            // idMora
+            // 
+            this.idMora.DataPropertyName = "idMora";
+            this.idMora.HeaderText = "ID Mora";
+            this.idMora.Name = "idMora";
+            this.idMora.ReadOnly = true;
+            this.idMora.Width = 60;
+            // 
+            // idDetalle
+            // 
+            this.idDetalle.DataPropertyName = "idDetalle";
+            this.idDetalle.HeaderText = "ID Detalle";
+            this.idDetalle.Name = "idDetalle";
+            this.idDetalle.ReadOnly = true;
+            this.idDetalle.Width = 60;
+            // 
+            // idEjemplar
+            // 
+            this.idEjemplar.DataPropertyName = "idEjemplar";
+            this.idEjemplar.HeaderText = "ID Ejemplar";
+            this.idEjemplar.Name = "idEjemplar";
+            this.idEjemplar.ReadOnly = true;
+            this.idEjemplar.Width = 60;
+            // 
+            // titulo
+            // 
+            this.titulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titulo.DataPropertyName = "titulo";
+            this.titulo.HeaderText = "Ejemplar";
+            this.titulo.Name = "titulo";
+            this.titulo.ReadOnly = true;
+            // 
+            // fecha_prestamo
+            // 
+            this.fecha_prestamo.DataPropertyName = "fecha_prestamo";
+            this.fecha_prestamo.HeaderText = "Fecha préstamo";
+            this.fecha_prestamo.Name = "fecha_prestamo";
+            this.fecha_prestamo.ReadOnly = true;
+            // 
+            // fecha_devolucion
+            // 
+            this.fecha_devolucion.DataPropertyName = "fecha_devolucion";
+            this.fecha_devolucion.HeaderText = "Fecha devolución";
+            this.fecha_devolucion.Name = "fecha_devolucion";
+            this.fecha_devolucion.ReadOnly = true;
+            // 
+            // totalMora
+            // 
+            this.totalMora.DataPropertyName = "totalMora";
+            this.totalMora.HeaderText = "Total Mora";
+            this.totalMora.Name = "totalMora";
+            this.totalMora.ReadOnly = true;
+            this.totalMora.Width = 90;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Width = 120;
+            // 
             // MorasGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,12 +354,16 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDetalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalMora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton btnSeleccionar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDetalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEjemplar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_prestamo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_devolucion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalMora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
     }
 }

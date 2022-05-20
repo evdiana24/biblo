@@ -109,7 +109,7 @@
             this.cmbGenero.Location = new System.Drawing.Point(156, 231);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(130, 28);
-            this.cmbGenero.TabIndex = 90;
+            this.cmbGenero.TabIndex = 2;
             // 
             // txbNombres
             // 
@@ -118,7 +118,7 @@
             this.txbNombres.Location = new System.Drawing.Point(156, 153);
             this.txbNombres.Name = "txbNombres";
             this.txbNombres.Size = new System.Drawing.Size(298, 26);
-            this.txbNombres.TabIndex = 89;
+            this.txbNombres.TabIndex = 0;
             // 
             // label3
             // 
@@ -183,7 +183,7 @@
             this.txbIdAutor.Name = "txbIdAutor";
             this.txbIdAutor.ReadOnly = true;
             this.txbIdAutor.Size = new System.Drawing.Size(129, 26);
-            this.txbIdAutor.TabIndex = 97;
+            this.txbIdAutor.TabIndex = 12;
             // 
             // txbApellidos
             // 
@@ -192,7 +192,7 @@
             this.txbApellidos.Location = new System.Drawing.Point(156, 192);
             this.txbApellidos.Name = "txbApellidos";
             this.txbApellidos.Size = new System.Drawing.Size(298, 26);
-            this.txbApellidos.TabIndex = 99;
+            this.txbApellidos.TabIndex = 1;
             // 
             // label6
             // 

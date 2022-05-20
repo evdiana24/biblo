@@ -97,9 +97,9 @@ namespace Pagos.CLS
             try
             {
                 Sentencia.Append("UPDATE moras SET ");
-                Sentencia.Append("nombre='" + this._idDetalle + "',");
-                Sentencia.Append("fecha_nacimiento='" + this._totalMora + "',");
-                Sentencia.Append("fecha_contratacion" + this._estado + "' WHERE idMora=" + this._idMora + ";");
+                Sentencia.Append("idDetalle='" + this._idDetalle + "',");
+                Sentencia.Append("totalMora='" + this._totalMora + "',");
+                Sentencia.Append("estado" + this._estado + "' WHERE idMora=" + this._idMora + ";");
                 if (operacion.Actualizar(Sentencia.ToString()) > 0)
                 {
                     Resultado = true;

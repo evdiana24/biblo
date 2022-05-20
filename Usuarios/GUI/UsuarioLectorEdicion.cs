@@ -112,11 +112,6 @@ namespace Usuarios.GUI
                     Notificador.SetError(txbIdLector, "Seleccione el ID del lector");
                     Validado = false;
                 }
-                //if (txbIdRol.TextLength == 0)
-                //{
-                //    Notificador.SetError(txbIdRol, "Escriba el ID del rol");
-                //    Validado = false;
-                //}
             }
             catch (Exception)
             {
@@ -152,6 +147,7 @@ namespace Usuarios.GUI
                     txbIdLector.Text = f.IDLectorSeleccionado;
                     txbLector.Text = f.LectorSeleccionado;
                 }
+                Close();
             }
             catch (Exception)
             {

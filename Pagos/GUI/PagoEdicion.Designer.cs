@@ -63,7 +63,7 @@
             this.txbTotal.Location = new System.Drawing.Point(304, 227);
             this.txbTotal.Name = "txbTotal";
             this.txbTotal.Size = new System.Drawing.Size(122, 26);
-            this.txbTotal.TabIndex = 176;
+            this.txbTotal.TabIndex = 2;
             this.txbTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTotal_KeyPress);
             // 
             // txbIdUsuarioLector
@@ -198,7 +198,7 @@
             this.cmbDescripcion.Location = new System.Drawing.Point(287, 148);
             this.cmbDescripcion.Name = "cmbDescripcion";
             this.cmbDescripcion.Size = new System.Drawing.Size(298, 28);
-            this.cmbDescripcion.TabIndex = 166;
+            this.cmbDescripcion.TabIndex = 0;
             // 
             // label4
             // 
@@ -241,7 +241,7 @@
             this.dtFechaPago.Location = new System.Drawing.Point(287, 186);
             this.dtFechaPago.Name = "dtFechaPago";
             this.dtFechaPago.Size = new System.Drawing.Size(298, 26);
-            this.dtFechaPago.TabIndex = 180;
+            this.dtFechaPago.TabIndex = 1;
             // 
             // label5
             // 
@@ -309,7 +309,7 @@
             this.btnBuscarLector.Location = new System.Drawing.Point(514, 263);
             this.btnBuscarLector.Name = "btnBuscarLector";
             this.btnBuscarLector.Size = new System.Drawing.Size(71, 34);
-            this.btnBuscarLector.TabIndex = 185;
+            this.btnBuscarLector.TabIndex = 3;
             this.btnBuscarLector.UseVisualStyleBackColor = true;
             this.btnBuscarLector.Click += new System.EventHandler(this.btnBuscarLector_Click);
             // 
@@ -320,7 +320,7 @@
             this.btnBuscarEmpleado.Location = new System.Drawing.Point(514, 341);
             this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
             this.btnBuscarEmpleado.Size = new System.Drawing.Size(71, 34);
-            this.btnBuscarEmpleado.TabIndex = 186;
+            this.btnBuscarEmpleado.TabIndex = 4;
             this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
             this.btnBuscarEmpleado.Click += new System.EventHandler(this.btnBuscarEmpleado_Click);
             // 

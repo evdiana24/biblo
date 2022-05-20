@@ -96,7 +96,7 @@
             this.txbCategoria.Location = new System.Drawing.Point(160, 182);
             this.txbCategoria.Name = "txbCategoria";
             this.txbCategoria.Size = new System.Drawing.Size(271, 26);
-            this.txbCategoria.TabIndex = 102;
+            this.txbCategoria.TabIndex = 0;
             // 
             // label2
             // 

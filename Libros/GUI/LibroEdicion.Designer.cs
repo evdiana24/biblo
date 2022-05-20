@@ -104,7 +104,7 @@
             this.txbISBN.Mask = "000-00-00000-00-0";
             this.txbISBN.Name = "txbISBN";
             this.txbISBN.Size = new System.Drawing.Size(150, 26);
-            this.txbISBN.TabIndex = 203;
+            this.txbISBN.TabIndex = 0;
             // 
             // label13
             // 
@@ -125,7 +125,7 @@
             this.txbEdicion.Location = new System.Drawing.Point(181, 282);
             this.txbEdicion.Name = "txbEdicion";
             this.txbEdicion.Size = new System.Drawing.Size(149, 26);
-            this.txbEdicion.TabIndex = 201;
+            this.txbEdicion.TabIndex = 3;
             this.txbEdicion.Value = new decimal(new int[] {
             1,
             0,
@@ -139,7 +139,7 @@
             this.btnBuscarEditorial.Location = new System.Drawing.Point(425, 319);
             this.btnBuscarEditorial.Name = "btnBuscarEditorial";
             this.btnBuscarEditorial.Size = new System.Drawing.Size(71, 34);
-            this.btnBuscarEditorial.TabIndex = 200;
+            this.btnBuscarEditorial.TabIndex = 4;
             this.btnBuscarEditorial.UseVisualStyleBackColor = true;
             this.btnBuscarEditorial.Click += new System.EventHandler(this.btnBuscarEditorial_Click);
             // 
@@ -180,7 +180,7 @@
             this.txbAnio.MaxLength = 4;
             this.txbAnio.Name = "txbAnio";
             this.txbAnio.Size = new System.Drawing.Size(150, 26);
-            this.txbAnio.TabIndex = 196;
+            this.txbAnio.TabIndex = 2;
             // 
             // txbTitulo
             // 
@@ -188,7 +188,7 @@
             this.txbTitulo.Location = new System.Drawing.Point(181, 203);
             this.txbTitulo.Name = "txbTitulo";
             this.txbTitulo.Size = new System.Drawing.Size(316, 26);
-            this.txbTitulo.TabIndex = 195;
+            this.txbTitulo.TabIndex = 1;
             // 
             // label9
             // 

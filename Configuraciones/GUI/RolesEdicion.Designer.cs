@@ -74,7 +74,7 @@
             this.txbIdRol.Name = "txbIdRol";
             this.txbIdRol.ReadOnly = true;
             this.txbIdRol.Size = new System.Drawing.Size(129, 26);
-            this.txbIdRol.TabIndex = 98;
+            this.txbIdRol.TabIndex = 0;
             // 
             // label1
             // 
@@ -97,7 +97,7 @@
             this.txbRol.MaxLength = 45;
             this.txbRol.Name = "txbRol";
             this.txbRol.Size = new System.Drawing.Size(271, 26);
-            this.txbRol.TabIndex = 102;
+            this.txbRol.TabIndex = 1;
             // 
             // label2
             // 

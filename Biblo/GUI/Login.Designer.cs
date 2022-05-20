@@ -127,7 +127,7 @@
             this.txbClave.Name = "txbClave";
             this.txbClave.PasswordChar = '●';
             this.txbClave.Size = new System.Drawing.Size(250, 25);
-            this.txbClave.TabIndex = 5;
+            this.txbClave.TabIndex = 1;
             // 
             // txbUsuario
             // 
@@ -136,7 +136,7 @@
             this.txbUsuario.MaxLength = 50;
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(250, 25);
-            this.txbUsuario.TabIndex = 4;
+            this.txbUsuario.TabIndex = 0;
             // 
             // label3
             // 

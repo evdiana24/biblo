@@ -162,12 +162,12 @@ namespace Prestamos.GUI
                 {
                     //Se guardo correctamente
                     MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Close();
+                    CargarEjemplares();
                 }
                 else
                 {
                     //No se guardo correctamente
-                    MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Sólo se permite un máximo de 5 ejemplares", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
 

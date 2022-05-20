@@ -36,7 +36,7 @@ namespace Biblo.GUI
             try
             {
                 Datos = DataSource.Consultas.INICIO_SESION(txbUsuario.Text, clave);
-                if(Datos.Rows.Count == 1)
+                if (Datos.Rows.Count == 1)
                 {
                     oSesion.IDUsuario = Datos.Rows[0]["IDUsuario"].ToString();
                     oSesion.Usuario = Datos.Rows[0]["Usuario"].ToString();
@@ -53,7 +53,7 @@ namespace Biblo.GUI
                     {
                         _Autorizado = true;
                         Close();
-                    } 
+                    }
                 }
 
                 else
@@ -61,9 +61,9 @@ namespace Biblo.GUI
                     lblMensaje.Text = "Usuario o clave incorrectos";
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
-                
+
             }
         }
         public Login()

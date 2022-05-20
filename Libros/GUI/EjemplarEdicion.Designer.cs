@@ -101,7 +101,7 @@
             this.txbCantidad.Location = new System.Drawing.Point(219, 298);
             this.txbCantidad.Name = "txbCantidad";
             this.txbCantidad.Size = new System.Drawing.Size(120, 26);
-            this.txbCantidad.TabIndex = 236;
+            this.txbCantidad.TabIndex = 3;
             this.txbCantidad.Value = new decimal(new int[] {
             1,
             0,
@@ -116,7 +116,7 @@
             this.dtFechaIngreso.Location = new System.Drawing.Point(217, 258);
             this.dtFechaIngreso.Name = "dtFechaIngreso";
             this.dtFechaIngreso.Size = new System.Drawing.Size(324, 26);
-            this.dtFechaIngreso.TabIndex = 235;
+            this.dtFechaIngreso.TabIndex = 2;
             // 
             // label7
             // 
@@ -138,7 +138,7 @@
             this.btnBuscarLibro.Location = new System.Drawing.Point(467, 143);
             this.btnBuscarLibro.Name = "btnBuscarLibro";
             this.btnBuscarLibro.Size = new System.Drawing.Size(71, 34);
-            this.btnBuscarLibro.TabIndex = 233;
+            this.btnBuscarLibro.TabIndex = 0;
             this.btnBuscarLibro.UseVisualStyleBackColor = true;
             this.btnBuscarLibro.Click += new System.EventHandler(this.btnBuscarLibro_Click_1);
             // 
@@ -150,7 +150,7 @@
             this.txbIdLibro.Name = "txbIdLibro";
             this.txbIdLibro.ReadOnly = true;
             this.txbIdLibro.Size = new System.Drawing.Size(129, 26);
-            this.txbIdLibro.TabIndex = 232;
+            this.txbIdLibro.TabIndex = 100;
             // 
             // label6
             // 
@@ -177,7 +177,7 @@
             this.cmbEstado.Location = new System.Drawing.Point(217, 220);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(130, 28);
-            this.cmbEstado.TabIndex = 230;
+            this.cmbEstado.TabIndex = 1;
             // 
             // label3
             // 

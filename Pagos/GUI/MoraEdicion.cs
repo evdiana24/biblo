@@ -112,20 +112,21 @@ namespace Pagos.GUI
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    Prestamos.GUI.DetallesPrestamosVista f = new Prestamos.GUI.DetallesPrestamosVista();
-            //    f.ShowDialog();
-            //    if (f.Seleccionado)
-            //    {
-            //        txbIdEditorial.Text = f.IDEditorialSeleccionado;
-            //        txbEditorial.Text = f.EditorialSeleccionado;
-            //    }
-            //}
-            //catch (Exception)
-            //{
+            try
+            {
+                Prestamos.GUI.DetallesPrestamosVista f = new Prestamos.GUI.DetallesPrestamosVista();
+                f.FormBorderStyle = FormBorderStyle.FixedSingle;
+                f.ShowDialog(); 
+                if (f.Seleccionado)
+                {
+                    txbIdDetalle.Text = f.IDDetalleSeleccionado;
+                    txbLector.Text = f.LectorSeleccionado;
+                }
+            }
+            catch (Exception)
+            {
 
-            //}
+            }
         }
 
         private void txbTotal_KeyPress(object sender, KeyPressEventArgs e)

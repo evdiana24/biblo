@@ -145,7 +145,7 @@
             this.dtFechaPrestamo.Location = new System.Drawing.Point(279, 331);
             this.dtFechaPrestamo.Name = "dtFechaPrestamo";
             this.dtFechaPrestamo.Size = new System.Drawing.Size(298, 26);
-            this.dtFechaPrestamo.TabIndex = 182;
+            this.dtFechaPrestamo.TabIndex = 2;
             // 
             // label5
             // 
@@ -171,7 +171,7 @@
             this.btnBuscarEmpleado.Location = new System.Drawing.Point(506, 252);
             this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
             this.btnBuscarEmpleado.Size = new System.Drawing.Size(71, 34);
-            this.btnBuscarEmpleado.TabIndex = 196;
+            this.btnBuscarEmpleado.TabIndex = 1;
             this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
             this.btnBuscarEmpleado.Click += new System.EventHandler(this.btnBuscarEmpleado_Click);
             // 
@@ -182,7 +182,7 @@
             this.btnBuscarLector.Location = new System.Drawing.Point(506, 174);
             this.btnBuscarLector.Name = "btnBuscarLector";
             this.btnBuscarLector.Size = new System.Drawing.Size(71, 34);
-            this.btnBuscarLector.TabIndex = 195;
+            this.btnBuscarLector.TabIndex = 0;
             this.btnBuscarLector.UseVisualStyleBackColor = true;
             this.btnBuscarLector.Click += new System.EventHandler(this.btnBuscarLector_Click);
             // 

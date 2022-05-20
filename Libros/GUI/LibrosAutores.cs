@@ -176,7 +176,6 @@ namespace Libros.GUI
                 {
                     //Se guardo correctamente
                     MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Close();
                 }
                 else
                 {

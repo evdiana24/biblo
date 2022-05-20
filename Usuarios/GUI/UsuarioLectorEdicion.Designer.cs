@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioLectorEdicion));
             this.txbIdLector = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,7 +47,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbCarnet = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Notificador = new System.Windows.Forms.ErrorProvider();
             this.txbRepiteClave = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txbLector = new System.Windows.Forms.TextBox();
@@ -87,7 +86,7 @@
             this.dtFechaCreacion.Location = new System.Drawing.Point(291, 323);
             this.dtFechaCreacion.Name = "dtFechaCreacion";
             this.dtFechaCreacion.Size = new System.Drawing.Size(311, 26);
-            this.dtFechaCreacion.TabIndex = 202;
+            this.dtFechaCreacion.TabIndex = 5;
             // 
             // label5
             // 
@@ -108,7 +107,7 @@
             this.txbClave.Name = "txbClave";
             this.txbClave.PasswordChar = '●';
             this.txbClave.Size = new System.Drawing.Size(311, 26);
-            this.txbClave.TabIndex = 200;
+            this.txbClave.TabIndex = 1;
             // 
             // txbUsuario
             // 
@@ -116,7 +115,7 @@
             this.txbUsuario.Location = new System.Drawing.Point(153, 150);
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(226, 26);
-            this.txbUsuario.TabIndex = 199;
+            this.txbUsuario.TabIndex = 0;
             // 
             // label9
             // 
@@ -238,7 +237,7 @@
             this.cmbEstado.Location = new System.Drawing.Point(153, 276);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(139, 28);
-            this.cmbEstado.TabIndex = 190;
+            this.cmbEstado.TabIndex = 3;
             // 
             // label4
             // 
@@ -263,7 +262,7 @@
             this.cmbCarnet.Location = new System.Drawing.Point(392, 276);
             this.cmbCarnet.Name = "cmbCarnet";
             this.cmbCarnet.Size = new System.Drawing.Size(211, 28);
-            this.cmbCarnet.TabIndex = 208;
+            this.cmbCarnet.TabIndex = 4;
             // 
             // label7
             // 
@@ -289,7 +288,7 @@
             this.txbRepiteClave.Name = "txbRepiteClave";
             this.txbRepiteClave.PasswordChar = '●';
             this.txbRepiteClave.Size = new System.Drawing.Size(312, 26);
-            this.txbRepiteClave.TabIndex = 210;
+            this.txbRepiteClave.TabIndex = 2;
             // 
             // label8
             // 
@@ -332,7 +331,7 @@
             this.btnBuscarLector.Location = new System.Drawing.Point(447, 364);
             this.btnBuscarLector.Name = "btnBuscarLector";
             this.btnBuscarLector.Size = new System.Drawing.Size(71, 34);
-            this.btnBuscarLector.TabIndex = 215;
+            this.btnBuscarLector.TabIndex = 6;
             this.btnBuscarLector.UseVisualStyleBackColor = true;
             this.btnBuscarLector.Click += new System.EventHandler(this.btnBuscarLector_Click);
             // 

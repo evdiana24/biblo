@@ -119,7 +119,8 @@ namespace Pagos.GUI
                     GUI.MoraEdicion f = new MoraEdicion();
                     f.txbIdMora.Text = dtgMorasGestion.CurrentRow.Cells["idMora"].Value.ToString();
                     f.txbIdDetalle.Text = dtgMorasGestion.CurrentRow.Cells["idDetalle"].Value.ToString();
-                    f.txbTotal.Text = dtgMorasGestion.CurrentRow.Cells["total"].Value.ToString();
+                    f.txbLector.Text = dtgMorasGestion.CurrentRow.Cells["titulo"].Value.ToString();
+                    f.txbTotal.Text = dtgMorasGestion.CurrentRow.Cells["totalMora"].Value.ToString();
                     f.cmbEstadoMora.Text = dtgMorasGestion.CurrentRow.Cells["estado"].Value.ToString();
                     f.ShowDialog();
                     CargarDatos();

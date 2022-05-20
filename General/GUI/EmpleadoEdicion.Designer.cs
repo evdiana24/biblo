@@ -153,7 +153,7 @@
             this.dtFechaContratacion.Location = new System.Drawing.Point(289, 400);
             this.dtFechaContratacion.Name = "dtFechaContratacion";
             this.dtFechaContratacion.Size = new System.Drawing.Size(170, 26);
-            this.dtFechaContratacion.TabIndex = 158;
+            this.dtFechaContratacion.TabIndex = 9;
             // 
             // dtFechaNacimiento
             // 
@@ -163,7 +163,7 @@
             this.dtFechaNacimiento.Location = new System.Drawing.Point(289, 360);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(170, 26);
-            this.dtFechaNacimiento.TabIndex = 157;
+            this.dtFechaNacimiento.TabIndex = 8;
             // 
             // cmbGenero
             // 
@@ -176,7 +176,7 @@
             this.cmbGenero.Location = new System.Drawing.Point(147, 281);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(155, 28);
-            this.cmbGenero.TabIndex = 156;
+            this.cmbGenero.TabIndex = 5;
             // 
             // txbTelefono
             // 
@@ -184,7 +184,7 @@
             this.txbTelefono.Location = new System.Drawing.Point(445, 281);
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.Size = new System.Drawing.Size(157, 26);
-            this.txbTelefono.TabIndex = 155;
+            this.txbTelefono.TabIndex = 6;
             // 
             // txbCorreo
             // 
@@ -192,7 +192,7 @@
             this.txbCorreo.Location = new System.Drawing.Point(146, 321);
             this.txbCorreo.Name = "txbCorreo";
             this.txbCorreo.Size = new System.Drawing.Size(313, 26);
-            this.txbCorreo.TabIndex = 152;
+            this.txbCorreo.TabIndex = 7;
             // 
             // txbDireccion
             // 
@@ -200,7 +200,7 @@
             this.txbDireccion.Location = new System.Drawing.Point(147, 204);
             this.txbDireccion.Name = "txbDireccion";
             this.txbDireccion.Size = new System.Drawing.Size(454, 26);
-            this.txbDireccion.TabIndex = 151;
+            this.txbDireccion.TabIndex = 2;
             // 
             // txbNombres
             // 
@@ -208,7 +208,7 @@
             this.txbNombres.Location = new System.Drawing.Point(147, 134);
             this.txbNombres.Name = "txbNombres";
             this.txbNombres.Size = new System.Drawing.Size(312, 26);
-            this.txbNombres.TabIndex = 150;
+            this.txbNombres.TabIndex = 0;
             // 
             // label10
             // 
@@ -341,7 +341,7 @@
             this.txbApellidos.Location = new System.Drawing.Point(146, 169);
             this.txbApellidos.Name = "txbApellidos";
             this.txbApellidos.Size = new System.Drawing.Size(313, 26);
-            this.txbApellidos.TabIndex = 166;
+            this.txbApellidos.TabIndex = 1;
             // 
             // txbDUI
             // 
@@ -350,7 +350,7 @@
             this.txbDUI.Mask = "00000000-0";
             this.txbDUI.Name = "txbDUI";
             this.txbDUI.Size = new System.Drawing.Size(156, 26);
-            this.txbDUI.TabIndex = 167;
+            this.txbDUI.TabIndex = 3;
             // 
             // txbNIT
             // 
@@ -359,7 +359,7 @@
             this.txbNIT.Mask = "0000-000000-000-0";
             this.txbNIT.Name = "txbNIT";
             this.txbNIT.Size = new System.Drawing.Size(157, 26);
-            this.txbNIT.TabIndex = 168;
+            this.txbNIT.TabIndex = 4;
             // 
             // EmpleadoEdicion
             // 

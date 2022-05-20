@@ -128,7 +128,7 @@
             this.cmbGenero.Location = new System.Drawing.Point(148, 254);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(170, 28);
-            this.cmbGenero.TabIndex = 132;
+            this.cmbGenero.TabIndex = 3;
             // 
             // txbTelefono
             // 
@@ -136,7 +136,7 @@
             this.txbTelefono.Location = new System.Drawing.Point(446, 256);
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.Size = new System.Drawing.Size(157, 26);
-            this.txbTelefono.TabIndex = 131;
+            this.txbTelefono.TabIndex = 4;
             // 
             // txbCorreo
             // 
@@ -144,7 +144,7 @@
             this.txbCorreo.Location = new System.Drawing.Point(147, 295);
             this.txbCorreo.Name = "txbCorreo";
             this.txbCorreo.Size = new System.Drawing.Size(303, 26);
-            this.txbCorreo.TabIndex = 128;
+            this.txbCorreo.TabIndex = 5;
             // 
             // txbDireccion
             // 
@@ -152,7 +152,7 @@
             this.txbDireccion.Location = new System.Drawing.Point(147, 214);
             this.txbDireccion.Name = "txbDireccion";
             this.txbDireccion.Size = new System.Drawing.Size(455, 26);
-            this.txbDireccion.TabIndex = 127;
+            this.txbDireccion.TabIndex = 2;
             // 
             // txbNombres
             // 
@@ -160,7 +160,7 @@
             this.txbNombres.Location = new System.Drawing.Point(148, 138);
             this.txbNombres.Name = "txbNombres";
             this.txbNombres.Size = new System.Drawing.Size(369, 26);
-            this.txbNombres.TabIndex = 126;
+            this.txbNombres.TabIndex = 0;
             // 
             // label9
             // 
@@ -264,7 +264,7 @@
             this.dtFechaNacimiento.Location = new System.Drawing.Point(280, 337);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(170, 26);
-            this.dtFechaNacimiento.TabIndex = 159;
+            this.dtFechaNacimiento.TabIndex = 6;
             // 
             // Notificador
             // 
@@ -277,7 +277,7 @@
             this.txbApellidos.Location = new System.Drawing.Point(148, 177);
             this.txbApellidos.Name = "txbApellidos";
             this.txbApellidos.Size = new System.Drawing.Size(369, 26);
-            this.txbApellidos.TabIndex = 161;
+            this.txbApellidos.TabIndex = 1;
             // 
             // label4
             // 

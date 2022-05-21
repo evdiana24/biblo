@@ -25,7 +25,7 @@ namespace Biblo.CLS
             _Resultado = f.Autorizado;
             return _Resultado;
         }
-
+       
         public AppManager()
         {
             if (Splash())

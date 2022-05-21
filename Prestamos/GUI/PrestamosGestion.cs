@@ -61,7 +61,7 @@ namespace Prestamos.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = "titulo LIKE '%" + txbFiltro.Text + "%' OR editorial LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = "usuario_lector LIKE '%" + txbFiltro.Text + "%' OR usuario_empleado LIKE '%" + txbFiltro.Text + "%'";
                 }
                 else
                 {

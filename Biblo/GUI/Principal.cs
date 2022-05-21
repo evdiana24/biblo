@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Biblo.CLS;
 
 namespace Biblo.GUI
 {
@@ -405,60 +406,30 @@ namespace Biblo.GUI
             hideSubMenu();
         }
 
-        //CERRAR SESION
-        //private void btnSalir_Click_1(object sender, EventArgs e)
-        //{
-        //    Application.Exit();
-        //}
-
-        //private void btnMinimizar_Click_1(object sender, EventArgs e)
-        //{
-        //    this.WindowState = FormWindowState.Minimized;
-        //}
-
-        //private void btnRestaurar_Click_1(object sender, EventArgs e)
-        //{
-        //    this.WindowState = FormWindowState.Normal;
-        //    btnRestaurar.Visible = false;
-        //    btnMaximizar.Visible = true;
-        //}
-
-        //private void btnMaximizar_Click_1(object sender, EventArgs e)
-        //{
-        //    this.WindowState = FormWindowState.Maximized;
-        //    btnMaximizar.Visible = false;
-        //    btnRestaurar.Visible = true;
-        //}
-
-        //[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        //private extern static void ReleaseCapture();
-        //[DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        //private extern static void SendMessage(System.IntPtr Hwnd, int wMsg, int wParam, int lParam);
-
-        //private void panelBarraTitulo_MouseMove(object sender, MouseEventArgs e)
-        //{
-        //    ReleaseCapture();
-        //    SendMessage(this.Handle, 0x112, 0xf012, 0);
-        //}
-
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de querer cerrar sesión?", "Warning", 
+            if (MessageBox.Show("¿Está seguro de querer cerrar sesión?", "Warning",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
+                Login f = new Login();
+                f.ShowDialog();
+                if (f.Autorizado == true)
+                {
+                    this.Close();
+                    Principal p = new Principal();
+                    p.ShowDialog();
+                }
+                else
+                {
+                    this.Close();
+                }
             }
-
         }
 
         private void Principal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

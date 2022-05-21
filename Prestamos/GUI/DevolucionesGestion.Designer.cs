@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevolucionesGestion));
             this.dtgDevolucionesGestion = new System.Windows.Forms.DataGridView();
             this.idDevolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +50,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.dtHasta = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtDesde = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDevolucionesGestion)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -64,14 +68,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgDevolucionesGestion.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgDevolucionesGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgDevolucionesGestion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgDevolucionesGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDevolucionesGestion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDevolucion,
@@ -79,13 +83,13 @@
             this.condicion_libro,
             this.descripcion,
             this.fecha_entregado});
-            this.dtgDevolucionesGestion.Location = new System.Drawing.Point(39, 92);
+            this.dtgDevolucionesGestion.Location = new System.Drawing.Point(39, 126);
             this.dtgDevolucionesGestion.Name = "dtgDevolucionesGestion";
             this.dtgDevolucionesGestion.ReadOnly = true;
             this.dtgDevolucionesGestion.RowHeadersVisible = false;
             this.dtgDevolucionesGestion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgDevolucionesGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDevolucionesGestion.Size = new System.Drawing.Size(897, 412);
+            this.dtgDevolucionesGestion.Size = new System.Drawing.Size(897, 378);
             this.dtgDevolucionesGestion.TabIndex = 40;
             // 
             // idDevolucion
@@ -263,6 +267,54 @@
             this.label1.TabIndex = 89;
             this.label1.Text = "DEVOLUCIONES";
             // 
+            // label
+            // 
+            this.label.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.Transparent;
+            this.label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(493, 98);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(49, 16);
+            this.label.TabIndex = 117;
+            this.label.Text = "Hasta:";
+            // 
+            // dtHasta
+            // 
+            this.dtHasta.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtHasta.CustomFormat = "dd-MM-yyyy";
+            this.dtHasta.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtHasta.Location = new System.Drawing.Point(547, 93);
+            this.dtHasta.Name = "dtHasta";
+            this.dtHasta.Size = new System.Drawing.Size(119, 23);
+            this.dtHasta.TabIndex = 115;
+            this.dtHasta.ValueChanged += new System.EventHandler(this.dtHasta_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(303, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.TabIndex = 116;
+            this.label2.Text = "Desde:";
+            // 
+            // dtDesde
+            // 
+            this.dtDesde.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtDesde.CustomFormat = "dd-MM-yyyy";
+            this.dtDesde.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDesde.Location = new System.Drawing.Point(361, 93);
+            this.dtDesde.Name = "dtDesde";
+            this.dtDesde.Size = new System.Drawing.Size(119, 23);
+            this.dtDesde.TabIndex = 114;
+            this.dtDesde.ValueChanged += new System.EventHandler(this.dtDesde_ValueChanged);
+            // 
             // DevolucionesGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,6 +322,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(975, 600);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.dtHasta);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtDesde);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.statusStrip1);
@@ -310,5 +366,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn condicion_libro;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_entregado;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.DateTimePicker dtHasta;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtDesde;
     }
 }

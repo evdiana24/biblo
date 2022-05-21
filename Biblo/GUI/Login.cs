@@ -66,6 +66,7 @@ namespace Biblo.GUI
 
             }
         }
+
         public Login()
         {
             InitializeComponent();
@@ -79,6 +80,14 @@ namespace Biblo.GUI
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             Validar();
+        }
+
+        private void Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                Validar();
+            }
         }
     }
 }

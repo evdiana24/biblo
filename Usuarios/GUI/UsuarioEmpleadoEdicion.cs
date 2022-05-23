@@ -72,7 +72,7 @@ namespace Usuarios.GUI
                         else
                         {
                             //No se guardo correctamente
-                            MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("El registro no fue agregado. El nombre de usuario ya existe", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }

@@ -33,6 +33,7 @@ namespace Biblo.GUI
             panelPrestamos.Visible = false;
             panelPagos.Visible = false;
             panelConfiguraciones.Visible = false;
+            panelInformes.Visible = false;
         }
 
         private void RestringirOpciones()
@@ -83,6 +84,10 @@ namespace Biblo.GUI
             if (panelConfiguraciones.Visible == true)
             {
                 panelConfiguraciones.Visible = false;
+            }
+            if(panelInformes.Visible == true)
+            {
+                panelInformes.Visible = false;
             }
         }
 
@@ -364,7 +369,31 @@ namespace Biblo.GUI
         //INFORMES
         private void btnInformes_Click(object sender, EventArgs e)
         {
+            showSubMenu(panelInformes);
+        }
 
+        private void btnInPagos_Click(object sender, EventArgs e)
+        {
+            Informes.GUI.VisorPagos f = new Informes.GUI.VisorPagos();
+            f.ShowDialog();
+        }
+
+        private void btnInPrestamos_Click(object sender, EventArgs e)
+        {
+            Informes.GUI.VisorPrestamos f = new Informes.GUI.VisorPrestamos();
+            f.ShowDialog();
+        }
+
+        private void btnInLibros_Click(object sender, EventArgs e)
+        {
+            Informes.GUI.VisorLibros f = new Informes.GUI.VisorLibros();
+            f.ShowDialog();
+        }
+
+        private void btnInMoras_Click(object sender, EventArgs e)
+        {
+            Informes.GUI.VisorMoras f = new Informes.GUI.VisorMoras();
+            f.ShowDialog();
         }
 
         //CONFIGURACIONES
@@ -430,26 +459,6 @@ namespace Biblo.GUI
         private void Principal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btnInPagos_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Informes.GUI.VisorPagos>();
-        }
-
-        private void btnInPrestamos_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Informes.GUI.VisorPrestamos>();
-        }
-
-        private void btnInLibros_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Informes.GUI.VisorLibros>();
-        }
-
-        private void btnInMoras_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Informes.GUI.VisorMoras>();
         }
     }
 }

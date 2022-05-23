@@ -60,7 +60,7 @@ namespace Libros.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = "titulo LIKE '%" + txbFiltro.Text + "%' OR autor LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = "titulo LIKE '%" + txbFiltro.Text + "%' OR editorial LIKE '%" + txbFiltro.Text + "%'";
                 }
                 else
                 {

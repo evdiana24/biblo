@@ -110,29 +110,6 @@ namespace Pagos.GUI
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    GUI.MoraEdicion f = new MoraEdicion();
-                    f.txbIdMora.Text = dtgMorasGestion.CurrentRow.Cells["idMora"].Value.ToString();
-                    f.txbIdDetalle.Text = dtgMorasGestion.CurrentRow.Cells["idDetalle"].Value.ToString();
-                    f.txbLector.Text = dtgMorasGestion.CurrentRow.Cells["titulo"].Value.ToString();
-                    f.txbTotal.Text = dtgMorasGestion.CurrentRow.Cells["totalMora"].Value.ToString();
-                    f.cmbEstadoMora.Text = dtgMorasGestion.CurrentRow.Cells["estado"].Value.ToString();
-                    f.ShowDialog();
-                    CargarDatos();
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Seleccione una fila válida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -156,21 +133,6 @@ namespace Pagos.GUI
             catch (Exception)
             {
                 MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _IDMoraSeleccionado = dtgMorasGestion.CurrentRow.Cells["idMora"].Value.ToString();
-                _MoraSeleccionado = dtgMorasGestion.CurrentRow.Cells["total"].Value.ToString();
-                _Seleccionado = true;
-                //Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al seleccionar el registro");
             }
         }
 

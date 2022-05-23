@@ -166,7 +166,7 @@ namespace Libros.GUI
                 else
                 {
                     //No se guardo correctamente
-                    MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El registro no fue agregado. La categoría ya estaba agregada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
 

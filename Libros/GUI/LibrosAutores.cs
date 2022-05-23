@@ -180,7 +180,7 @@ namespace Libros.GUI
                 else
                 {
                     //No se guardo correctamente
-                    MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El registro no fue agregado. El autor ya estaba agregado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
 

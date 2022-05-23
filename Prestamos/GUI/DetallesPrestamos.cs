@@ -202,6 +202,7 @@ namespace Prestamos.GUI
                     {
                         MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDetallesPrestamos();
+                        CargarEjemplares();
                     }
                     else
                     {

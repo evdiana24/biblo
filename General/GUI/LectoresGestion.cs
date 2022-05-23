@@ -169,7 +169,7 @@ namespace General.GUI
                 _IDLectorSeleccionado = dtgLectoresGestion.CurrentRow.Cells["idLector"].Value.ToString();
                 _LectorSeleccionado = dtgLectoresGestion.CurrentRow.Cells["nombres"].Value.ToString() + " " + dtgLectoresGestion.CurrentRow.Cells["apellidos"].Value.ToString();
                 _Seleccionado = true;
-                //Close();
+                Close();
             }
             catch (Exception)
             {

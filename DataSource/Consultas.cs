@@ -115,21 +115,11 @@ namespace DataSource
         public static DataTable TODOS_LOS_LIBROS()
         {
             DataTable Resultado = new DataTable();
-            //String Consulta = @"SELECT a.idLibro, a.ISBN, a.titulo, a.anio_publicacion, a.edicion, CONCAT(b.nombres, ' ',b.apellidos) AS autor, 
-            //c.categoria, a.idEditorial, f.editorial, IFNULL(COUNT(g.idLibro), 0) AS ejemplares
-            //FROM libros a, autores b, categorias c, libros_categorias d, libros_autores e, editoriales f, ejemplares g
-            //WHERE a.idLibro = g.idLibro
-            //AND b.idAutor = e.idAutor
-            //AND e.idLibro = a.idLibro
-            //AND c.idCategoria = d.idCategoria
-            //AND d.idLibro = a.idLibro
-            //AND f.idEditorial = a.idEditorial
-            //AND g.idLibro = g.idLibro
-            //GROUP BY a.idLibro;";
 
             String Consulta = @"SELECT a.idLibro, a.ISBN, a.titulo, a.anio_publicacion, a.edicion, a.idEditorial, b.editorial 
             FROM libros a, editoriales b
-            WHERE a.idEditorial = b.idEditorial;";
+            WHERE a.idEditorial = b.idEditorial
+            ORDER BY a.idLibro DESC;";
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {

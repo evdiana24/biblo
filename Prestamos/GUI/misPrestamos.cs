@@ -58,6 +58,7 @@ namespace Prestamos.GUI
         private void misPrestamos_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            dtHasta.Value = dtHasta.Value.AddDays(1);
             dtDesde.Value = dtDesde.Value.AddMonths(-1);
         }
 

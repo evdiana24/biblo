@@ -68,28 +68,6 @@ namespace Libros.GUI
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    GUI.EjemplarEdicion f = new EjemplarEdicion();
-                    f.txbIdEjemplar.Text = dtgEjemplaresGestion.CurrentRow.Cells["idEjemplar"].Value.ToString();
-                    f.txbLibro.Text = dtgEjemplaresGestion.CurrentRow.Cells["idLibro"].Value.ToString();
-                    f.cmbEstado.Text = dtgEjemplaresGestion.CurrentRow.Cells["estado"].Value.ToString();
-                    f.dtFechaIngreso.Text = dtgEjemplaresGestion.CurrentRow.Cells["fecha_ingreso"].Value.ToString();
-                    f.ShowDialog();
-                    CargarDatos();
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Seleccione una fila válida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try

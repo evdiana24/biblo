@@ -120,6 +120,8 @@ namespace Prestamos.GUI
         private void PrestamosGestion_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            dtHasta.Value = dtHasta.Value.AddDays(1);
+            dtDesde.Value = dtDesde.Value.AddMonths(-1);
         }
 
         private void txbFiltro_TextChanged(object sender, EventArgs e)

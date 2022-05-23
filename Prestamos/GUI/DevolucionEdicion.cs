@@ -56,7 +56,7 @@ namespace Prestamos.GUI
                         else
                         {
                             //No se guardo correctamente
-                            MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("El registro no fue agregado. La devolción fue previamente agregada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }

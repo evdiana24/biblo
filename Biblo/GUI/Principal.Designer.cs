@@ -104,7 +104,7 @@
             this.panel2.Controls.Add(this.imgUsuario);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(228, 144);
             this.panel2.TabIndex = 1;
@@ -163,7 +163,7 @@
             // 
             this.imgUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgUsuario.Image")));
             this.imgUsuario.Location = new System.Drawing.Point(85, 7);
-            this.imgUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imgUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.imgUsuario.Name = "imgUsuario";
             this.imgUsuario.Size = new System.Drawing.Size(69, 66);
             this.imgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,7 +193,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 600);
             this.panel1.TabIndex = 5;
@@ -207,7 +207,7 @@
             this.panelConfiguraciones.Controls.Add(this.btnGRoles);
             this.panelConfiguraciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelConfiguraciones.Location = new System.Drawing.Point(0, 948);
-            this.panelConfiguraciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelConfiguraciones.Margin = new System.Windows.Forms.Padding(2);
             this.panelConfiguraciones.Name = "panelConfiguraciones";
             this.panelConfiguraciones.Size = new System.Drawing.Size(228, 78);
             this.panelConfiguraciones.TabIndex = 30;
@@ -220,7 +220,7 @@
             this.btnGOpciones.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGOpciones.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGOpciones.Location = new System.Drawing.Point(0, 52);
-            this.btnGOpciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGOpciones.Margin = new System.Windows.Forms.Padding(2);
             this.btnGOpciones.Name = "btnGOpciones";
             this.btnGOpciones.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGOpciones.Size = new System.Drawing.Size(228, 26);
@@ -238,7 +238,7 @@
             this.btnGPermisos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGPermisos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGPermisos.Location = new System.Drawing.Point(0, 26);
-            this.btnGPermisos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGPermisos.Margin = new System.Windows.Forms.Padding(2);
             this.btnGPermisos.Name = "btnGPermisos";
             this.btnGPermisos.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGPermisos.Size = new System.Drawing.Size(228, 26);
@@ -256,7 +256,7 @@
             this.btnGRoles.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGRoles.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGRoles.Location = new System.Drawing.Point(0, 0);
-            this.btnGRoles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGRoles.Margin = new System.Windows.Forms.Padding(2);
             this.btnGRoles.Name = "btnGRoles";
             this.btnGRoles.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGRoles.Size = new System.Drawing.Size(228, 26);
@@ -278,7 +278,7 @@
             this.btnConfiguraciones.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguraciones.Image")));
             this.btnConfiguraciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfiguraciones.Location = new System.Drawing.Point(0, 919);
-            this.btnConfiguraciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfiguraciones.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfiguraciones.Name = "btnConfiguraciones";
             this.btnConfiguraciones.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnConfiguraciones.Size = new System.Drawing.Size(228, 29);
@@ -298,7 +298,7 @@
             this.panelInformes.Controls.Add(this.btnInPrestamos);
             this.panelInformes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInformes.Location = new System.Drawing.Point(0, 815);
-            this.panelInformes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInformes.Margin = new System.Windows.Forms.Padding(2);
             this.panelInformes.Name = "panelInformes";
             this.panelInformes.Size = new System.Drawing.Size(228, 104);
             this.panelInformes.TabIndex = 32;
@@ -311,7 +311,7 @@
             this.btnInMoras.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInMoras.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnInMoras.Location = new System.Drawing.Point(0, 78);
-            this.btnInMoras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInMoras.Margin = new System.Windows.Forms.Padding(2);
             this.btnInMoras.Name = "btnInMoras";
             this.btnInMoras.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnInMoras.Size = new System.Drawing.Size(228, 26);
@@ -329,7 +329,7 @@
             this.btnInLibros.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInLibros.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnInLibros.Location = new System.Drawing.Point(0, 52);
-            this.btnInLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInLibros.Margin = new System.Windows.Forms.Padding(2);
             this.btnInLibros.Name = "btnInLibros";
             this.btnInLibros.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnInLibros.Size = new System.Drawing.Size(228, 26);
@@ -347,7 +347,7 @@
             this.btnInPagos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInPagos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnInPagos.Location = new System.Drawing.Point(0, 26);
-            this.btnInPagos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInPagos.Margin = new System.Windows.Forms.Padding(2);
             this.btnInPagos.Name = "btnInPagos";
             this.btnInPagos.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnInPagos.Size = new System.Drawing.Size(228, 26);
@@ -365,7 +365,7 @@
             this.btnInPrestamos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInPrestamos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnInPrestamos.Location = new System.Drawing.Point(0, 0);
-            this.btnInPrestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInPrestamos.Margin = new System.Windows.Forms.Padding(2);
             this.btnInPrestamos.Name = "btnInPrestamos";
             this.btnInPrestamos.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnInPrestamos.Size = new System.Drawing.Size(228, 26);
@@ -387,7 +387,7 @@
             this.btnInformes.Image = ((System.Drawing.Image)(resources.GetObject("btnInformes.Image")));
             this.btnInformes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInformes.Location = new System.Drawing.Point(0, 786);
-            this.btnInformes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInformes.Margin = new System.Windows.Forms.Padding(2);
             this.btnInformes.Name = "btnInformes";
             this.btnInformes.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnInformes.Size = new System.Drawing.Size(228, 29);
@@ -407,7 +407,7 @@
             this.panelPagos.Controls.Add(this.btnGMoras);
             this.panelPagos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPagos.Location = new System.Drawing.Point(0, 682);
-            this.panelPagos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPagos.Margin = new System.Windows.Forms.Padding(2);
             this.panelPagos.Name = "panelPagos";
             this.panelPagos.Size = new System.Drawing.Size(228, 104);
             this.panelPagos.TabIndex = 27;
@@ -420,7 +420,7 @@
             this.btnHistorialPagos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorialPagos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnHistorialPagos.Location = new System.Drawing.Point(0, 78);
-            this.btnHistorialPagos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHistorialPagos.Margin = new System.Windows.Forms.Padding(2);
             this.btnHistorialPagos.Name = "btnHistorialPagos";
             this.btnHistorialPagos.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnHistorialPagos.Size = new System.Drawing.Size(228, 26);
@@ -438,7 +438,7 @@
             this.btnGPagos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGPagos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGPagos.Location = new System.Drawing.Point(0, 52);
-            this.btnGPagos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGPagos.Margin = new System.Windows.Forms.Padding(2);
             this.btnGPagos.Name = "btnGPagos";
             this.btnGPagos.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGPagos.Size = new System.Drawing.Size(228, 26);
@@ -456,7 +456,7 @@
             this.btnMisMoras.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMisMoras.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnMisMoras.Location = new System.Drawing.Point(0, 26);
-            this.btnMisMoras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMisMoras.Margin = new System.Windows.Forms.Padding(2);
             this.btnMisMoras.Name = "btnMisMoras";
             this.btnMisMoras.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnMisMoras.Size = new System.Drawing.Size(228, 26);
@@ -474,7 +474,7 @@
             this.btnGMoras.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGMoras.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGMoras.Location = new System.Drawing.Point(0, 0);
-            this.btnGMoras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGMoras.Margin = new System.Windows.Forms.Padding(2);
             this.btnGMoras.Name = "btnGMoras";
             this.btnGMoras.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGMoras.Size = new System.Drawing.Size(228, 26);
@@ -496,7 +496,7 @@
             this.btnPagos.Image = ((System.Drawing.Image)(resources.GetObject("btnPagos.Image")));
             this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPagos.Location = new System.Drawing.Point(0, 653);
-            this.btnPagos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPagos.Margin = new System.Windows.Forms.Padding(2);
             this.btnPagos.Name = "btnPagos";
             this.btnPagos.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnPagos.Size = new System.Drawing.Size(228, 29);
@@ -516,7 +516,7 @@
             this.panelPrestamos.Controls.Add(this.btnGPrestamos);
             this.panelPrestamos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPrestamos.Location = new System.Drawing.Point(0, 549);
-            this.panelPrestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPrestamos.Margin = new System.Windows.Forms.Padding(2);
             this.panelPrestamos.Name = "panelPrestamos";
             this.panelPrestamos.Size = new System.Drawing.Size(228, 104);
             this.panelPrestamos.TabIndex = 25;
@@ -529,7 +529,7 @@
             this.btnGestionarDevoluciones.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionarDevoluciones.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGestionarDevoluciones.Location = new System.Drawing.Point(0, 78);
-            this.btnGestionarDevoluciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGestionarDevoluciones.Margin = new System.Windows.Forms.Padding(2);
             this.btnGestionarDevoluciones.Name = "btnGestionarDevoluciones";
             this.btnGestionarDevoluciones.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGestionarDevoluciones.Size = new System.Drawing.Size(228, 26);
@@ -547,7 +547,7 @@
             this.btnMisPrestamos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMisPrestamos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnMisPrestamos.Location = new System.Drawing.Point(0, 52);
-            this.btnMisPrestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMisPrestamos.Margin = new System.Windows.Forms.Padding(2);
             this.btnMisPrestamos.Name = "btnMisPrestamos";
             this.btnMisPrestamos.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnMisPrestamos.Size = new System.Drawing.Size(228, 26);
@@ -565,7 +565,7 @@
             this.btnDetallesPrestamos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetallesPrestamos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDetallesPrestamos.Location = new System.Drawing.Point(0, 26);
-            this.btnDetallesPrestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDetallesPrestamos.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetallesPrestamos.Name = "btnDetallesPrestamos";
             this.btnDetallesPrestamos.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnDetallesPrestamos.Size = new System.Drawing.Size(228, 26);
@@ -583,7 +583,7 @@
             this.btnGPrestamos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGPrestamos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGPrestamos.Location = new System.Drawing.Point(0, 0);
-            this.btnGPrestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGPrestamos.Margin = new System.Windows.Forms.Padding(2);
             this.btnGPrestamos.Name = "btnGPrestamos";
             this.btnGPrestamos.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGPrestamos.Size = new System.Drawing.Size(228, 26);
@@ -605,7 +605,7 @@
             this.btnPrestamos.Image = ((System.Drawing.Image)(resources.GetObject("btnPrestamos.Image")));
             this.btnPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrestamos.Location = new System.Drawing.Point(0, 520);
-            this.btnPrestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrestamos.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrestamos.Name = "btnPrestamos";
             this.btnPrestamos.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnPrestamos.Size = new System.Drawing.Size(228, 29);
@@ -624,7 +624,7 @@
             this.panelLibros.Controls.Add(this.btnGLibros);
             this.panelLibros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLibros.Location = new System.Drawing.Point(0, 442);
-            this.panelLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLibros.Margin = new System.Windows.Forms.Padding(2);
             this.panelLibros.Name = "panelLibros";
             this.panelLibros.Size = new System.Drawing.Size(228, 78);
             this.panelLibros.TabIndex = 23;
@@ -637,7 +637,7 @@
             this.btnBuscarLibros.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarLibros.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnBuscarLibros.Location = new System.Drawing.Point(0, 52);
-            this.btnBuscarLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarLibros.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarLibros.Name = "btnBuscarLibros";
             this.btnBuscarLibros.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnBuscarLibros.Size = new System.Drawing.Size(228, 26);
@@ -655,7 +655,7 @@
             this.btnGEjemplares.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGEjemplares.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGEjemplares.Location = new System.Drawing.Point(0, 26);
-            this.btnGEjemplares.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGEjemplares.Margin = new System.Windows.Forms.Padding(2);
             this.btnGEjemplares.Name = "btnGEjemplares";
             this.btnGEjemplares.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGEjemplares.Size = new System.Drawing.Size(228, 26);
@@ -673,7 +673,7 @@
             this.btnGLibros.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGLibros.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGLibros.Location = new System.Drawing.Point(0, 0);
-            this.btnGLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGLibros.Margin = new System.Windows.Forms.Padding(2);
             this.btnGLibros.Name = "btnGLibros";
             this.btnGLibros.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGLibros.Size = new System.Drawing.Size(228, 26);
@@ -695,7 +695,7 @@
             this.btnLibros.Image = ((System.Drawing.Image)(resources.GetObject("btnLibros.Image")));
             this.btnLibros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLibros.Location = new System.Drawing.Point(0, 413);
-            this.btnLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLibros.Margin = new System.Windows.Forms.Padding(2);
             this.btnLibros.Name = "btnLibros";
             this.btnLibros.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnLibros.Size = new System.Drawing.Size(228, 29);
@@ -713,7 +713,7 @@
             this.panelUsuarios.Controls.Add(this.btnGUsuariosEmpleados);
             this.panelUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUsuarios.Location = new System.Drawing.Point(0, 361);
-            this.panelUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.panelUsuarios.Name = "panelUsuarios";
             this.panelUsuarios.Size = new System.Drawing.Size(228, 52);
             this.panelUsuarios.TabIndex = 21;
@@ -726,7 +726,7 @@
             this.btnGUsuariosLectores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGUsuariosLectores.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGUsuariosLectores.Location = new System.Drawing.Point(0, 26);
-            this.btnGUsuariosLectores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGUsuariosLectores.Margin = new System.Windows.Forms.Padding(2);
             this.btnGUsuariosLectores.Name = "btnGUsuariosLectores";
             this.btnGUsuariosLectores.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGUsuariosLectores.Size = new System.Drawing.Size(228, 26);
@@ -744,7 +744,7 @@
             this.btnGUsuariosEmpleados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGUsuariosEmpleados.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGUsuariosEmpleados.Location = new System.Drawing.Point(0, 0);
-            this.btnGUsuariosEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGUsuariosEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.btnGUsuariosEmpleados.Name = "btnGUsuariosEmpleados";
             this.btnGUsuariosEmpleados.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGUsuariosEmpleados.Size = new System.Drawing.Size(228, 26);
@@ -766,7 +766,7 @@
             this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.Location = new System.Drawing.Point(0, 332);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnUsuarios.Size = new System.Drawing.Size(228, 29);
@@ -788,7 +788,7 @@
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.Location = new System.Drawing.Point(0, 1026);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(228, 29);
@@ -809,7 +809,7 @@
             this.panelGeneral.Controls.Add(this.btnGAutores);
             this.panelGeneral.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelGeneral.Location = new System.Drawing.Point(0, 202);
-            this.panelGeneral.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelGeneral.Margin = new System.Windows.Forms.Padding(2);
             this.panelGeneral.Name = "panelGeneral";
             this.panelGeneral.Size = new System.Drawing.Size(228, 130);
             this.panelGeneral.TabIndex = 5;
@@ -822,7 +822,7 @@
             this.btnGLectores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGLectores.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGLectores.Location = new System.Drawing.Point(0, 104);
-            this.btnGLectores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGLectores.Margin = new System.Windows.Forms.Padding(2);
             this.btnGLectores.Name = "btnGLectores";
             this.btnGLectores.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGLectores.Size = new System.Drawing.Size(228, 26);
@@ -840,7 +840,7 @@
             this.btnGEmpleados.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGEmpleados.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGEmpleados.Location = new System.Drawing.Point(0, 78);
-            this.btnGEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.btnGEmpleados.Name = "btnGEmpleados";
             this.btnGEmpleados.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGEmpleados.Size = new System.Drawing.Size(228, 26);
@@ -858,7 +858,7 @@
             this.btnGEditoriales.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGEditoriales.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGEditoriales.Location = new System.Drawing.Point(0, 52);
-            this.btnGEditoriales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGEditoriales.Margin = new System.Windows.Forms.Padding(2);
             this.btnGEditoriales.Name = "btnGEditoriales";
             this.btnGEditoriales.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGEditoriales.Size = new System.Drawing.Size(228, 26);
@@ -876,7 +876,7 @@
             this.btnGCategorias.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGCategorias.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGCategorias.Location = new System.Drawing.Point(0, 26);
-            this.btnGCategorias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.btnGCategorias.Name = "btnGCategorias";
             this.btnGCategorias.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGCategorias.Size = new System.Drawing.Size(228, 26);
@@ -894,7 +894,7 @@
             this.btnGAutores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGAutores.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGAutores.Location = new System.Drawing.Point(0, 0);
-            this.btnGAutores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGAutores.Margin = new System.Windows.Forms.Padding(2);
             this.btnGAutores.Name = "btnGAutores";
             this.btnGAutores.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
             this.btnGAutores.Size = new System.Drawing.Size(228, 26);
@@ -916,7 +916,7 @@
             this.btnGeneral.Image = ((System.Drawing.Image)(resources.GetObject("btnGeneral.Image")));
             this.btnGeneral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGeneral.Location = new System.Drawing.Point(0, 173);
-            this.btnGeneral.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGeneral.Margin = new System.Windows.Forms.Padding(2);
             this.btnGeneral.Name = "btnGeneral";
             this.btnGeneral.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnGeneral.Size = new System.Drawing.Size(228, 29);
@@ -938,7 +938,7 @@
             this.btnMiPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnMiPerfil.Image")));
             this.btnMiPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMiPerfil.Location = new System.Drawing.Point(0, 144);
-            this.btnMiPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMiPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnMiPerfil.Name = "btnMiPerfil";
             this.btnMiPerfil.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnMiPerfil.Size = new System.Drawing.Size(228, 29);
@@ -986,7 +986,7 @@
             this.MinimumSize = new System.Drawing.Size(1071, 571);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Principal";
+            this.Text = "Biblo";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

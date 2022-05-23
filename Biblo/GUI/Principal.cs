@@ -431,5 +431,25 @@ namespace Biblo.GUI
         {
             Application.Exit();
         }
+
+        private void btnInPagos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Informes.GUI.VisorPagos>();
+        }
+
+        private void btnInPrestamos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Informes.GUI.VisorPrestamos>();
+        }
+
+        private void btnInLibros_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Informes.GUI.VisorLibros>();
+        }
+
+        private void btnInMoras_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Informes.GUI.VisorMoras>();
+        }
     }
 }

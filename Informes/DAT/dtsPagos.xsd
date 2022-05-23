@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsPagos" targetNamespace="http://tempuri.org/dtsPagos.xsd" xmlns:mstns="http://tempuri.org/dtsPagos.xsd" xmlns="http://tempuri.org/dtsPagos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsPagos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsPagos" msprop:Generator_UserDSName="dtsPagos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Pagos" msprop:Generator_TableClassName="PagosDataTable" msprop:Generator_TableVarName="tablePagos" msprop:Generator_TablePropName="Pagos" msprop:Generator_RowDeletingName="PagosRowDeleting" msprop:Generator_RowChangingName="PagosRowChanging" msprop:Generator_RowEvHandlerName="PagosRowChangeEventHandler" msprop:Generator_RowDeletedName="PagosRowDeleted" msprop:Generator_UserTableName="Pagos" msprop:Generator_RowChangedName="PagosRowChanged" msprop:Generator_RowEvArgName="PagosRowChangeEvent" msprop:Generator_RowClassName="PagosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idPago" msprop:Generator_ColumnVarNameInTable="columnidPago" msprop:Generator_ColumnPropNameInRow="idPago" msprop:Generator_ColumnPropNameInTable="idPagoColumn" msprop:Generator_UserColumnName="idPago" type="xs:int" minOccurs="0" />
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="empleado" msprop:Generator_ColumnVarNameInTable="columnempleado" msprop:Generator_ColumnPropNameInRow="empleado" msprop:Generator_ColumnPropNameInTable="empleadoColumn" msprop:Generator_UserColumnName="empleado" type="xs:string" minOccurs="0" />
+              <xs:element name="lector" msprop:Generator_ColumnVarNameInTable="columnlector" msprop:Generator_ColumnPropNameInRow="lector" msprop:Generator_ColumnPropNameInTable="lectorColumn" msprop:Generator_UserColumnName="lector" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha_pago" msprop:Generator_ColumnVarNameInTable="columnfecha_pago" msprop:Generator_ColumnPropNameInRow="fecha_pago" msprop:Generator_ColumnPropNameInTable="fecha_pagoColumn" msprop:Generator_UserColumnName="fecha_pago" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

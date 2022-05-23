@@ -59,10 +59,10 @@
     <Compile Include="GUI\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Splash.cs">
+    <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Splash.Designer.cs">
+    <Compile Include="Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -73,7 +73,7 @@
     <EmbeddedResource Include="GUI\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Splash.resx">
+    <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -115,6 +115,10 @@
     <ProjectReference Include="..\General\General.csproj">
       <Project>{0633c326-b44d-439b-bbd4-1bc7bfd90f98}</Project>
       <Name>General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Informes\Informes.csproj">
+      <Project>{0a73b703-16a9-4ad3-a769-17032192d94b}</Project>
+      <Name>Informes</Name>
     </ProjectReference>
     <ProjectReference Include="..\Libros\Libros.csproj">
       <Project>{90c385ce-648a-4bc9-a84f-35df00a3ab7b}</Project>

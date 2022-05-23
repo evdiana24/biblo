@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsMoras" targetNamespace="http://tempuri.org/dtsMoras.xsd" xmlns:mstns="http://tempuri.org/dtsMoras.xsd" xmlns="http://tempuri.org/dtsMoras.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsMoras" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsMoras" msprop:Generator_UserDSName="dtsMoras">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Moras" msprop:Generator_TableClassName="MorasDataTable" msprop:Generator_TableVarName="tableMoras" msprop:Generator_TablePropName="Moras" msprop:Generator_RowDeletingName="MorasRowDeleting" msprop:Generator_RowChangingName="MorasRowChanging" msprop:Generator_RowEvHandlerName="MorasRowChangeEventHandler" msprop:Generator_RowDeletedName="MorasRowDeleted" msprop:Generator_UserTableName="Moras" msprop:Generator_RowChangedName="MorasRowChanged" msprop:Generator_RowEvArgName="MorasRowChangeEvent" msprop:Generator_RowClassName="MorasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idMora" msprop:Generator_ColumnVarNameInTable="columnidMora" msprop:Generator_ColumnPropNameInRow="idMora" msprop:Generator_ColumnPropNameInTable="idMoraColumn" msprop:Generator_UserColumnName="idMora" type="xs:int" minOccurs="0" />
+              <xs:element name="lector" msprop:Generator_ColumnVarNameInTable="columnlector" msprop:Generator_ColumnPropNameInRow="lector" msprop:Generator_ColumnPropNameInTable="lectorColumn" msprop:Generator_UserColumnName="lector" type="xs:string" minOccurs="0" />
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha_devolucion" msprop:Generator_ColumnVarNameInTable="columnfecha_devolucion" msprop:Generator_ColumnPropNameInRow="fecha_devolucion" msprop:Generator_ColumnPropNameInTable="fecha_devolucionColumn" msprop:Generator_UserColumnName="fecha_devolucion" type="xs:string" minOccurs="0" />
+              <xs:element name="totalMora" msprop:Generator_ColumnVarNameInTable="columntotalMora" msprop:Generator_ColumnPropNameInRow="totalMora" msprop:Generator_ColumnPropNameInTable="totalMoraColumn" msprop:Generator_UserColumnName="totalMora" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

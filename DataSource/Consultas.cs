@@ -666,6 +666,84 @@ namespace DataSource
             }
             return Resultado;
         }
+        public static DataTable REPORTE_PAGOS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idPago, a.descripcion, a.total, b.usuario as empleado, c.usuario as lector, a.fecha_pago
+                                FROM biblioteca2.pagos a, biblioteca2.usuarios_empleados b, usuarios_lectores c
+                                WHERE a.idPago = b.idEmpleado
+                                AND a.idPago = c.idLector;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+        public static DataTable REPORTE_MORAS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idMora, a.totalMora, a.estado, b.fecha_devolucion, d.usuario as lector
+                                FROM biblioteca2.moras a, detalles_prestamos b, prestamos c, usuarios_lectores d
+                                WHERE a.idDetalle = b.idDetalle
+                                AND a.idDetalle = c.idPrestamo
+                                GROUP BY a.idMora;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+        public static DataTable REPORTE_LIBROS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT b.idLibro,  b.ISBN, b.titulo, d.categoria, CONCAT(f.nombres, ' ', f.apellidos) AS autor, g.editorial,
+                                COUNT(a.idEjemplar) AS cantidad
+                                FROM ejemplares a, libros b, libros_categorias c, categorias d, libros_autores e, autores f, editoriales g
+                                WHERE a.idLibro = b.idLibro AND c.idCategoria = d.idCategoria AND c.idLibro = b.idLibro AND e.idAutor = f.idAutor 
+                                AND e.idLibro = b.idLibro AND g.idEditorial = b.idEditorial
+                                group by a.idLibro;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+        public static DataTable REPORTE_PRESTAMOS()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta = @"SELECT a.idPrestamo, e.idDetalle, g.titulo, a.fecha_prestamo, b.usuario AS Usuario_lector, e.fecha_devolucion
+                                FROM prestamos a, usuarios_lectores b, ejemplares f, libros g, detalles_prestamos e
+                                WHERE a.idUsuario_lector = b.idUsuario
+                                AND a.idPrestamo = e.idPrestamo
+                                AND e.idEjemplar = f.idEjemplar
+                                AND g.idLibro = f.idLibro
+                                ORDER BY a.fecha_prestamo;";
+            DataManager.DBOperacion op = new DataManager.DBOperacion();
+            try
+            {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
     }
 }
 
